@@ -9,7 +9,6 @@
     <form th:action="@{'/patients/update/' + ${patient.id}}" th:object="${patient}" method="post">
         <p>Nom : <input type="text" th:field="*{nom}" required/></p>
         <p>Prénom : <input type="text" th:field="*{prenom}" required /></p>
-        <p>Date de naissance : <input type="date" th:field="*{dateAnniversaire}" /></p>  
         <p>Date de naissance : <input type="date" id="date" name="dateAnniversaire" th:value="${#temporals.format(dateAnniversaire, 'yyyy-MM-dd')}" required /></p>
         
 		<p>Genre : 
