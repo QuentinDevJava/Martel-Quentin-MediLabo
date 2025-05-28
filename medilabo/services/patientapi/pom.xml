@@ -10,7 +10,6 @@
 	</parent>
 	<groupId>com.mediLabo</groupId>
 	<artifactId>patientapi</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>patientapi</name>
 	<description>microservice pour la gestion des patients</description>
 	
@@ -112,6 +111,7 @@
 	</dependencyManagement>
 
 	<build>
+	  <finalName>patientapi</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

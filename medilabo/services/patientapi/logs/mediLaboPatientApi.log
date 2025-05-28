@@ -57,3 +57,674 @@
 2025-05-28T20:43:00.593+02:00  INFO 3640 --- [RMI TCP Connection(13)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-05-28T20:43:00.596+02:00  INFO 3640 --- [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-05-28T20:43:00.602+02:00  INFO 3640 --- [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-28T21:12:14.637+02:00  INFO 24896 --- [main] c.m.p.PatientApiApplicationTests         : Starting PatientApiApplicationTests using Java 22.0.1 with PID 24896 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-05-28T21:12:14.641+02:00  INFO 24896 --- [main] c.m.p.PatientApiApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2025-05-28T21:12:16.809+02:00  INFO 24896 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-28T21:12:16.986+02:00  INFO 24896 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 163 ms. Found 1 JPA repository interface.
+2025-05-28T21:12:17.489+02:00  INFO 24896 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0249f444-86b1-36e3-9a7a-34b381fceb7d
+2025-05-28T21:12:18.274+02:00  INFO 24896 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-28T21:12:18.576+02:00  INFO 24896 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@785d6a98
+2025-05-28T21:12:18.578+02:00  INFO 24896 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-28T21:12:18.868+02:00  INFO 24896 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-28T21:12:18.981+02:00  INFO 24896 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-28T21:12:19.126+02:00  INFO 24896 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-28T21:12:19.506+02:00  INFO 24896 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-28T21:12:19.604+02:00  WARN 24896 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-05-28T21:12:19.626+02:00  INFO 24896 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-28T21:12:21.154+02:00  INFO 24896 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-28T21:12:21.224+02:00  INFO 24896 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:12:24.761+02:00  INFO 24896 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-28T21:12:24.889+02:00  WARN 24896 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-28T21:12:24.950+02:00  INFO 24896 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-28T21:12:25.188+02:00  INFO 24896 --- [main] c.m.p.PatientApiApplicationTests         : Started PatientApiApplicationTests in 11.403 seconds (process running for 13.525)
+2025-05-28T21:12:26.139+02:00  INFO 24896 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mediLabo.patientapi.PatientControllerTest]: PatientControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-05-28T21:12:26.183+02:00  INFO 24896 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mediLabo.patientapi.PatientApiApplication for test class com.mediLabo.patientapi.PatientControllerTest
+2025-05-28T21:12:26.192+02:00  INFO 24896 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2025-05-28T21:12:26.302+02:00  INFO 24896 --- [main] c.m.patientapi.PatientControllerTest     : Starting PatientControllerTest using Java 22.0.1 with PID 24896 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-05-28T21:12:26.303+02:00  INFO 24896 --- [main] c.m.patientapi.PatientControllerTest     : The following 1 profile is active: "test"
+2025-05-28T21:12:26.821+02:00  INFO 24896 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-28T21:12:26.837+02:00  INFO 24896 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 1 JPA repository interface.
+2025-05-28T21:12:26.990+02:00  INFO 24896 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=707034e8-dd83-36bd-94fe-934cb8d0b815
+2025-05-28T21:12:27.842+02:00  INFO 24896 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-28T21:12:27.858+02:00  INFO 24896 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-28T21:12:27.910+02:00  INFO 24896 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-28T21:12:27.912+02:00  INFO 24896 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-05-28T21:12:28.462+02:00  INFO 24896 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-05-28T21:12:28.463+02:00  INFO 24896 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-05-28T21:12:28.486+02:00  WARN 24896 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-28T21:12:28.502+02:00  INFO 24896 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-28T21:12:28.701+02:00  INFO 24896 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-28T21:12:28.745+02:00  INFO 24896 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:12:30.644+02:00  INFO 24896 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-05-28T21:12:30.644+02:00  INFO 24896 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-05-28T21:12:30.653+02:00  INFO 24896 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-28T21:12:30.669+02:00  INFO 24896 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 24 ms
+2025-05-28T21:12:31.024+02:00  INFO 24896 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-28T21:12:31.139+02:00  WARN 24896 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-28T21:12:31.209+02:00  INFO 24896 --- [main] c.m.patientapi.PatientControllerTest     : Started PatientControllerTest in 5.018 seconds (process running for 19.548)
+2025-05-28T21:12:31.522+02:00  INFO 24896 --- [main] c.m.p.controllers.PatientController      : Receive GET /api/patients/1: PatientApi use RestController to send PatientDto by ID
+2025-05-28T21:12:31.824+02:00  INFO 24896 --- [main] c.m.p.controllers.PatientController      : Receive GET /api/patients: PatientApi use RestController to send list of PatientDto
+2025-05-28T21:12:31.882+02:00  INFO 24896 --- [main] c.m.p.controllers.PatientController      : Receive GET /api/patients/name/Test: PatientApi use RestController to send PatientDto by name
+2025-05-28T21:12:31.994+02:00  INFO 24896 --- [main] c.m.p.controllers.PatientController      : Receive POST /api/patients: PatientDto PatientDto(id=1, nom=Test, prenom=Jean, dateAnniversaire=1990-01-01, genre=M, adresse=123 rue Test, telephone=0000000000) - PatientApi use RestController to create Patient
+2025-05-28T21:12:32.015+02:00  INFO 24896 --- [main] c.m.p.controllers.PatientController      : Receive PUT /api/patients/1: PatientDto PatientDto(id=1, nom=Test, prenom=Jean, dateAnniversaire=1990-01-01, genre=M, adresse=123 rue Test, telephone=0000000000) - PatientApi use RestController to update Patient
+2025-05-28T21:12:32.036+02:00  INFO 24896 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mediLabo.patientapi.PatientServiceImplTest]: PatientServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-05-28T21:12:32.039+02:00  INFO 24896 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mediLabo.patientapi.PatientApiApplication for test class com.mediLabo.patientapi.PatientServiceImplTest
+2025-05-28T21:12:32.044+02:00  INFO 24896 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2025-05-28T21:12:32.132+02:00  INFO 24896 --- [main] c.m.patientapi.PatientServiceImplTest    : Starting PatientServiceImplTest using Java 22.0.1 with PID 24896 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-05-28T21:12:32.133+02:00  INFO 24896 --- [main] c.m.patientapi.PatientServiceImplTest    : The following 1 profile is active: "test"
+2025-05-28T21:12:32.808+02:00  INFO 24896 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-28T21:12:32.832+02:00  INFO 24896 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 1 JPA repository interface.
+2025-05-28T21:12:32.977+02:00  INFO 24896 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=bd4cf51b-8284-39b8-bc35-e2c7315255a3
+2025-05-28T21:12:33.150+02:00  INFO 24896 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-28T21:12:33.155+02:00  INFO 24896 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-28T21:12:33.181+02:00  INFO 24896 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-28T21:12:33.184+02:00  INFO 24896 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-05-28T21:12:33.186+02:00  INFO 24896 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2025-05-28T21:12:33.187+02:00  INFO 24896 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-05-28T21:12:33.188+02:00  WARN 24896 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-28T21:12:33.189+02:00  INFO 24896 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-28T21:12:33.253+02:00  INFO 24896 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-28T21:12:33.261+02:00  INFO 24896 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:12:34.425+02:00  INFO 24896 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-28T21:12:34.503+02:00  WARN 24896 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-28T21:12:34.540+02:00  INFO 24896 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-28T21:12:34.584+02:00  INFO 24896 --- [main] c.m.patientapi.PatientServiceImplTest    : Started PatientServiceImplTest in 2.54 seconds (process running for 22.921)
+2025-05-28T21:12:35.056+02:00  INFO 24896 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:12:35.061+02:00  INFO 24896 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-28T21:12:35.083+02:00  INFO 24896 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-28T21:12:35.092+02:00  INFO 24896 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:12:35.096+02:00  INFO 24896 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-05-28T21:12:35.098+02:00  INFO 24896 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-05-28T21:12:35.105+02:00  INFO 24896 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:12:35.106+02:00  INFO 24896 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-05-28T21:12:35.108+02:00  INFO 24896 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-05-28T21:31:07.949+02:00  INFO 28028 --- [main] c.m.p.PatientApiApplicationTests         : Starting PatientApiApplicationTests using Java 22.0.1 with PID 28028 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-05-28T21:31:07.953+02:00  INFO 28028 --- [main] c.m.p.PatientApiApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2025-05-28T21:31:10.099+02:00  INFO 28028 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-28T21:31:10.368+02:00  INFO 28028 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 255 ms. Found 1 JPA repository interface.
+2025-05-28T21:31:10.828+02:00  INFO 28028 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0249f444-86b1-36e3-9a7a-34b381fceb7d
+2025-05-28T21:31:11.813+02:00  INFO 28028 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-28T21:31:12.129+02:00  INFO 28028 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19e2db7c
+2025-05-28T21:31:12.132+02:00  INFO 28028 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-28T21:31:12.375+02:00  INFO 28028 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-28T21:31:12.507+02:00  INFO 28028 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-28T21:31:12.564+02:00  INFO 28028 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-28T21:31:13.037+02:00  INFO 28028 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-28T21:31:13.137+02:00  WARN 28028 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-05-28T21:31:13.157+02:00  INFO 28028 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-28T21:31:14.617+02:00  INFO 28028 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-28T21:31:14.681+02:00  INFO 28028 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:31:18.044+02:00  INFO 28028 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-28T21:31:18.140+02:00  WARN 28028 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-28T21:31:18.205+02:00  INFO 28028 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-28T21:31:18.385+02:00  INFO 28028 --- [main] c.m.p.PatientApiApplicationTests         : Started PatientApiApplicationTests in 11.052 seconds (process running for 12.794)
+2025-05-28T21:31:19.299+02:00  INFO 28028 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mediLabo.patientapi.PatientControllerTest]: PatientControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-05-28T21:31:19.314+02:00  INFO 28028 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mediLabo.patientapi.PatientApiApplication for test class com.mediLabo.patientapi.PatientControllerTest
+2025-05-28T21:31:19.320+02:00  INFO 28028 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2025-05-28T21:31:19.443+02:00  INFO 28028 --- [main] c.m.patientapi.PatientControllerTest     : Starting PatientControllerTest using Java 22.0.1 with PID 28028 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-05-28T21:31:19.444+02:00  INFO 28028 --- [main] c.m.patientapi.PatientControllerTest     : The following 1 profile is active: "test"
+2025-05-28T21:31:19.942+02:00  INFO 28028 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-28T21:31:19.954+02:00  INFO 28028 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interface.
+2025-05-28T21:31:20.059+02:00  INFO 28028 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=707034e8-dd83-36bd-94fe-934cb8d0b815
+2025-05-28T21:31:20.685+02:00  INFO 28028 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-28T21:31:20.690+02:00  INFO 28028 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-28T21:31:20.715+02:00  INFO 28028 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-28T21:31:20.717+02:00  INFO 28028 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-05-28T21:31:21.165+02:00  INFO 28028 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-05-28T21:31:21.166+02:00  INFO 28028 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-05-28T21:31:21.189+02:00  WARN 28028 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-28T21:31:21.204+02:00  INFO 28028 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-28T21:31:21.404+02:00  INFO 28028 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-28T21:31:21.450+02:00  INFO 28028 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:31:22.872+02:00  INFO 28028 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-05-28T21:31:22.873+02:00  INFO 28028 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-05-28T21:31:22.884+02:00  INFO 28028 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-28T21:31:22.902+02:00  INFO 28028 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 29 ms
+2025-05-28T21:31:23.136+02:00  INFO 28028 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-28T21:31:23.226+02:00  WARN 28028 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-28T21:31:23.301+02:00  INFO 28028 --- [main] c.m.patientapi.PatientControllerTest     : Started PatientControllerTest in 3.982 seconds (process running for 17.71)
+2025-05-28T21:31:23.527+02:00  INFO 28028 --- [main] c.m.p.controllers.PatientController      : Receive GET /api/patients/1: PatientApi use RestController to send PatientDto by ID
+2025-05-28T21:31:23.758+02:00  INFO 28028 --- [main] c.m.p.controllers.PatientController      : Receive GET /api/patients: PatientApi use RestController to send list of PatientDto
+2025-05-28T21:31:23.803+02:00  INFO 28028 --- [main] c.m.p.controllers.PatientController      : Receive GET /api/patients/name/Test: PatientApi use RestController to send PatientDto by name
+2025-05-28T21:31:23.898+02:00  INFO 28028 --- [main] c.m.p.controllers.PatientController      : Receive POST /api/patients: PatientDto PatientDto(id=1, nom=Test, prenom=Jean, dateAnniversaire=1990-01-01, genre=M, adresse=123 rue Test, telephone=0000000000) - PatientApi use RestController to create Patient
+2025-05-28T21:31:23.917+02:00  INFO 28028 --- [main] c.m.p.controllers.PatientController      : Receive PUT /api/patients/1: PatientDto PatientDto(id=1, nom=Test, prenom=Jean, dateAnniversaire=1990-01-01, genre=M, adresse=123 rue Test, telephone=0000000000) - PatientApi use RestController to update Patient
+2025-05-28T21:31:23.936+02:00  INFO 28028 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mediLabo.patientapi.PatientServiceImplTest]: PatientServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-05-28T21:31:23.939+02:00  INFO 28028 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mediLabo.patientapi.PatientApiApplication for test class com.mediLabo.patientapi.PatientServiceImplTest
+2025-05-28T21:31:23.944+02:00  INFO 28028 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2025-05-28T21:31:24.019+02:00  INFO 28028 --- [main] c.m.patientapi.PatientServiceImplTest    : Starting PatientServiceImplTest using Java 22.0.1 with PID 28028 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-05-28T21:31:24.020+02:00  INFO 28028 --- [main] c.m.patientapi.PatientServiceImplTest    : The following 1 profile is active: "test"
+2025-05-28T21:31:24.699+02:00  INFO 28028 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-28T21:31:24.712+02:00  INFO 28028 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interface.
+2025-05-28T21:31:24.807+02:00  INFO 28028 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=bd4cf51b-8284-39b8-bc35-e2c7315255a3
+2025-05-28T21:31:24.932+02:00  INFO 28028 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-28T21:31:24.937+02:00  INFO 28028 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-28T21:31:24.953+02:00  INFO 28028 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-28T21:31:24.954+02:00  INFO 28028 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-05-28T21:31:24.957+02:00  INFO 28028 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2025-05-28T21:31:24.957+02:00  INFO 28028 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-05-28T21:31:24.958+02:00  WARN 28028 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-28T21:31:24.959+02:00  INFO 28028 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-28T21:31:25.007+02:00  INFO 28028 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-28T21:31:25.011+02:00  INFO 28028 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:31:25.956+02:00  INFO 28028 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-28T21:31:26.025+02:00  WARN 28028 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-28T21:31:26.069+02:00  INFO 28028 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-28T21:31:26.100+02:00  INFO 28028 --- [main] c.m.patientapi.PatientServiceImplTest    : Started PatientServiceImplTest in 2.155 seconds (process running for 20.508)
+2025-05-28T21:31:26.448+02:00  INFO 28028 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:31:26.452+02:00  INFO 28028 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-28T21:31:26.474+02:00  INFO 28028 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-28T21:31:26.480+02:00  INFO 28028 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:31:26.485+02:00  INFO 28028 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-05-28T21:31:26.487+02:00  INFO 28028 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-05-28T21:31:26.492+02:00  INFO 28028 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:31:26.493+02:00  INFO 28028 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-05-28T21:31:26.494+02:00  INFO 28028 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-05-28T21:40:05.543+02:00  INFO 14500 --- [main] c.m.p.PatientApiApplicationTests         : Starting PatientApiApplicationTests using Java 22.0.1 with PID 14500 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-05-28T21:40:05.546+02:00  INFO 14500 --- [main] c.m.p.PatientApiApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2025-05-28T21:40:07.254+02:00  INFO 14500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-28T21:40:07.434+02:00  INFO 14500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 165 ms. Found 1 JPA repository interface.
+2025-05-28T21:40:07.842+02:00  INFO 14500 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0249f444-86b1-36e3-9a7a-34b381fceb7d
+2025-05-28T21:40:08.664+02:00  INFO 14500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-28T21:40:08.934+02:00  INFO 14500 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@785d6a98
+2025-05-28T21:40:08.936+02:00  INFO 14500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-28T21:40:09.219+02:00  INFO 14500 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-28T21:40:09.343+02:00  INFO 14500 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-28T21:40:09.419+02:00  INFO 14500 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-28T21:40:09.755+02:00  INFO 14500 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-28T21:40:09.832+02:00  WARN 14500 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-05-28T21:40:09.848+02:00  INFO 14500 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-28T21:40:10.751+02:00  INFO 14500 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-28T21:40:10.801+02:00  INFO 14500 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:40:13.936+02:00  INFO 14500 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-28T21:40:14.067+02:00  WARN 14500 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-28T21:40:14.131+02:00  INFO 14500 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-28T21:40:14.281+02:00  INFO 14500 --- [main] c.m.p.PatientApiApplicationTests         : Started PatientApiApplicationTests in 9.381 seconds (process running for 10.818)
+2025-05-28T21:40:15.065+02:00  INFO 14500 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mediLabo.patientapi.PatientControllerTest]: PatientControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-05-28T21:40:15.090+02:00  INFO 14500 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mediLabo.patientapi.PatientApiApplication for test class com.mediLabo.patientapi.PatientControllerTest
+2025-05-28T21:40:15.094+02:00  INFO 14500 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2025-05-28T21:40:15.196+02:00  INFO 14500 --- [main] c.m.patientapi.PatientControllerTest     : Starting PatientControllerTest using Java 22.0.1 with PID 14500 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-05-28T21:40:15.197+02:00  INFO 14500 --- [main] c.m.patientapi.PatientControllerTest     : The following 1 profile is active: "test"
+2025-05-28T21:40:15.700+02:00  INFO 14500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-28T21:40:15.714+02:00  INFO 14500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interface.
+2025-05-28T21:40:15.822+02:00  INFO 14500 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=707034e8-dd83-36bd-94fe-934cb8d0b815
+2025-05-28T21:40:16.504+02:00  INFO 14500 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-28T21:40:16.512+02:00  INFO 14500 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-28T21:40:16.543+02:00  INFO 14500 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-28T21:40:16.545+02:00  INFO 14500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-05-28T21:40:17.111+02:00  INFO 14500 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-05-28T21:40:17.113+02:00  INFO 14500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-05-28T21:40:17.137+02:00  WARN 14500 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-28T21:40:17.154+02:00  INFO 14500 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-28T21:40:17.368+02:00  INFO 14500 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-28T21:40:17.427+02:00  INFO 14500 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:40:18.860+02:00  INFO 14500 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-05-28T21:40:18.861+02:00  INFO 14500 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-05-28T21:40:18.870+02:00  INFO 14500 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-28T21:40:18.883+02:00  INFO 14500 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 22 ms
+2025-05-28T21:40:19.156+02:00  INFO 14500 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-28T21:40:19.237+02:00  WARN 14500 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-28T21:40:19.305+02:00  INFO 14500 --- [main] c.m.patientapi.PatientControllerTest     : Started PatientControllerTest in 4.211 seconds (process running for 15.843)
+2025-05-28T21:40:19.551+02:00  INFO 14500 --- [main] c.m.p.controllers.PatientController      : Receive GET /api/patients/1: PatientApi use RestController to send PatientDto by ID
+2025-05-28T21:40:19.803+02:00  INFO 14500 --- [main] c.m.p.controllers.PatientController      : Receive GET /api/patients: PatientApi use RestController to send list of PatientDto
+2025-05-28T21:40:19.850+02:00  INFO 14500 --- [main] c.m.p.controllers.PatientController      : Receive GET /api/patients/name/Test: PatientApi use RestController to send PatientDto by name
+2025-05-28T21:40:19.984+02:00  INFO 14500 --- [main] c.m.p.controllers.PatientController      : Receive POST /api/patients: PatientDto PatientDto(id=1, nom=Test, prenom=Jean, dateAnniversaire=1990-01-01, genre=M, adresse=123 rue Test, telephone=0000000000) - PatientApi use RestController to create Patient
+2025-05-28T21:40:20.013+02:00  INFO 14500 --- [main] c.m.p.controllers.PatientController      : Receive PUT /api/patients/1: PatientDto PatientDto(id=1, nom=Test, prenom=Jean, dateAnniversaire=1990-01-01, genre=M, adresse=123 rue Test, telephone=0000000000) - PatientApi use RestController to update Patient
+2025-05-28T21:40:20.041+02:00  INFO 14500 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mediLabo.patientapi.PatientServiceImplTest]: PatientServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-05-28T21:40:20.045+02:00  INFO 14500 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mediLabo.patientapi.PatientApiApplication for test class com.mediLabo.patientapi.PatientServiceImplTest
+2025-05-28T21:40:20.053+02:00  INFO 14500 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2025-05-28T21:40:20.137+02:00  INFO 14500 --- [main] c.m.patientapi.PatientServiceImplTest    : Starting PatientServiceImplTest using Java 22.0.1 with PID 14500 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-05-28T21:40:20.138+02:00  INFO 14500 --- [main] c.m.patientapi.PatientServiceImplTest    : The following 1 profile is active: "test"
+2025-05-28T21:40:20.805+02:00  INFO 14500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-28T21:40:20.823+02:00  INFO 14500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 1 JPA repository interface.
+2025-05-28T21:40:20.923+02:00  INFO 14500 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=bd4cf51b-8284-39b8-bc35-e2c7315255a3
+2025-05-28T21:40:21.068+02:00  INFO 14500 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-28T21:40:21.074+02:00  INFO 14500 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-28T21:40:21.094+02:00  INFO 14500 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-28T21:40:21.097+02:00  INFO 14500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-05-28T21:40:21.099+02:00  INFO 14500 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2025-05-28T21:40:21.099+02:00  INFO 14500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-05-28T21:40:21.100+02:00  WARN 14500 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-28T21:40:21.101+02:00  INFO 14500 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-28T21:40:21.151+02:00  INFO 14500 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-28T21:40:21.157+02:00  INFO 14500 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:40:22.155+02:00  INFO 14500 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-28T21:40:22.255+02:00  WARN 14500 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-28T21:40:22.301+02:00  INFO 14500 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-28T21:40:22.352+02:00  INFO 14500 --- [main] c.m.patientapi.PatientServiceImplTest    : Started PatientServiceImplTest in 2.3 seconds (process running for 18.89)
+2025-05-28T21:40:22.785+02:00  INFO 14500 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:40:22.790+02:00  INFO 14500 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-28T21:40:22.811+02:00  INFO 14500 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-28T21:40:22.821+02:00  INFO 14500 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:40:22.828+02:00  INFO 14500 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-05-28T21:40:22.830+02:00  INFO 14500 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-05-28T21:40:22.836+02:00  INFO 14500 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:40:22.837+02:00  INFO 14500 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-05-28T21:40:22.839+02:00  INFO 14500 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-05-28T21:45:11.049+02:00  INFO 20132 --- [restartedMain] c.m.patientapi.PatientApiApplication     : Starting PatientApiApplication using Java 22.0.1 with PID 20132 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-05-28T21:45:11.051+02:00  INFO 20132 --- [restartedMain] c.m.patientapi.PatientApiApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-05-28T21:45:11.105+02:00  INFO 20132 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-28T21:45:11.105+02:00  INFO 20132 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-28T21:45:12.155+02:00  INFO 20132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-28T21:45:12.283+02:00  INFO 20132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117 ms. Found 1 JPA repository interface.
+2025-05-28T21:45:12.499+02:00  INFO 20132 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a5c9fe1f-87de-36a0-aa60-f72de8b04cf1
+2025-05-28T21:45:13.193+02:00  INFO 20132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2025-05-28T21:45:13.209+02:00  INFO 20132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-28T21:45:13.209+02:00  INFO 20132 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-28T21:45:13.257+02:00  INFO 20132 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-28T21:45:13.258+02:00  INFO 20132 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2152 ms
+2025-05-28T21:45:13.503+02:00  INFO 20132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-28T21:45:13.695+02:00  INFO 20132 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@416c5043
+2025-05-28T21:45:13.698+02:00  INFO 20132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-28T21:45:13.811+02:00  INFO 20132 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-28T21:45:13.862+02:00  INFO 20132 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-28T21:45:13.904+02:00  INFO 20132 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-28T21:45:14.176+02:00  INFO 20132 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-28T21:45:14.245+02:00  WARN 20132 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-05-28T21:45:14.260+02:00  INFO 20132 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-28T21:45:14.996+02:00  INFO 20132 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-28T21:45:15.071+02:00  INFO 20132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:45:16.628+02:00  INFO 20132 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/medilaboDB'
+2025-05-28T21:45:16.684+02:00  INFO 20132 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-28T21:45:16.727+02:00  INFO 20132 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-28T21:45:16.808+02:00  WARN 20132 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-28T21:45:16.852+02:00  INFO 20132 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-28T21:45:17.007+02:00  INFO 20132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
+2025-05-28T21:45:17.028+02:00  INFO 20132 --- [restartedMain] c.m.patientapi.PatientApiApplication     : Started PatientApiApplication in 6.453 seconds (process running for 7.342)
+2025-05-28T21:45:17.656+02:00  INFO 20132 --- [RMI TCP Connection(10)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-28T21:45:17.657+02:00  INFO 20132 --- [RMI TCP Connection(10)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-28T21:45:17.658+02:00  INFO 20132 --- [RMI TCP Connection(10)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-28T21:53:17.526+02:00  INFO 20132 --- [RMI TCP Connection(19)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-05-28T21:53:17.530+02:00  INFO 20132 --- [RMI TCP Connection(19)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-28T21:53:17.542+02:00  INFO 20132 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-28T21:53:17.583+02:00  INFO 20132 --- [RMI TCP Connection(19)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:53:17.586+02:00  INFO 20132 --- [RMI TCP Connection(19)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-28T21:53:17.596+02:00  INFO 20132 --- [RMI TCP Connection(19)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-28T21:53:38.605+02:00  INFO 18624 --- [main] c.m.p.PatientApiApplicationTests         : Starting PatientApiApplicationTests using Java 22.0.1 with PID 18624 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-05-28T21:53:38.608+02:00  INFO 18624 --- [main] c.m.p.PatientApiApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2025-05-28T21:53:40.084+02:00  INFO 18624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-28T21:53:40.251+02:00  INFO 18624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 152 ms. Found 1 JPA repository interface.
+2025-05-28T21:53:40.691+02:00  INFO 18624 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0249f444-86b1-36e3-9a7a-34b381fceb7d
+2025-05-28T21:53:41.474+02:00  INFO 18624 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-28T21:53:41.792+02:00  INFO 18624 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@279e1422
+2025-05-28T21:53:41.794+02:00  INFO 18624 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-28T21:53:41.976+02:00  INFO 18624 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-28T21:53:42.079+02:00  INFO 18624 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-28T21:53:42.125+02:00  INFO 18624 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-28T21:53:42.484+02:00  INFO 18624 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-28T21:53:42.559+02:00  WARN 18624 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-05-28T21:53:42.583+02:00  INFO 18624 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-28T21:53:43.527+02:00  INFO 18624 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-28T21:53:43.582+02:00  INFO 18624 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:53:46.387+02:00  INFO 18624 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-28T21:53:46.487+02:00  WARN 18624 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-28T21:53:46.558+02:00  INFO 18624 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-28T21:53:46.710+02:00  INFO 18624 --- [main] c.m.p.PatientApiApplicationTests         : Started PatientApiApplicationTests in 8.737 seconds (process running for 10.35)
+2025-05-28T21:53:47.496+02:00  INFO 18624 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mediLabo.patientapi.PatientControllerTest]: PatientControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-05-28T21:53:47.509+02:00  INFO 18624 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mediLabo.patientapi.PatientApiApplication for test class com.mediLabo.patientapi.PatientControllerTest
+2025-05-28T21:53:47.516+02:00  INFO 18624 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2025-05-28T21:53:47.588+02:00  INFO 18624 --- [main] c.m.patientapi.PatientControllerTest     : Starting PatientControllerTest using Java 22.0.1 with PID 18624 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-05-28T21:53:47.589+02:00  INFO 18624 --- [main] c.m.patientapi.PatientControllerTest     : The following 1 profile is active: "test"
+2025-05-28T21:53:47.914+02:00  INFO 18624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-28T21:53:47.924+02:00  INFO 18624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 1 JPA repository interface.
+2025-05-28T21:53:48.033+02:00  INFO 18624 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=707034e8-dd83-36bd-94fe-934cb8d0b815
+2025-05-28T21:53:48.605+02:00  INFO 18624 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-28T21:53:48.609+02:00  INFO 18624 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-28T21:53:48.628+02:00  INFO 18624 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-28T21:53:48.630+02:00  INFO 18624 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-05-28T21:53:48.982+02:00  INFO 18624 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-05-28T21:53:48.984+02:00  INFO 18624 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-05-28T21:53:49.002+02:00  WARN 18624 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-28T21:53:49.014+02:00  INFO 18624 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-28T21:53:49.162+02:00  INFO 18624 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-28T21:53:49.198+02:00  INFO 18624 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:53:50.384+02:00  INFO 18624 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-05-28T21:53:50.384+02:00  INFO 18624 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-05-28T21:53:50.396+02:00  INFO 18624 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-28T21:53:50.409+02:00  INFO 18624 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 24 ms
+2025-05-28T21:53:50.623+02:00  INFO 18624 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-28T21:53:50.699+02:00  WARN 18624 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-28T21:53:50.764+02:00  INFO 18624 --- [main] c.m.patientapi.PatientControllerTest     : Started PatientControllerTest in 3.25 seconds (process running for 14.404)
+2025-05-28T21:53:50.967+02:00  INFO 18624 --- [main] c.m.p.controllers.PatientController      : Receive GET /api/patients/1: PatientApi use RestController to send PatientDto by ID
+2025-05-28T21:53:51.145+02:00  INFO 18624 --- [main] c.m.p.controllers.PatientController      : Receive GET /api/patients: PatientApi use RestController to send list of PatientDto
+2025-05-28T21:53:51.181+02:00  INFO 18624 --- [main] c.m.p.controllers.PatientController      : Receive GET /api/patients/name/Test: PatientApi use RestController to send PatientDto by name
+2025-05-28T21:53:51.263+02:00  INFO 18624 --- [main] c.m.p.controllers.PatientController      : Receive POST /api/patients: PatientDto PatientDto(id=1, nom=Test, prenom=Jean, dateAnniversaire=1990-01-01, genre=M, adresse=123 rue Test, telephone=0000000000) - PatientApi use RestController to create Patient
+2025-05-28T21:53:51.280+02:00  INFO 18624 --- [main] c.m.p.controllers.PatientController      : Receive PUT /api/patients/1: PatientDto PatientDto(id=1, nom=Test, prenom=Jean, dateAnniversaire=1990-01-01, genre=M, adresse=123 rue Test, telephone=0000000000) - PatientApi use RestController to update Patient
+2025-05-28T21:53:51.301+02:00  INFO 18624 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mediLabo.patientapi.PatientServiceImplTest]: PatientServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-05-28T21:53:51.305+02:00  INFO 18624 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mediLabo.patientapi.PatientApiApplication for test class com.mediLabo.patientapi.PatientServiceImplTest
+2025-05-28T21:53:51.309+02:00  INFO 18624 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2025-05-28T21:53:51.364+02:00  INFO 18624 --- [main] c.m.patientapi.PatientServiceImplTest    : Starting PatientServiceImplTest using Java 22.0.1 with PID 18624 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-05-28T21:53:51.365+02:00  INFO 18624 --- [main] c.m.patientapi.PatientServiceImplTest    : The following 1 profile is active: "test"
+2025-05-28T21:53:51.755+02:00  INFO 18624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-28T21:53:51.766+02:00  INFO 18624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 1 JPA repository interface.
+2025-05-28T21:53:51.883+02:00  INFO 18624 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=bd4cf51b-8284-39b8-bc35-e2c7315255a3
+2025-05-28T21:53:51.963+02:00  INFO 18624 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-28T21:53:51.967+02:00  INFO 18624 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-28T21:53:51.988+02:00  INFO 18624 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-28T21:53:51.989+02:00  INFO 18624 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-05-28T21:53:51.991+02:00  INFO 18624 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2025-05-28T21:53:51.992+02:00  INFO 18624 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-05-28T21:53:51.992+02:00  WARN 18624 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-28T21:53:51.993+02:00  INFO 18624 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-28T21:53:52.023+02:00  INFO 18624 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-28T21:53:52.027+02:00  INFO 18624 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:53:52.802+02:00  INFO 18624 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-28T21:53:52.856+02:00  WARN 18624 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-28T21:53:52.886+02:00  INFO 18624 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-28T21:53:52.927+02:00  INFO 18624 --- [main] c.m.patientapi.PatientServiceImplTest    : Started PatientServiceImplTest in 1.619 seconds (process running for 16.568)
+2025-05-28T21:53:53.223+02:00  INFO 18624 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:53:53.227+02:00  INFO 18624 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-28T21:53:53.240+02:00  INFO 18624 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-28T21:53:53.248+02:00  INFO 18624 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:53:53.252+02:00  INFO 18624 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-05-28T21:53:53.253+02:00  INFO 18624 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-05-28T21:53:53.258+02:00  INFO 18624 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T21:53:53.259+02:00  INFO 18624 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-05-28T21:53:53.260+02:00  INFO 18624 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-05-28T22:44:06.614+02:00  INFO 17336 --- [restartedMain] c.m.patientapi.PatientApiApplication     : Starting PatientApiApplication using Java 22.0.1 with PID 17336 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-05-28T22:44:06.617+02:00  INFO 17336 --- [restartedMain] c.m.patientapi.PatientApiApplication     : The following 1 profile is active: "dev"
+2025-05-28T22:44:06.671+02:00  INFO 17336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-28T22:44:06.672+02:00  INFO 17336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-28T22:44:07.729+02:00  INFO 17336 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-28T22:44:07.854+02:00  INFO 17336 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 1 JPA repository interface.
+2025-05-28T22:44:08.100+02:00  INFO 17336 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a5c9fe1f-87de-36a0-aa60-f72de8b04cf1
+2025-05-28T22:44:08.782+02:00  INFO 17336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2025-05-28T22:44:08.795+02:00  INFO 17336 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-28T22:44:08.795+02:00  INFO 17336 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-28T22:44:08.845+02:00  INFO 17336 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-28T22:44:08.846+02:00  INFO 17336 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2174 ms
+2025-05-28T22:44:09.091+02:00  INFO 17336 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-28T22:44:09.260+02:00  INFO 17336 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@52183d1a
+2025-05-28T22:44:09.262+02:00  INFO 17336 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-28T22:44:09.361+02:00  INFO 17336 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-28T22:44:09.409+02:00  INFO 17336 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-28T22:44:09.444+02:00  INFO 17336 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-28T22:44:09.724+02:00  INFO 17336 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-28T22:44:09.793+02:00  WARN 17336 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-05-28T22:44:09.809+02:00  INFO 17336 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-28T22:44:10.622+02:00  INFO 17336 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-28T22:44:10.683+02:00  INFO 17336 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T22:44:12.357+02:00  INFO 17336 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/medilaboDB'
+2025-05-28T22:44:12.439+02:00  WARN 17336 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-28T22:44:12.487+02:00  INFO 17336 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-28T22:44:12.560+02:00  WARN 17336 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-28T22:44:12.604+02:00  INFO 17336 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-28T22:44:12.757+02:00  INFO 17336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
+2025-05-28T22:44:12.781+02:00  INFO 17336 --- [restartedMain] c.m.patientapi.PatientApiApplication     : Started PatientApiApplication in 6.688 seconds (process running for 7.634)
+2025-05-28T22:44:13.177+02:00  INFO 17336 --- [RMI TCP Connection(6)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-28T22:44:13.178+02:00  INFO 17336 --- [RMI TCP Connection(6)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-28T22:44:13.179+02:00  INFO 17336 --- [RMI TCP Connection(6)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-28T22:44:18.468+02:00  INFO 17336 --- [http-nio-5000-exec-1] c.m.p.controllers.PatientController      : Receive GET /api/patients: PatientApi use RestController to send list of PatientDto
+2025-05-28T22:48:20.094+02:00  INFO 17336 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-05-28T22:48:20.100+02:00  INFO 17336 --- [Thread-1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-28T22:48:20.110+02:00  INFO 17336 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-28T22:48:20.149+02:00  INFO 17336 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T22:48:20.154+02:00  INFO 17336 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-28T22:48:20.162+02:00  INFO 17336 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-28T22:48:20.283+02:00  INFO 17336 --- [restartedMain] c.m.patientapi.PatientApiApplication     : Starting PatientApiApplication using Java 22.0.1 with PID 17336 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-05-28T22:48:20.284+02:00  INFO 17336 --- [restartedMain] c.m.patientapi.PatientApiApplication     : The following 1 profile is active: "dev"
+2025-05-28T22:48:20.602+02:00  INFO 17336 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-28T22:48:20.616+02:00  INFO 17336 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interface.
+2025-05-28T22:48:20.686+02:00  INFO 17336 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a5c9fe1f-87de-36a0-aa60-f72de8b04cf1
+2025-05-28T22:48:20.834+02:00  INFO 17336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2025-05-28T22:48:20.836+02:00  INFO 17336 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-28T22:48:20.836+02:00  INFO 17336 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-28T22:48:20.865+02:00  INFO 17336 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-28T22:48:20.865+02:00  INFO 17336 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 579 ms
+2025-05-28T22:48:20.962+02:00  INFO 17336 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-05-28T22:48:20.968+02:00  INFO 17336 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c2b2496
+2025-05-28T22:48:20.968+02:00  INFO 17336 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-05-28T22:48:20.995+02:00  INFO 17336 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-28T22:48:20.999+02:00  INFO 17336 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-28T22:48:21.010+02:00  INFO 17336 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-28T22:48:21.013+02:00  WARN 17336 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-05-28T22:48:21.014+02:00  INFO 17336 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-28T22:48:21.068+02:00  INFO 17336 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-28T22:48:21.088+02:00  INFO 17336 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T22:48:21.722+02:00  INFO 17336 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/medilaboDB'
+2025-05-28T22:48:21.746+02:00  WARN 17336 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-28T22:48:21.777+02:00  INFO 17336 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-28T22:48:21.817+02:00  WARN 17336 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-28T22:48:21.840+02:00  INFO 17336 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-28T22:48:21.881+02:00  INFO 17336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
+2025-05-28T22:48:21.899+02:00  INFO 17336 --- [restartedMain] c.m.patientapi.PatientApiApplication     : Started PatientApiApplication in 1.675 seconds (process running for 256.752)
+2025-05-28T22:48:21.904+02:00  INFO 17336 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-28T22:48:37.506+02:00  INFO 17336 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-28T22:48:37.509+02:00  INFO 17336 --- [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-28T22:48:37.521+02:00  INFO 17336 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-28T22:48:37.525+02:00  INFO 17336 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T22:48:37.525+02:00  INFO 17336 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-05-28T22:48:37.528+02:00  INFO 17336 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-05-28T22:48:37.618+02:00  INFO 17336 --- [restartedMain] c.m.patientapi.PatientApiApplication     : Starting PatientApiApplication using Java 22.0.1 with PID 17336 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-05-28T22:48:37.618+02:00  INFO 17336 --- [restartedMain] c.m.patientapi.PatientApiApplication     : The following 1 profile is active: "dev"
+2025-05-28T22:48:37.906+02:00  INFO 17336 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-28T22:48:37.916+02:00  INFO 17336 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 1 JPA repository interface.
+2025-05-28T22:48:38.000+02:00  INFO 17336 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a5c9fe1f-87de-36a0-aa60-f72de8b04cf1
+2025-05-28T22:48:38.127+02:00  INFO 17336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2025-05-28T22:48:38.128+02:00  INFO 17336 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-28T22:48:38.128+02:00  INFO 17336 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-28T22:48:38.181+02:00  INFO 17336 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-28T22:48:38.182+02:00  INFO 17336 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 562 ms
+2025-05-28T22:48:38.290+02:00  INFO 17336 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-05-28T22:48:38.295+02:00  INFO 17336 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7fa41b4c
+2025-05-28T22:48:38.295+02:00  INFO 17336 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-05-28T22:48:38.322+02:00  INFO 17336 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-28T22:48:38.324+02:00  INFO 17336 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-28T22:48:38.334+02:00  INFO 17336 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-28T22:48:38.336+02:00  WARN 17336 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-05-28T22:48:38.337+02:00  INFO 17336 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-28T22:48:38.386+02:00  INFO 17336 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-28T22:48:38.402+02:00  INFO 17336 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T22:48:39.079+02:00  INFO 17336 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/medilaboDB'
+2025-05-28T22:48:39.117+02:00  WARN 17336 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-28T22:48:39.160+02:00  INFO 17336 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-28T22:48:39.200+02:00  WARN 17336 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-28T22:48:39.221+02:00  INFO 17336 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-28T22:48:39.264+02:00  INFO 17336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
+2025-05-28T22:48:39.285+02:00  INFO 17336 --- [restartedMain] c.m.patientapi.PatientApiApplication     : Started PatientApiApplication in 1.705 seconds (process running for 274.138)
+2025-05-28T22:48:39.288+02:00  INFO 17336 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-28T22:52:39.112+02:00  INFO 17336 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-28T22:52:39.115+02:00  INFO 17336 --- [Thread-13] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-28T22:52:39.127+02:00  INFO 17336 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-28T22:52:39.132+02:00  INFO 17336 --- [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T22:52:39.133+02:00  INFO 17336 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-05-28T22:52:39.137+02:00  INFO 17336 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-05-28T22:52:39.248+02:00  INFO 17336 --- [restartedMain] c.m.patientapi.PatientApiApplication     : Starting PatientApiApplication using Java 22.0.1 with PID 17336 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-05-28T22:52:39.249+02:00  INFO 17336 --- [restartedMain] c.m.patientapi.PatientApiApplication     : The following 1 profile is active: "dev"
+2025-05-28T22:52:39.559+02:00  INFO 17336 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-28T22:52:39.582+02:00  INFO 17336 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interface.
+2025-05-28T22:52:39.690+02:00  INFO 17336 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a5c9fe1f-87de-36a0-aa60-f72de8b04cf1
+2025-05-28T22:52:39.815+02:00  INFO 17336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2025-05-28T22:52:39.816+02:00  INFO 17336 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-28T22:52:39.816+02:00  INFO 17336 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-28T22:52:39.875+02:00  INFO 17336 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-28T22:52:39.876+02:00  INFO 17336 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 626 ms
+2025-05-28T22:52:39.972+02:00  INFO 17336 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-05-28T22:52:39.978+02:00  INFO 17336 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b062a88
+2025-05-28T22:52:39.978+02:00  INFO 17336 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-05-28T22:52:40.004+02:00  INFO 17336 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-28T22:52:40.006+02:00  INFO 17336 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-28T22:52:40.016+02:00  INFO 17336 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-28T22:52:40.019+02:00  WARN 17336 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-05-28T22:52:40.020+02:00  INFO 17336 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-28T22:52:40.070+02:00  INFO 17336 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-28T22:52:40.086+02:00  INFO 17336 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T22:52:40.878+02:00  INFO 17336 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/medilaboDB'
+2025-05-28T22:52:40.919+02:00  WARN 17336 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-28T22:52:40.952+02:00  INFO 17336 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-28T22:52:40.991+02:00  WARN 17336 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-28T22:52:41.010+02:00  INFO 17336 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-28T22:52:41.050+02:00  INFO 17336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
+2025-05-28T22:52:41.069+02:00  INFO 17336 --- [restartedMain] c.m.patientapi.PatientApiApplication     : Started PatientApiApplication in 1.871 seconds (process running for 515.922)
+2025-05-28T22:52:41.074+02:00  INFO 17336 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-28T22:53:48.168+02:00  INFO 17336 --- [RMI TCP Connection(24)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-05-28T22:53:48.170+02:00  INFO 17336 --- [RMI TCP Connection(24)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-28T22:53:48.188+02:00  INFO 17336 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-28T22:53:48.192+02:00  INFO 17336 --- [RMI TCP Connection(24)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T22:53:48.192+02:00  INFO 17336 --- [RMI TCP Connection(24)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-05-28T22:53:48.196+02:00  INFO 17336 --- [RMI TCP Connection(24)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-05-28T23:12:37.600+02:00  INFO 27468 --- [restartedMain] c.m.patientapi.PatientApiApplication     : Starting PatientApiApplication using Java 22.0.1 with PID 27468 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-05-28T23:12:37.605+02:00  INFO 27468 --- [restartedMain] c.m.patientapi.PatientApiApplication     : The following 1 profile is active: "dev"
+2025-05-28T23:12:37.677+02:00  INFO 27468 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-28T23:12:37.678+02:00  INFO 27468 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-28T23:12:38.931+02:00  INFO 27468 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-28T23:12:39.056+02:00  INFO 27468 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117 ms. Found 1 JPA repository interface.
+2025-05-28T23:12:39.348+02:00  INFO 27468 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a5c9fe1f-87de-36a0-aa60-f72de8b04cf1
+2025-05-28T23:12:40.027+02:00  INFO 27468 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2025-05-28T23:12:40.041+02:00  INFO 27468 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-28T23:12:40.041+02:00  INFO 27468 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-28T23:12:40.094+02:00  INFO 27468 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-28T23:12:40.095+02:00  INFO 27468 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2417 ms
+2025-05-28T23:12:40.405+02:00  INFO 27468 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-28T23:12:40.570+02:00  INFO 27468 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e588744
+2025-05-28T23:12:40.572+02:00  INFO 27468 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-28T23:12:40.674+02:00  INFO 27468 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-28T23:12:40.722+02:00  INFO 27468 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-28T23:12:40.761+02:00  INFO 27468 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-28T23:12:41.082+02:00  INFO 27468 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-28T23:12:41.176+02:00  WARN 27468 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-05-28T23:12:41.206+02:00  INFO 27468 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-28T23:12:42.005+02:00  INFO 27468 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-28T23:12:42.057+02:00  INFO 27468 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T23:12:43.953+02:00  INFO 27468 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/medilaboDB'
+2025-05-28T23:12:44.009+02:00  WARN 27468 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-28T23:12:44.053+02:00  INFO 27468 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-28T23:12:44.144+02:00  WARN 27468 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-28T23:12:44.188+02:00  INFO 27468 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-28T23:12:44.403+02:00  INFO 27468 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
+2025-05-28T23:12:44.453+02:00  INFO 27468 --- [restartedMain] c.m.patientapi.PatientApiApplication     : Started PatientApiApplication in 7.45 seconds (process running for 8.47)
+2025-05-28T23:12:44.997+02:00  INFO 27468 --- [RMI TCP Connection(6)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-28T23:12:44.998+02:00  INFO 27468 --- [RMI TCP Connection(6)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-28T23:12:45.000+02:00  INFO 27468 --- [RMI TCP Connection(6)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-05-28T23:12:45.706+02:00  INFO 27468 --- [http-nio-5000-exec-1] c.m.p.controllers.PatientController      : Receive GET /api/patients: PatientApi use RestController to send list of PatientDto
+2025-05-28T23:14:10.118+02:00  INFO 27468 --- [RMI TCP Connection(9)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-05-28T23:14:10.124+02:00  INFO 27468 --- [RMI TCP Connection(9)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-28T23:14:10.147+02:00  INFO 27468 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-28T23:14:10.182+02:00  INFO 27468 --- [RMI TCP Connection(9)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-28T23:14:10.187+02:00  INFO 27468 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-28T23:14:10.198+02:00  INFO 27468 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
