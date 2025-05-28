@@ -1,0 +1,26 @@
+server:
+  port: 5005  # Port du gateway
+
+spring:
+  application:
+    name: gatewayapi
+
+  cloud:
+    config:
+      enabled: false
+    discovery:
+      enabled: false
+    gateway:
+      routes:
+        - id: patientapi
+          uri: http://localhost:5000
+          predicates:
+            - Path=/api/patients/**
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    gateway:
+      access: unrestricted
