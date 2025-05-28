@@ -1,0 +1,38 @@
+server:
+  port: 5000
+
+spring:
+  cloud:
+    config:
+      enabled: false
+    discovery:
+      enabled: false
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/medilaboDB
+    username: root
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: false
+    show-sql: true
+    open-in-view: true
+
+  sql:
+    init:
+      mode: always
+      data-locations:
+        - classpath:data.sql
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+
+logging:
+  file:
+    name: logs/mediLaboPatientApi.log

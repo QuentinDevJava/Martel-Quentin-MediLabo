@@ -1,0 +1,120 @@
+package com.mediLabo.patientapi;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
+
+import com.mediLabo.patientapi.dto.PatientDto;
+import com.mediLabo.patientapi.entities.Patient;
+import com.mediLabo.patientapi.mapper.PatientMapper;
+import com.mediLabo.patientapi.repository.PatientRepository;
+import com.mediLabo.patientapi.service.PatientServiceImpl;
+
+@ActiveProfiles("test")
+@SpringBootTest
+class PatientServiceImplTest {
+
+	@Mock
+	private PatientRepository patientRepository;
+
+	private PatientMapper patientMapper = new PatientMapper();
+
+	private PatientServiceImpl patientServiceImpl;
+
+	private Patient testPatient;
+	private PatientDto testPatientDto;
+
+	@BeforeEach
+	void setUp() {
+		patientServiceImpl = new PatientServiceImpl(patientRepository, patientMapper);
+
+		testPatient = new Patient();
+		testPatient.setId(1);
+		testPatient.setNom("Test");
+		testPatient.setPrenom("Jean");
+		testPatient.setDateAnniversaire(LocalDate.of(1990, 1, 1));
+		testPatient.setGenre("M");
+		testPatient.setAdresse("123 rue Test");
+		testPatient.setTelephone("0000000000");
+
+		testPatientDto = new PatientDto();
+		testPatientDto.setId(1);
+		testPatientDto.setNom("Test");
+		testPatientDto.setPrenom("Jean");
+		testPatientDto.setDateAnniversaire(LocalDate.of(1990, 1, 1));
+		testPatientDto.setGenre("M");
+		testPatientDto.setAdresse("123 rue Test");
+		testPatientDto.setTelephone("0000000000");
+	}
+
+	@Test
+	void testGetPatientById() {
+		when(patientRepository.findById(1)).thenReturn(testPatient);
+
+		PatientDto result = patientServiceImpl.getPatientById(1);
+
+		assertEquals("Test", result.getNom());
+		assertEquals("Jean", result.getPrenom());
+		verify(patientRepository).findById(1);
+	}
+
+	@Test
+	void testGetPatientByName() {
+		when(patientRepository.findByNom("Test")).thenReturn(testPatient);
+
+		PatientDto result = patientServiceImpl.getPatientByName("Test");
+
+		assertEquals("Jean", result.getPrenom());
+		verify(patientRepository).findByNom("Test");
+	}
+
+	@Test
+	void testGetAllPatient() {
+		when(patientRepository.findAll()).thenReturn(List.of(testPatient));
+
+		List<PatientDto> result = patientServiceImpl.getAllPatient();
+
+		assertEquals(1, result.size());
+		assertEquals("Test", result.get(0).getNom());
+	}
+
+	@Test
+	void testAddPatient() {
+		when(patientRepository.save(any(Patient.class))).thenReturn(testPatient);
+
+		PatientDto result = patientServiceImpl.addPatient(testPatientDto);
+
+		assertEquals("Test", result.getNom());
+		verify(patientRepository).save(any(Patient.class));
+	}
+
+	@Test
+	void testUpdatePatient() {
+		when(patientRepository.findById(1)).thenReturn(testPatient);
+		when(patientRepository.save(any(Patient.class))).thenReturn(testPatient);
+
+		PatientDto updatedDto = new PatientDto();
+		updatedDto.setNom("Nouveau");
+		updatedDto.setPrenom("Prenom");
+		updatedDto.setDateAnniversaire(LocalDate.of(2000, 1, 1));
+		updatedDto.setGenre("F");
+		updatedDto.setAdresse("456 rue nouvelle");
+		updatedDto.setTelephone("9999999999");
+
+		PatientDto result = patientServiceImpl.updatePatient(1, updatedDto);
+
+		assertEquals("Nouveau", result.getNom());
+		assertEquals("Prenom", result.getPrenom());
+		verify(patientRepository).save(any(Patient.class));
+	}
+}
