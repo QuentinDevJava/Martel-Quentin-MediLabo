@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Détail du patient</title>
-</head>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: head(pageTitle='Détail du patient')}"></head>
 <body>
-    <h1>Détail du patient</h1>
-    <p><strong>Nom :</strong> <span th:text="${patient.nom}"></span></p>
-    <p><strong>Prénom :</strong> <span th:text="${patient.prenom}"></span></p>
-    <p><strong>Date de naissance :</strong> <span th:text="${patient.dateAnniversaire}"></span></p>
-    <p><strong>Genre :</strong> <span th:text="${patient.genre}"></span></p>
-    <p><strong>Adresse :</strong> <span th:text="${patient.adresse}"></span></p>
-    <p><strong>Téléphone :</strong> <span th:text="${patient.telephone}"></span></p>
-	<a th:href="@{'/patients/update/' + ${patient.id}}"> Mettre a jour</a>
-    <a href="/patients"> Retour à la liste</a>
+    <div class="container mt-5">
+        <h1 class="mb-4">Détail du patient</h1>
+
+        <ul class="list-group mb-3">
+            <li class="list-group-item"><strong>Nom :</strong> <span th:text="${patient.nom}">Nom</span></li>
+            <li class="list-group-item"><strong>Prénom :</strong> <span th:text="${patient.prenom}">Prénom</span></li>
+            <li class="list-group-item"><strong>Date de naissance :</strong> <span th:text="${patient.dateAnniversaire}">Date</span></li>
+            <li class="list-group-item"><strong>Genre :</strong> <span th:text="${patient.genre}">Genre</span></li>
+            <li class="list-group-item"><strong>Adresse :</strong> <span th:text="${patient.adresse}">Adresse</span></li>
+            <li class="list-group-item"><strong>Téléphone :</strong> <span th:text="${patient.telephone}">Téléphone</span></li>
+        </ul>
+
+        <a class="btn btn-primary me-2" th:href="@{'/patients/update/' + ${patient.id}}">Mettre à jour</a>
+        <a class="btn btn-secondary" href="/patients">Retour à la liste</a>
+    </div>
+
+    <footer th:replace="~{fragments/footer :: footer}"></footer>
 </body>
 </html>

@@ -1,26 +1,51 @@
 <!DOCTYPE html>
-<html lang="" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Mettre à jour un patient</title>
-</head>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: head(pageTitle='Mettre à jour un patient')}"></head>
 <body>
-    <h1>Mettre à jour un patient</h1>
-    <form th:action="@{'/patients/update/' + ${patient.id}}" th:object="${patient}" method="post">
-        <p>Nom : <input type="text" th:field="*{nom}" required/></p>
-        <p>Prénom : <input type="text" th:field="*{prenom}" required /></p>
-        <p>Date de naissance : <input type="date" id="date" name="dateAnniversaire" th:value="${#temporals.format(dateAnniversaire, 'yyyy-MM-dd')}" required /></p>
-        
-		<p>Genre : 
-            <select th:field="*{genre}" required>
-                <option value="M">Masculin</option>
-                <option value="F">Féminin</option>
-            </select>
-        </p>
-        <p>Adresse : <input type="text" th:field="*{adresse}" /></p>
-        <p>Téléphone : <input type="text" th:field="*{telephone}" /></p>
-        <p><button type="submit">Mettre à jour</button></p>
-    </form>
-    <a href="/patients">Retour à la liste</a>
+    <div class="container mt-5">
+        <h1 class="mb-4">Mettre à jour un patient</h1>
+
+        <form th:action="@{'/patients/update/' + ${patient.id}}" th:object="${patient}" method="post" class="row g-3">
+            <div class="col-md-6">
+                <label for="nom" class="form-label">Nom</label>
+                <input type="text" th:field="*{nom}" class="form-control" required />
+            </div>
+
+            <div class="col-md-6">
+                <label for="prenom" class="form-label">Prénom</label>
+                <input type="text" th:field="*{prenom}" class="form-control" required />
+            </div>
+
+            <div class="col-md-6">
+                <label for="dateAnniversaire" class="form-label">Date de naissance</label>
+                <input type="date" th:field="*{dateAnniversaire}" class="form-control" required />
+            </div>
+
+            <div class="col-md-6">
+                <label for="genre" class="form-label">Genre</label>
+                <select th:field="*{genre}" class="form-select" required>
+                    <option value="M">Masculin</option>
+                    <option value="F">Féminin</option>
+                </select>
+            </div>
+
+            <div class="col-md-12">
+                <label for="adresse" class="form-label">Adresse</label>
+                <input type="text" th:field="*{adresse}" class="form-control" />
+            </div>
+
+            <div class="col-md-6">
+                <label for="telephone" class="form-label">Téléphone</label>
+                <input type="text" th:field="*{telephone}" class="form-control" />
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Mettre à jour</button>
+                <a href="/patients" class="btn btn-secondary ms-2">Retour à la liste</a>
+            </div>
+        </form>
+    </div>
+
+    <footer th:replace="~{fragments/footer :: footer}"></footer>
 </body>
 </html>

@@ -1,24 +1,52 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Ajouter un patient</title>
-</head>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: head(pageTitle='Ajouter un patient')}"></head>
 <body>
-    <h1>Ajouter un patient</h1>
-    <form th:action="@{/patients/add}" th:object="${patient}" method="post">
-        <p>Nom : <input type="text" th:field="*{nom}" /></p>
-        <p>Prénom : <input type="text" th:field="*{prenom}" /></p>
-        <p>Date de naissance : <input type="date" th:field="*{dateAnniversaire}" /></p>
-        <p>Genre : 
-            <select th:field="*{genre}">
-                <option value="M">Masculin</option>
-                <option value="F">Féminin</option>
-            </select>
-        </p>
-        <p>Adresse : <input type="text" th:field="*{adresse}" /></p>
-        <p>Téléphone : <input type="text" th:field="*{telephone}" /></p>
-        <p><button type="submit">Ajouter</button></p>
-    </form>
-    <a href="/patients">Retour à la liste</a>
+    <div class="container mt-5">
+        <h1 class="mb-4">Ajouter un patient</h1>
+
+        <form th:action="@{/patients/add}" th:object="${patient}" method="post" class="row g-3">
+            <div class="col-md-6">
+                <label for="nom" class="form-label">Nom</label>
+                <input type="text" th:field="*{nom}" class="form-control" required />
+            </div>
+
+            <div class="col-md-6">
+                <label for="prenom" class="form-label">Prénom</label>
+                <input type="text" th:field="*{prenom}" class="form-control" required />
+            </div>
+
+            <div class="col-md-6">
+                <label for="dateAnniversaire" class="form-label">Date de naissance</label>
+                <input type="date" th:field="*{dateAnniversaire}" class="form-control" required />
+            </div>
+
+            <div class="col-md-6">
+                <label for="genre" class="form-label">Genre</label>
+                <select th:field="*{genre}" class="form-select" required>
+                    <option value="" disabled selected>Choisir...</option>
+                    <option value="M">Masculin</option>
+                    <option value="F">Féminin</option>
+                </select>
+            </div>
+
+            <div class="col-md-12">
+                <label for="adresse" class="form-label">Adresse</label>
+                <input type="text" th:field="*{adresse}" class="form-control" />
+            </div>
+
+            <div class="col-md-6">
+                <label for="telephone" class="form-label">Téléphone</label>
+                <input type="text" th:field="*{telephone}" class="form-control" />
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Ajouter</button>
+                <a href="/patients" class="btn btn-secondary ms-2">Retour à la liste</a>
+            </div>
+        </form>
+    </div>
+
+    <footer th:replace="~{fragments/footer :: footer}"></footer>
 </body>
 </html>
