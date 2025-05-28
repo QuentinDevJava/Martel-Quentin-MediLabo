@@ -1,4 +1,4 @@
-package com.mediLabo.patientapi;
+package com.mediLabo.patientapi.entities;
 
 import java.time.LocalDate;
 
