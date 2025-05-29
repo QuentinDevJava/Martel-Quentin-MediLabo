@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: head(pageTitle='Liste des Notes')}"></head>
+<body>
+    <h1>Notes sur le patient</h1>
+    <div>
+        <h2 th:text="'Nom : ' + ${patient.nom}"></h2>
+        <h2 th:text="'Prenom : ' + ${patient.prenom}"></h2>
+
+        <h1>Notes :</h1>
+		<table border="1">
+		    <thead>
+		        <tr>
+		            <th>Contenu de la note</th>
+		            <th>Actions</th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		        <tr th:each="note : ${patient.notes}">
+		            <td th:text="${note.note}">Contenu</td>
+		            <td>
+		                <a class="btn btn-primary" th:href="@{'/patients/notes/update/' + ${note.id}}">Modifier</a>
+		            </td>
+		        </tr>
+		    </tbody>
+		</table>
+
+		<br>
+		<p>
+		    <a th:href="@{'/patients/notes/add/' + ${patient.nom}}" class="btn btn-primary">Ajouter une nouvelle note</a>
+		</p>
+		<p>
+		    <a href="/patients" class="btn btn-secondary">Retour à la liste des patients</a>
+		</p>
+    </div>
+	<div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+</html>
