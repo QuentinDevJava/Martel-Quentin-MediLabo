@@ -13,8 +13,8 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update
-    defer-datasource-initialization: false
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
     show-sql: true
     open-in-view: true
 

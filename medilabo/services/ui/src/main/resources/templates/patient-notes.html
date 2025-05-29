@@ -1,38 +1,44 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragments/header :: head(pageTitle='Liste des Notes')}"></head>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: head(pageTitle='Liste des Notes')}">
+</head>
 <body>
-    <h1>Notes sur le patient</h1>
-    <div>
-        <h2 th:text="'Nom : ' + ${patient.nom}"></h2>
-        <h2 th:text="'Prenom : ' + ${patient.prenom}"></h2>
+    <div class="container my-5">
+        <h1 class="mb-4">Notes sur le patient</h1>
 
-        <h1>Notes :</h1>
-		<table border="1">
-		    <thead>
-		        <tr>
-		            <th>Contenu de la note</th>
-		            <th>Actions</th>
-		        </tr>
-		    </thead>
-		    <tbody>
-		        <tr th:each="note : ${patient.notes}">
-		            <td th:text="${note.note}">Contenu</td>
-		            <td>
-		                <a class="btn btn-primary" th:href="@{'/patients/notes/update/' + ${note.id}}">Modifier</a>
-		            </td>
-		        </tr>
-		    </tbody>
-		</table>
+        <div class="mb-4">
+            <h4 th:text="'Nom : ' + ${patient.nom}" class="fw-normal"></h4>
+            <h4 th:text="'Prénom : ' + ${patient.prenom}" class="fw-normal"></h4>
+        </div>
 
-		<br>
-		<p>
-		    <a th:href="@{'/patients/notes/add/' + ${patient.nom}}" class="btn btn-primary">Ajouter une nouvelle note</a>
-		</p>
-		<p>
-		    <a href="/patients" class="btn btn-secondary">Retour à la liste des patients</a>
-		</p>
+        <div class="mb-4">
+            <h2 class="h4">Notes :</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Contenu de la note</th>
+                            <th class="text-center">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="note : ${patient.notes}">
+                            <td th:text="${note.note}"></td>
+                            <td class="text-center">
+                                <a class="btn btn-sm btn-primary" th:href="@{'/patients/notes/update/' + ${note.id}}"> Modifier </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="d-flex gap-2">
+            <a th:href="@{'/patients/notes/add/' + ${patient.nom}}" class="btn btn-primary"> Ajouter une nouvelle note</a>
+            <a href="/patients" class="btn btn-secondary">Retour à la liste des patients</a>
+        </div>
     </div>
-	<div th:replace="~{fragments/footer :: footer}"></div>
+
+    <div th:replace="~{fragments/footer :: footer}"></div>
 </body>
 </html>

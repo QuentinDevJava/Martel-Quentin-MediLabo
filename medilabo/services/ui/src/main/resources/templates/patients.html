@@ -14,7 +14,8 @@
                     <th>Prénom</th>
                     <th>Date de naissance</th>
                     <th class="text-center">Genre</th>
-                    <th class="text-center">Détails</th>
+					<th class="text-center">Détails patients</th>
+					<th class="text-center">Détails notes</th>
                 </tr>
             </thead>
 			<tbody>
@@ -25,6 +26,9 @@
 			         <td class="text-center" th:text="${patient.genre}">Genre</td>
 			         <td class="text-center">
 			             <a class="btn btn-primary btn-sm" th:href="@{'/patients/' + ${patient.id}}">Voir</a>
+			         </td>
+			         <td class="text-center">
+					 <a class="btn btn-primary btn-sm" th:href="@{'/patients/notes/' + ${patient.id}}">Voir les notes</a>
 			         </td>
 			     </tr>
 			 </tbody>

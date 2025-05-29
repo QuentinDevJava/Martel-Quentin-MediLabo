@@ -1,6 +1,6 @@
 spring:
   profiles:
     active:
-    - sqldocker
+    - dev
 server:
   port: 5000

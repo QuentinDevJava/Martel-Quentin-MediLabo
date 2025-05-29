@@ -2,14 +2,23 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="~{fragments/header :: head(pageTitle='Modifier une note')}"></head>
 <body>
-    <h1>Modifier la note</h1>
-
-    <form th:action="@{'/patients/notes/update/' + ${note.id}}" method="post">
-        <textarea name="note" rows="4" cols="50" th:text="${note.note}"></textarea><br/>
-        <button type="submit" class="btn btn-primary ms-2">Mettre à jour</button>
-    <a href="/patients" class="btn btn-secondary ms-2">Retour à la liste</a>
-    </form>
-
+	<div class="container mt-4">
+	    <h1>Modifier la note</h1>
+	
+	    <form th:action="@{'/patients/notes/update/' + ${note.id}}" method="post">
+	        <textarea
+			 name="note"
+			 id="note"
+             class="form-control w-100" 
+             style="min-height: 40vh;"
+             th:text="${note.note}">
+         </textarea><br/>
+			<div class="d-flex gap-2 mt-4">
+			    <button type="submit" class="btn btn-primary">Mettre à jour</button>
+			    <a href="/patients" class="btn btn-secondary">Retour à la liste</a>
+			</div>
+	    </form>
+	</div>
 	<div th:replace="~{fragments/footer :: footer}"></div>
 </body>
 </html>

@@ -1,15 +1,29 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="~{fragments/header :: head(pageTitle='Ajouter une note')}"></head>
 <body>
-    <h1>Ajouter une note pour <span th:text="${patientNom}">Patient</span></h1>
+    <div class="container my-5">
+        <h1 class="mb-4">Ajouter une note pour <span th:text="${patientNom}"></span></h1>
 
-    <form th:action="@{'/patients/notes/add/' + ${patientNom}}" method="post">
-        <textarea name="note" rows="4" cols="50" placeholder="Contenu de la note"></textarea><br/>
-        <a class="btn btn-primary" type="submit">Enregistrer</a>
-    </form>
+        <form th:action="@{'/patients/notes/add/' + ${patientNom}}" method="post">
+            <div class="mb-4">
+                <label for="note" class="form-label">Contenu de la note :</label>
+                <textarea 
+                    id="note" 
+                    name="note" 
+                    class="form-control w-100" 
+                    style="min-height: 40vh;"
+                    th:attr="placeholder='Contenu de la note...'">
+                </textarea>
+            </div>
 
-    <a href="/patients" class="btn btn-secondary"> Retour</a>
-<div th:replace="~{fragments/footer :: footer}"></div>
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary">Enregistrer</button>
+                <a href="/patients" class="btn btn-secondary">Retour</a>
+            </div>
+        </form>
+    </div>
+
+    <div th:replace="~{fragments/footer :: footer}"></div>
 </body>
 </html>
