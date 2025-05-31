@@ -1,23 +1,14 @@
 package com.medilabo.evaluationrisqueapi.service;
 
-import java.util.List;
-
 import com.medilabo.evaluationrisqueapi.dto.PatientDto;
+import com.medilabo.evaluationrisqueapi.enums.DangerLevel;
 
 public interface EvaluationRisqueService {
 
-	PatientDto getPatientById(int id);
+	int getNumberOfTriggerTermsByPatientName(String patientName);
 
-	List<PatientDto> getAllPatient();
+	PatientDto getPatientByName(String patientName);
 
-	PatientDto addPatient(PatientDto patientDto);
-
-	PatientDto updatePatient(int id, PatientDto patientDto);
-
-	PatientDto getPatientByName(String name);
-
-	PatientDto getPatientWithNotesById(int id);
-
-	PatientDto getPatientWithNotesByName(String name);
+	DangerLevel generateDiabetesReport(String patientName);
 
 }

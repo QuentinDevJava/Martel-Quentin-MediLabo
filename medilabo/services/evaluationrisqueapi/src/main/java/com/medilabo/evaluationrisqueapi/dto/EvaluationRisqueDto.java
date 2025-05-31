@@ -1,5 +1,7 @@
 package com.medilabo.evaluationrisqueapi.dto;
 
+import com.medilabo.evaluationrisqueapi.enums.DangerLevel;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,13 +11,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class NoteDto {
+public class EvaluationRisqueDto {
 
-	private String id;
+	private DangerLevel dangerLevel;
 
-	private String fkPatientNom;
-
-	private String note;
-
-	private int nbOfTriggerTerms;
 }

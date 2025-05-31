@@ -1,16 +1,12 @@
 package com.medilabo.evaluationrisqueapi.service;
 
-import java.util.List;
-
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import com.medilabo.evaluationrisqueapi.dto.NoteDto;
-
 @FeignClient(url = "http://localhost:5005/", name = "noteapi")
-public interface ApiClient {
+public interface NoteApi {
 
-	@GetMapping("api/notes/patient/{patientNom}")
-	List<NoteDto> getNoteDtos(@PathVariable String patientNom);
+	@GetMapping("api/notes/termesAnalyse/{patientName}")
+	int getTriggerTerms(@PathVariable String patientName);
 }

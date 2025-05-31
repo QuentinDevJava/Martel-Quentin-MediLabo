@@ -7,7 +7,12 @@ spring:
 
   data:
     mongodb:
-      uri: mongodb://localhost:27017/dbNote
+      host: localhost
+      port: 27018
+      database: medilaboMongoDB
+      username: mongo_admin
+      password: "!eUFG8LWZ4nb2$@VBVuiLI69gre?Zb?j"
+      authentication-database: admin
 
   cloud:
     config:

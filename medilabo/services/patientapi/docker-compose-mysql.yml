@@ -3,7 +3,7 @@ services:
     image: mysql:8
     container_name: mysqldb
     ports:
-      - "3308:3306"  # expose le port 3306 du container sur le port 3308 local
+      - "3308:3306"  # expose le port 3306 du container sur le port 3308 local pour pas géner le mysql local sur le 3306
     environment:
       MYSQL_DATABASE: medilaboDB
       MYSQL_USER: medilabo_user

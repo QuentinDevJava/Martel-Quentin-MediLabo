@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments/header :: head(pageTitle='Rapport d\'évaluation du risque')}"></head>
+
+<body class="container mt-4">
+    <h1 class="mb-4">Rapport d'évaluation du risque</h1>
+
+    <p><strong>Nom :</strong> <span th:text="${patient.nom}">Nom</span></p>
+    <p><strong>Prénom :</strong> <span th:text="${patient.prenom}">Prénom</span></p>
+
+    <p><strong>Statut du diabète :</strong>
+        <span th:switch="${dangerLevel}">
+            <span th:case="'NONE'" class="badge bg-success">Aucun risque</span>
+            <span th:case="'BORDERLINE'" class="badge bg-warning text-dark">Limite</span>
+            <span th:case="'IN_DANGER'" class="badge bg-warning">En danger</span>
+            <span th:case="'EARLY_ONSET'" class="badge bg-danger">Début précoce du diabète</span>
+        </span>
+    </p>
+
+    <a href="/patients" class="btn btn-secondary mt-3">Retour à la liste des patients</a>
+
+    <div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+</html>
