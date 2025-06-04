@@ -3,12 +3,12 @@ services:
     image: mysql:8
     container_name: mysqldb
     ports:
-      - "3308:3306"
+      - "3306:3306"
     environment:
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_INITDB_DATABASE}
+      MYSQL_USER: ${MYSQL_INITDB_USER}
+      MYSQL_PASSWORD: ${MYSQL_INITDB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_INITDB_ROOT_PASSWORD}
     volumes:
       - mysql-data:/var/lib/mysql
 
@@ -23,6 +23,56 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
     volumes:
       - mongo-data:/data/db
+  eurekaserver:
+    build:
+      context: ./services/eurekaserver
+    container_name: eurekaserver
+    ports:
+      - "8761:8761"
+    environment:
+      - "SPRING_PROFILES_ACTIVE=docker"
+  gatewayapi:
+    build:
+      context: ./services/gatewayapi
+    container_name: gatewayapi
+    ports:
+      - "5005:5005"
+    depends_on:
+      - eurekaserver
+    environment:
+      - "SPRING_PROFILES_ACTIVE=docker"
+  evaluationrisqueapi:
+    build:
+      context: ./services/evaluationrisqueapi
+    container_name: evaluationrisqueapi
+    ports:
+      - "5003:5003"
+    depends_on:
+      - eurekaserver
+    environment:
+      - "SPRING_PROFILES_ACTIVE=docker"
+  noteapi:
+    build:
+      context: ./services/noteapi
+    container_name: noteapi
+    ports:
+      - "5002:5002"
+    depends_on:
+      - eurekaserver
+      - mongodb
+    environment:
+      - "SPRING_PROFILES_ACTIVE=docker"
+  patientapi:
+    build:
+      context: ./services/patientapi
+    container_name: patientapi
+    ports:
+      - "5000:5000"
+    depends_on:
+      - eurekaserver
+      - mysqldb
+    environment:
+      - "SPRING_PROFILES_ACTIVE=docker"
 
 volumes:
   mysql-data:

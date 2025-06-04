@@ -12,7 +12,7 @@
 	<artifactId>noteapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>noteApi</name>
-	<description>Demo project for Spring Boot</description>
+	<description>microservice pour la gestion des notes</description>
 
 	<properties>
 		<java.version>22</java.version>
@@ -78,6 +78,7 @@
 	</dependencyManagement>
 
 	<build>
+	<finalName>noteapi</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -103,6 +104,27 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+		      <artifactId>maven-resources-plugin</artifactId>
+		      <executions>
+		        <execution>
+		          <id>copy-jar</id>
+		          <phase>package</phase>
+		          <goals><goal>copy-resources</goal></goals>
+		          <configuration>
+		            <outputDirectory>../../docker/services/${project.artifactId}</outputDirectory>
+		            <resources>
+		              <resource>
+		                <directory>${project.build.directory}</directory>
+		                <includes>
+		                  <include>${project.build.finalName}.jar</include>
+		                </includes>
+		              </resource>
+		            </resources>
+		          </configuration>
+		        </execution>
+		      </executions>
+		    </plugin>
 		</plugins>
 	</build>
 </project>

@@ -13,19 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>configserver</name>
 	<description>microservice configserver</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
+
 	<properties>
 		<java.version>22</java.version>
 		<spring-cloud.version>2025.0.0-RC1</spring-cloud.version>
@@ -65,11 +53,33 @@
 	</dependencyManagement>
 
 	<build>
+	<finalName>configserver</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+		      <artifactId>maven-resources-plugin</artifactId>
+		      <executions>
+		        <execution>
+		          <id>copy-jar</id>
+		          <phase>package</phase>
+		          <goals><goal>copy-resources</goal></goals>
+		          <configuration>
+		            <outputDirectory>../../docker/services/${project.artifactId}</outputDirectory>
+		            <resources>
+		              <resource>
+		                <directory>${project.build.directory}</directory>
+		                <includes>
+		                  <include>${project.build.finalName}.jar</include>
+		                </includes>
+		              </resource>
+		            </resources>
+		          </configuration>
+		        </execution>
+		      </executions>
+		    </plugin>
 		</plugins>
 	</build>
 	<repositories>

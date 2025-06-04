@@ -1,5 +1,36 @@
+server:
+  port: 5002
+
 spring:
   application:
     name: noteapi
-  config:
-   import: configserver:http://localhost:5555
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27018
+      database: medilaboSqlDb
+      username: mongo_admin
+      password: "!eUFG8LWZ4nb2$@VBVuiLI69gre?Zb?j"
+      authentication-database: admin  # <-- Add this line
+
+  cloud:
+    config:
+      enabled: false
+    discovery:
+      enabled: true
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://localhost:8761/eureka/ 
+  instance:
+    prefer-ip-address: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+logging:
+  file:
+    name: logs/mediLaboNoteApi.log

@@ -6,7 +6,7 @@ spring:
     name: patientapi
 
   datasource:
-    url: jdbc:mysql://localhost:3308/medilaboSqlDb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    url: jdbc:mysql://mysqldb:3306/medilaboSqlDb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
     username: medilabo_admin
     password: '!eUFG8LWZ4nb2$@VBVuiLI69gre?Zb?j'
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -28,13 +28,6 @@ spring:
       enabled: true
     discovery:
       enabled: true
-
-eureka: 
-  client: 
-    service-url: 
-      defaultZone: http://localhost:8761/eureka/ 
-  instance:
-    prefer-ip-address: true
 
 management:
   endpoints:

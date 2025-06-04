@@ -1,5 +1,47 @@
+server:
+  port: 5000
+
 spring:
   application:
     name: patientapi
-  config:
-   import: configserver:http://localhost:5555
+
+  datasource:
+    url: jdbc:mysql://localhost:3308/medilaboSqlDb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: medilabo_admin
+    password: '!eUFG8LWZ4nb2$@VBVuiLI69gre?Zb?j'
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+  sql:
+    init:
+      mode: always
+      data-locations:
+        - classpath:data.sql
+
+  cloud:
+    config:
+      enabled: false
+    discovery:
+      enabled: true
+
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://eurekaserver:8761/eureka/ 
+  instance:
+    prefer-ip-address: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+
+logging:
+  file:
+    name: logs/mediLaboPatientApi.log
