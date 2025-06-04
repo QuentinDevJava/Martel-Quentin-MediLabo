@@ -25,53 +25,67 @@ public class EvaluationRisqueServiceImpl implements EvaluationRisqueService {
 	public DangerLevel generateDiabetesReport(String patientName) {
 
 		PatientDto patientDto = getPatientByName(patientName);
+
+		// String genre = getPatientGenreByName(patientName)
+
 		int numberOfTriggerTerms = getNumberOfTriggerTermsByPatientName(patientName);
 
 		int age = Period.between(patientDto.getDateAnniversaire(), LocalDate.now()).getYears();
 
 		if (age > 30) {
+			return evaluateRisqueForAgeMore30(numberOfTriggerTerms);
+		} else {
+			return evaluateRisqueForAge30OrLess(numberOfTriggerTerms, patientDto.getGenre());
+		}
+	}
+
+	private DangerLevel evaluateRisqueForAgeMore30(int numberOfTriggerTerms) {
+
+		switch (numberOfTriggerTerms) {
+		case 0, 1 -> {
+			return DangerLevel.NONE;
+		}
+		case 2, 3, 4, 5 -> {
+			return DangerLevel.BORDERLINE;
+		}
+		case 6, 7 -> {
+			return DangerLevel.IN_DANGER;
+		}
+		default -> {
+			if (numberOfTriggerTerms >= 8) {
+				return DangerLevel.EARLY_ONSET;
+			}
+			throw new IllegalArgumentException("Unexpected value numberOfTriggerTerms : " + numberOfTriggerTerms);
+		}
+		}
+
+	}
+
+	private DangerLevel evaluateRisqueForAge30OrLess(int numberOfTriggerTerms, String genre) {
+
+		if ("M".equals(genre)) {
 			switch (numberOfTriggerTerms) {
-			case 0, 1 -> {
-				return DangerLevel.NONE;
-			}
-			case 2, 3, 4, 5 -> {
-				return DangerLevel.BORDERLINE;
-			}
-			case 6, 7 -> {
+			case 3, 4, 5 -> {
 				return DangerLevel.IN_DANGER;
 			}
 			default -> {
-				if (numberOfTriggerTerms >= 8) {
+				if (numberOfTriggerTerms > 5) {
 					return DangerLevel.EARLY_ONSET;
 				}
 				throw new IllegalArgumentException("Unexpected value: " + numberOfTriggerTerms);
 			}
 			}
-		} else {
-			if ("M".equals(patientDto.getGenre())) {
-				switch (numberOfTriggerTerms) {
-				case 3, 4, 5 -> {
-					return DangerLevel.IN_DANGER;
+		} else { // une femme
+			switch (numberOfTriggerTerms) {
+			case 4, 5, 6, 7 -> {
+				return DangerLevel.IN_DANGER;
+			}
+			default -> {
+				if (numberOfTriggerTerms > 7) {
+					return DangerLevel.EARLY_ONSET;
 				}
-				default -> {
-					if (numberOfTriggerTerms > 5) {
-						return DangerLevel.EARLY_ONSET;
-					}
-					throw new IllegalArgumentException("Unexpected value: " + numberOfTriggerTerms);
-				}
-				}
-			} else { // une femme
-				switch (numberOfTriggerTerms) {
-				case 4, 5, 6, 7 -> {
-					return DangerLevel.IN_DANGER;
-				}
-				default -> {
-					if (numberOfTriggerTerms > 7) {
-						return DangerLevel.EARLY_ONSET;
-					}
-					throw new IllegalArgumentException("Unexpected value: " + numberOfTriggerTerms);
-				}
-				}
+				throw new IllegalArgumentException("Unexpected value: " + numberOfTriggerTerms);
+			}
 			}
 		}
 	}

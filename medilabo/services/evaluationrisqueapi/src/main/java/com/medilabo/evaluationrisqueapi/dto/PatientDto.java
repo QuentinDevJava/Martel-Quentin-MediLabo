@@ -3,15 +3,21 @@ package com.medilabo.evaluationrisqueapi.dto;
 import java.time.LocalDate;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 public class PatientDto {
+
+	public PatientDto(String nom, String prenom, LocalDate dateAnniversaire, String genre) {
+		super();
+		this.nom = nom;
+		this.prenom = prenom;
+		this.dateAnniversaire = dateAnniversaire;
+		this.genre = genre;
+	}
 
 	private int id;
 
