@@ -9,14 +9,14 @@
     <p><strong>Nom :</strong> <span th:text="${patient.nom}">Nom</span></p>
     <p><strong>Prénom :</strong> <span th:text="${patient.prenom}">Prénom</span></p>
 
-    <p><strong>Statut du diabète :</strong>
-        <span th:switch="${dangerLevel}">
-            <span th:case="'NONE'" class="badge bg-success">Aucun risque</span>
-            <span th:case="'BORDERLINE'" class="badge bg-warning text-dark">Limite</span>
-            <span th:case="'IN_DANGER'" class="badge bg-warning">En danger</span>
-            <span th:case="'EARLY_ONSET'" class="badge bg-danger">Début précoce du diabète</span>
-        </span>
-    </p>
+	<p><strong>Statut du diabète :</strong>
+	    <span th:switch="${dangerLevel}">
+	        <span th:case="'NONE'" class="badge bg-success text-dark fs-6">Aucun risque</span>
+	        <span th:case="'BORDERLINE'" class="badge bg-warning-subtle text-dark fs-6">Risque limité</span>
+	        <span th:case="'IN_DANGER'" class="badge bg-warning text-dark fs-6">En danger</span>
+	        <span th:case="'EARLY_ONSET'" class="badge bg-danger text-dark fs-6">Apparition précoce</span>
+	    </span>
+	</p>
 
     <a href="/patients" class="btn btn-secondary mt-3">Retour à la liste des patients</a>
 

@@ -24,7 +24,7 @@ public class EvaluationRisqueController {
 	@GetMapping("/name/{patientName}")
 	public ResponseEntity<DangerLevel> getPatientByNom(@PathVariable String patientName) {
 		log.info("Receive GET /api/evaluationrisque/patients/name/" + patientName
-				+ ": EvaluationRisqueApi use RestController to send diabetes report");
+				+ ": EvaluationRisqueApi use RestController to send diabetes report for patient " + patientName);
 		return new ResponseEntity<>(evaluationRisqueService.generateDiabetesReport(patientName), HttpStatus.OK);
 
 	}

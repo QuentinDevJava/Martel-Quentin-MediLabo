@@ -1,6 +1,5 @@
 spring:
-  profiles:
-    active:
-    - dev
-server:
-  port: 5000
+  application:
+    name: patientapi
+  config:
+   import: configserver:http://localhost:5555

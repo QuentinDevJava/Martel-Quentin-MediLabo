@@ -18,8 +18,7 @@
 
             <div class="col-md-6">
                 <label for="dateAnniversaire" class="form-label">Date de naissance</label>
-                <input type="date" th:field="*{dateAnniversaire}" class="form-control" required />
-            </div>
+        	<input type="date" id="date" name="dateAnniversaire" th:value="${#temporals.format(dateAnniversaire, 'yyyy-MM-dd')}" class="form-control" required /></div>
 
             <div class="col-md-6">
                 <label for="genre" class="form-label">Genre</label>

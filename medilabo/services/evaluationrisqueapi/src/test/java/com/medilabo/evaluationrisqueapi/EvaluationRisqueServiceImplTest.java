@@ -1,7 +1,6 @@
 package com.medilabo.evaluationrisqueapi;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.when;
 
 import java.time.LocalDate;
@@ -126,8 +125,8 @@ class EvaluationRisqueServiceImplTest {
 		PatientDto patient = createPatient("M", 25);
 		when(patientApi.getPatientDto("tony")).thenReturn(patient);
 		when(noteApi.getTriggerTerms("tony")).thenReturn(2);
-
-		assertThrows(IllegalArgumentException.class, () -> evaluationService.generateDiabetesReport("tony"));
+		DangerLevel result = evaluationService.generateDiabetesReport("tony");
+		assertThat(result).isEqualTo(DangerLevel.BORDERLINE);
 	}
 
 	@Test
@@ -135,7 +134,7 @@ class EvaluationRisqueServiceImplTest {
 		PatientDto patient = createPatient("F", 30);
 		when(patientApi.getPatientDto("laura")).thenReturn(patient);
 		when(noteApi.getTriggerTerms("laura")).thenReturn(2);
-
-		assertThrows(IllegalArgumentException.class, () -> evaluationService.generateDiabetesReport("laura"));
+		DangerLevel result = evaluationService.generateDiabetesReport("laura");
+		assertThat(result).isEqualTo(DangerLevel.BORDERLINE);
 	}
 }

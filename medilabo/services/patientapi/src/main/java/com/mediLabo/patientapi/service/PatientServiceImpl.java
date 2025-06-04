@@ -32,7 +32,7 @@ public class PatientServiceImpl implements PatientService {
 
 	@Override
 	public List<PatientDto> getAllPatient() {
-		return patientRepository.findAll().stream().map(patientMapper::toDtoWithNotes).toList();
+		return patientRepository.findAll().stream().map(patientMapper::toDto).toList();
 	}
 
 	@Override

@@ -1,0 +1,256 @@
+2025-06-04T13:24:43.809+02:00  INFO 27448 --- [noteapi] [restartedMain] c.m.patientapi.PatientApiApplication     : Starting PatientApiApplication using Java 22.0.1 with PID 27448 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-06-04T13:24:43.811+02:00  INFO 27448 --- [noteapi] [restartedMain] c.m.patientapi.PatientApiApplication     : The following 1 profile is active: "sqldocker"
+2025-06-04T13:24:43.860+02:00  INFO 27448 --- [noteapi] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:5555
+2025-06-04T13:24:43.863+02:00  INFO 27448 --- [noteapi] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=patientapi, profiles=[default], label=null, version=null, state=null
+2025-06-04T13:24:43.863+02:00  INFO 27448 --- [noteapi] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:5555
+2025-06-04T13:24:43.863+02:00  INFO 27448 --- [noteapi] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=noteapi, profiles=[sqldocker], label=null, version=null, state=null
+2025-06-04T13:24:43.863+02:00  INFO 27448 --- [noteapi] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:5555
+2025-06-04T13:24:43.863+02:00  INFO 27448 --- [noteapi] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=noteapi, profiles=[default], label=null, version=null, state=null
+2025-06-04T13:24:43.866+02:00  INFO 27448 --- [noteapi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-04T13:24:43.866+02:00  INFO 27448 --- [noteapi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-04T13:24:44.962+02:00  INFO 27448 --- [noteapi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-04T13:24:45.091+02:00  INFO 27448 --- [noteapi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 119 ms. Found 1 JPA repository interface.
+2025-06-04T13:24:45.312+02:00  INFO 27448 --- [noteapi] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3504e9c5-7edd-3083-a794-f64dee70c843
+2025-06-04T13:24:45.933+02:00  INFO 27448 --- [noteapi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5002 (http)
+2025-06-04T13:24:45.945+02:00  INFO 27448 --- [noteapi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-04T13:24:45.946+02:00  INFO 27448 --- [noteapi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04T13:24:45.992+02:00  INFO 27448 --- [noteapi] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-04T13:24:45.992+02:00  INFO 27448 --- [noteapi] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2125 ms
+2025-06-04T13:24:46.226+02:00  INFO 27448 --- [noteapi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-04T13:24:46.399+02:00  INFO 27448 --- [noteapi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@57d9055a
+2025-06-04T13:24:46.401+02:00  INFO 27448 --- [noteapi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-04T13:24:46.506+02:00  INFO 27448 --- [noteapi] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-04T13:24:46.562+02:00  INFO 27448 --- [noteapi] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-04T13:24:46.605+02:00  INFO 27448 --- [noteapi] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-04T13:24:46.914+02:00  INFO 27448 --- [noteapi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-04T13:24:46.977+02:00  WARN 27448 --- [noteapi] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-04T13:24:46.979+02:00  WARN 27448 --- [noteapi] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-06-04T13:24:46.990+02:00  INFO 27448 --- [noteapi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-04T13:24:47.674+02:00  INFO 27448 --- [noteapi] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-04T13:24:47.728+02:00  INFO 27448 --- [noteapi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-04T13:24:48.081+02:00  WARN 27448 --- [noteapi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-04T13:24:48.290+02:00  INFO 27448 --- [noteapi] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-04T13:24:49.491+02:00  INFO 27448 --- [noteapi] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3308/medilaboSqlDb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC'
+2025-06-04T13:24:49.754+02:00  INFO 27448 --- [noteapi] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-06-04T13:24:49.880+02:00  WARN 27448 --- [noteapi] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-06-04T13:24:49.909+02:00  INFO 27448 --- [noteapi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-06-04T13:24:50.166+02:00  WARN 27448 --- [noteapi] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-06-04T13:24:50.185+02:00  INFO 27448 --- [noteapi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-04T13:24:50.197+02:00  INFO 27448 --- [noteapi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-04T13:24:50.232+02:00  INFO 27448 --- [noteapi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-04T13:24:50.285+02:00  INFO 27448 --- [noteapi] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-04T13:24:50.328+02:00 ERROR 27448 --- [noteapi] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 5002 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 5002 or configure this application to listen on another port.
+
+2025-06-04T13:25:35.894+02:00  INFO 28032 --- [noteapi] [restartedMain] c.m.patientapi.PatientApiApplication     : Starting PatientApiApplication using Java 22.0.1 with PID 28032 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-06-04T13:25:35.896+02:00  INFO 28032 --- [noteapi] [restartedMain] c.m.patientapi.PatientApiApplication     : The following 1 profile is active: "sqldocker"
+2025-06-04T13:25:35.938+02:00  INFO 28032 --- [noteapi] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:5555
+2025-06-04T13:25:35.938+02:00  INFO 28032 --- [noteapi] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=patientapi, profiles=[default], label=null, version=null, state=null
+2025-06-04T13:25:35.938+02:00  INFO 28032 --- [noteapi] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:5555
+2025-06-04T13:25:35.938+02:00  INFO 28032 --- [noteapi] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=noteapi, profiles=[sqldocker], label=null, version=null, state=null
+2025-06-04T13:25:35.938+02:00  INFO 28032 --- [noteapi] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:5555
+2025-06-04T13:25:35.939+02:00  INFO 28032 --- [noteapi] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=noteapi, profiles=[default], label=null, version=null, state=null
+2025-06-04T13:25:35.941+02:00  INFO 28032 --- [noteapi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-04T13:25:35.941+02:00  INFO 28032 --- [noteapi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-04T13:25:36.828+02:00  INFO 28032 --- [noteapi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-04T13:25:36.930+02:00  INFO 28032 --- [noteapi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 1 JPA repository interface.
+2025-06-04T13:25:37.138+02:00  INFO 28032 --- [noteapi] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3504e9c5-7edd-3083-a794-f64dee70c843
+2025-06-04T13:25:37.696+02:00  INFO 28032 --- [noteapi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5002 (http)
+2025-06-04T13:25:37.708+02:00  INFO 28032 --- [noteapi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-04T13:25:37.709+02:00  INFO 28032 --- [noteapi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04T13:25:37.755+02:00  INFO 28032 --- [noteapi] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-04T13:25:37.756+02:00  INFO 28032 --- [noteapi] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1814 ms
+2025-06-04T13:25:37.962+02:00  INFO 28032 --- [noteapi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-04T13:25:38.098+02:00  INFO 28032 --- [noteapi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@40302a03
+2025-06-04T13:25:38.101+02:00  INFO 28032 --- [noteapi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-04T13:25:38.189+02:00  INFO 28032 --- [noteapi] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-04T13:25:38.229+02:00  INFO 28032 --- [noteapi] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-04T13:25:38.257+02:00  INFO 28032 --- [noteapi] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-04T13:25:38.489+02:00  INFO 28032 --- [noteapi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-04T13:25:38.537+02:00  WARN 28032 --- [noteapi] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-04T13:25:38.538+02:00  WARN 28032 --- [noteapi] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-06-04T13:25:38.552+02:00  INFO 28032 --- [noteapi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-04T13:25:39.169+02:00  INFO 28032 --- [noteapi] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-04T13:25:39.214+02:00  INFO 28032 --- [noteapi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-04T13:25:39.540+02:00  WARN 28032 --- [noteapi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-04T13:25:39.711+02:00  INFO 28032 --- [noteapi] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-04T13:25:40.573+02:00  INFO 28032 --- [noteapi] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3308/medilaboSqlDb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC'
+2025-06-04T13:25:40.638+02:00  INFO 28032 --- [noteapi] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-06-04T13:25:40.678+02:00  WARN 28032 --- [noteapi] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-06-04T13:25:40.696+02:00  INFO 28032 --- [noteapi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-06-04T13:25:40.829+02:00  WARN 28032 --- [noteapi] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-06-04T13:25:40.836+02:00  INFO 28032 --- [noteapi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-04T13:25:40.841+02:00  INFO 28032 --- [noteapi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-04T13:25:40.850+02:00  INFO 28032 --- [noteapi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-04T13:25:40.864+02:00  INFO 28032 --- [noteapi] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-04T13:25:40.880+02:00 ERROR 28032 --- [noteapi] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 5002 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 5002 or configure this application to listen on another port.
+
+2025-06-04T13:26:12.970+02:00  INFO 8608 --- [noteapi] [restartedMain] c.m.patientapi.PatientApiApplication     : Starting PatientApiApplication using Java 22.0.1 with PID 8608 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-06-04T13:26:12.972+02:00  INFO 8608 --- [noteapi] [restartedMain] c.m.patientapi.PatientApiApplication     : The following 1 profile is active: "sqldocker"
+2025-06-04T13:26:13.021+02:00  INFO 8608 --- [noteapi] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:5555
+2025-06-04T13:26:13.021+02:00  INFO 8608 --- [noteapi] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=patientapi, profiles=[default], label=null, version=null, state=null
+2025-06-04T13:26:13.022+02:00  INFO 8608 --- [noteapi] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:5555
+2025-06-04T13:26:13.022+02:00  INFO 8608 --- [noteapi] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=noteapi, profiles=[sqldocker], label=null, version=null, state=null
+2025-06-04T13:26:13.022+02:00  INFO 8608 --- [noteapi] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:5555
+2025-06-04T13:26:13.022+02:00  INFO 8608 --- [noteapi] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=noteapi, profiles=[default], label=null, version=null, state=null
+2025-06-04T13:26:13.024+02:00  INFO 8608 --- [noteapi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-04T13:26:13.024+02:00  INFO 8608 --- [noteapi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-04T13:26:13.907+02:00  INFO 8608 --- [noteapi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-04T13:26:14.009+02:00  INFO 8608 --- [noteapi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 1 JPA repository interface.
+2025-06-04T13:26:14.203+02:00  INFO 8608 --- [noteapi] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3504e9c5-7edd-3083-a794-f64dee70c843
+2025-06-04T13:26:14.778+02:00  INFO 8608 --- [noteapi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5002 (http)
+2025-06-04T13:26:14.788+02:00  INFO 8608 --- [noteapi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-04T13:26:14.789+02:00  INFO 8608 --- [noteapi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04T13:26:14.830+02:00  INFO 8608 --- [noteapi] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-04T13:26:14.831+02:00  INFO 8608 --- [noteapi] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1805 ms
+2025-06-04T13:26:15.033+02:00  INFO 8608 --- [noteapi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-04T13:26:15.171+02:00  INFO 8608 --- [noteapi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b5cf0eb
+2025-06-04T13:26:15.173+02:00  INFO 8608 --- [noteapi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-04T13:26:15.262+02:00  INFO 8608 --- [noteapi] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-04T13:26:15.302+02:00  INFO 8608 --- [noteapi] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-04T13:26:15.332+02:00  INFO 8608 --- [noteapi] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-04T13:26:15.559+02:00  INFO 8608 --- [noteapi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-04T13:26:15.610+02:00  WARN 8608 --- [noteapi] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-04T13:26:15.611+02:00  WARN 8608 --- [noteapi] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-06-04T13:26:15.621+02:00  INFO 8608 --- [noteapi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-04T13:26:16.278+02:00  INFO 8608 --- [noteapi] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-04T13:26:16.323+02:00  INFO 8608 --- [noteapi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-04T13:26:16.664+02:00  WARN 8608 --- [noteapi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-04T13:26:16.825+02:00  INFO 8608 --- [noteapi] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-04T13:26:17.701+02:00  INFO 8608 --- [noteapi] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3308/medilaboSqlDb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC'
+2025-06-04T13:26:17.771+02:00  INFO 8608 --- [noteapi] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-06-04T13:26:17.814+02:00  WARN 8608 --- [noteapi] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-06-04T13:26:17.832+02:00  INFO 8608 --- [noteapi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-06-04T13:26:17.985+02:00  WARN 8608 --- [noteapi] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-06-04T13:26:17.991+02:00  INFO 8608 --- [noteapi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-04T13:26:17.994+02:00  INFO 8608 --- [noteapi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-04T13:26:18.005+02:00  INFO 8608 --- [noteapi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-04T13:26:18.020+02:00  INFO 8608 --- [noteapi] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-04T13:26:18.035+02:00 ERROR 8608 --- [noteapi] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 5002 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 5002 or configure this application to listen on another port.
+
+2025-06-04T13:26:39.506+02:00  INFO 27820 --- [noteapi] [restartedMain] c.m.patientapi.PatientApiApplication     : Starting PatientApiApplication using Java 22.0.1 with PID 27820 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-06-04T13:26:39.507+02:00  INFO 27820 --- [noteapi] [restartedMain] c.m.patientapi.PatientApiApplication     : The following 1 profile is active: "sqldocker"
+2025-06-04T13:26:39.550+02:00  INFO 27820 --- [noteapi] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:5555
+2025-06-04T13:26:39.550+02:00  INFO 27820 --- [noteapi] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=patientapi, profiles=[default], label=null, version=null, state=null
+2025-06-04T13:26:39.550+02:00  INFO 27820 --- [noteapi] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:5555
+2025-06-04T13:26:39.550+02:00  INFO 27820 --- [noteapi] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=noteapi, profiles=[sqldocker], label=null, version=null, state=null
+2025-06-04T13:26:39.550+02:00  INFO 27820 --- [noteapi] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:5555
+2025-06-04T13:26:39.551+02:00  INFO 27820 --- [noteapi] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=noteapi, profiles=[default], label=null, version=null, state=null
+2025-06-04T13:26:39.553+02:00  INFO 27820 --- [noteapi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-04T13:26:39.553+02:00  INFO 27820 --- [noteapi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-04T13:26:40.443+02:00  INFO 27820 --- [noteapi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-04T13:26:40.551+02:00  INFO 27820 --- [noteapi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 1 JPA repository interface.
+2025-06-04T13:26:40.739+02:00  INFO 27820 --- [noteapi] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3504e9c5-7edd-3083-a794-f64dee70c843
+2025-06-04T13:26:41.282+02:00  INFO 27820 --- [noteapi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5002 (http)
+2025-06-04T13:26:41.294+02:00  INFO 27820 --- [noteapi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-04T13:26:41.294+02:00  INFO 27820 --- [noteapi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04T13:26:41.340+02:00  INFO 27820 --- [noteapi] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-04T13:26:41.341+02:00  INFO 27820 --- [noteapi] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1786 ms
+2025-06-04T13:26:41.531+02:00  INFO 27820 --- [noteapi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-04T13:26:41.669+02:00  INFO 27820 --- [noteapi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1313df3a
+2025-06-04T13:26:41.671+02:00  INFO 27820 --- [noteapi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-04T13:26:41.771+02:00  INFO 27820 --- [noteapi] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-04T13:26:41.814+02:00  INFO 27820 --- [noteapi] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-04T13:26:41.844+02:00  INFO 27820 --- [noteapi] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-04T13:26:42.111+02:00  INFO 27820 --- [noteapi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-04T13:26:42.160+02:00  WARN 27820 --- [noteapi] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-04T13:26:42.163+02:00  WARN 27820 --- [noteapi] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-06-04T13:26:42.175+02:00  INFO 27820 --- [noteapi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-04T13:26:42.759+02:00  INFO 27820 --- [noteapi] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-04T13:26:42.803+02:00  INFO 27820 --- [noteapi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-04T13:26:43.121+02:00  WARN 27820 --- [noteapi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-04T13:26:43.280+02:00  INFO 27820 --- [noteapi] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-04T13:26:44.213+02:00  INFO 27820 --- [noteapi] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3308/medilaboSqlDb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC'
+2025-06-04T13:26:44.287+02:00  INFO 27820 --- [noteapi] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-06-04T13:26:44.330+02:00  WARN 27820 --- [noteapi] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-06-04T13:26:44.348+02:00  INFO 27820 --- [noteapi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-06-04T13:26:44.481+02:00  WARN 27820 --- [noteapi] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-06-04T13:26:44.485+02:00  INFO 27820 --- [noteapi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-04T13:26:44.489+02:00  INFO 27820 --- [noteapi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-04T13:26:44.499+02:00  INFO 27820 --- [noteapi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-04T13:26:44.520+02:00  INFO 27820 --- [noteapi] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-04T13:26:44.535+02:00 ERROR 27820 --- [noteapi] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 5002 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 5002 or configure this application to listen on another port.
+

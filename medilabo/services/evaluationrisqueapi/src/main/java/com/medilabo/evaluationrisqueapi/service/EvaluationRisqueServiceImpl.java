@@ -9,15 +9,10 @@ import org.springframework.stereotype.Service;
 import com.medilabo.evaluationrisqueapi.dto.PatientDto;
 import com.medilabo.evaluationrisqueapi.enums.DangerLevel;
 
-import lombok.AllArgsConstructor;
-
 @Service
-@AllArgsConstructor
 public class EvaluationRisqueServiceImpl implements EvaluationRisqueService {
-
 	@Autowired
 	private NoteApi noteApi;
-
 	@Autowired
 	private PatientApi patientApi;
 
@@ -61,10 +56,17 @@ public class EvaluationRisqueServiceImpl implements EvaluationRisqueService {
 
 	}
 
+//TODO il y a des cas qui ne sont pas traité cela génere des valeur inatendu ex 
 	private DangerLevel evaluateRisqueForAge30OrLess(int numberOfTriggerTerms, String genre) {
 
-		if ("M".equals(genre)) {
+		if ("M".equals(genre)) {// un homme
 			switch (numberOfTriggerTerms) {
+			case 0, 1 -> {// ajouté mais pas demandé
+				return DangerLevel.NONE;
+			}
+			case 2 -> {// ajouté mais pas demandé
+				return DangerLevel.BORDERLINE;
+			}
 			case 3, 4, 5 -> {
 				return DangerLevel.IN_DANGER;
 			}
@@ -77,6 +79,12 @@ public class EvaluationRisqueServiceImpl implements EvaluationRisqueService {
 			}
 		} else { // une femme
 			switch (numberOfTriggerTerms) {
+			case 0, 1 -> {// ajouté mais pas demandé
+				return DangerLevel.NONE;
+			}
+			case 2, 3 -> {// ajouté mais pas demandé
+				return DangerLevel.BORDERLINE;
+			}
 			case 4, 5, 6, 7 -> {
 				return DangerLevel.IN_DANGER;
 			}

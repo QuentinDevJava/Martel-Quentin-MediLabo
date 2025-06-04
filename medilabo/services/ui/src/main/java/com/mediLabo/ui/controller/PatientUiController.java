@@ -1,6 +1,5 @@
 package com.mediLabo.ui.controller;
 
-import java.time.LocalDate;
 import java.util.Arrays;
 
 import org.springframework.stereotype.Controller;
@@ -65,10 +64,8 @@ public class PatientUiController {
 	}
 
 	@PostMapping("/patients/update/{id}")
-	public String updatePatient(@PathVariable int id, @ModelAttribute PatientDto patient,
-			@ModelAttribute LocalDate localDate) {
-		log.info("UI POST /patients/update/{} - updating patient with date: {}", id, localDate);
-		patient.setDateAnniversaire(localDate);
+	public String updatePatient(@PathVariable int id, @ModelAttribute PatientDto patient) {
+		log.info("UI POST /patients/update/{} - updating patient with date: {}", id);
 		restTemplate.put(patientApiUrl + id, patient);
 		return "redirect:/patients";
 	}

@@ -60,7 +60,8 @@ public class NoteController {
 	public ResponseEntity<Integer> getTriggerTermCountForPatient(@PathVariable String patientName) {
 		int count = noteService.getNumberOfTermsByPatient(patientName);
 		log.info("Receive PUT /api/notes/termesAnalyse/" + patientName
-				+ " - NoteApi use RestController get number of trigger terms in list of NoteDto for this patient ");
+				+ " - NoteApi use RestController get number of trigger terms in list of NoteDto for patient : "
+				+ patientName);
 		return ResponseEntity.ok(count);
 	}
 }

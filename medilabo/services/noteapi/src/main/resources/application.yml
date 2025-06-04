@@ -1,30 +1,5 @@
-server:
-  port: 5002
-
 spring:
   application:
     name: noteapi
-
-  data:
-    mongodb:
-      host: localhost
-      port: 27018
-      database: medilaboMongoDB
-      username: mongo_admin
-      password: "!eUFG8LWZ4nb2$@VBVuiLI69gre?Zb?j"
-      authentication-database: admin
-
-  cloud:
-    config:
-      enabled: false
-    discovery:
-      enabled: false
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health
-logging:
-  file:
-    name: logs/mediLaboNoteApi.log
+  config:
+   import: configserver:http://localhost:5555

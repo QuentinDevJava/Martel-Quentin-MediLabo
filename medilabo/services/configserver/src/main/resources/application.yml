@@ -1,0 +1,13 @@
+server:
+  port: 5555
+
+spring:
+  application:
+    name: configserver
+  profiles:
+   active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config

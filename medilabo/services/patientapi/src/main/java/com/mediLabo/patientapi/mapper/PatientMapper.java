@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 import com.mediLabo.patientapi.dto.PatientDto;
 import com.mediLabo.patientapi.entities.Patient;
-import com.mediLabo.patientapi.service.ApiClient;
+import com.mediLabo.patientapi.service.NoteApi;
 
 import lombok.NoArgsConstructor;
 
@@ -14,12 +14,12 @@ import lombok.NoArgsConstructor;
 public class PatientMapper {
 
 	@Autowired
-	private ApiClient apiClient;// utilisé pour recuperer les notes associées aux patient
+	private NoteApi noteApi;// utilisé pour recuperer les notes associées aux patient
 
 	public PatientDto toDtoWithNotes(Patient patient) {
 		return PatientDto.builder().id(patient.getId()).nom(patient.getNom()).prenom(patient.getPrenom())
 				.dateAnniversaire(patient.getDateAnniversaire()).genre(patient.getGenre()).adresse(patient.getAdresse())
-				.telephone(patient.getTelephone()).notes(apiClient.getNoteDtos(patient.getNom())).build();
+				.telephone(patient.getTelephone()).notes(noteApi.getNoteDtos(patient.getNom())).build();
 	}
 
 	public PatientDto toDto(Patient patient) {
