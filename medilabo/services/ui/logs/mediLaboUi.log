@@ -206,3 +206,9 @@ java.net.UnknownHostException: gatewayapi
 2025-06-06T14:34:19.328+02:00  INFO 18160 --- [ui] [main] com.mediLabo.ui.UiApplicationTests       : Starting UiApplicationTests using Java 22.0.1 with PID 18160 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\ui)
 2025-06-06T14:34:19.331+02:00  INFO 18160 --- [ui] [main] com.mediLabo.ui.UiApplicationTests       : No active profile set, falling back to 1 default profile: "default"
 2025-06-06T14:34:20.606+02:00  INFO 18160 --- [ui] [main] com.mediLabo.ui.UiApplicationTests       : Started UiApplicationTests in 1.797 seconds (process running for 2.74)
+2025-06-06T14:55:58.730+02:00  INFO 28184 --- [ui] [main] com.mediLabo.ui.UiApplicationTests       : Starting UiApplicationTests using Java 22.0.1 with PID 28184 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\ui)
+2025-06-06T14:55:58.733+02:00  INFO 28184 --- [ui] [main] com.mediLabo.ui.UiApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2025-06-06T14:56:00.415+02:00  INFO 28184 --- [ui] [main] com.mediLabo.ui.UiApplicationTests       : Started UiApplicationTests in 2.328 seconds (process running for 3.605)
+2025-06-06T15:00:28.368+02:00  INFO 16872 --- [ui] [main] com.mediLabo.ui.UiApplicationTests       : Starting UiApplicationTests using Java 22.0.1 with PID 16872 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\ui)
+2025-06-06T15:00:28.371+02:00  INFO 16872 --- [ui] [main] com.mediLabo.ui.UiApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2025-06-06T15:00:30.161+02:00  INFO 16872 --- [ui] [main] com.mediLabo.ui.UiApplicationTests       : Started UiApplicationTests in 2.602 seconds (process running for 4.287)

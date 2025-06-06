@@ -29,7 +29,7 @@ public class EvaluationRisqueUiController {
 	public String getRapport(@PathVariable String patientName, Model model) {
 		log.info("Receive GET /evaluationrisque/patients/name/" + patientName
 				+ ": EvaluationRisqueApi use RestController to send diabetes report");
-		PatientDto patientDto = restTemplate.getForObject(patientApiUrl + patientName, PatientDto.class);
+		PatientDto patientDto = restTemplate.getForObject(patientApiUrl + "/name/" + patientName, PatientDto.class);
 
 		if (patientDto == null) {
 			return "redirect:/patients";
