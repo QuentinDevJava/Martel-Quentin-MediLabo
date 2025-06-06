@@ -20,15 +20,16 @@ public class PatientServiceImpl implements PatientService {
 	private final PatientMapper patientMapper;
 	private final NoteApi noteApi;
 
+
 	@Override
 	public PatientDto getPatientById(int id) {
-		Patient patient = patientRepository.findById(id);
+		Patient patient = patientRepository.findById(id).orElseThrow(() -> new RuntimeException("Patient with id not find"));;
 		return patientMapper.toDto(patient);
 	}
 
 	@Override
 	public PatientDto getPatientByName(String name) {
-		Patient patient = patientRepository.findByNom(name);
+		Patient patient = patientRepository.findByNom(name).orElseThrow(() -> new RuntimeException("Patient with name not find"));;
 		return patientMapper.toDto(patient);
 	}
 
@@ -45,8 +46,7 @@ public class PatientServiceImpl implements PatientService {
 
 	@Override
 	public PatientDto updatePatient(int id, PatientDto patientDto) {
-		Patient patient = patientRepository.findById(id);
-
+		Patient patient = patientRepository.findById(id).orElseThrow(() -> new RuntimeException("Patient with name not find"));
 		patient.setNom(patientDto.getNom());
 		patient.setPrenom(patientDto.getPrenom());
 		patient.setDateAnniversaire(patientDto.getDateAnniversaire());
@@ -59,14 +59,14 @@ public class PatientServiceImpl implements PatientService {
 
 	@Override
 	public PatientDto getPatientWithNotesById(int id) {
-		Patient patient = patientRepository.findById(id);
+		Patient patient = patientRepository.findById(id).orElseThrow(() -> new RuntimeException("Patient with id not find"));
 		List<NoteDto> noteDtos = noteApi.getNoteDtos(patient.getNom());
 		return patientMapper.toDtoWithNotes(patient, noteDtos);
 	}
 
 	@Override
 	public PatientDto getPatientWithNotesByName(String name) {
-		Patient patient = patientRepository.findByNom(name);
+		Patient patient = patientRepository.findByNom(name).orElseThrow(() -> new RuntimeException("Patient with name not find"));
 		List<NoteDto> noteDtos = noteApi.getNoteDtos(name);
 		return patientMapper.toDtoWithNotes(patient, noteDtos);
 	}

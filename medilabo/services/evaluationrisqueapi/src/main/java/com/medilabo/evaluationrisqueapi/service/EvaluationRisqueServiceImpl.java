@@ -21,26 +21,25 @@ public class EvaluationRisqueServiceImpl implements EvaluationRisqueService {
 	public DangerLevel generateDiabetesReport(String patientName) {
 
 		PatientDto patientDto = getPatientByName(patientName);
-//TODO ?
-		// String genre = getPatientGenreByName(patientName)
-
-		int numberOfTriggerTerms = getNumberOfTriggerTermsByPatientName(patientName);
-
+		
 		int age = Period.between(patientDto.getDateAnniversaire(), LocalDate.now()).getYears();
+		 String genre =patientDto.getGenre();
+		int numberOfTriggerTerms = getNumberOfTriggerTermsByPatientName(patientName);
 
 		if (age > 30) {
 			return evaluateRisqueForAgeMore30(numberOfTriggerTerms);
 		} else {
-			// TODO ?
-			// if ("M".equals(genre)) { // un homme
-			// evaluateRisqueForManAge30OrLess
-			// une femme
-			// evaluateRisqueForWomanAge30OrLess
-
-			return evaluateRisqueForAge30OrLess(numberOfTriggerTerms, patientDto.getGenre());
+			 if ("M".equals(genre)) { 
+				 return	evaluateRisqueForManAge30OrLess(numberOfTriggerTerms);
+			 }else {
+				 return evaluateRisqueForWomanAge30OrLess( numberOfTriggerTerms);
+				 
+			 }
 		}
 	}
-
+	
+	
+	
 	private DangerLevel evaluateRisqueForAgeMore30(int numberOfTriggerTerms) {
 
 		switch (numberOfTriggerTerms) {
@@ -63,12 +62,30 @@ public class EvaluationRisqueServiceImpl implements EvaluationRisqueService {
 
 	}
 
-//TODO il y a des cas qui ne sont pas traité(dans les info client) cela génere des valeur inatendu ex 
-	private DangerLevel evaluateRisqueForAge30OrLess(int numberOfTriggerTerms, String genre) {
+	private DangerLevel evaluateRisqueForWomanAge30OrLess(int numberOfTriggerTerms) {
+		switch (numberOfTriggerTerms) {
+		case 0, 1 -> {// ajouté mais pas demandé
+			return DangerLevel.NONE;
+		}
+		case 2, 3 -> {// ajouté mais pas demandé
+			return DangerLevel.BORDERLINE;
+		}
+		case 4, 5, 6, 7 -> {
+			return DangerLevel.IN_DANGER;
+		}
+		default -> {
+			if (numberOfTriggerTerms > 7) {
+				return DangerLevel.EARLY_ONSET;
+			}
+			throw new IllegalArgumentException("Unexpected value: " + numberOfTriggerTerms);
+		}
+		}
+	}
 
-		if ("M".equals(genre)) {// un homme
+
+	private DangerLevel evaluateRisqueForManAge30OrLess(int numberOfTriggerTerms) {
 			switch (numberOfTriggerTerms) {
-			case 0, 1 -> {// ajouté mais pas demandé
+			case 0, 1 -> {// ajouté mais pas demandé mettre NONE si pas couvert par les explications OCR
 				return DangerLevel.NONE;
 			}
 			case 2 -> {// ajouté mais pas demandé
@@ -84,26 +101,11 @@ public class EvaluationRisqueServiceImpl implements EvaluationRisqueService {
 				throw new IllegalArgumentException("Unexpected value: " + numberOfTriggerTerms);
 			}
 			}
-		} else { // une femme
-			switch (numberOfTriggerTerms) {
-			case 0, 1 -> {// ajouté mais pas demandé
-				return DangerLevel.NONE;
-			}
-			case 2, 3 -> {// ajouté mais pas demandé
-				return DangerLevel.BORDERLINE;
-			}
-			case 4, 5, 6, 7 -> {
-				return DangerLevel.IN_DANGER;
-			}
-			default -> {
-				if (numberOfTriggerTerms > 7) {
-					return DangerLevel.EARLY_ONSET;
-				}
-				throw new IllegalArgumentException("Unexpected value: " + numberOfTriggerTerms);
-			}
-			}
-		}
 	}
+
+
+
+//TODO il y a des cas qui ne sont pas traité(dans les info client) cela génere des valeur inatendu ex 
 
 	private PatientDto getPatientByName(String patientName) {
 		return patientApi.getPatientDto(patientName);

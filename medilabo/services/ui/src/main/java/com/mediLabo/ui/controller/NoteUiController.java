@@ -19,6 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping("/patients/notes")
 public class NoteUiController {
 
+	//TODO bean configuration du restTemplate au lieu de le faire dans chaque controller
 	private final RestTemplate restTemplate = new RestTemplate();
 
 	@Value("${note.api.url}")

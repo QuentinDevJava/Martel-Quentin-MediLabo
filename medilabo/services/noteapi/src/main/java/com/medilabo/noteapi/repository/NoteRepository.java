@@ -17,4 +17,5 @@ public interface NoteRepository extends MongoRepository<Note, String> {
 
 	List<Note> findAllByFkPatientNom(String Patientnom);
 
+	
 }

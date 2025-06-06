@@ -7,6 +7,7 @@ import static org.mockito.Mockito.when;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -37,7 +38,7 @@ class PatientServiceImplTest {
 
 	private Patient testPatient;
 	private PatientDto testPatientDto;
-
+	private Optional<Patient> optionalPatient ;
 	@BeforeEach
 	void setUp() {
 
@@ -51,6 +52,8 @@ class PatientServiceImplTest {
 		testPatient.setGenre("M");
 		testPatient.setAdresse("123 rue Test");
 		testPatient.setTelephone("0000000000");
+		
+		optionalPatient=Optional.of(testPatient);
 
 		testPatientDto = new PatientDto();
 		testPatientDto.setId(1);
@@ -64,7 +67,7 @@ class PatientServiceImplTest {
 
 	@Test
 	void testGetPatientById() {
-		when(patientRepository.findById(1)).thenReturn(testPatient);
+		when(patientRepository.findById(1)).thenReturn(optionalPatient);
 
 		PatientDto result = patientServiceImpl.getPatientById(1);
 
@@ -75,7 +78,7 @@ class PatientServiceImplTest {
 
 	@Test
 	void testGetPatientByName() {
-		when(patientRepository.findByNom("Test")).thenReturn(testPatient);
+		when(patientRepository.findByNom("Test")).thenReturn(optionalPatient);
 
 		PatientDto result = patientServiceImpl.getPatientByName("Test");
 
@@ -105,7 +108,7 @@ class PatientServiceImplTest {
 
 	@Test
 	void testUpdatePatient() {
-		when(patientRepository.findById(1)).thenReturn(testPatient);
+		when(patientRepository.findById(1)).thenReturn(optionalPatient);
 		when(patientRepository.save(any(Patient.class))).thenReturn(testPatient);
 
 		PatientDto updatedDto = new PatientDto();
@@ -125,7 +128,7 @@ class PatientServiceImplTest {
 
 	@Test
 	void testGetPatientWithNotesById() {
-		when(patientRepository.findById(1)).thenReturn(testPatient);
+		when(patientRepository.findById(1)).thenReturn(optionalPatient);
 
 		List<NoteDto> notes = List.of(new NoteDto("note-1", "Test", "Ceci est une note"),
 				new NoteDto("note-2", "Test", "Deuxième note"));
@@ -142,7 +145,7 @@ class PatientServiceImplTest {
 
 	@Test
 	void testGetPatientWithNotesByName() {
-		when(patientRepository.findByNom("Test")).thenReturn(testPatient);
+		when(patientRepository.findByNom("Test")).thenReturn(optionalPatient);
 
 		List<NoteDto> notes = List.of(new NoteDto("note-1", "Test", "Première note"));
 
