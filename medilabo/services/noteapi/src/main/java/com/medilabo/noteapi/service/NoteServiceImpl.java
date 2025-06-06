@@ -42,8 +42,13 @@ public class NoteServiceImpl implements NoteService {
 
 	@Override
 	public NoteDto getNotesById(String id) {
-		Note note = findById(id);
-		return toDto(note);
+		Optional<Note> note = Optional.ofNullable(findById(id));
+		if (note.isPresent()) {
+			return toDto(note.get());
+		} else {
+			return null;
+		}
+
 	}
 
 	@Override
@@ -93,7 +98,7 @@ public class NoteServiceImpl implements NoteService {
 		}
 	}
 
-	// TODO mapper ?
+	// TODO class mapper ?
 	private NoteDto toDto(Note note) {
 		return NoteDto.builder().id(note.getId()).fkPatientNom(note.getFkPatientNom()).note(note.getNote()).build();
 	}

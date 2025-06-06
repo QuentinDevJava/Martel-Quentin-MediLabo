@@ -3,24 +3,25 @@ package com.medilabo.evaluationrisqueapi.service;
 import java.time.LocalDate;
 import java.time.Period;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.medilabo.evaluationrisqueapi.dto.PatientDto;
 import com.medilabo.evaluationrisqueapi.enums.DangerLevel;
 
+import lombok.AllArgsConstructor;
+
 @Service
+@AllArgsConstructor
 public class EvaluationRisqueServiceImpl implements EvaluationRisqueService {
-	@Autowired
+
 	private NoteApi noteApi;
-	@Autowired
 	private PatientApi patientApi;
 
 	@Override
 	public DangerLevel generateDiabetesReport(String patientName) {
 
 		PatientDto patientDto = getPatientByName(patientName);
-
+//TODO ?
 		// String genre = getPatientGenreByName(patientName)
 
 		int numberOfTriggerTerms = getNumberOfTriggerTermsByPatientName(patientName);
@@ -30,6 +31,12 @@ public class EvaluationRisqueServiceImpl implements EvaluationRisqueService {
 		if (age > 30) {
 			return evaluateRisqueForAgeMore30(numberOfTriggerTerms);
 		} else {
+			// TODO ?
+			// if ("M".equals(genre)) { // un homme
+			// evaluateRisqueForManAge30OrLess
+			// une femme
+			// evaluateRisqueForWomanAge30OrLess
+
 			return evaluateRisqueForAge30OrLess(numberOfTriggerTerms, patientDto.getGenre());
 		}
 	}
@@ -56,7 +63,7 @@ public class EvaluationRisqueServiceImpl implements EvaluationRisqueService {
 
 	}
 
-//TODO il y a des cas qui ne sont pas traité cela génere des valeur inatendu ex 
+//TODO il y a des cas qui ne sont pas traité(dans les info client) cela génere des valeur inatendu ex 
 	private DangerLevel evaluateRisqueForAge30OrLess(int numberOfTriggerTerms, String genre) {
 
 		if ("M".equals(genre)) {// un homme
@@ -98,15 +105,11 @@ public class EvaluationRisqueServiceImpl implements EvaluationRisqueService {
 		}
 	}
 
-	// openfeign
-	@Override
-	public PatientDto getPatientByName(String patientName) {
+	private PatientDto getPatientByName(String patientName) {
 		return patientApi.getPatientDto(patientName);
 	}
 
-	// openfeign
-	@Override
-	public int getNumberOfTriggerTermsByPatientName(String patientName) {
+	private int getNumberOfTriggerTermsByPatientName(String patientName) {
 		return noteApi.getTriggerTerms(patientName);
 	}
 

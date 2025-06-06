@@ -1,11 +1,12 @@
 package com.mediLabo.patientapi.mapper;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
+
 import org.springframework.stereotype.Component;
 
+import com.mediLabo.patientapi.dto.NoteDto;
 import com.mediLabo.patientapi.dto.PatientDto;
 import com.mediLabo.patientapi.entities.Patient;
-import com.mediLabo.patientapi.service.NoteApi;
 
 import lombok.NoArgsConstructor;
 
@@ -13,13 +14,10 @@ import lombok.NoArgsConstructor;
 @Component
 public class PatientMapper {
 
-	@Autowired
-	private NoteApi noteApi;// utilisé pour recuperer les notes associées aux patient
-
-	public PatientDto toDtoWithNotes(Patient patient) {
+	public PatientDto toDtoWithNotes(Patient patient, List<NoteDto> noteDto) {
 		return PatientDto.builder().id(patient.getId()).nom(patient.getNom()).prenom(patient.getPrenom())
 				.dateAnniversaire(patient.getDateAnniversaire()).genre(patient.getGenre()).adresse(patient.getAdresse())
-				.telephone(patient.getTelephone()).notes(noteApi.getNoteDtos(patient.getNom())).build();
+				.telephone(patient.getTelephone()).notes(noteDto).build();
 	}
 
 	public PatientDto toDto(Patient patient) {
