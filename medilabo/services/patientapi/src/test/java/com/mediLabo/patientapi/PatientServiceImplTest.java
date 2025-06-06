@@ -11,20 +11,20 @@ import java.util.Optional;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.test.context.ActiveProfiles;
 
 import com.mediLabo.patientapi.dto.NoteDto;
 import com.mediLabo.patientapi.dto.PatientDto;
 import com.mediLabo.patientapi.entities.Patient;
-import com.mediLabo.patientapi.mapper.PatientMapper;
 import com.mediLabo.patientapi.repository.PatientRepository;
 import com.mediLabo.patientapi.service.NoteApi;
 import com.mediLabo.patientapi.service.PatientServiceImpl;
 
 @ActiveProfiles("test")
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 class PatientServiceImplTest {
 
 	@Mock
@@ -33,16 +33,16 @@ class PatientServiceImplTest {
 	@Mock
 	private NoteApi noteApi;
 
-	private PatientMapper patientMapper = new PatientMapper();
 	private PatientServiceImpl patientServiceImpl;
 
 	private Patient testPatient;
 	private PatientDto testPatientDto;
-	private Optional<Patient> optionalPatient ;
+	private Optional<Patient> optionalPatient;
+
 	@BeforeEach
 	void setUp() {
 
-		patientServiceImpl = new PatientServiceImpl(patientRepository, patientMapper, noteApi);
+		patientServiceImpl = new PatientServiceImpl(patientRepository, noteApi);
 
 		testPatient = new Patient();
 		testPatient.setId(1);
@@ -52,8 +52,8 @@ class PatientServiceImplTest {
 		testPatient.setGenre("M");
 		testPatient.setAdresse("123 rue Test");
 		testPatient.setTelephone("0000000000");
-		
-		optionalPatient=Optional.of(testPatient);
+
+		optionalPatient = Optional.of(testPatient);
 
 		testPatientDto = new PatientDto();
 		testPatientDto.setId(1);

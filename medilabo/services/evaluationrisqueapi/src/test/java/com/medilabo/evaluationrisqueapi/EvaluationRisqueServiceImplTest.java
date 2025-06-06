@@ -6,9 +6,10 @@ import static org.mockito.Mockito.when;
 import java.time.LocalDate;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import com.medilabo.evaluationrisqueapi.dto.PatientDto;
 import com.medilabo.evaluationrisqueapi.enums.DangerLevel;
@@ -16,7 +17,7 @@ import com.medilabo.evaluationrisqueapi.service.EvaluationRisqueServiceImpl;
 import com.medilabo.evaluationrisqueapi.service.NoteApi;
 import com.medilabo.evaluationrisqueapi.service.PatientApi;
 
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 class EvaluationRisqueServiceImplTest {
 
 	@Mock

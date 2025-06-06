@@ -28,3 +28,18 @@ java.lang.IllegalStateException: Client instance has been closed.
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
 
+2025-06-06T23:11:19.357+02:00 ERROR 19536 --- [eurekaServer] [Eureka-Jersey3Client-Conn-Cleaner2] c.n.d.s.t.j.EurekaJersey3ClientImpl      : Cannot clean connections
+
+java.lang.IllegalStateException: Client instance has been closed.
+	at org.glassfish.jersey.internal.guava.Preconditions.checkState(Preconditions.java:169) ~[jersey-common-3.1.10.jar:na]
+	at org.glassfish.jersey.client.JerseyClient.checkNotClosed(JerseyClient.java:248) ~[jersey-client-3.1.10.jar:na]
+	at org.glassfish.jersey.client.JerseyClient.getConfiguration(JerseyClient.java:363) ~[jersey-client-3.1.10.jar:na]
+	at org.glassfish.jersey.client.JerseyClient.getConfiguration(JerseyClient.java:54) ~[jersey-client-3.1.10.jar:na]
+	at com.netflix.discovery.shared.transport.jersey3.EurekaJersey3ClientImpl$ConnectionCleanerTask.run(EurekaJersey3ClientImpl.java:338) ~[eureka-client-jersey3-2.0.4.jar:2.0.4]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+
