@@ -4,21 +4,17 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.5</version>
-		<relativePath/> <!-- lookup parent from repository -->
+	  <groupId>com.medilabo</groupId>
+	  <artifactId>medilabo-parent</artifactId>
+	  <version>0.0.1</version>
+	  <relativePath>../../../pom.xml</relativePath> 
 	</parent>
 	
-	<groupId>com.mediLabo</groupId>
 	<artifactId>ui</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ui</name>
 	<description>Microservice pour le front-end des patients</description>
 
-	<properties>
-		<java.version>22</java.version>
-	</properties>
 
 	<dependencies>
 		<dependency>

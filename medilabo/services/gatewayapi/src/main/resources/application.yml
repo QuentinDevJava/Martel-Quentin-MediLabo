@@ -24,10 +24,7 @@ spring:
           uri: lb://evaluationrisqueapi
           predicates:
             - Path=/api/evaluationrisque/**
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
+
 management:
   endpoints:
     web:
