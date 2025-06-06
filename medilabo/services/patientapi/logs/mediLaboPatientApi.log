@@ -1,17 +1,17 @@
-2025-06-05T00:16:16.329+02:00  INFO 29800 --- [patientapi] [main] c.m.patientapi.PatientControllerTest     : Starting PatientControllerTest using Java 22.0.1 with PID 29800 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
-2025-06-05T00:16:16.338+02:00  INFO 29800 --- [patientapi] [main] c.m.patientapi.PatientControllerTest     : The following 1 profile is active: "test"
-2025-06-05T00:16:17.845+02:00  INFO 29800 --- [patientapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-05T00:16:18.105+02:00  INFO 29800 --- [patientapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 246 ms. Found 1 JPA repository interface.
-2025-06-05T00:16:18.632+02:00  INFO 29800 --- [patientapi] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=abe166b6-8898-3bc8-9072-7a6de18a9d7b
-2025-06-05T00:16:21.087+02:00  INFO 29800 --- [patientapi] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-05T00:16:21.248+02:00  INFO 29800 --- [patientapi] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
-2025-06-05T00:16:21.337+02:00  INFO 29800 --- [patientapi] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-05T00:16:21.522+02:00  INFO 29800 --- [patientapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-05T00:16:21.578+02:00  INFO 29800 --- [patientapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-05T00:16:21.945+02:00  INFO 29800 --- [patientapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2025-06-05T00:16:21.950+02:00  INFO 29800 --- [patientapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-05T00:16:22.006+02:00  WARN 29800 --- [patientapi] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-06-05T00:16:22.047+02:00  INFO 29800 --- [patientapi] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-06-06T11:34:42.239+02:00  INFO 26940 --- [patientapi] [main] c.m.patientapi.PatientControllerTest     : Starting PatientControllerTest using Java 22.0.1 with PID 26940 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-06-06T11:34:42.248+02:00  INFO 26940 --- [patientapi] [main] c.m.patientapi.PatientControllerTest     : The following 1 profile is active: "test"
+2025-06-06T11:34:43.771+02:00  INFO 26940 --- [patientapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-06T11:34:43.930+02:00  INFO 26940 --- [patientapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 146 ms. Found 1 JPA repository interface.
+2025-06-06T11:34:44.407+02:00  INFO 26940 --- [patientapi] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=abe166b6-8898-3bc8-9072-7a6de18a9d7b
+2025-06-06T11:34:46.813+02:00  INFO 26940 --- [patientapi] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-06T11:34:47.006+02:00  INFO 26940 --- [patientapi] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-06T11:34:47.128+02:00  INFO 26940 --- [patientapi] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-06T11:34:47.405+02:00  INFO 26940 --- [patientapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-06T11:34:47.457+02:00  INFO 26940 --- [patientapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-06T11:34:47.898+02:00  INFO 26940 --- [patientapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-06-06T11:34:47.903+02:00  INFO 26940 --- [patientapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-06T11:34:47.964+02:00  WARN 26940 --- [patientapi] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-06T11:34:48.016+02:00  INFO 26940 --- [patientapi] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 2.3.232
@@ -19,340 +19,27 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-06-05T00:16:23.230+02:00  INFO 29800 --- [patientapi] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-05T00:16:23.311+02:00  INFO 29800 --- [patientapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-05T00:16:23.753+02:00  WARN 29800 --- [patientapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-05T00:16:25.127+02:00  INFO 29800 --- [patientapi] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'noteapi' URL not provided. Will try picking an instance via load-balancing.
-2025-06-05T00:16:29.779+02:00  INFO 29800 --- [patientapi] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-06-05T00:16:29.780+02:00  INFO 29800 --- [patientapi] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-06-05T00:16:29.800+02:00  INFO 29800 --- [patientapi] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2025-06-05T00:16:29.825+02:00  INFO 29800 --- [patientapi] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 44 ms
-2025-06-05T00:16:30.088+02:00  INFO 29800 --- [patientapi] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-06-05T00:16:30.191+02:00  WARN 29800 --- [patientapi] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-06-05T00:16:30.438+02:00  INFO 29800 --- [patientapi] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-06-05T00:16:30.485+02:00  INFO 29800 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-06-05T00:16:30.490+02:00  INFO 29800 --- [patientapi] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-05T00:16:30.502+02:00  INFO 29800 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-06-05T00:16:30.502+02:00  INFO 29800 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-06-05T00:16:30.502+02:00  INFO 29800 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-06-05T00:16:30.503+02:00  INFO 29800 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-06-05T00:16:30.503+02:00  INFO 29800 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-06-05T00:16:30.503+02:00  INFO 29800 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-06-05T00:16:30.504+02:00  INFO 29800 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-06-05T00:16:31.367+02:00  INFO 29800 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-06-05T00:16:31.370+02:00  INFO 29800 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-06-05T00:16:31.372+02:00  INFO 29800 --- [patientapi] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-06-05T00:16:31.374+02:00  INFO 29800 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1749075391373 with initial instances count: 3
-2025-06-05T00:16:31.381+02:00  INFO 29800 --- [patientapi] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PATIENTAPI with eureka with status UP
-2025-06-05T00:16:31.382+02:00  INFO 29800 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749075391382, current=UP, previous=STARTING]
-2025-06-05T00:16:31.386+02:00  INFO 29800 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
-2025-06-05T00:16:31.452+02:00  INFO 29800 --- [patientapi] [main] c.m.patientapi.PatientControllerTest     : Started PatientControllerTest in 15.762 seconds (process running for 17.144)
-2025-06-05T00:16:31.484+02:00  INFO 29800 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration status: 204
-2025-06-05T00:16:31.754+02:00  INFO 29800 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive GET /api/patients/1: PatientApi use RestController to send PatientDto by ID
-2025-06-05T00:16:31.948+02:00  INFO 29800 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive GET /api/patients: PatientApi use RestController to send list of PatientDto
-2025-06-05T00:16:32.044+02:00  INFO 29800 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive GET /api/patients/name/Test: PatientApi use RestController to send PatientDto by name
-2025-06-05T00:16:32.103+02:00  INFO 29800 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive POST /api/patients: PatientDto PatientDto(id=1, nom=Test, prenom=Jean, dateAnniversaire=1990-01-01, genre=M, adresse=123 rue Test, telephone=0000000000, notes=null) - PatientApi use RestController to create Patient
-2025-06-05T00:16:32.127+02:00  INFO 29800 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive PUT /api/patients/1: PatientDto PatientDto(id=1, nom=Test, prenom=Jean, dateAnniversaire=1990-01-01, genre=M, adresse=123 rue Test, telephone=0000000000, notes=null) - PatientApi use RestController to update Patient
-2025-06-05T00:16:32.169+02:00  INFO 29800 --- [patientapi] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mediLabo.patientapi.PatientServiceImplTest]: PatientServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-06-05T00:16:32.172+02:00  INFO 29800 --- [patientapi] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mediLabo.patientapi.PatientApiApplication for test class com.mediLabo.patientapi.PatientServiceImplTest
-2025-06-05T00:16:32.184+02:00  INFO 29800 --- [patientapi] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
-2025-06-05T00:16:32.284+02:00  INFO 29800 --- [patientapi] [main] c.m.patientapi.PatientServiceImplTest    : Starting PatientServiceImplTest using Java 22.0.1 with PID 29800 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
-2025-06-05T00:16:32.284+02:00  INFO 29800 --- [patientapi] [main] c.m.patientapi.PatientServiceImplTest    : The following 1 profile is active: "test"
-2025-06-05T00:16:32.869+02:00  INFO 29800 --- [patientapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-05T00:16:32.894+02:00  INFO 29800 --- [patientapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interface.
-2025-06-05T00:16:33.011+02:00  INFO 29800 --- [patientapi] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=66a9bd76-bd5a-395a-aa6c-02e02e36d186
-2025-06-05T00:16:33.151+02:00  INFO 29800 --- [patientapi] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-05T00:16:33.156+02:00  INFO 29800 --- [patientapi] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-05T00:16:33.186+02:00  INFO 29800 --- [patientapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-05T00:16:33.188+02:00  INFO 29800 --- [patientapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2025-06-05T00:16:33.190+02:00  INFO 29800 --- [patientapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
-2025-06-05T00:16:33.190+02:00  INFO 29800 --- [patientapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2025-06-05T00:16:33.191+02:00  WARN 29800 --- [patientapi] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-06-05T00:16:33.192+02:00  INFO 29800 --- [patientapi] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
-	Database driver: undefined/unknown
-	Database version: 2.3.232
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-06-05T00:16:33.233+02:00  INFO 29800 --- [patientapi] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-05T00:16:33.237+02:00  INFO 29800 --- [patientapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-05T00:16:33.495+02:00  WARN 29800 --- [patientapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-05T00:16:33.785+02:00  INFO 29800 --- [patientapi] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'noteapi' URL not provided. Will try picking an instance via load-balancing.
-2025-06-05T00:16:34.591+02:00  INFO 29800 --- [patientapi] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-06-05T00:16:34.653+02:00  WARN 29800 --- [patientapi] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-06-05T00:16:34.667+02:00  INFO 29800 --- [patientapi] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2025-06-05T00:16:34.758+02:00  INFO 29800 --- [patientapi] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-06-05T00:16:34.771+02:00  INFO 29800 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-06-05T00:16:34.772+02:00  INFO 29800 --- [patientapi] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-05T00:16:34.774+02:00  INFO 29800 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-06-05T00:16:34.776+02:00  INFO 29800 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-06-05T00:16:34.777+02:00  INFO 29800 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-06-05T00:16:34.777+02:00  INFO 29800 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-06-05T00:16:34.777+02:00  INFO 29800 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-06-05T00:16:34.778+02:00  INFO 29800 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-06-05T00:16:34.779+02:00  INFO 29800 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-06-05T00:16:34.885+02:00  INFO 29800 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-06-05T00:16:34.886+02:00  INFO 29800 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-06-05T00:16:34.887+02:00  INFO 29800 --- [patientapi] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-06-05T00:16:34.889+02:00  INFO 29800 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1749075394888 with initial instances count: 3
-2025-06-05T00:16:34.893+02:00  INFO 29800 --- [patientapi] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PATIENTAPI with eureka with status UP
-2025-06-05T00:16:34.894+02:00  INFO 29800 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749075394894, current=UP, previous=STARTING]
-2025-06-05T00:16:34.894+02:00  INFO 29800 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
-2025-06-05T00:16:34.911+02:00  INFO 29800 --- [patientapi] [main] c.m.patientapi.PatientServiceImplTest    : Started PatientServiceImplTest in 2.729 seconds (process running for 20.605)
-2025-06-05T00:16:34.927+02:00  INFO 29800 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration status: 204
-2025-06-05T00:16:35.408+02:00  INFO 29800 --- [patientapi] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PATIENTAPI with eureka with status DOWN
-2025-06-05T00:16:35.409+02:00  INFO 29800 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749075395409, current=DOWN, previous=UP]
-2025-06-05T00:16:35.409+02:00  INFO 29800 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
-2025-06-05T00:16:35.432+02:00  INFO 29800 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration status: 204
-2025-06-05T00:16:35.446+02:00  INFO 29800 --- [patientapi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-05T00:16:35.453+02:00  INFO 29800 --- [patientapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-06-05T00:16:35.456+02:00  INFO 29800 --- [patientapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-06-05T00:16:35.457+02:00  INFO 29800 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-06-05T00:16:38.472+02:00  INFO 29800 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-06-05T00:16:38.495+02:00  INFO 29800 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - deregister  status: 200
-2025-06-05T00:16:38.495+02:00  INFO 29800 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2025-06-05T00:16:38.497+02:00  INFO 29800 --- [patientapi] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PATIENTAPI with eureka with status DOWN
-2025-06-05T00:16:38.498+02:00  INFO 29800 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749075398498, current=DOWN, previous=UP]
-2025-06-05T00:16:38.498+02:00  INFO 29800 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
-2025-06-05T00:16:38.507+02:00  INFO 29800 --- [patientapi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-05T00:16:38.511+02:00  INFO 29800 --- [patientapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2025-06-05T00:16:38.515+02:00  INFO 29800 --- [patientapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2025-06-05T00:16:38.515+02:00  INFO 29800 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration status: 204
-2025-06-05T00:16:38.516+02:00  INFO 29800 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-06-05T00:16:41.522+02:00  INFO 29800 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-06-05T00:16:41.543+02:00  INFO 29800 --- [patientapi] [SpringApplicationShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:100)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
-	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
-	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
-	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
-	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:796)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:746)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1473)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:705)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1466)
-	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219)
-	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180)
-	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
-	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
-	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
-	at java.base/java.lang.Thread.run(Thread.java:1570)
-Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:752)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:183)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
-	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
-	... 36 more
-
-2025-06-05T00:16:41.544+02:00  WARN 29800 --- [patientapi] [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-2025-06-05T00:16:41.602+02:00  INFO 29800 --- [patientapi] [SpringApplicationShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:100)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
-	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
-	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
-	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
-	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:796)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:746)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1473)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:705)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1466)
-	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219)
-	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180)
-	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
-	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
-	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
-	at java.base/java.lang.Thread.run(Thread.java:1570)
-Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:752)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:183)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
-	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
-	... 37 more
-
-2025-06-05T00:16:41.603+02:00  WARN 29800 --- [patientapi] [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-2025-06-05T00:16:41.604+02:00 ERROR 29800 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - de-registration failedCannot execute request on any known server
-
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900) ~[eureka-client-2.0.4.jar:2.0.4]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389) ~[spring-cloud-context-4.2.1.jar:4.2.1]
-	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136) ~[spring-cloud-context-4.2.1.jar:4.2.1]
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:796) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:746) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1473) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:705) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1466) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147) ~[spring-boot-3.4.5.jar:3.4.5]
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
-	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116) ~[spring-boot-3.4.5.jar:3.4.5]
-	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
-
-2025-06-05T00:16:41.616+02:00  INFO 29800 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2025-06-05T00:18:07.168+02:00  INFO 26448 --- [patientapi] [main] c.m.patientapi.PatientControllerTest     : Starting PatientControllerTest using Java 22.0.1 with PID 26448 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
-2025-06-05T00:18:07.172+02:00  INFO 26448 --- [patientapi] [main] c.m.patientapi.PatientControllerTest     : The following 1 profile is active: "test"
-2025-06-05T00:18:08.986+02:00  INFO 26448 --- [patientapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-05T00:18:09.165+02:00  INFO 26448 --- [patientapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 168 ms. Found 1 JPA repository interface.
-2025-06-05T00:18:09.575+02:00  INFO 26448 --- [patientapi] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=abe166b6-8898-3bc8-9072-7a6de18a9d7b
-2025-06-05T00:18:11.525+02:00  INFO 26448 --- [patientapi] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-05T00:18:11.676+02:00  INFO 26448 --- [patientapi] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
-2025-06-05T00:18:11.752+02:00  INFO 26448 --- [patientapi] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-05T00:18:11.973+02:00  INFO 26448 --- [patientapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-05T00:18:12.012+02:00  INFO 26448 --- [patientapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-05T00:18:12.319+02:00  INFO 26448 --- [patientapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2025-06-05T00:18:12.323+02:00  INFO 26448 --- [patientapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-05T00:18:12.401+02:00  WARN 26448 --- [patientapi] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-06-05T00:18:12.456+02:00  INFO 26448 --- [patientapi] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 2.3.232
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-06-05T00:18:14.046+02:00  INFO 26448 --- [patientapi] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-05T00:18:14.129+02:00  INFO 26448 --- [patientapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-05T00:18:14.501+02:00  WARN 26448 --- [patientapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-05T00:18:15.812+02:00  INFO 26448 --- [patientapi] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'noteapi' URL not provided. Will try picking an instance via load-balancing.
-2025-06-05T00:18:20.610+02:00  INFO 26448 --- [patientapi] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-06-05T00:18:20.611+02:00  INFO 26448 --- [patientapi] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-06-05T00:18:20.653+02:00  INFO 26448 --- [patientapi] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2025-06-05T00:18:20.705+02:00  INFO 26448 --- [patientapi] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 94 ms
-2025-06-05T00:18:21.152+02:00  INFO 26448 --- [patientapi] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-06-05T00:18:21.347+02:00  WARN 26448 --- [patientapi] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-06-05T00:18:21.766+02:00  INFO 26448 --- [patientapi] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-06-05T00:18:21.816+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-06-05T00:18:21.827+02:00  INFO 26448 --- [patientapi] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-05T00:18:21.850+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-06-05T00:18:21.851+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-06-05T00:18:21.851+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-06-05T00:18:21.851+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-06-05T00:18:21.851+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-06-05T00:18:21.852+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-06-05T00:18:21.852+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-06-05T00:18:25.679+02:00  INFO 26448 --- [patientapi] [main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eurekaserver:8761/eureka/}, exception=I/O error on GET request for "http://eurekaserver:8761/eureka/apps/": Hôte inconnu (eurekaserver) stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://eurekaserver:8761/eureka/apps/": Hôte inconnu (eurekaserver)
+2025-06-06T11:34:48.966+02:00  INFO 26940 --- [patientapi] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-06T11:34:49.012+02:00  INFO 26940 --- [patientapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-06T11:34:49.272+02:00  WARN 26940 --- [patientapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-06T11:34:49.991+02:00  INFO 26940 --- [patientapi] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'noteapi' URL not provided. Will try picking an instance via load-balancing.
+2025-06-06T11:34:52.810+02:00  INFO 26940 --- [patientapi] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-06-06T11:34:52.811+02:00  INFO 26940 --- [patientapi] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-06-06T11:34:52.824+02:00  INFO 26940 --- [patientapi] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-06-06T11:34:52.839+02:00  INFO 26940 --- [patientapi] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 28 ms
+2025-06-06T11:34:53.026+02:00  INFO 26940 --- [patientapi] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-06-06T11:34:53.123+02:00  WARN 26940 --- [patientapi] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-06-06T11:34:53.252+02:00  INFO 26940 --- [patientapi] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-06-06T11:34:53.281+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-06-06T11:34:53.285+02:00  INFO 26940 --- [patientapi] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-06T11:34:53.294+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-06-06T11:34:53.294+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-06-06T11:34:53.294+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-06-06T11:34:53.294+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-06-06T11:34:53.295+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-06-06T11:34:53.295+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-06-06T11:34:53.295+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-06-06T11:34:56.623+02:00  INFO 26940 --- [patientapi] [main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eurekaserver:8761/eureka/}, exception=I/O error on GET request for "http://eurekaserver:8761/eureka/apps/": Hôte inconnu (eurekaserver) stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://eurekaserver:8761/eureka/apps/": Hôte inconnu (eurekaserver)
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
@@ -539,8 +226,8 @@ Caused by: java.net.UnknownHostException: Hôte inconnu (eurekaserver)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
 	... 145 more
 
-2025-06-05T00:18:25.681+02:00  WARN 26448 --- [patientapi] [main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://eurekaserver:8761/eureka/apps/": Hôte inconnu (eurekaserver)
-2025-06-05T00:18:25.681+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+2025-06-06T11:34:56.628+02:00  WARN 26940 --- [patientapi] [main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://eurekaserver:8761/eureka/apps/": Hôte inconnu (eurekaserver)
+2025-06-06T11:34:56.635+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
@@ -678,17 +365,17 @@ Caused by: java.net.UnknownHostException: Hôte inconnu (eurekaserver)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-2025-06-05T00:18:25.683+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
-2025-06-05T00:18:25.683+02:00  WARN 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
-2025-06-05T00:18:25.683+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
-2025-06-05T00:18:25.684+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-06-05T00:18:25.686+02:00  INFO 26448 --- [patientapi] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-06-05T00:18:25.688+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1749075505687 with initial instances count: 0
-2025-06-05T00:18:25.693+02:00  INFO 26448 --- [patientapi] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PATIENTAPI with eureka with status UP
-2025-06-05T00:18:25.696+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749075505696, current=UP, previous=STARTING]
-2025-06-05T00:18:25.700+02:00  INFO 26448 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
-2025-06-05T00:18:25.717+02:00  INFO 26448 --- [patientapi] [main] c.m.patientapi.PatientControllerTest     : Started PatientControllerTest in 19.47 seconds (process running for 21.353)
-2025-06-05T00:18:25.769+02:00  INFO 26448 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eurekaserver:8761/eureka/}, exception=I/O error on POST request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI": eurekaserver stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI": eurekaserver
+2025-06-06T11:34:56.640+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
+2025-06-06T11:34:56.641+02:00  WARN 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
+2025-06-06T11:34:56.642+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
+2025-06-06T11:34:56.644+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-06-06T11:34:56.651+02:00  INFO 26940 --- [patientapi] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-06-06T11:34:56.654+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1749202496653 with initial instances count: 0
+2025-06-06T11:34:56.661+02:00  INFO 26940 --- [patientapi] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PATIENTAPI with eureka with status UP
+2025-06-06T11:34:56.663+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749202496663, current=UP, previous=STARTING]
+2025-06-06T11:34:56.668+02:00  INFO 26940 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
+2025-06-06T11:34:56.697+02:00  INFO 26940 --- [patientapi] [main] c.m.patientapi.PatientControllerTest     : Started PatientControllerTest in 15.172 seconds (process running for 16.687)
+2025-06-06T11:34:56.809+02:00  INFO 26940 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eurekaserver:8761/eureka/}, exception=I/O error on POST request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI": eurekaserver stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI": eurekaserver
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
@@ -748,8 +435,8 @@ Caused by: java.net.UnknownHostException: eurekaserver
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
 	... 22 more
 
-2025-06-05T00:18:25.770+02:00  WARN 26448 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI": eurekaserver
-2025-06-05T00:18:25.771+02:00  WARN 26448 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration failed Cannot execute request on any known server
+2025-06-06T11:34:56.811+02:00  WARN 26940 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI": eurekaserver
+2025-06-06T11:34:56.812+02:00  WARN 26940 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration failed Cannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
@@ -767,7 +454,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
 
-2025-06-05T00:18:25.783+02:00  WARN 26448 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+2025-06-06T11:34:56.819+02:00  WARN 26940 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
@@ -785,27 +472,27 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
 
-2025-06-05T00:18:25.969+02:00  INFO 26448 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive GET /api/patients/1: PatientApi use RestController to send PatientDto by ID
-2025-06-05T00:18:26.107+02:00  INFO 26448 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive GET /api/patients: PatientApi use RestController to send list of PatientDto
-2025-06-05T00:18:26.155+02:00  INFO 26448 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive GET /api/patients/name/Test: PatientApi use RestController to send PatientDto by name
-2025-06-05T00:18:26.219+02:00  INFO 26448 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive POST /api/patients: PatientDto PatientDto(id=1, nom=Test, prenom=Jean, dateAnniversaire=1990-01-01, genre=M, adresse=123 rue Test, telephone=0000000000, notes=null) - PatientApi use RestController to create Patient
-2025-06-05T00:18:26.243+02:00  INFO 26448 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive PUT /api/patients/1: PatientDto PatientDto(id=1, nom=Test, prenom=Jean, dateAnniversaire=1990-01-01, genre=M, adresse=123 rue Test, telephone=0000000000, notes=null) - PatientApi use RestController to update Patient
-2025-06-05T00:18:26.264+02:00  INFO 26448 --- [patientapi] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mediLabo.patientapi.PatientServiceImplTest]: PatientServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-06-05T00:18:26.267+02:00  INFO 26448 --- [patientapi] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mediLabo.patientapi.PatientApiApplication for test class com.mediLabo.patientapi.PatientServiceImplTest
-2025-06-05T00:18:26.271+02:00  INFO 26448 --- [patientapi] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
-2025-06-05T00:18:26.334+02:00  INFO 26448 --- [patientapi] [main] c.m.patientapi.PatientServiceImplTest    : Starting PatientServiceImplTest using Java 22.0.1 with PID 26448 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
-2025-06-05T00:18:26.334+02:00  INFO 26448 --- [patientapi] [main] c.m.patientapi.PatientServiceImplTest    : The following 1 profile is active: "test"
-2025-06-05T00:18:26.728+02:00  INFO 26448 --- [patientapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-05T00:18:26.736+02:00  INFO 26448 --- [patientapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interface.
-2025-06-05T00:18:26.802+02:00  INFO 26448 --- [patientapi] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=66a9bd76-bd5a-395a-aa6c-02e02e36d186
-2025-06-05T00:18:26.887+02:00  INFO 26448 --- [patientapi] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-05T00:18:26.890+02:00  INFO 26448 --- [patientapi] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-05T00:18:26.897+02:00  INFO 26448 --- [patientapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-05T00:18:26.898+02:00  INFO 26448 --- [patientapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2025-06-05T00:18:26.899+02:00  INFO 26448 --- [patientapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
-2025-06-05T00:18:26.900+02:00  INFO 26448 --- [patientapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2025-06-05T00:18:26.901+02:00  WARN 26448 --- [patientapi] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-06-05T00:18:26.902+02:00  INFO 26448 --- [patientapi] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-06-06T11:34:57.094+02:00  INFO 26940 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive GET /api/patients/1: PatientApi use RestController to send PatientDto by ID
+2025-06-06T11:34:57.227+02:00  INFO 26940 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive GET /api/patients: PatientApi use RestController to send list of PatientDto
+2025-06-06T11:34:57.267+02:00  INFO 26940 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive GET /api/patients/name/Test: PatientApi use RestController to send PatientDto by name
+2025-06-06T11:34:57.332+02:00  INFO 26940 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive POST /api/patients: PatientDto PatientDto(id=1, nom=Test, prenom=Jean, dateAnniversaire=1990-01-01, genre=M, adresse=123 rue Test, telephone=0000000000, notes=null) - PatientApi use RestController to create Patient
+2025-06-06T11:34:57.350+02:00  INFO 26940 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive PUT /api/patients/1: PatientDto PatientDto(id=1, nom=Test, prenom=Jean, dateAnniversaire=1990-01-01, genre=M, adresse=123 rue Test, telephone=0000000000, notes=null) - PatientApi use RestController to update Patient
+2025-06-06T11:34:57.384+02:00  INFO 26940 --- [patientapi] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mediLabo.patientapi.PatientServiceImplTest]: PatientServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-06-06T11:34:57.387+02:00  INFO 26940 --- [patientapi] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mediLabo.patientapi.PatientApiApplication for test class com.mediLabo.patientapi.PatientServiceImplTest
+2025-06-06T11:34:57.395+02:00  INFO 26940 --- [patientapi] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2025-06-06T11:34:57.485+02:00  INFO 26940 --- [patientapi] [main] c.m.patientapi.PatientServiceImplTest    : Starting PatientServiceImplTest using Java 22.0.1 with PID 26940 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-06-06T11:34:57.486+02:00  INFO 26940 --- [patientapi] [main] c.m.patientapi.PatientServiceImplTest    : The following 1 profile is active: "test"
+2025-06-06T11:34:57.938+02:00  INFO 26940 --- [patientapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-06T11:34:57.950+02:00  INFO 26940 --- [patientapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interface.
+2025-06-06T11:34:58.027+02:00  INFO 26940 --- [patientapi] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=66a9bd76-bd5a-395a-aa6c-02e02e36d186
+2025-06-06T11:34:58.115+02:00  INFO 26940 --- [patientapi] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-06T11:34:58.118+02:00  INFO 26940 --- [patientapi] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-06T11:34:58.129+02:00  INFO 26940 --- [patientapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-06T11:34:58.131+02:00  INFO 26940 --- [patientapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-06-06T11:34:58.132+02:00  INFO 26940 --- [patientapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2025-06-06T11:34:58.132+02:00  INFO 26940 --- [patientapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-06-06T11:34:58.133+02:00  WARN 26940 --- [patientapi] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-06T11:34:58.134+02:00  INFO 26940 --- [patientapi] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
 	Database driver: undefined/unknown
 	Database version: 2.3.232
@@ -813,24 +500,24 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-06-05T00:18:26.930+02:00  INFO 26448 --- [patientapi] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-05T00:18:26.934+02:00  INFO 26448 --- [patientapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-05T00:18:27.022+02:00  WARN 26448 --- [patientapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-05T00:18:27.159+02:00  INFO 26448 --- [patientapi] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'noteapi' URL not provided. Will try picking an instance via load-balancing.
-2025-06-05T00:18:27.701+02:00  INFO 26448 --- [patientapi] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-06-05T00:18:27.742+02:00  WARN 26448 --- [patientapi] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-06-05T00:18:27.765+02:00  INFO 26448 --- [patientapi] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2025-06-05T00:18:27.788+02:00  INFO 26448 --- [patientapi] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-06-05T00:18:27.789+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-06-05T00:18:27.790+02:00  INFO 26448 --- [patientapi] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-05T00:18:27.790+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-06-05T00:18:27.790+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-06-05T00:18:27.790+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-06-05T00:18:27.790+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-06-05T00:18:27.790+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-06-05T00:18:27.790+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-06-05T00:18:27.790+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-06-05T00:18:27.825+02:00  INFO 26448 --- [patientapi] [main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eurekaserver:8761/eureka/}, exception=I/O error on GET request for "http://eurekaserver:8761/eureka/apps/": eurekaserver stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://eurekaserver:8761/eureka/apps/": eurekaserver
+2025-06-06T11:34:58.166+02:00  INFO 26940 --- [patientapi] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-06T11:34:58.170+02:00  INFO 26940 --- [patientapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-06T11:34:58.264+02:00  WARN 26940 --- [patientapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-06T11:34:58.404+02:00  INFO 26940 --- [patientapi] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'noteapi' URL not provided. Will try picking an instance via load-balancing.
+2025-06-06T11:34:58.898+02:00  INFO 26940 --- [patientapi] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-06-06T11:34:58.930+02:00  WARN 26940 --- [patientapi] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-06-06T11:34:58.938+02:00  INFO 26940 --- [patientapi] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-06-06T11:34:58.956+02:00  INFO 26940 --- [patientapi] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-06-06T11:34:58.958+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-06-06T11:34:58.959+02:00  INFO 26940 --- [patientapi] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-06T11:34:58.959+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-06-06T11:34:58.959+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-06-06T11:34:58.959+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-06-06T11:34:58.959+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-06-06T11:34:58.959+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-06-06T11:34:58.959+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-06-06T11:34:58.960+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-06-06T11:34:58.985+02:00  INFO 26940 --- [patientapi] [main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eurekaserver:8761/eureka/}, exception=I/O error on GET request for "http://eurekaserver:8761/eureka/apps/": eurekaserver stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://eurekaserver:8761/eureka/apps/": eurekaserver
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
@@ -1013,8 +700,8 @@ Caused by: java.net.UnknownHostException: eurekaserver
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
 	... 145 more
 
-2025-06-05T00:18:27.826+02:00  WARN 26448 --- [patientapi] [main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://eurekaserver:8761/eureka/apps/": eurekaserver
-2025-06-05T00:18:27.826+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+2025-06-06T11:34:58.986+02:00  WARN 26940 --- [patientapi] [main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://eurekaserver:8761/eureka/apps/": eurekaserver
+2025-06-06T11:34:58.987+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
@@ -1152,17 +839,16 @@ Caused by: java.net.UnknownHostException: eurekaserver
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-2025-06-05T00:18:27.826+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
-2025-06-05T00:18:27.826+02:00  WARN 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
-2025-06-05T00:18:27.826+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
-2025-06-05T00:18:27.827+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-06-05T00:18:27.827+02:00  INFO 26448 --- [patientapi] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-06-05T00:18:27.828+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1749075507828 with initial instances count: 0
-2025-06-05T00:18:27.830+02:00  INFO 26448 --- [patientapi] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PATIENTAPI with eureka with status UP
-2025-06-05T00:18:27.830+02:00  INFO 26448 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749075507830, current=UP, previous=STARTING]
-2025-06-05T00:18:27.830+02:00  INFO 26448 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
-2025-06-05T00:18:27.837+02:00  INFO 26448 --- [patientapi] [main] c.m.patientapi.PatientServiceImplTest    : Started PatientServiceImplTest in 1.567 seconds (process running for 23.473)
-2025-06-05T00:18:27.837+02:00  INFO 26448 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eurekaserver:8761/eureka/}, exception=I/O error on POST request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI": eurekaserver stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI": eurekaserver
+2025-06-06T11:34:58.987+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
+2025-06-06T11:34:58.987+02:00  WARN 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
+2025-06-06T11:34:58.987+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
+2025-06-06T11:34:58.988+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-06-06T11:34:58.993+02:00  INFO 26940 --- [patientapi] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-06-06T11:34:58.994+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1749202498994 with initial instances count: 0
+2025-06-06T11:34:58.996+02:00  INFO 26940 --- [patientapi] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PATIENTAPI with eureka with status UP
+2025-06-06T11:34:58.996+02:00  INFO 26940 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749202498996, current=UP, previous=STARTING]
+2025-06-06T11:34:58.996+02:00  INFO 26940 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
+2025-06-06T11:34:59.006+02:00  INFO 26940 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eurekaserver:8761/eureka/}, exception=I/O error on POST request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI": eurekaserver stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI": eurekaserver
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
@@ -1222,8 +908,8 @@ Caused by: java.net.UnknownHostException: eurekaserver
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
 	... 22 more
 
-2025-06-05T00:18:27.838+02:00  WARN 26448 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI": eurekaserver
-2025-06-05T00:18:27.838+02:00  WARN 26448 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration failed Cannot execute request on any known server
+2025-06-06T11:34:59.006+02:00  WARN 26940 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI": eurekaserver
+2025-06-06T11:34:59.006+02:00  WARN 26940 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration failed Cannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
@@ -1241,7 +927,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
 
-2025-06-05T00:18:27.838+02:00  WARN 26448 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+2025-06-06T11:34:59.007+02:00  WARN 26940 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
@@ -1259,10 +945,11 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
 
-2025-06-05T00:18:28.061+02:00  INFO 26448 --- [patientapi] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PATIENTAPI with eureka with status DOWN
-2025-06-05T00:18:28.062+02:00  INFO 26448 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749075508062, current=DOWN, previous=UP]
-2025-06-05T00:18:28.063+02:00  INFO 26448 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
-2025-06-05T00:18:28.079+02:00  INFO 26448 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eurekaserver:8761/eureka/}, exception=I/O error on POST request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI": eurekaserver stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI": eurekaserver
+2025-06-06T11:34:59.010+02:00  INFO 26940 --- [patientapi] [main] c.m.patientapi.PatientServiceImplTest    : Started PatientServiceImplTest in 1.616 seconds (process running for 19.001)
+2025-06-06T11:34:59.224+02:00  INFO 26940 --- [patientapi] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PATIENTAPI with eureka with status DOWN
+2025-06-06T11:34:59.225+02:00  INFO 26940 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749202499225, current=DOWN, previous=UP]
+2025-06-06T11:34:59.225+02:00  INFO 26940 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
+2025-06-06T11:34:59.236+02:00  INFO 26940 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eurekaserver:8761/eureka/}, exception=I/O error on POST request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI": eurekaserver stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI": eurekaserver
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
@@ -1322,8 +1009,8 @@ Caused by: java.net.UnknownHostException: eurekaserver
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
 	... 22 more
 
-2025-06-05T00:18:28.079+02:00  WARN 26448 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI": eurekaserver
-2025-06-05T00:18:28.079+02:00  WARN 26448 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration failed Cannot execute request on any known server
+2025-06-06T11:34:59.236+02:00  WARN 26940 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI": eurekaserver
+2025-06-06T11:34:59.236+02:00  WARN 26940 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration failed Cannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
@@ -1341,7 +1028,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
 
-2025-06-05T00:18:28.080+02:00  WARN 26448 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+2025-06-06T11:34:59.239+02:00  WARN 26940 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
@@ -1359,12 +1046,12 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
 
-2025-06-05T00:18:28.098+02:00  INFO 26448 --- [patientapi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-05T00:18:28.103+02:00  INFO 26448 --- [patientapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-06-05T00:18:28.105+02:00  INFO 26448 --- [patientapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-06-05T00:18:28.106+02:00  INFO 26448 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-06-05T00:18:31.108+02:00  INFO 26448 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-06-05T00:18:31.121+02:00  INFO 26448 --- [patientapi] [SpringApplicationShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eurekaserver:8761/eureka/}, exception=I/O error on DELETE request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000": eurekaserver stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000": eurekaserver
+2025-06-06T11:34:59.264+02:00  INFO 26940 --- [patientapi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-06T11:34:59.272+02:00  INFO 26940 --- [patientapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-06T11:34:59.275+02:00  INFO 26940 --- [patientapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-06T11:34:59.276+02:00  INFO 26940 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-06-06T11:35:02.283+02:00  INFO 26940 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-06-06T11:35:02.293+02:00  INFO 26940 --- [patientapi] [SpringApplicationShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eurekaserver:8761/eureka/}, exception=I/O error on DELETE request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000": eurekaserver stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000": eurekaserver
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
@@ -1439,8 +1126,8 @@ Caused by: java.net.UnknownHostException: eurekaserver
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
 	... 37 more
 
-2025-06-05T00:18:31.122+02:00  WARN 26448 --- [patientapi] [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000": eurekaserver
-2025-06-05T00:18:31.124+02:00 ERROR 26448 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - de-registration failedCannot execute request on any known server
+2025-06-06T11:35:02.294+02:00  WARN 26940 --- [patientapi] [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000": eurekaserver
+2025-06-06T11:35:02.294+02:00 ERROR 26940 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - de-registration failedCannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
@@ -1473,15 +1160,15 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116) ~[spring-boot-3.4.5.jar:3.4.5]
 	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
 
-2025-06-05T00:18:31.125+02:00  INFO 26448 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2025-06-05T00:18:31.126+02:00  INFO 26448 --- [patientapi] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PATIENTAPI with eureka with status DOWN
-2025-06-05T00:18:31.127+02:00  INFO 26448 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749075511127, current=DOWN, previous=UP]
-2025-06-05T00:18:31.128+02:00  INFO 26448 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
-2025-06-05T00:18:31.137+02:00  INFO 26448 --- [patientapi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-05T00:18:31.138+02:00  INFO 26448 --- [patientapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2025-06-05T00:18:31.142+02:00  INFO 26448 --- [patientapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2025-06-05T00:18:31.143+02:00  INFO 26448 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-06-05T00:18:31.155+02:00  INFO 26448 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eurekaserver:8761/eureka/}, exception=I/O error on POST request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI": eurekaserver stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI": eurekaserver
+2025-06-06T11:35:02.295+02:00  INFO 26940 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-06-06T11:35:02.296+02:00  INFO 26940 --- [patientapi] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PATIENTAPI with eureka with status DOWN
+2025-06-06T11:35:02.296+02:00  INFO 26940 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749202502296, current=DOWN, previous=UP]
+2025-06-06T11:35:02.297+02:00  INFO 26940 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
+2025-06-06T11:35:02.301+02:00  INFO 26940 --- [patientapi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-06T11:35:02.302+02:00  INFO 26940 --- [patientapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-06-06T11:35:02.304+02:00  INFO 26940 --- [patientapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-06-06T11:35:02.304+02:00  INFO 26940 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-06-06T11:35:02.310+02:00  INFO 26940 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eurekaserver:8761/eureka/}, exception=I/O error on POST request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI": eurekaserver stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI": eurekaserver
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
@@ -1541,8 +1228,8 @@ Caused by: java.net.UnknownHostException: eurekaserver
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
 	... 22 more
 
-2025-06-05T00:18:31.156+02:00  WARN 26448 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI": eurekaserver
-2025-06-05T00:18:31.156+02:00  WARN 26448 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration failed Cannot execute request on any known server
+2025-06-06T11:35:02.311+02:00  WARN 26940 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI": eurekaserver
+2025-06-06T11:35:02.311+02:00  WARN 26940 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration failed Cannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
@@ -1560,7 +1247,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
 
-2025-06-05T00:18:31.156+02:00  WARN 26448 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+2025-06-06T11:35:02.311+02:00  WARN 26940 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
@@ -1578,8 +1265,8 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
 
-2025-06-05T00:18:31.157+02:00  INFO 26448 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-06-05T00:18:31.172+02:00  INFO 26448 --- [patientapi] [SpringApplicationShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eurekaserver:8761/eureka/}, exception=I/O error on DELETE request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000": eurekaserver stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000": eurekaserver
+2025-06-06T11:35:02.312+02:00  INFO 26940 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-06-06T11:35:02.320+02:00  INFO 26940 --- [patientapi] [SpringApplicationShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eurekaserver:8761/eureka/}, exception=I/O error on DELETE request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000": eurekaserver stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000": eurekaserver
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
@@ -1654,8 +1341,8 @@ Caused by: java.net.UnknownHostException: eurekaserver
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
 	... 37 more
 
-2025-06-05T00:18:31.173+02:00  WARN 26448 --- [patientapi] [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000": eurekaserver
-2025-06-05T00:18:31.173+02:00 ERROR 26448 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - de-registration failedCannot execute request on any known server
+2025-06-06T11:35:02.320+02:00  WARN 26940 --- [patientapi] [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://eurekaserver:8761/eureka/apps/PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000": eurekaserver
+2025-06-06T11:35:02.321+02:00 ERROR 26940 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - de-registration failedCannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
@@ -1688,4 +1375,440 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116) ~[spring-boot-3.4.5.jar:3.4.5]
 	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
 
-2025-06-05T00:18:31.175+02:00  INFO 26448 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-06-06T11:35:02.322+02:00  INFO 26940 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-06-06T11:37:47.265+02:00  INFO 13304 --- [patientapi] [main] c.m.patientapi.PatientControllerTest     : Starting PatientControllerTest using Java 22.0.1 with PID 13304 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-06-06T11:37:47.268+02:00  INFO 13304 --- [patientapi] [main] c.m.patientapi.PatientControllerTest     : The following 1 profile is active: "test"
+2025-06-06T11:37:48.747+02:00  INFO 13304 --- [patientapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-06T11:37:48.927+02:00  INFO 13304 --- [patientapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 165 ms. Found 1 JPA repository interface.
+2025-06-06T11:37:49.349+02:00  INFO 13304 --- [patientapi] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=abe166b6-8898-3bc8-9072-7a6de18a9d7b
+2025-06-06T11:37:51.364+02:00  INFO 13304 --- [patientapi] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-06T11:37:51.499+02:00  INFO 13304 --- [patientapi] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-06T11:37:51.585+02:00  INFO 13304 --- [patientapi] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-06T11:37:51.851+02:00  INFO 13304 --- [patientapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-06T11:37:51.910+02:00  INFO 13304 --- [patientapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-06T11:37:52.217+02:00  INFO 13304 --- [patientapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-06-06T11:37:52.220+02:00  INFO 13304 --- [patientapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-06T11:37:52.259+02:00  WARN 13304 --- [patientapi] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-06T11:37:52.302+02:00  INFO 13304 --- [patientapi] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-06T11:37:53.318+02:00  INFO 13304 --- [patientapi] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-06T11:37:53.353+02:00  INFO 13304 --- [patientapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-06T11:37:53.633+02:00  WARN 13304 --- [patientapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-06T11:37:54.319+02:00  INFO 13304 --- [patientapi] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'noteapi' URL not provided. Will try picking an instance via load-balancing.
+2025-06-06T11:37:56.870+02:00  INFO 13304 --- [patientapi] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-06-06T11:37:56.871+02:00  INFO 13304 --- [patientapi] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-06-06T11:37:56.883+02:00  INFO 13304 --- [patientapi] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-06-06T11:37:56.900+02:00  INFO 13304 --- [patientapi] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 27 ms
+2025-06-06T11:37:57.042+02:00  INFO 13304 --- [patientapi] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-06-06T11:37:57.110+02:00  WARN 13304 --- [patientapi] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-06-06T11:37:57.255+02:00  INFO 13304 --- [patientapi] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-06-06T11:37:57.283+02:00  INFO 13304 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-06-06T11:37:57.287+02:00  INFO 13304 --- [patientapi] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-06T11:37:57.297+02:00  INFO 13304 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-06-06T11:37:57.298+02:00  INFO 13304 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-06-06T11:37:57.298+02:00  INFO 13304 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-06-06T11:37:57.298+02:00  INFO 13304 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-06-06T11:37:57.298+02:00  INFO 13304 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-06-06T11:37:57.299+02:00  INFO 13304 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-06-06T11:37:57.299+02:00  INFO 13304 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-06-06T11:37:57.794+02:00  INFO 13304 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-06-06T11:37:57.795+02:00  INFO 13304 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-06-06T11:37:57.797+02:00  INFO 13304 --- [patientapi] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-06-06T11:37:57.799+02:00  INFO 13304 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1749202677798 with initial instances count: 0
+2025-06-06T11:37:57.804+02:00  INFO 13304 --- [patientapi] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PATIENTAPI with eureka with status UP
+2025-06-06T11:37:57.805+02:00  INFO 13304 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749202677805, current=UP, previous=STARTING]
+2025-06-06T11:37:57.807+02:00  INFO 13304 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
+2025-06-06T11:37:57.825+02:00  INFO 13304 --- [patientapi] [main] c.m.patientapi.PatientControllerTest     : Started PatientControllerTest in 11.183 seconds (process running for 12.69)
+2025-06-06T11:37:57.852+02:00  INFO 13304 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration status: 204
+2025-06-06T11:37:58.061+02:00  INFO 13304 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive GET /api/patients/1: PatientApi use RestController to send PatientDto by ID
+2025-06-06T11:37:58.190+02:00  INFO 13304 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive GET /api/patients: PatientApi use RestController to send list of PatientDto
+2025-06-06T11:37:58.226+02:00  INFO 13304 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive GET /api/patients/name/Test: PatientApi use RestController to send PatientDto by name
+2025-06-06T11:37:58.290+02:00  INFO 13304 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive POST /api/patients: PatientDto PatientDto(id=1, nom=Test, prenom=Jean, dateAnniversaire=1990-01-01, genre=M, adresse=123 rue Test, telephone=0000000000, notes=null) - PatientApi use RestController to create Patient
+2025-06-06T11:37:58.325+02:00  INFO 13304 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive PUT /api/patients/1: PatientDto PatientDto(id=1, nom=Test, prenom=Jean, dateAnniversaire=1990-01-01, genre=M, adresse=123 rue Test, telephone=0000000000, notes=null) - PatientApi use RestController to update Patient
+2025-06-06T11:37:58.357+02:00  INFO 13304 --- [patientapi] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mediLabo.patientapi.PatientServiceImplTest]: PatientServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-06-06T11:37:58.362+02:00  INFO 13304 --- [patientapi] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mediLabo.patientapi.PatientApiApplication for test class com.mediLabo.patientapi.PatientServiceImplTest
+2025-06-06T11:37:58.371+02:00  INFO 13304 --- [patientapi] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2025-06-06T11:37:58.439+02:00  INFO 13304 --- [patientapi] [main] c.m.patientapi.PatientServiceImplTest    : Starting PatientServiceImplTest using Java 22.0.1 with PID 13304 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-06-06T11:37:58.440+02:00  INFO 13304 --- [patientapi] [main] c.m.patientapi.PatientServiceImplTest    : The following 1 profile is active: "test"
+2025-06-06T11:37:58.767+02:00  INFO 13304 --- [patientapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-06T11:37:58.778+02:00  INFO 13304 --- [patientapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interface.
+2025-06-06T11:37:58.845+02:00  INFO 13304 --- [patientapi] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=66a9bd76-bd5a-395a-aa6c-02e02e36d186
+2025-06-06T11:37:58.921+02:00  INFO 13304 --- [patientapi] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-06T11:37:58.926+02:00  INFO 13304 --- [patientapi] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-06T11:37:58.935+02:00  INFO 13304 --- [patientapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-06T11:37:58.936+02:00  INFO 13304 --- [patientapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-06-06T11:37:58.937+02:00  INFO 13304 --- [patientapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2025-06-06T11:37:58.937+02:00  INFO 13304 --- [patientapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-06-06T11:37:58.938+02:00  WARN 13304 --- [patientapi] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-06T11:37:58.938+02:00  INFO 13304 --- [patientapi] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-06T11:37:58.964+02:00  INFO 13304 --- [patientapi] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-06T11:37:58.967+02:00  INFO 13304 --- [patientapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-06T11:37:59.104+02:00  WARN 13304 --- [patientapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-06T11:37:59.232+02:00  INFO 13304 --- [patientapi] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'noteapi' URL not provided. Will try picking an instance via load-balancing.
+2025-06-06T11:37:59.752+02:00  INFO 13304 --- [patientapi] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-06-06T11:37:59.797+02:00  WARN 13304 --- [patientapi] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-06-06T11:37:59.811+02:00  INFO 13304 --- [patientapi] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-06-06T11:37:59.829+02:00  INFO 13304 --- [patientapi] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-06-06T11:37:59.831+02:00  INFO 13304 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-06-06T11:37:59.832+02:00  INFO 13304 --- [patientapi] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-06T11:37:59.832+02:00  INFO 13304 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-06-06T11:37:59.832+02:00  INFO 13304 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-06-06T11:37:59.832+02:00  INFO 13304 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-06-06T11:37:59.832+02:00  INFO 13304 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-06-06T11:37:59.832+02:00  INFO 13304 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-06-06T11:37:59.832+02:00  INFO 13304 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-06-06T11:37:59.832+02:00  INFO 13304 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-06-06T11:37:59.866+02:00  INFO 13304 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-06-06T11:37:59.867+02:00  INFO 13304 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-06-06T11:37:59.867+02:00  INFO 13304 --- [patientapi] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-06-06T11:37:59.868+02:00  INFO 13304 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1749202679867 with initial instances count: 0
+2025-06-06T11:37:59.870+02:00  INFO 13304 --- [patientapi] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PATIENTAPI with eureka with status UP
+2025-06-06T11:37:59.870+02:00  INFO 13304 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749202679870, current=UP, previous=STARTING]
+2025-06-06T11:37:59.870+02:00  INFO 13304 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
+2025-06-06T11:37:59.884+02:00  INFO 13304 --- [patientapi] [main] c.m.patientapi.PatientServiceImplTest    : Started PatientServiceImplTest in 1.514 seconds (process running for 14.748)
+2025-06-06T11:37:59.886+02:00  INFO 13304 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration status: 204
+2025-06-06T11:38:00.105+02:00  INFO 13304 --- [patientapi] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PATIENTAPI with eureka with status DOWN
+2025-06-06T11:38:00.106+02:00  INFO 13304 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749202680106, current=DOWN, previous=UP]
+2025-06-06T11:38:00.106+02:00  INFO 13304 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
+2025-06-06T11:38:00.118+02:00  INFO 13304 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration status: 204
+2025-06-06T11:38:00.133+02:00  INFO 13304 --- [patientapi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-06T11:38:00.137+02:00  INFO 13304 --- [patientapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-06T11:38:00.138+02:00  INFO 13304 --- [patientapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-06T11:38:00.138+02:00  INFO 13304 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-06-06T11:38:03.145+02:00  INFO 13304 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-06-06T11:38:03.168+02:00  INFO 13304 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - deregister  status: 200
+2025-06-06T11:38:03.169+02:00  INFO 13304 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-06-06T11:38:03.171+02:00  INFO 13304 --- [patientapi] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PATIENTAPI with eureka with status DOWN
+2025-06-06T11:38:03.172+02:00  INFO 13304 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749202683172, current=DOWN, previous=UP]
+2025-06-06T11:38:03.173+02:00  INFO 13304 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
+2025-06-06T11:38:03.181+02:00  INFO 13304 --- [patientapi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-06T11:38:03.183+02:00  INFO 13304 --- [patientapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-06-06T11:38:03.186+02:00  INFO 13304 --- [patientapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-06-06T11:38:03.187+02:00  INFO 13304 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-06-06T11:38:03.198+02:00  INFO 13304 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration status: 204
+2025-06-06T11:38:03.199+02:00  INFO 13304 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-06-06T11:38:03.208+02:00  INFO 13304 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - deregister  status: 200
+2025-06-06T11:38:03.209+02:00  INFO 13304 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-06-06T11:38:39.765+02:00  INFO 1348 --- [patientapi] [restartedMain] c.m.patientapi.PatientApiApplication     : Starting PatientApiApplication using Java 22.0.1 with PID 1348 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-06-06T11:38:39.769+02:00  INFO 1348 --- [patientapi] [restartedMain] c.m.patientapi.PatientApiApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-06-06T11:38:39.847+02:00  INFO 1348 --- [patientapi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-06T11:38:39.847+02:00  INFO 1348 --- [patientapi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-06T11:38:41.791+02:00  INFO 1348 --- [patientapi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-06T11:38:42.028+02:00  INFO 1348 --- [patientapi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 219 ms. Found 1 JPA repository interface.
+2025-06-06T11:38:42.719+02:00  INFO 1348 --- [patientapi] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d1a0fb87-b6d1-3569-804e-e1cebf0ba625
+2025-06-06T11:38:43.951+02:00  INFO 1348 --- [patientapi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2025-06-06T11:38:43.967+02:00  INFO 1348 --- [patientapi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-06T11:38:43.968+02:00  INFO 1348 --- [patientapi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-06T11:38:44.032+02:00  INFO 1348 --- [patientapi] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-06T11:38:44.033+02:00  INFO 1348 --- [patientapi] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4185 ms
+2025-06-06T11:38:44.568+02:00  INFO 1348 --- [patientapi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-06T11:38:45.713+02:00  WARN 1348 --- [patientapi] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script
+2025-06-06T11:38:45.718+02:00  INFO 1348 --- [patientapi] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-06-06T11:38:45.740+02:00  INFO 1348 --- [patientapi] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-06T11:38:45.772+02:00 ERROR 1348 --- [patientapi] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.6.jar:6.2.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.6.jar:6.2.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351) ~[spring-boot-3.4.5.jar:3.4.5]
+	at com.mediLabo.patientapi.PatientApiApplication.main(PatientApiApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.5.jar:3.4.5]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1818) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.6.jar:6.2.6]
+	... 13 common frames omitted
+Caused by: org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:67) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1865) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1814) ~[spring-beans-6.2.6.jar:6.2.6]
+	... 20 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:52) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	... 28 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81) ~[spring-jdbc-6.2.6.jar:6.2.6]
+	... 29 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:961) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	... 42 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:752) ~[na:na]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	... 45 common frames omitted
+
+2025-06-06T11:39:52.847+02:00  INFO 30316 --- [patientapi] [restartedMain] c.m.patientapi.PatientApiApplication     : Starting PatientApiApplication using Java 22.0.1 with PID 30316 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-06-06T11:39:52.849+02:00  INFO 30316 --- [patientapi] [restartedMain] c.m.patientapi.PatientApiApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-06-06T11:39:52.901+02:00  INFO 30316 --- [patientapi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-06T11:39:52.901+02:00  INFO 30316 --- [patientapi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-06T11:39:53.901+02:00  INFO 30316 --- [patientapi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-06T11:39:54.024+02:00  INFO 30316 --- [patientapi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 1 JPA repository interface.
+2025-06-06T11:39:54.265+02:00  INFO 30316 --- [patientapi] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d1a0fb87-b6d1-3569-804e-e1cebf0ba625
+2025-06-06T11:39:54.878+02:00  INFO 30316 --- [patientapi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2025-06-06T11:39:54.893+02:00  INFO 30316 --- [patientapi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-06T11:39:54.894+02:00  INFO 30316 --- [patientapi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-06T11:39:54.943+02:00  INFO 30316 --- [patientapi] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-06T11:39:54.943+02:00  INFO 30316 --- [patientapi] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2042 ms
+2025-06-06T11:39:55.268+02:00  INFO 30316 --- [patientapi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-06T11:39:55.422+02:00  INFO 30316 --- [patientapi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24e94fed
+2025-06-06T11:39:55.425+02:00  INFO 30316 --- [patientapi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-06T11:39:55.532+02:00  INFO 30316 --- [patientapi] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-06T11:39:55.582+02:00  INFO 30316 --- [patientapi] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-06T11:39:55.612+02:00  INFO 30316 --- [patientapi] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-06T11:39:55.879+02:00  INFO 30316 --- [patientapi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-06T11:39:55.919+02:00  WARN 30316 --- [patientapi] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-06T11:39:55.921+02:00  WARN 30316 --- [patientapi] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-06-06T11:39:55.932+02:00  INFO 30316 --- [patientapi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-06T11:39:56.605+02:00  INFO 30316 --- [patientapi] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-06T11:39:56.685+02:00  INFO 30316 --- [patientapi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-06T11:39:57.089+02:00  WARN 30316 --- [patientapi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-06T11:39:57.301+02:00  WARN 30316 --- [patientapi] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-06-06T11:39:57.369+02:00  INFO 30316 --- [patientapi] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'noteapi' URL not provided. Will try picking an instance via load-balancing.
+2025-06-06T11:39:58.424+02:00  INFO 30316 --- [patientapi] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/medilaboDB'
+2025-06-06T11:39:58.501+02:00  INFO 30316 --- [patientapi] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-06-06T11:39:58.560+02:00  WARN 30316 --- [patientapi] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-06-06T11:39:58.582+02:00  INFO 30316 --- [patientapi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-06-06T11:39:58.727+02:00  INFO 30316 --- [patientapi] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-06-06T11:39:58.753+02:00  INFO 30316 --- [patientapi] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-06-06T11:39:58.759+02:00  INFO 30316 --- [patientapi] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-06T11:39:58.773+02:00  INFO 30316 --- [patientapi] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-06-06T11:39:58.774+02:00  INFO 30316 --- [patientapi] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-06-06T11:39:58.774+02:00  INFO 30316 --- [patientapi] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-06-06T11:39:58.774+02:00  INFO 30316 --- [patientapi] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-06-06T11:39:58.774+02:00  INFO 30316 --- [patientapi] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-06-06T11:39:58.774+02:00  INFO 30316 --- [patientapi] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-06-06T11:39:58.774+02:00  INFO 30316 --- [patientapi] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-06-06T11:39:59.132+02:00  INFO 30316 --- [patientapi] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-06-06T11:39:59.133+02:00  INFO 30316 --- [patientapi] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-06-06T11:39:59.136+02:00  INFO 30316 --- [patientapi] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-06-06T11:39:59.140+02:00  INFO 30316 --- [patientapi] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1749202799139 with initial instances count: 3
+2025-06-06T11:39:59.148+02:00  INFO 30316 --- [patientapi] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PATIENTAPI with eureka with status UP
+2025-06-06T11:39:59.149+02:00  INFO 30316 --- [patientapi] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749202799149, current=UP, previous=STARTING]
+2025-06-06T11:39:59.151+02:00  INFO 30316 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
+2025-06-06T11:39:59.178+02:00  INFO 30316 --- [patientapi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
+2025-06-06T11:39:59.180+02:00  INFO 30316 --- [patientapi] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 5000
+2025-06-06T11:39:59.198+02:00  INFO 30316 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration status: 204
+2025-06-06T11:39:59.211+02:00  INFO 30316 --- [patientapi] [restartedMain] c.m.patientapi.PatientApiApplication     : Started PatientApiApplication in 6.884 seconds (process running for 7.826)
+2025-06-06T11:39:59.396+02:00  INFO 30316 --- [patientapi] [RMI TCP Connection(7)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-06T11:39:59.396+02:00  INFO 30316 --- [patientapi] [RMI TCP Connection(7)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-06T11:39:59.398+02:00  INFO 30316 --- [patientapi] [RMI TCP Connection(7)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-06-06T11:40:36.745+02:00  INFO 30316 --- [patientapi] [http-nio-5000-exec-1] c.m.p.controllers.PatientController      : Receive GET /api/patients: PatientApi use RestController to send list of PatientDto
+2025-06-06T11:40:40.155+02:00  INFO 30316 --- [patientapi] [http-nio-5000-exec-2] c.m.p.controllers.PatientController      : Receive GET /api/patients: PatientApi use RestController to send list of PatientDto
+2025-06-06T11:40:41.323+02:00  INFO 30316 --- [patientapi] [http-nio-5000-exec-8] c.m.p.controllers.PatientController      : Receive GET /api/patients: PatientApi use RestController to send list of PatientDto
+2025-06-06T11:40:49.017+02:00  INFO 30316 --- [patientapi] [http-nio-5000-exec-9] c.m.p.controllers.PatientController      : Receive GET /api/patients/name/TestNone: PatientApi use RestController to send PatientDto by name
+2025-06-06T11:40:49.809+02:00  INFO 30316 --- [patientapi] [http-nio-5000-exec-5] c.m.p.controllers.PatientController      : Receive GET /api/patients/name/TestNone: PatientApi use RestController to send PatientDto by name
+2025-06-06T11:40:56.808+02:00  INFO 30316 --- [patientapi] [RMI TCP Connection(11)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-06T11:40:56.810+02:00  INFO 30316 --- [patientapi] [RMI TCP Connection(11)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PATIENTAPI with eureka with status DOWN
+2025-06-06T11:40:56.810+02:00  INFO 30316 --- [patientapi] [RMI TCP Connection(11)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749202856810, current=DOWN, previous=UP]
+2025-06-06T11:40:56.810+02:00  INFO 30316 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
+2025-06-06T11:40:56.814+02:00  INFO 30316 --- [patientapi] [RMI TCP Connection(11)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-06T11:40:56.819+02:00  INFO 30316 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration status: 204
+2025-06-06T11:40:56.825+02:00  INFO 30316 --- [patientapi] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-06T11:40:56.859+02:00  INFO 30316 --- [patientapi] [RMI TCP Connection(11)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-06T11:40:56.862+02:00  INFO 30316 --- [patientapi] [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-06T11:40:56.869+02:00  INFO 30316 --- [patientapi] [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-06T11:40:56.870+02:00  INFO 30316 --- [patientapi] [RMI TCP Connection(11)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-06-06T12:53:46.679+02:00  INFO 29912 --- [patientapi] [main] c.m.patientapi.PatientControllerTest     : Starting PatientControllerTest using Java 22.0.1 with PID 29912 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-06-06T12:53:46.687+02:00  INFO 29912 --- [patientapi] [main] c.m.patientapi.PatientControllerTest     : The following 1 profile is active: "test"
+2025-06-06T12:53:50.182+02:00  INFO 29912 --- [patientapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-06T12:53:50.505+02:00  INFO 29912 --- [patientapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 297 ms. Found 1 JPA repository interface.
+2025-06-06T12:53:51.455+02:00  INFO 29912 --- [patientapi] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=abe166b6-8898-3bc8-9072-7a6de18a9d7b
+2025-06-06T12:53:56.787+02:00  INFO 29912 --- [patientapi] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-06T12:53:57.166+02:00  INFO 29912 --- [patientapi] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-06T12:53:57.406+02:00  INFO 29912 --- [patientapi] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-06T12:53:58.106+02:00  INFO 29912 --- [patientapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-06T12:53:58.231+02:00  INFO 29912 --- [patientapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-06T12:53:58.993+02:00  INFO 29912 --- [patientapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-06-06T12:53:58.999+02:00  INFO 29912 --- [patientapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-06T12:53:59.146+02:00  WARN 29912 --- [patientapi] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-06T12:53:59.228+02:00  INFO 29912 --- [patientapi] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-06T12:54:03.397+02:00  INFO 29912 --- [patientapi] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-06T12:54:03.594+02:00  INFO 29912 --- [patientapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-06T12:54:04.656+02:00  WARN 29912 --- [patientapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-06T12:54:07.812+02:00  INFO 29912 --- [patientapi] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'noteapi' URL not provided. Will try picking an instance via load-balancing.
+2025-06-06T12:54:18.023+02:00  INFO 29912 --- [patientapi] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-06-06T12:54:18.025+02:00  INFO 29912 --- [patientapi] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-06-06T12:54:18.082+02:00  INFO 29912 --- [patientapi] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-06-06T12:54:18.168+02:00  INFO 29912 --- [patientapi] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 140 ms
+2025-06-06T12:54:18.892+02:00  INFO 29912 --- [patientapi] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-06-06T12:54:19.281+02:00  WARN 29912 --- [patientapi] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-06-06T12:54:19.823+02:00  INFO 29912 --- [patientapi] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-06-06T12:54:19.947+02:00  INFO 29912 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-06-06T12:54:19.970+02:00  INFO 29912 --- [patientapi] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-06T12:54:20.020+02:00  INFO 29912 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-06-06T12:54:20.021+02:00  INFO 29912 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-06-06T12:54:20.022+02:00  INFO 29912 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-06-06T12:54:20.023+02:00  INFO 29912 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-06-06T12:54:20.023+02:00  INFO 29912 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-06-06T12:54:20.026+02:00  INFO 29912 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-06-06T12:54:20.027+02:00  INFO 29912 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-06-06T12:54:22.032+02:00  INFO 29912 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-06-06T12:54:22.039+02:00  INFO 29912 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-06-06T12:54:22.048+02:00  INFO 29912 --- [patientapi] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-06-06T12:54:22.055+02:00  INFO 29912 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1749207262052 with initial instances count: 2
+2025-06-06T12:54:22.080+02:00  INFO 29912 --- [patientapi] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PATIENTAPI with eureka with status UP
+2025-06-06T12:54:22.084+02:00  INFO 29912 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749207262084, current=UP, previous=STARTING]
+2025-06-06T12:54:22.097+02:00  INFO 29912 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
+2025-06-06T12:54:22.213+02:00  INFO 29912 --- [patientapi] [main] c.m.patientapi.PatientControllerTest     : Started PatientControllerTest in 37.01 seconds (process running for 40.198)
+2025-06-06T12:54:22.428+02:00  INFO 29912 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration status: 204
+2025-06-06T12:54:23.181+02:00  INFO 29912 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive GET /api/patients/1: PatientApi use RestController to send PatientDto by ID
+2025-06-06T12:54:23.486+02:00  INFO 29912 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive GET /api/patients: PatientApi use RestController to send list of PatientDto
+2025-06-06T12:54:23.569+02:00  INFO 29912 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive GET /api/patients/name/Test: PatientApi use RestController to send PatientDto by name
+2025-06-06T12:54:23.676+02:00  INFO 29912 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive POST /api/patients: PatientDto PatientDto(id=1, nom=Test, prenom=Jean, dateAnniversaire=1990-01-01, genre=M, adresse=123 rue Test, telephone=0000000000, notes=null) - PatientApi use RestController to create Patient
+2025-06-06T12:54:23.721+02:00  INFO 29912 --- [patientapi] [main] c.m.p.controllers.PatientController      : Receive PUT /api/patients/1: PatientDto PatientDto(id=1, nom=Test, prenom=Jean, dateAnniversaire=1990-01-01, genre=M, adresse=123 rue Test, telephone=0000000000, notes=null) - PatientApi use RestController to update Patient
+2025-06-06T12:54:23.781+02:00  INFO 29912 --- [patientapi] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mediLabo.patientapi.PatientServiceImplTest]: PatientServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-06-06T12:54:23.795+02:00  INFO 29912 --- [patientapi] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mediLabo.patientapi.PatientApiApplication for test class com.mediLabo.patientapi.PatientServiceImplTest
+2025-06-06T12:54:23.816+02:00  INFO 29912 --- [patientapi] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2025-06-06T12:54:24.102+02:00  INFO 29912 --- [patientapi] [main] c.m.patientapi.PatientServiceImplTest    : Starting PatientServiceImplTest using Java 22.0.1 with PID 29912 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-06-06T12:54:24.104+02:00  INFO 29912 --- [patientapi] [main] c.m.patientapi.PatientServiceImplTest    : The following 1 profile is active: "test"
+2025-06-06T12:54:25.838+02:00  INFO 29912 --- [patientapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-06T12:54:25.889+02:00  INFO 29912 --- [patientapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interface.
+2025-06-06T12:54:26.282+02:00  INFO 29912 --- [patientapi] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=66a9bd76-bd5a-395a-aa6c-02e02e36d186
+2025-06-06T12:54:26.609+02:00  INFO 29912 --- [patientapi] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-06T12:54:26.623+02:00  INFO 29912 --- [patientapi] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-06T12:54:26.677+02:00  INFO 29912 --- [patientapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-06T12:54:26.682+02:00  INFO 29912 --- [patientapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-06-06T12:54:26.685+02:00  INFO 29912 --- [patientapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2025-06-06T12:54:26.687+02:00  INFO 29912 --- [patientapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-06-06T12:54:26.688+02:00  WARN 29912 --- [patientapi] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-06T12:54:26.690+02:00  INFO 29912 --- [patientapi] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-06T12:54:26.813+02:00  INFO 29912 --- [patientapi] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-06T12:54:26.825+02:00  INFO 29912 --- [patientapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-06T12:54:27.199+02:00  WARN 29912 --- [patientapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-06T12:54:27.426+02:00  INFO 29912 --- [patientapi] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'noteapi' URL not provided. Will try picking an instance via load-balancing.
+2025-06-06T12:54:28.271+02:00  INFO 29912 --- [patientapi] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-06-06T12:54:28.318+02:00  WARN 29912 --- [patientapi] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-06-06T12:54:28.336+02:00  INFO 29912 --- [patientapi] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-06-06T12:54:28.372+02:00  INFO 29912 --- [patientapi] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-06-06T12:54:28.378+02:00  INFO 29912 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-06-06T12:54:28.379+02:00  INFO 29912 --- [patientapi] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-06T12:54:28.380+02:00  INFO 29912 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-06-06T12:54:28.380+02:00  INFO 29912 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-06-06T12:54:28.380+02:00  INFO 29912 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-06-06T12:54:28.380+02:00  INFO 29912 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-06-06T12:54:28.380+02:00  INFO 29912 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-06-06T12:54:28.380+02:00  INFO 29912 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-06-06T12:54:28.380+02:00  INFO 29912 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-06-06T12:54:28.430+02:00  INFO 29912 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-06-06T12:54:28.431+02:00  INFO 29912 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-06-06T12:54:28.432+02:00  INFO 29912 --- [patientapi] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-06-06T12:54:28.433+02:00  INFO 29912 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1749207268433 with initial instances count: 2
+2025-06-06T12:54:28.438+02:00  INFO 29912 --- [patientapi] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PATIENTAPI with eureka with status UP
+2025-06-06T12:54:28.439+02:00  INFO 29912 --- [patientapi] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749207268439, current=UP, previous=STARTING]
+2025-06-06T12:54:28.440+02:00  INFO 29912 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
+2025-06-06T12:54:28.471+02:00  INFO 29912 --- [patientapi] [main] c.m.patientapi.PatientServiceImplTest    : Started PatientServiceImplTest in 4.658 seconds (process running for 46.456)
+2025-06-06T12:54:28.482+02:00  INFO 29912 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration status: 204
+2025-06-06T12:54:29.021+02:00  INFO 29912 --- [patientapi] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PATIENTAPI with eureka with status DOWN
+2025-06-06T12:54:29.022+02:00  INFO 29912 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749207269022, current=DOWN, previous=UP]
+2025-06-06T12:54:29.023+02:00  INFO 29912 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
+2025-06-06T12:54:29.059+02:00  INFO 29912 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration status: 204
+2025-06-06T12:54:29.061+02:00  INFO 29912 --- [patientapi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-06T12:54:29.066+02:00  INFO 29912 --- [patientapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-06T12:54:29.069+02:00  INFO 29912 --- [patientapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-06T12:54:29.071+02:00  INFO 29912 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-06-06T12:54:32.083+02:00  INFO 29912 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-06-06T12:54:32.111+02:00  INFO 29912 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - deregister  status: 200
+2025-06-06T12:54:32.112+02:00  INFO 29912 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-06-06T12:54:32.114+02:00  INFO 29912 --- [patientapi] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PATIENTAPI with eureka with status DOWN
+2025-06-06T12:54:32.114+02:00  INFO 29912 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749207272114, current=DOWN, previous=UP]
+2025-06-06T12:54:32.115+02:00  INFO 29912 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
+2025-06-06T12:54:32.123+02:00  INFO 29912 --- [patientapi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-06T12:54:32.125+02:00  INFO 29912 --- [patientapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-06-06T12:54:32.126+02:00  INFO 29912 --- [patientapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-06-06T12:54:32.126+02:00  INFO 29912 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-06-06T12:54:32.142+02:00  INFO 29912 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration status: 204
+2025-06-06T12:54:32.144+02:00  INFO 29912 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-06-06T12:54:32.159+02:00  INFO 29912 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - deregister  status: 200
+2025-06-06T12:54:32.160+02:00  INFO 29912 --- [patientapi] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

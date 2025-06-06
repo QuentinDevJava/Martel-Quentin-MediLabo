@@ -106,7 +106,7 @@
 					</excludes>
 				</configuration>
 			</plugin>
-						<plugin>
+			<plugin>
 		      <artifactId>maven-resources-plugin</artifactId>
 		      <executions>
 		        <execution>

@@ -1,40 +1,5 @@
-server:
-  port: 5005  # Port du gateway
-
 spring:
   application:
     name: gatewayapi
-  cloud:
-    config:
-      enabled: false
-    discovery:
-      enabled: true
-    gateway:
-      routes:
-        - id: patientapi
-          uri: lb://patientapi
-          predicates:
-            - Path=/api/patients/**
-        - id: noteapi
-          uri: lb://noteapi
-          predicates:
-            - Path=/api/notes/**
-        - id: evaluationrisqueapi
-          uri: lb://evaluationrisqueapi
-          predicates:
-            - Path=/api/evaluationrisque/**
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-  endpoint:
-    gateway:
-      access: unrestricted
-eureka:
-  client:
-    service-url:
-      defaultZone: http://eurekaserver:8761/eureka/
-  instance:
-   prefer-ip-address: true
+  config:
+   import: configserver:http://configserver:5555

@@ -23,6 +23,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
     volumes:
       - mongo-data:/data/db
+
   eurekaserver:
     build:
       context: ./services/eurekaserver
@@ -31,6 +32,23 @@ services:
       - "8761:8761"
     environment:
       - "SPRING_PROFILES_ACTIVE=docker"
+
+  configserver:
+    build:
+      context: ./services/configserver
+    container_name: configserver
+    ports:
+      - "5555:5555"
+  
+  ui:
+    build:
+      context: ./services/ui
+    container_name: ui
+    ports:
+      - "5001:5001"
+    environment:
+      - "SPRING_PROFILES_ACTIVE=docker"
+
   gatewayapi:
     build:
       context: ./services/gatewayapi
@@ -39,8 +57,13 @@ services:
       - "5005:5005"
     depends_on:
       - eurekaserver
+      - configserver
     environment:
       - "SPRING_PROFILES_ACTIVE=docker"
+      - WAIT_HOSTS=eurekaserver:8761,configserver:5555
+      - WAIT_HOSTS_TIMEOUT=1000
+    command: sh -c "/wait && java -jar gatewayapi.jar"
+
   evaluationrisqueapi:
     build:
       context: ./services/evaluationrisqueapi
@@ -49,8 +72,13 @@ services:
       - "5003:5003"
     depends_on:
       - eurekaserver
+      - configserver
     environment:
       - "SPRING_PROFILES_ACTIVE=docker"
+      - WAIT_HOSTS=eurekaserver:8761,configserver:5555
+      - WAIT_HOSTS_TIMEOUT=8000
+    command: sh -c "/wait && java -jar evaluationrisqueapi.jar"
+
   noteapi:
     build:
       context: ./services/noteapi
@@ -58,10 +86,15 @@ services:
     ports:
       - "5002:5002"
     depends_on:
-      - eurekaserver
       - mongodb
+      - eurekaserver
+      - configserver
     environment:
       - "SPRING_PROFILES_ACTIVE=docker"
+      - WAIT_HOSTS=mongodb:27017,eurekaserver:8761,configserver:5555
+      - WAIT_HOSTS_TIMEOUT=8000
+    command: sh -c "/wait && java -jar noteapi.jar"
+
   patientapi:
     build:
       context: ./services/patientapi
@@ -69,10 +102,14 @@ services:
     ports:
       - "5000:5000"
     depends_on:
-      - eurekaserver
       - mysqldb
+      - eurekaserver
+      - configserver
     environment:
       - "SPRING_PROFILES_ACTIVE=docker"
+      - WAIT_HOSTS=mysqldb:3306,eurekaserver:8761,configserver:5555,noteapi:5002
+      - WAIT_HOSTS_TIMEOUT=20000
+    command: sh -c "/wait && java -jar patientapi.jar"
 
 volumes:
   mysql-data:

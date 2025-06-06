@@ -4,7 +4,6 @@ server:
 spring:
   application:
     name: gatewayapi
-
   cloud:
     config:
       enabled: true
@@ -24,10 +23,7 @@ spring:
           uri: lb://evaluationrisqueapi
           predicates:
             - Path=/api/evaluationrisque/**
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
+
 management:
   endpoints:
     web:
@@ -39,6 +35,6 @@ management:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://eurekaserver:8761/eureka/
   instance:
    prefer-ip-address: true
