@@ -46,6 +46,10 @@ services:
     container_name: ui
     ports:
       - "5001:5001"
+    depends_on:
+      - eurekaserver
+      - configserver
+      - patientapi
     environment:
       - "SPRING_PROFILES_ACTIVE=docker"
 
@@ -105,6 +109,7 @@ services:
       - mysqldb
       - eurekaserver
       - configserver
+      - noteapi
     environment:
       - "SPRING_PROFILES_ACTIVE=docker"
       - WAIT_HOSTS=mysqldb:3306,eurekaserver:8761,configserver:5555,noteapi:5002

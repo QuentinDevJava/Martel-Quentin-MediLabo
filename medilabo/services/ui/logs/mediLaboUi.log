@@ -81,3 +81,128 @@ org.springframework.web.client.HttpServerErrorException$ServiceUnavailable: 503 
 2025-06-06T11:41:04.856+02:00  INFO 26720 --- [ui] [RMI TCP Connection(13)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
 2025-06-06T11:41:04.858+02:00  INFO 26720 --- [ui] [RMI TCP Connection(13)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
 2025-06-06T11:41:04.866+02:00  INFO 26720 --- [ui] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-06T13:44:19.215+02:00  INFO 24336 --- [ui] [main] com.mediLabo.ui.UiApplicationTests       : Starting UiApplicationTests using Java 22.0.1 with PID 24336 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\ui)
+2025-06-06T13:44:19.218+02:00  INFO 24336 --- [ui] [main] com.mediLabo.ui.UiApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2025-06-06T13:44:20.510+02:00  INFO 24336 --- [ui] [main] com.mediLabo.ui.UiApplicationTests       : Started UiApplicationTests in 1.756 seconds (process running for 2.807)
+2025-06-06T13:54:50.284+02:00  INFO 29236 --- [ui] [main] com.mediLabo.ui.UiApplicationTests       : Starting UiApplicationTests using Java 22.0.1 with PID 29236 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\ui)
+2025-06-06T13:54:50.289+02:00  INFO 29236 --- [ui] [main] com.mediLabo.ui.UiApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2025-06-06T13:54:51.762+02:00  INFO 29236 --- [ui] [main] com.mediLabo.ui.UiApplicationTests       : Started UiApplicationTests in 1.939 seconds (process running for 3.011)
+2025-06-06T14:19:45.198+02:00  INFO 8700 --- [ui] [main] com.mediLabo.ui.UiApplicationTests       : Starting UiApplicationTests using Java 22.0.1 with PID 8700 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\ui)
+2025-06-06T14:19:45.201+02:00  INFO 8700 --- [ui] [main] com.mediLabo.ui.UiApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2025-06-06T14:19:46.408+02:00  INFO 8700 --- [ui] [main] com.mediLabo.ui.UiApplicationTests       : Started UiApplicationTests in 1.687 seconds (process running for 2.65)
+2025-06-06T14:19:53.960+02:00  INFO 26432 --- [ui] [restartedMain] com.mediLabo.ui.UiApplication            : Starting UiApplication using Java 22.0.1 with PID 26432 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\ui\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\ui)
+2025-06-06T14:19:53.963+02:00  INFO 26432 --- [ui] [restartedMain] com.mediLabo.ui.UiApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-06-06T14:19:54.012+02:00  INFO 26432 --- [ui] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-06T14:19:54.013+02:00  INFO 26432 --- [ui] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-06T14:19:54.593+02:00  INFO 26432 --- [ui] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5001 (http)
+2025-06-06T14:19:54.605+02:00  INFO 26432 --- [ui] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-06T14:19:54.605+02:00  INFO 26432 --- [ui] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-06T14:19:54.645+02:00  INFO 26432 --- [ui] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-06T14:19:54.645+02:00  INFO 26432 --- [ui] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 632 ms
+2025-06-06T14:19:54.902+02:00  INFO 26432 --- [ui] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-06T14:19:54.929+02:00  INFO 26432 --- [ui] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5001 (http) with context path '/'
+2025-06-06T14:19:54.937+02:00  INFO 26432 --- [ui] [restartedMain] com.mediLabo.ui.UiApplication            : Started UiApplication in 1.292 seconds (process running for 1.897)
+2025-06-06T14:20:00.234+02:00  INFO 26432 --- [ui] [http-nio-5001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-06T14:20:00.235+02:00  INFO 26432 --- [ui] [http-nio-5001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-06T14:20:00.235+02:00  INFO 26432 --- [ui] [http-nio-5001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-06-06T14:20:00.255+02:00  INFO 26432 --- [ui] [http-nio-5001-exec-1] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-06T14:20:03.053+02:00 ERROR 26432 --- [ui] [http-nio-5001-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://gatewayapi:5005/api/patients/": gatewayapi] with root cause
+
+java.net.UnknownHostException: gatewayapi
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:752) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:687) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:531) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:636) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:386) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:408) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1310) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1243) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1129) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1058) ~[na:na]
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:801) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:415) ~[spring-web-6.2.6.jar:6.2.6]
+	at com.mediLabo.ui.controller.PatientUiController.listPatients(PatientUiController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+
+2025-06-06T14:20:27.836+02:00  INFO 26432 --- [ui] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-06-06T14:20:27.841+02:00  INFO 26432 --- [ui] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-06T14:20:27.854+02:00  INFO 26432 --- [ui] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-06T14:20:27.910+02:00  INFO 26432 --- [ui] [restartedMain] com.mediLabo.ui.UiApplication            : Starting UiApplication using Java 22.0.1 with PID 26432 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\ui\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\ui)
+2025-06-06T14:20:27.910+02:00  INFO 26432 --- [ui] [restartedMain] com.mediLabo.ui.UiApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-06-06T14:20:28.031+02:00  INFO 26432 --- [ui] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5001 (http)
+2025-06-06T14:20:28.032+02:00  INFO 26432 --- [ui] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-06T14:20:28.033+02:00  INFO 26432 --- [ui] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-06T14:20:28.045+02:00  INFO 26432 --- [ui] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-06T14:20:28.045+02:00  INFO 26432 --- [ui] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 134 ms
+2025-06-06T14:20:28.104+02:00  INFO 26432 --- [ui] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-06T14:20:28.112+02:00  INFO 26432 --- [ui] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5001 (http) with context path '/'
+2025-06-06T14:20:28.116+02:00  INFO 26432 --- [ui] [restartedMain] com.mediLabo.ui.UiApplication            : Started UiApplication in 0.225 seconds (process running for 35.076)
+2025-06-06T14:20:28.117+02:00  INFO 26432 --- [ui] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-06-06T14:20:31.341+02:00  INFO 26432 --- [ui] [http-nio-5001-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-06T14:20:31.341+02:00  INFO 26432 --- [ui] [http-nio-5001-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-06T14:20:31.343+02:00  INFO 26432 --- [ui] [http-nio-5001-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-06-06T14:20:31.344+02:00  INFO 26432 --- [ui] [http-nio-5001-exec-2] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-06T14:20:33.274+02:00  INFO 26432 --- [ui] [http-nio-5001-exec-1] c.m.ui.controller.PatientUiController    : UI GET /patients/1 - retrieving patient detail
+2025-06-06T14:25:17.810+02:00  INFO 26432 --- [ui] [RMI TCP Connection(18)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-06T14:25:17.810+02:00  INFO 26432 --- [ui] [RMI TCP Connection(18)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-06T14:25:17.819+02:00  INFO 26432 --- [ui] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-06T14:25:27.001+02:00  INFO 23744 --- [ui] [main] com.mediLabo.ui.UiApplicationTests       : Starting UiApplicationTests using Java 22.0.1 with PID 23744 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\ui)
+2025-06-06T14:25:27.003+02:00  INFO 23744 --- [ui] [main] com.mediLabo.ui.UiApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2025-06-06T14:25:28.323+02:00  INFO 23744 --- [ui] [main] com.mediLabo.ui.UiApplicationTests       : Started UiApplicationTests in 1.858 seconds (process running for 2.894)
+2025-06-06T14:34:19.328+02:00  INFO 18160 --- [ui] [main] com.mediLabo.ui.UiApplicationTests       : Starting UiApplicationTests using Java 22.0.1 with PID 18160 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\ui)
+2025-06-06T14:34:19.331+02:00  INFO 18160 --- [ui] [main] com.mediLabo.ui.UiApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2025-06-06T14:34:20.606+02:00  INFO 18160 --- [ui] [main] com.mediLabo.ui.UiApplicationTests       : Started UiApplicationTests in 1.797 seconds (process running for 2.74)

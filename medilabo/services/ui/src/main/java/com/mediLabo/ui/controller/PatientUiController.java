@@ -2,6 +2,7 @@ package com.mediLabo.ui.controller;
 
 import java.util.Arrays;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +20,8 @@ import lombok.extern.slf4j.Slf4j;
 public class PatientUiController {
 
 	private final RestTemplate restTemplate = new RestTemplate();
-	private String patientApiUrl = "http://localhost:5005/api/patients/";
+	@Value("${patient.api.url}")
+	private String patientApiUrl;
 
 	@GetMapping("/patients")
 	public String listPatients(Model model) {

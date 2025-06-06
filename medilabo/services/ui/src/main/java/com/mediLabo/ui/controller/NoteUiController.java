@@ -1,5 +1,6 @@
 package com.mediLabo.ui.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +20,9 @@ import lombok.extern.slf4j.Slf4j;
 public class NoteUiController {
 
 	private final RestTemplate restTemplate = new RestTemplate();
-	private String noteApiUrl = "http://localhost:5005/api/notes/";
+
+	@Value("${note.api.url}")
+	private String noteApiUrl;
 
 	@GetMapping("/add/{patientNom}")
 	public String addNoteForm(@PathVariable String patientNom, Model model) {

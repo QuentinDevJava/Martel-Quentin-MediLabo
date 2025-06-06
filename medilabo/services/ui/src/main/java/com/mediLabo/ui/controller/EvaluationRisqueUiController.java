@@ -1,5 +1,6 @@
 package com.mediLabo.ui.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,8 +16,12 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 @RequestMapping("/evaluationRisque")
 public class EvaluationRisqueUiController {
-	private String patientApiUrl = "http://localhost:5005/api/patients/name/";
-	private String evaluationRisqueApiUrl = "http://localhost:5003/api/evaluationrisque/patients/name/";
+
+	@Value("${patient.api.url}")
+	private String patientApiUrl;
+
+	@Value("${evaluationrisque.api.url}")
+	private String evaluationRisqueApiUrl;
 
 	private final RestTemplate restTemplate = new RestTemplate();
 

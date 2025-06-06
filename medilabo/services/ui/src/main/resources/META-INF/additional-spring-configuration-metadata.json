@@ -1,5 +1,17 @@
-{"properties": [{
-  "name": "patient.api.url",
-  "type": "java.lang.String",
-  "description": "A description for 'patient.api.url'"
-}]}
+{"properties": [
+  {
+    "name": "patient.api.url",
+    "type": "java.lang.String",
+    "description": "A description for 'patient.api.url'"
+  },
+  {
+    "name": "note.api.url",
+    "type": "java.lang.String",
+    "description": "A description for 'note.api.url'"
+  },
+  {
+    "name": "evaluationrisque.api.url",
+    "type": "java.lang.String",
+    "description": "A description for 'evaluationrisque.api.url'"
+  }
+]}
