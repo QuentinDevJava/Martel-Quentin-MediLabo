@@ -11,6 +11,12 @@ services:
       MYSQL_ROOT_PASSWORD: ${MYSQL_INITDB_ROOT_PASSWORD}
     volumes:
       - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 20s
 
   mongodb:
     image: mongo:6
@@ -23,98 +29,147 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
     volumes:
       - mongo-data:/data/db
+    healthcheck:
+      test: ["CMD-SHELL", "echo 'db.runCommand({ ping: 1 }).ok' | mongosh localhost:27017/test --quiet | grep 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 20s
 
   eurekaserver:
     build:
-      context: ./services/eurekaserver
+      context: ../services/eurekaserver
     container_name: eurekaserver
     ports:
       - "8761:8761"
     environment:
       - "SPRING_PROFILES_ACTIVE=docker"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8761/actuator/health || exit 1"]
+      interval: 2s
+      timeout: 3s
+      retries: 10
+      start_period: 20s
 
   configserver:
     build:
-      context: ./services/configserver
+      context: ../services/configserver
     container_name: configserver
     ports:
       - "5555:5555"
-  
-  ui:
-    build:
-      context: ./services/ui
-    container_name: ui
-    ports:
-      - "5001:5001"
     depends_on:
-      - eurekaserver
-      - configserver
-      - patientapi
-    environment:
-      - "SPRING_PROFILES_ACTIVE=docker"
+      eurekaserver:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5555/noteapi/docker || exit 1"]
+      interval: 2s
+      timeout: 3s
+      retries: 10
+      start_period: 20s
 
   gatewayapi:
     build:
-      context: ./services/gatewayapi
+      context: ../services/gatewayapi
     container_name: gatewayapi
     ports:
       - "5005:5005"
     depends_on:
-      - eurekaserver
-      - configserver
+      eurekaserver:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
     environment:
       - "SPRING_PROFILES_ACTIVE=docker"
-      - WAIT_HOSTS=eurekaserver:8761,configserver:5555
-      - WAIT_HOSTS_TIMEOUT=1000
-    command: sh -c "/wait && java -jar gatewayapi.jar"
-
-  evaluationrisqueapi:
-    build:
-      context: ./services/evaluationrisqueapi
-    container_name: evaluationrisqueapi
-    ports:
-      - "5003:5003"
-    depends_on:
-      - eurekaserver
-      - configserver
-    environment:
-      - "SPRING_PROFILES_ACTIVE=docker"
-      - WAIT_HOSTS=eurekaserver:8761,configserver:5555
-      - WAIT_HOSTS_TIMEOUT=8000
-    command: sh -c "/wait && java -jar evaluationrisqueapi.jar"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5005/actuator/health || exit 1"]
+      interval: 2s
+      timeout: 3s
+      retries: 10
+      start_period: 20s
 
   noteapi:
     build:
-      context: ./services/noteapi
+      context: ../services/noteapi
     container_name: noteapi
     ports:
       - "5002:5002"
     depends_on:
-      - mongodb
-      - eurekaserver
-      - configserver
+      mongodb:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+      gatewayapi:
+        condition: service_healthy
     environment:
       - "SPRING_PROFILES_ACTIVE=docker"
-      - WAIT_HOSTS=mongodb:27017,eurekaserver:8761,configserver:5555
-      - WAIT_HOSTS_TIMEOUT=8000
-    command: sh -c "/wait && java -jar noteapi.jar"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5002/actuator/health || exit 1"]
+      interval: 2s
+      timeout: 3s
+      retries: 10
+      start_period: 20s
 
   patientapi:
     build:
-      context: ./services/patientapi
+      context: ../services/patientapi
     container_name: patientapi
     ports:
       - "5000:5000"
     depends_on:
-      - mysqldb
-      - eurekaserver
-      - configserver
-      - noteapi
+      mysqldb:
+        condition: service_healthy
+      noteapi:
+        condition: service_healthy
+      evaluationrisqueapi:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+      gatewayapi:
+        condition: service_healthy
     environment:
       - "SPRING_PROFILES_ACTIVE=docker"
-      - WAIT_HOSTS=mysqldb:3306,eurekaserver:8761,configserver:5555,noteapi:5002
-      - WAIT_HOSTS_TIMEOUT=20000
-    command: sh -c "/wait && java -jar patientapi.jar"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5000/actuator/health || exit 1"]
+      interval: 2s
+      timeout: 3s
+      retries: 10
+      start_period: 20s
+
+  evaluationrisqueapi:
+    build:
+      context: ../services/evaluationrisqueapi
+    container_name: evaluationrisqueapi
+    ports:
+      - "5003:5003"
+    depends_on:
+      gatewayapi:
+        condition: service_healthy
+    environment:
+      - "SPRING_PROFILES_ACTIVE=docker"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5003/actuator/health || exit 1"]
+      interval: 2s
+      timeout: 3s
+      retries: 10
+      start_period: 20s
+
+  ui:
+    build:
+      context: ../services/ui
+    container_name: ui
+    ports:
+      - "5001:5001"
+    depends_on:
+      patientapi:
+        condition: service_healthy
+    environment:
+      - "SPRING_PROFILES_ACTIVE=docker"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5001 || exit 1"]
+      interval: 2s
+      timeout: 3s
+      retries: 10
+      start_period: 20s
 
 volumes:
   mysql-data:

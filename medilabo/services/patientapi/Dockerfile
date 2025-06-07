@@ -1,7 +1,8 @@
-FROM openjdk:22-slim-bullseye
+FROM eclipse-temurin:22-jdk-alpine
+VOLUME /tmp
+RUN apk add --no-cache curl
 
 WORKDIR /app
+COPY target/patientapi.jar .
 
-COPY target/*.jar /app/patientapi.jar
-
-ENTRYPOINT ["java", "-jar", "/app/patientapi.jar"]
+ENTRYPOINT ["java", "-jar", "patientapi.jar"]

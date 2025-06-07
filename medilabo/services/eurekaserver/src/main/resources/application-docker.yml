@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: eurekaserver
+  cloud:
+    config:
+      enabled: false
+
+server:
+  port: 8761
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    prefer-ip-address: true
+  server:
+    enable-self-preservation: true
+
+logging:
+  file:
+    name: logs/mediLaboEurekaServer.log
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
