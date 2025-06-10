@@ -22,43 +22,42 @@ public class NoteServiceImpl implements NoteService {
 	private NoteRepository noteRepository;
 
 	@Override
-	public List<NoteDto> getNotesByPatientId(int patientId) {
-		return noteRepository.findAllByPatientId(patientId).stream().map(this::toDto).toList();
+	public List<NoteDto> getNotesByNom(String patientNom) {
+		return noteRepository.findAllByFkPatientNom(patientNom).stream().map(this::toDto).toList();
 	}
 
 	@Override
 	public NoteDto createNote(NoteDto noteDto) {
-		Note note = Note.builder().patientId(noteDto.getPatientId()).patientNom(noteDto.getPatientNom())
-				.contenuNote(noteDto.getContenuNote()).build();
+		Note note = Note.builder().fkPatientNom(noteDto.getFkPatientNom()).note(noteDto.getNote()).build();
 
 		return toDto(noteRepository.save(note));
 	}
 
 	@Override
-	public NoteDto updateNote(String id, NoteDto updateNoteDto) {
-		NoteDto noteDto = getNoteDtoByNoteById(id);
-		if (noteDto == null) {
-			throw new IllegalArgumentException("The note with id : " + id + "is not found");
-		} else {
-			noteDto.setContenuNote(updateNoteDto.getContenuNote());
-
-			return toDto(noteRepository.save(toEntity(noteDto)));
-		}
+	public NoteDto updateNote(String id, NoteDto noteDto) {
+		Note note = findById(id);
+		note.setNote(noteDto.getNote());
+		return toDto(noteRepository.save(note));
 	}
 
 	@Override
 	public NoteDto getNotesById(String id) {
-		return getNoteDtoByNoteById(id);
+		Optional<Note> note = Optional.ofNullable(findById(id));
+		if (note.isPresent()) {
+			return toDto(note.get());
+		} else {
+			return null;
+		}
 
 	}
 
 	@Override
-	public int getNumberOfTermsByPatient(int patientId) {
+	public int getNumberOfTermsByPatient(String patientName) {
 
-		List<NoteDto> notes = getNotesByPatientId(patientId);
+		List<NoteDto> notes = getNotesByNom(patientName);
 		StringBuilder contents = new StringBuilder();
 		for (NoteDto note : notes) {
-			contents.append(contents.append(note.getContenuNote().toLowerCase()).append(" "));
+			contents.append(contents.append(note.getNote().toLowerCase()).append(" "));
 		}
 		String contentString = contents.toString();
 
@@ -90,10 +89,10 @@ public class NoteServiceImpl implements NoteService {
 		return count;
 	}
 
-	private NoteDto getNoteDtoByNoteById(String id) {
+	private Note findById(String id) {
 		Optional<Note> note = noteRepository.findById(id);
 		if (note.isPresent()) {
-			return toDto(note.get());
+			return note.get();
 		} else {
 			return null;
 		}
@@ -101,32 +100,7 @@ public class NoteServiceImpl implements NoteService {
 
 	// TODO class mapper ?
 	private NoteDto toDto(Note note) {
-		return NoteDto.builder()
-
-				.id(note.getId())
-
-				.patientId(note.getPatientId())
-
-				.patientNom(note.getPatientNom())
-
-				.contenuNote(note.getContenuNote())
-
-				.build();
-	}
-
-	// TODO class mapper ?
-	private Note toEntity(NoteDto noteDto) {
-		return Note.builder()
-
-				.id(noteDto.getId())
-
-				.patientId(noteDto.getPatientId())
-
-				.patientNom(noteDto.getPatientNom())
-
-				.contenuNote(noteDto.getContenuNote())
-
-				.build();
+		return NoteDto.builder().id(note.getId()).fkPatientNom(note.getFkPatientNom()).note(note.getNote()).build();
 	}
 
 }

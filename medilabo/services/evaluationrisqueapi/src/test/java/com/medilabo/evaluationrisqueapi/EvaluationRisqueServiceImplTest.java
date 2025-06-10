@@ -36,10 +36,10 @@ class EvaluationRisqueServiceImplTest {
 	@Test
 	void generateDiabetesReport_AgeOver30_ZeroTriggersTest() {
 		PatientDto patient = createPatient("M", 45);
-		when(patientApi.getPatientDtoByPatientId(1)).thenReturn(patient);
-		when(noteApi.getTriggerTermsByPatientId(1)).thenReturn(0);
+		when(patientApi.getPatientDto("john")).thenReturn(patient);
+		when(noteApi.getTriggerTerms("john")).thenReturn(0);
 
-		DangerLevel result = evaluationService.generateDiabetesReport(1);
+		DangerLevel result = evaluationService.generateDiabetesReport("john");
 
 		assertThat(result).isEqualTo(DangerLevel.NONE);
 	}
@@ -47,11 +47,10 @@ class EvaluationRisqueServiceImplTest {
 	@Test
 	void generateDiabetesReport_AgeOver30_ThreeTriggersTest() {
 		PatientDto patient = createPatient("M", 50);
+		when(patientApi.getPatientDto("luc")).thenReturn(patient);
+		when(noteApi.getTriggerTerms("luc")).thenReturn(3);
 
-		when(patientApi.getPatientDtoByPatientId(1)).thenReturn(patient);
-		when(noteApi.getTriggerTermsByPatientId(1)).thenReturn(3);
-
-		DangerLevel result = evaluationService.generateDiabetesReport(1);
+		DangerLevel result = evaluationService.generateDiabetesReport("luc");
 
 		assertThat(result).isEqualTo(DangerLevel.BORDERLINE);
 	}
@@ -59,10 +58,10 @@ class EvaluationRisqueServiceImplTest {
 	@Test
 	void generateDiabetesReport_AgeOver30_SixTriggersTest() {
 		PatientDto patient = createPatient("F", 60);
-		when(patientApi.getPatientDtoByPatientId(1)).thenReturn(patient);
-		when(noteApi.getTriggerTermsByPatientId(1)).thenReturn(6);
+		when(patientApi.getPatientDto("alice")).thenReturn(patient);
+		when(noteApi.getTriggerTerms("alice")).thenReturn(6);
 
-		DangerLevel result = evaluationService.generateDiabetesReport(1);
+		DangerLevel result = evaluationService.generateDiabetesReport("alice");
 
 		assertThat(result).isEqualTo(DangerLevel.IN_DANGER);
 	}
@@ -70,10 +69,10 @@ class EvaluationRisqueServiceImplTest {
 	@Test
 	void generateDiabetesReport_AgeOver30_EightTriggersTest() {
 		PatientDto patient = createPatient("F", 62);
-		when(patientApi.getPatientDtoByPatientId(1)).thenReturn(patient);
-		when(noteApi.getTriggerTermsByPatientId(1)).thenReturn(8);
+		when(patientApi.getPatientDto("marie")).thenReturn(patient);
+		when(noteApi.getTriggerTerms("marie")).thenReturn(8);
 
-		DangerLevel result = evaluationService.generateDiabetesReport(1);
+		DangerLevel result = evaluationService.generateDiabetesReport("marie");
 
 		assertThat(result).isEqualTo(DangerLevel.EARLY_ONSET);
 	}
@@ -81,10 +80,10 @@ class EvaluationRisqueServiceImplTest {
 	@Test
 	void generateDiabetesReport_MaleAgeUnder30_FourTriggersTest() {
 		PatientDto patient = createPatient("M", 28);
-		when(patientApi.getPatientDtoByPatientId(1)).thenReturn(patient);
-		when(noteApi.getTriggerTermsByPatientId(1)).thenReturn(4);
+		when(patientApi.getPatientDto("bob")).thenReturn(patient);
+		when(noteApi.getTriggerTerms("bob")).thenReturn(4);
 
-		DangerLevel result = evaluationService.generateDiabetesReport(1);
+		DangerLevel result = evaluationService.generateDiabetesReport("bob");
 
 		assertThat(result).isEqualTo(DangerLevel.IN_DANGER);
 	}
@@ -92,10 +91,10 @@ class EvaluationRisqueServiceImplTest {
 	@Test
 	void generateDiabetesReport_MaleAgeUnder30_SixTriggersTest() {
 		PatientDto patient = createPatient("M", 25);
-		when(patientApi.getPatientDtoByPatientId(1)).thenReturn(patient);
-		when(noteApi.getTriggerTermsByPatientId(1)).thenReturn(6);
+		when(patientApi.getPatientDto("max")).thenReturn(patient);
+		when(noteApi.getTriggerTerms("max")).thenReturn(6);
 
-		DangerLevel result = evaluationService.generateDiabetesReport(1);
+		DangerLevel result = evaluationService.generateDiabetesReport("max");
 
 		assertThat(result).isEqualTo(DangerLevel.EARLY_ONSET);
 	}
@@ -103,10 +102,10 @@ class EvaluationRisqueServiceImplTest {
 	@Test
 	void generateDiabetesReport_FemaleAgeUnder30_FiveTriggersTest() {
 		PatientDto patient = createPatient("F", 27);
-		when(patientApi.getPatientDtoByPatientId(1)).thenReturn(patient);
-		when(noteApi.getTriggerTermsByPatientId(1)).thenReturn(5);
+		when(patientApi.getPatientDto("eva")).thenReturn(patient);
+		when(noteApi.getTriggerTerms("eva")).thenReturn(5);
 
-		DangerLevel result = evaluationService.generateDiabetesReport(1);
+		DangerLevel result = evaluationService.generateDiabetesReport("eva");
 
 		assertThat(result).isEqualTo(DangerLevel.IN_DANGER);
 	}
@@ -114,11 +113,10 @@ class EvaluationRisqueServiceImplTest {
 	@Test
 	void generateDiabetesReport_FemaleAgeUnder30_NineTriggersTest() {
 		PatientDto patient = createPatient("F", 22);
+		when(patientApi.getPatientDto("sarah")).thenReturn(patient);
+		when(noteApi.getTriggerTerms("sarah")).thenReturn(9);
 
-		when(patientApi.getPatientDtoByPatientId(1)).thenReturn(patient);
-		when(noteApi.getTriggerTermsByPatientId(1)).thenReturn(9);
-
-		DangerLevel result = evaluationService.generateDiabetesReport(1);
+		DangerLevel result = evaluationService.generateDiabetesReport("sarah");
 
 		assertThat(result).isEqualTo(DangerLevel.EARLY_ONSET);
 	}
@@ -126,23 +124,18 @@ class EvaluationRisqueServiceImplTest {
 	@Test
 	void generateDiabetesReport_MaleAgeUnder30_TwoTriggersTest() {
 		PatientDto patient = createPatient("M", 25);
-
-		when(patientApi.getPatientDtoByPatientId(1)).thenReturn(patient);
-		when(noteApi.getTriggerTermsByPatientId(1)).thenReturn(2);
-
-		DangerLevel result = evaluationService.generateDiabetesReport(1);
-
+		when(patientApi.getPatientDto("tony")).thenReturn(patient);
+		when(noteApi.getTriggerTerms("tony")).thenReturn(2);
+		DangerLevel result = evaluationService.generateDiabetesReport("tony");
 		assertThat(result).isEqualTo(DangerLevel.BORDERLINE);
 	}
 
 	@Test
 	void generateDiabetesReport_FemaleAgeUnder30_TwoTriggersTest() {
 		PatientDto patient = createPatient("F", 30);
-		when(patientApi.getPatientDtoByPatientId(1)).thenReturn(patient);
-		when(noteApi.getTriggerTermsByPatientId(1)).thenReturn(2);
-
-		DangerLevel result = evaluationService.generateDiabetesReport(1);
-
+		when(patientApi.getPatientDto("laura")).thenReturn(patient);
+		when(noteApi.getTriggerTerms("laura")).thenReturn(2);
+		DangerLevel result = evaluationService.generateDiabetesReport("laura");
 		assertThat(result).isEqualTo(DangerLevel.BORDERLINE);
 	}
 }

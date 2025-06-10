@@ -21,11 +21,11 @@ public class EvaluationRisqueController {
 
 	private EvaluationRisqueService evaluationRisqueService;
 
-	@GetMapping("/{patientId}")
-	public ResponseEntity<DangerLevel> getPatientByNom(@PathVariable int patientId) {
-		log.info("Receive GET /api/evaluationrisque/patients/id/" + patientId
-				+ ": EvaluationRisqueApi use RestController to send diabetes report for patient");
-		return new ResponseEntity<>(evaluationRisqueService.generateDiabetesReport(patientId), HttpStatus.OK);
+	@GetMapping("/name/{patientName}")
+	public ResponseEntity<DangerLevel> getPatientByNom(@PathVariable String patientName) {
+		log.info("Receive GET /api/evaluationrisque/patients/name/" + patientName
+				+ ": EvaluationRisqueApi use RestController to send diabetes report for patient " + patientName);
+		return new ResponseEntity<>(evaluationRisqueService.generateDiabetesReport(patientName), HttpStatus.OK);
 
 	}
 }

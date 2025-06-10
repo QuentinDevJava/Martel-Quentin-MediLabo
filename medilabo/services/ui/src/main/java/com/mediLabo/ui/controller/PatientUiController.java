@@ -26,9 +26,8 @@ public class PatientUiController {
 	@GetMapping("/patients")
 	public String listPatients(Model model) {
 		log.info("UI GET /patients - retrieving list of patients");
-		PatientDto[] allPatientWithNotes = restTemplate.getForObject(patientApiUrl + "/notes", PatientDto[].class);
-
-		model.addAttribute("patients", Arrays.asList(allPatientWithNotes));
+		PatientDto[] allPatient = restTemplate.getForObject(patientApiUrl, PatientDto[].class);
+		model.addAttribute("patients", Arrays.asList(allPatient));
 		return "patients";
 	}
 

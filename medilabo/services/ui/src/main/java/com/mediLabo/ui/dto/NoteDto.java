@@ -4,13 +4,10 @@ import lombok.Data;
 
 @Data
 public class NoteDto {
-
 	private String id;
 
-	private int patientId;
+	private String fkPatientNom;
 
-	private String patientNom;
-
-	private String contenuNote;
+	private String note;
 
 }

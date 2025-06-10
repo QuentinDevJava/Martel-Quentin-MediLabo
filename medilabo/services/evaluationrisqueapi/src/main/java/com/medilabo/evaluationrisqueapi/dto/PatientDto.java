@@ -11,6 +11,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class PatientDto {
 
+	public PatientDto(String nom, String prenom, LocalDate dateAnniversaire, String genre) {
+		super();
+		this.nom = nom;
+		this.prenom = prenom;
+		this.dateAnniversaire = dateAnniversaire;
+		this.genre = genre;
+	}
+
 	private int id;
 
 	private String nom;
@@ -21,11 +29,8 @@ public class PatientDto {
 
 	private String genre;
 
-	public PatientDto(String nom, String prenom, LocalDate dateAnniversaire, String genre) {
-		super();
-		this.nom = nom;
-		this.prenom = prenom;
-		this.dateAnniversaire = dateAnniversaire;
-		this.genre = genre;
-	}
+	private String adresse;
+
+	private String telephone;
+
 }

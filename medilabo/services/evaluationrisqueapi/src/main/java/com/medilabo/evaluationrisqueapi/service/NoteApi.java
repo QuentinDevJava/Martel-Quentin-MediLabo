@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(name = "noteapi")
 public interface NoteApi {
 
-	@GetMapping("api/notes/termesAnalyse/{patientId}")
-	int getTriggerTermsByPatientId(@PathVariable int patientId);
+	@GetMapping("api/notes/termesAnalyse/{patientName}")
+	int getTriggerTerms(@PathVariable String patientName);
 }

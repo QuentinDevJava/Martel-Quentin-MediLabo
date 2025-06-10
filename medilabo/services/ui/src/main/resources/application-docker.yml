@@ -21,4 +21,4 @@ note:
 
 evaluationrisque:
   api:
-    url: http://gatewayapi:5005/api/evaluationrisque/patients/
+    url: http://gatewayapi:5005/api/evaluationrisque/patients/name/
