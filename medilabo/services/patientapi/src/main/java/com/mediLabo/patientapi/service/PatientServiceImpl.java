@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.mediLabo.patientapi.dto.NoteDto;
 import com.mediLabo.patientapi.dto.PatientDto;
 import com.mediLabo.patientapi.entities.Patient;
 import com.mediLabo.patientapi.mapper.PatientMapper;
@@ -62,11 +61,10 @@ public class PatientServiceImpl implements PatientService {
 	}
 
 	@Override
-	public PatientDto getPatientWithNotesById(int id) {
-		Patient patient = patientRepository.findById(id)
-				.orElseThrow(() -> new RuntimeException("Patient with id not find"));
-		List<NoteDto> noteDtos = noteApi.getNoteDtos(patient.getId());
-		return patientMapper.toDtoWithNotes(patient, noteDtos);
+	public List<PatientDto> getPatientWithNotesById() {
+		return patientRepository.findAll().stream()
+				.map(patient -> patientMapper.toDtoWithNotes(patient, noteApi.getNoteDtos(patient.getId()))).toList();
+
 	}
 
 //	@Override
