@@ -1,231 +1,35 @@
-2025-06-06T11:38:18.484+02:00 ERROR 21152 --- [eurekaServer] [Eureka-Jersey3Client-Conn-Cleaner2] c.n.d.s.t.j.EurekaJersey3ClientImpl      : Cannot clean connections
-
-java.lang.IllegalStateException: Client instance has been closed.
-	at org.glassfish.jersey.internal.guava.Preconditions.checkState(Preconditions.java:169) ~[jersey-common-3.1.10.jar:na]
-	at org.glassfish.jersey.client.JerseyClient.checkNotClosed(JerseyClient.java:248) ~[jersey-client-3.1.10.jar:na]
-	at org.glassfish.jersey.client.JerseyClient.getConfiguration(JerseyClient.java:363) ~[jersey-client-3.1.10.jar:na]
-	at org.glassfish.jersey.client.JerseyClient.getConfiguration(JerseyClient.java:54) ~[jersey-client-3.1.10.jar:na]
-	at com.netflix.discovery.shared.transport.jersey3.EurekaJersey3ClientImpl$ConnectionCleanerTask.run(EurekaJersey3ClientImpl.java:338) ~[eureka-client-jersey3-2.0.4.jar:2.0.4]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
-
-2025-06-06T11:41:10.363+02:00 ERROR 22740 --- [eurekaServer] [Eureka-Jersey3Client-Conn-Cleaner2] c.n.d.s.t.j.EurekaJersey3ClientImpl      : Cannot clean connections
-
-java.lang.IllegalStateException: Client instance has been closed.
-	at org.glassfish.jersey.internal.guava.Preconditions.checkState(Preconditions.java:169) ~[jersey-common-3.1.10.jar:na]
-	at org.glassfish.jersey.client.JerseyClient.checkNotClosed(JerseyClient.java:248) ~[jersey-client-3.1.10.jar:na]
-	at org.glassfish.jersey.client.JerseyClient.getConfiguration(JerseyClient.java:363) ~[jersey-client-3.1.10.jar:na]
-	at org.glassfish.jersey.client.JerseyClient.getConfiguration(JerseyClient.java:54) ~[jersey-client-3.1.10.jar:na]
-	at com.netflix.discovery.shared.transport.jersey3.EurekaJersey3ClientImpl$ConnectionCleanerTask.run(EurekaJersey3ClientImpl.java:338) ~[eureka-client-jersey3-2.0.4.jar:2.0.4]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
-
-2025-06-06T23:11:19.357+02:00 ERROR 19536 --- [eurekaServer] [Eureka-Jersey3Client-Conn-Cleaner2] c.n.d.s.t.j.EurekaJersey3ClientImpl      : Cannot clean connections
-
-java.lang.IllegalStateException: Client instance has been closed.
-	at org.glassfish.jersey.internal.guava.Preconditions.checkState(Preconditions.java:169) ~[jersey-common-3.1.10.jar:na]
-	at org.glassfish.jersey.client.JerseyClient.checkNotClosed(JerseyClient.java:248) ~[jersey-client-3.1.10.jar:na]
-	at org.glassfish.jersey.client.JerseyClient.getConfiguration(JerseyClient.java:363) ~[jersey-client-3.1.10.jar:na]
-	at org.glassfish.jersey.client.JerseyClient.getConfiguration(JerseyClient.java:54) ~[jersey-client-3.1.10.jar:na]
-	at com.netflix.discovery.shared.transport.jersey3.EurekaJersey3ClientImpl$ConnectionCleanerTask.run(EurekaJersey3ClientImpl.java:338) ~[eureka-client-jersey3-2.0.4.jar:2.0.4]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
-
-2025-06-07T18:42:12.550+02:00  INFO 17448 --- [eurekaServer] [restartedMain] c.m.e.EurekaServerApplication            : Starting EurekaServerApplication using Java 22.0.1 with PID 17448 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\eurekaserver\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\eurekaserver)
-2025-06-07T18:42:12.554+02:00  INFO 17448 --- [eurekaServer] [restartedMain] c.m.e.EurekaServerApplication            : No active profile set, falling back to 1 default profile: "default"
-2025-06-07T18:42:12.609+02:00  INFO 17448 --- [eurekaServer] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-06-07T18:42:12.609+02:00  INFO 17448 --- [eurekaServer] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-06-07T18:42:13.432+02:00  INFO 17448 --- [eurekaServer] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=49057b0d-5b16-3200-b02a-fbf8ee781df5
-2025-06-07T18:42:13.729+02:00  INFO 17448 --- [eurekaServer] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
-2025-06-07T18:42:13.742+02:00  INFO 17448 --- [eurekaServer] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-07T18:42:13.743+02:00  INFO 17448 --- [eurekaServer] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-06-07T18:42:13.791+02:00  INFO 17448 --- [eurekaServer] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-07T18:42:13.791+02:00  INFO 17448 --- [eurekaServer] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1181 ms
-2025-06-07T18:42:13.882+02:00 ERROR 17448 --- [eurekaServer] [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'org.springframework.cloud.netflix.eureka.server.EurekaServerAutoConfiguration': Unsatisfied dependency expressed through field 'applicationInfoManager': No qualifying bean of type 'com.netflix.appinfo.ApplicationInfoManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2025-06-07T18:42:13.909+02:00  INFO 17448 --- [eurekaServer] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2025-06-07T18:42:13.921+02:00  WARN 17448 --- [eurekaServer] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
-2025-06-07T18:42:13.934+02:00  INFO 17448 --- [eurekaServer] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-06-07T18:42:13.970+02:00 ERROR 17448 --- [eurekaServer] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Field applicationInfoManager in org.springframework.cloud.netflix.eureka.server.EurekaServerAutoConfiguration required a bean of type 'com.netflix.appinfo.ApplicationInfoManager' that could not be found.
-
-The injection point has the following annotations:
-	- @org.springframework.beans.factory.annotation.Autowired(required=true)
-
-
-Action:
-
-Consider defining a bean of type 'com.netflix.appinfo.ApplicationInfoManager' in your configuration.
-
-2025-06-07T18:43:12.457+02:00  INFO 25724 --- [eurekaServer] [restartedMain] c.m.e.EurekaServerApplication            : Starting EurekaServerApplication using Java 22.0.1 with PID 25724 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\eurekaserver\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\eurekaserver)
-2025-06-07T18:43:12.459+02:00  INFO 25724 --- [eurekaServer] [restartedMain] c.m.e.EurekaServerApplication            : No active profile set, falling back to 1 default profile: "default"
-2025-06-07T18:43:12.525+02:00  INFO 25724 --- [eurekaServer] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-06-07T18:43:12.526+02:00  INFO 25724 --- [eurekaServer] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-06-07T18:43:13.335+02:00  INFO 25724 --- [eurekaServer] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8f78fac4-482a-3816-81cc-3120a6b70c6f
-2025-06-07T18:43:13.626+02:00  INFO 25724 --- [eurekaServer] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
-2025-06-07T18:43:13.638+02:00  INFO 25724 --- [eurekaServer] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-07T18:43:13.639+02:00  INFO 25724 --- [eurekaServer] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-06-07T18:43:13.676+02:00  INFO 25724 --- [eurekaServer] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-07T18:43:13.676+02:00  INFO 25724 --- [eurekaServer] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1150 ms
-2025-06-07T18:43:14.336+02:00  INFO 25724 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2025-06-07T18:43:14.338+02:00  INFO 25724 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2025-06-07T18:43:14.465+02:00  INFO 25724 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2025-06-07T18:43:14.465+02:00  INFO 25724 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2025-06-07T18:43:14.602+02:00  INFO 25724 --- [eurekaServer] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-06-07T18:43:15.099+02:00  INFO 25724 --- [eurekaServer] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-06-07T18:43:15.155+02:00  WARN 25724 --- [eurekaServer] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-06-07T18:43:15.172+02:00  INFO 25724 --- [eurekaServer] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-06-07T18:43:15.188+02:00  INFO 25724 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-06-07T18:43:15.199+02:00  INFO 25724 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2025-06-07T18:43:15.200+02:00  INFO 25724 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2025-06-07T18:43:15.200+02:00  INFO 25724 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2025-06-07T18:43:15.201+02:00  INFO 25724 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2025-06-07T18:43:15.209+02:00  INFO 25724 --- [eurekaServer] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-07T18:43:15.216+02:00  INFO 25724 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-06-07T18:43:15.217+02:00  INFO 25724 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-06-07T18:43:15.217+02:00  INFO 25724 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-06-07T18:43:15.217+02:00  INFO 25724 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-06-07T18:43:15.217+02:00  INFO 25724 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-06-07T18:43:15.217+02:00  INFO 25724 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-06-07T18:43:15.217+02:00  INFO 25724 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-06-07T18:43:15.504+02:00  INFO 25724 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-06-07T18:43:15.505+02:00  INFO 25724 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Not registering with Eureka server per configuration
-2025-06-07T18:43:15.506+02:00  INFO 25724 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1749314595505 with initial instances count: 0
-2025-06-07T18:43:15.534+02:00  INFO 25724 --- [eurekaServer] [restartedMain] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
-2025-06-07T18:43:15.535+02:00  INFO 25724 --- [eurekaServer] [restartedMain] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
-2025-06-07T18:43:15.620+02:00  INFO 25724 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2025-06-07T18:43:15.621+02:00  INFO 25724 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2025-06-07T18:43:15.621+02:00  INFO 25724 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2025-06-07T18:43:15.621+02:00  INFO 25724 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2025-06-07T18:43:15.642+02:00  INFO 25724 --- [eurekaServer] [restartedMain] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
-2025-06-07T18:43:15.651+02:00  INFO 25724 --- [eurekaServer] [restartedMain] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
-2025-06-07T18:43:15.651+02:00  INFO 25724 --- [eurekaServer] [restartedMain] c.n.eureka.DefaultEurekaServerContext    : Initialized
-2025-06-07T18:43:15.663+02:00  INFO 25724 --- [eurekaServer] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2025-06-07T18:43:15.709+02:00  INFO 25724 --- [eurekaServer] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EUREKASERVER with eureka with status UP
-2025-06-07T18:43:15.716+02:00  INFO 25724 --- [eurekaServer] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EUREKASERVER with eureka with status DOWN
-2025-06-07T18:43:15.716+02:00  WARN 25724 --- [eurekaServer] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2025-06-07T18:43:15.717+02:00  INFO 25724 --- [eurekaServer] [restartedMain] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
-2025-06-07T18:43:15.720+02:00  INFO 25724 --- [eurekaServer] [Thread-15] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
-2025-06-07T18:43:15.721+02:00  INFO 25724 --- [eurekaServer] [Thread-15] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
-2025-06-07T18:43:15.721+02:00  INFO 25724 --- [eurekaServer] [restartedMain] c.n.eureka.DefaultEurekaServerContext    : Shut down
-2025-06-07T18:43:15.721+02:00  INFO 25724 --- [eurekaServer] [Thread-15] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
-2025-06-07T18:43:15.721+02:00  INFO 25724 --- [eurekaServer] [Thread-15] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
-2025-06-07T18:43:15.721+02:00  INFO 25724 --- [eurekaServer] [Thread-15] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
-2025-06-07T18:43:15.722+02:00 ERROR 25724 --- [eurekaServer] [Thread-15] o.s.c.n.e.server.EurekaServerBootstrap   : Cannot bootstrap eureka server :
-
-java.lang.IllegalStateException: Timer already cancelled.
-	at java.base/java.util.Timer.sched(Timer.java:407) ~[na:na]
-	at java.base/java.util.Timer.schedule(Timer.java:258) ~[na:na]
-	at com.netflix.eureka.registry.AbstractInstanceRegistry.postInit(AbstractInstanceRegistry.java:1226) ~[eureka-core-2.0.4.jar:2.0.4]
-	at com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl.openForTraffic(PeerAwareInstanceRegistryImpl.java:259) ~[eureka-core-2.0.4.jar:2.0.4]
-	at org.springframework.cloud.netflix.eureka.server.InstanceRegistry.openForTraffic(InstanceRegistry.java:77) ~[spring-cloud-netflix-eureka-server-4.2.1.jar:4.2.1]
-	at org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap.initEurekaServerContext(EurekaServerBootstrap.java:112) ~[spring-cloud-netflix-eureka-server-4.2.1.jar:4.2.1]
-	at org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap.contextInitialized(EurekaServerBootstrap.java:70) ~[spring-cloud-netflix-eureka-server-4.2.1.jar:4.2.1]
-	at org.springframework.cloud.netflix.eureka.server.EurekaServerInitializerConfiguration.lambda$start$0(EurekaServerInitializerConfiguration.java:67) ~[spring-cloud-netflix-eureka-server-4.2.1.jar:4.2.1]
-	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
-
-2025-06-07T18:43:15.717+02:00 ERROR 25724 --- [eurekaServer] [Eureka-Jersey3Client-Conn-Cleaner2] c.n.d.s.t.j.EurekaJersey3ClientImpl      : Cannot clean connections
-
-java.lang.IllegalStateException: Client instance has been closed.
-	at org.glassfish.jersey.internal.guava.Preconditions.checkState(Preconditions.java:169) ~[jersey-common-3.1.10.jar:na]
-	at org.glassfish.jersey.client.JerseyClient.checkNotClosed(JerseyClient.java:248) ~[jersey-client-3.1.10.jar:na]
-	at org.glassfish.jersey.client.JerseyClient.getConfiguration(JerseyClient.java:363) ~[jersey-client-3.1.10.jar:na]
-	at org.glassfish.jersey.client.JerseyClient.getConfiguration(JerseyClient.java:54) ~[jersey-client-3.1.10.jar:na]
-	at com.netflix.discovery.shared.transport.jersey3.EurekaJersey3ClientImpl$ConnectionCleanerTask.run(EurekaJersey3ClientImpl.java:338) ~[eureka-client-jersey3-2.0.4.jar:2.0.4]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
-
-2025-06-07T18:43:15.724+02:00 ERROR 25724 --- [eurekaServer] [Thread-15] e.s.EurekaServerInitializerConfiguration : Could not initialize Eureka servlet context
-
-java.lang.RuntimeException: Cannot bootstrap eureka server :
-	at org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap.contextInitialized(EurekaServerBootstrap.java:76) ~[spring-cloud-netflix-eureka-server-4.2.1.jar:4.2.1]
-	at org.springframework.cloud.netflix.eureka.server.EurekaServerInitializerConfiguration.lambda$start$0(EurekaServerInitializerConfiguration.java:67) ~[spring-cloud-netflix-eureka-server-4.2.1.jar:4.2.1]
-	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
-Caused by: java.lang.IllegalStateException: Timer already cancelled.
-	at java.base/java.util.Timer.sched(Timer.java:407) ~[na:na]
-	at java.base/java.util.Timer.schedule(Timer.java:258) ~[na:na]
-	at com.netflix.eureka.registry.AbstractInstanceRegistry.postInit(AbstractInstanceRegistry.java:1226) ~[eureka-core-2.0.4.jar:2.0.4]
-	at com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl.openForTraffic(PeerAwareInstanceRegistryImpl.java:259) ~[eureka-core-2.0.4.jar:2.0.4]
-	at org.springframework.cloud.netflix.eureka.server.InstanceRegistry.openForTraffic(InstanceRegistry.java:77) ~[spring-cloud-netflix-eureka-server-4.2.1.jar:4.2.1]
-	at org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap.initEurekaServerContext(EurekaServerBootstrap.java:112) ~[spring-cloud-netflix-eureka-server-4.2.1.jar:4.2.1]
-	at org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap.contextInitialized(EurekaServerBootstrap.java:70) ~[spring-cloud-netflix-eureka-server-4.2.1.jar:4.2.1]
-	... 2 common frames omitted
-
-2025-06-07T18:43:15.725+02:00  INFO 25724 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-06-07T18:43:15.727+02:00  INFO 25724 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2025-06-07T18:43:15.742+02:00  INFO 25724 --- [eurekaServer] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-06-07T18:43:15.756+02:00 ERROR 25724 --- [eurekaServer] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8761 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8761 or configure this application to listen on another port.
-
-2025-06-07T18:43:31.139+02:00  INFO 20988 --- [eurekaServer] [restartedMain] c.m.e.EurekaServerApplication            : Starting EurekaServerApplication using Java 22.0.1 with PID 20988 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\eurekaserver\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\eurekaserver)
-2025-06-07T18:43:31.141+02:00  INFO 20988 --- [eurekaServer] [restartedMain] c.m.e.EurekaServerApplication            : No active profile set, falling back to 1 default profile: "default"
-2025-06-07T18:43:31.185+02:00  INFO 20988 --- [eurekaServer] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-06-07T18:43:31.185+02:00  INFO 20988 --- [eurekaServer] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-06-07T18:43:31.942+02:00  INFO 20988 --- [eurekaServer] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8f78fac4-482a-3816-81cc-3120a6b70c6f
-2025-06-07T18:43:32.231+02:00  INFO 20988 --- [eurekaServer] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
-2025-06-07T18:43:32.244+02:00  INFO 20988 --- [eurekaServer] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-07T18:43:32.244+02:00  INFO 20988 --- [eurekaServer] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-06-07T18:43:32.284+02:00  INFO 20988 --- [eurekaServer] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-07T18:43:32.285+02:00  INFO 20988 --- [eurekaServer] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1099 ms
-2025-06-07T18:43:32.908+02:00  INFO 20988 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2025-06-07T18:43:32.909+02:00  INFO 20988 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2025-06-07T18:43:33.030+02:00  INFO 20988 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2025-06-07T18:43:33.030+02:00  INFO 20988 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2025-06-07T18:43:33.152+02:00  INFO 20988 --- [eurekaServer] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-06-07T18:43:33.722+02:00  INFO 20988 --- [eurekaServer] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-06-07T18:43:33.766+02:00  WARN 20988 --- [eurekaServer] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-06-07T18:43:33.783+02:00  INFO 20988 --- [eurekaServer] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-06-07T18:43:33.798+02:00  INFO 20988 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-06-07T18:43:33.814+02:00  INFO 20988 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2025-06-07T18:43:33.815+02:00  INFO 20988 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2025-06-07T18:43:33.815+02:00  INFO 20988 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2025-06-07T18:43:33.815+02:00  INFO 20988 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2025-06-07T18:43:33.827+02:00  INFO 20988 --- [eurekaServer] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-07T18:43:33.838+02:00  INFO 20988 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-06-07T18:43:33.838+02:00  INFO 20988 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-06-07T18:43:33.839+02:00  INFO 20988 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-06-07T18:43:33.839+02:00  INFO 20988 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-06-07T18:43:33.839+02:00  INFO 20988 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-06-07T18:43:33.839+02:00  INFO 20988 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-06-07T18:43:33.839+02:00  INFO 20988 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-06-07T18:43:33.931+02:00  INFO 20988 --- [eurekaServer] [restartedMain] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=java.net.ConnectException: Connection refused: getsockopt stacktrace=jakarta.ws.rs.ProcessingException: java.net.ConnectException: Connection refused: getsockopt
+2025-06-10T13:48:32.021+02:00  INFO 7288 --- [eurekaServer] [restartedMain] c.m.e.EurekaServerApplication            : Starting EurekaServerApplication using Java 22.0.1 with PID 7288 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\eurekaserver\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\eurekaserver)
+2025-06-10T13:48:32.027+02:00  INFO 7288 --- [eurekaServer] [restartedMain] c.m.e.EurekaServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-06-10T13:48:32.097+02:00  INFO 7288 --- [eurekaServer] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-10T13:48:32.097+02:00  INFO 7288 --- [eurekaServer] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-10T13:48:33.059+02:00  INFO 7288 --- [eurekaServer] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8f78fac4-482a-3816-81cc-3120a6b70c6f
+2025-06-10T13:48:33.400+02:00  INFO 7288 --- [eurekaServer] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
+2025-06-10T13:48:33.413+02:00  INFO 7288 --- [eurekaServer] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-10T13:48:33.414+02:00  INFO 7288 --- [eurekaServer] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-10T13:48:33.459+02:00  INFO 7288 --- [eurekaServer] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-10T13:48:33.460+02:00  INFO 7288 --- [eurekaServer] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1362 ms
+2025-06-10T13:48:34.235+02:00  INFO 7288 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-06-10T13:48:34.237+02:00  INFO 7288 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-06-10T13:48:34.388+02:00  INFO 7288 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-06-10T13:48:34.388+02:00  INFO 7288 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-06-10T13:48:34.529+02:00  INFO 7288 --- [eurekaServer] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-10T13:48:35.127+02:00  WARN 7288 --- [eurekaServer] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-06-10T13:48:35.182+02:00  WARN 7288 --- [eurekaServer] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-06-10T13:48:35.199+02:00  INFO 7288 --- [eurekaServer] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-06-10T13:48:35.217+02:00  INFO 7288 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-06-10T13:48:35.229+02:00  INFO 7288 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-06-10T13:48:35.229+02:00  INFO 7288 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-06-10T13:48:35.230+02:00  INFO 7288 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-06-10T13:48:35.230+02:00  INFO 7288 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-06-10T13:48:35.240+02:00  INFO 7288 --- [eurekaServer] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-10T13:48:35.247+02:00  INFO 7288 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-06-10T13:48:35.247+02:00  INFO 7288 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-06-10T13:48:35.247+02:00  INFO 7288 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-06-10T13:48:35.247+02:00  INFO 7288 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-06-10T13:48:35.247+02:00  INFO 7288 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-06-10T13:48:35.248+02:00  INFO 7288 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-06-10T13:48:35.248+02:00  INFO 7288 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-06-10T13:48:35.354+02:00  INFO 7288 --- [eurekaServer] [restartedMain] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=java.net.ConnectException: Connection refused: getsockopt stacktrace=jakarta.ws.rs.ProcessingException: java.net.ConnectException: Connection refused: getsockopt
 	at org.glassfish.jersey.client.internal.HttpUrlConnector.apply(HttpUrlConnector.java:288)
 	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:300)
 	at org.glassfish.jersey.client.JerseyInvocation.lambda$invoke$0(JerseyInvocation.java:674)
@@ -361,8 +165,8 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 	at org.glassfish.jersey.client.internal.HttpUrlConnector.apply(HttpUrlConnector.java:286)
 	... 111 more
 
-2025-06-07T18:43:33.932+02:00  WARN 20988 --- [eurekaServer] [restartedMain] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: getsockopt
-2025-06-07T18:43:33.932+02:00  INFO 20988 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EUREKASERVER/PC-Quentin-Martel.mshome.net:eurekaServer:8761 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+2025-06-10T13:48:35.355+02:00  WARN 7288 --- [eurekaServer] [restartedMain] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: getsockopt
+2025-06-10T13:48:35.356+02:00  INFO 7288 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EUREKASERVER/PC-Quentin-Martel.mshome.net:eurekaServer:8761 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
@@ -453,47 +257,130 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
 
-2025-06-07T18:43:33.933+02:00  INFO 20988 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
-2025-06-07T18:43:33.933+02:00  WARN 20988 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
-2025-06-07T18:43:33.933+02:00  INFO 20988 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
-2025-06-07T18:43:33.934+02:00  INFO 20988 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Not registering with Eureka server per configuration
-2025-06-07T18:43:33.935+02:00  INFO 20988 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1749314613934 with initial instances count: 0
-2025-06-07T18:43:33.961+02:00  INFO 20988 --- [eurekaServer] [restartedMain] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
-2025-06-07T18:43:33.962+02:00  INFO 20988 --- [eurekaServer] [restartedMain] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
-2025-06-07T18:43:34.045+02:00  INFO 20988 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2025-06-07T18:43:34.046+02:00  INFO 20988 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2025-06-07T18:43:34.046+02:00  INFO 20988 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2025-06-07T18:43:34.047+02:00  INFO 20988 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2025-06-07T18:43:34.069+02:00  INFO 20988 --- [eurekaServer] [restartedMain] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
-2025-06-07T18:43:34.076+02:00  INFO 20988 --- [eurekaServer] [restartedMain] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
-2025-06-07T18:43:34.076+02:00  INFO 20988 --- [eurekaServer] [restartedMain] c.n.eureka.DefaultEurekaServerContext    : Initialized
-2025-06-07T18:43:34.088+02:00  INFO 20988 --- [eurekaServer] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2025-06-07T18:43:34.151+02:00  INFO 20988 --- [eurekaServer] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EUREKASERVER with eureka with status UP
-2025-06-07T18:43:34.168+02:00  INFO 20988 --- [eurekaServer] [Thread-15] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
-2025-06-07T18:43:34.168+02:00  INFO 20988 --- [eurekaServer] [Thread-15] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
-2025-06-07T18:43:34.169+02:00  INFO 20988 --- [eurekaServer] [Thread-15] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
-2025-06-07T18:43:34.169+02:00  INFO 20988 --- [eurekaServer] [Thread-15] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
-2025-06-07T18:43:34.170+02:00  INFO 20988 --- [eurekaServer] [Thread-15] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
-2025-06-07T18:43:34.171+02:00  INFO 20988 --- [eurekaServer] [Thread-15] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
-2025-06-07T18:43:34.175+02:00  INFO 20988 --- [eurekaServer] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8761 (http) with context path '/'
-2025-06-07T18:43:34.176+02:00  INFO 20988 --- [eurekaServer] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
-2025-06-07T18:43:34.191+02:00  INFO 20988 --- [eurekaServer] [restartedMain] c.m.e.EurekaServerApplication            : Started EurekaServerApplication in 3.434 seconds (process running for 4.167)
-2025-06-07T18:43:34.936+02:00  INFO 20988 --- [eurekaServer] [RMI TCP Connection(10)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-07T18:43:34.936+02:00  INFO 20988 --- [eurekaServer] [RMI TCP Connection(10)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-06-07T18:43:34.937+02:00  INFO 20988 --- [eurekaServer] [RMI TCP Connection(10)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2025-06-07T18:43:37.638+02:00  INFO 20988 --- [eurekaServer] [RMI TCP Connection(8)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2025-06-07T18:43:37.640+02:00  INFO 20988 --- [eurekaServer] [RMI TCP Connection(8)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EUREKASERVER with eureka with status DOWN
-2025-06-07T18:43:37.646+02:00  INFO 20988 --- [eurekaServer] [RMI TCP Connection(8)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-07T18:43:37.653+02:00  INFO 20988 --- [eurekaServer] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-06-07T18:43:37.655+02:00  INFO 20988 --- [eurekaServer] [RMI TCP Connection(8)-127.0.0.1] o.s.c.n.e.server.EurekaServerBootstrap   : Shutting down Eureka Server..
-2025-06-07T18:43:37.655+02:00  INFO 20988 --- [eurekaServer] [RMI TCP Connection(8)-127.0.0.1] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
-2025-06-07T18:43:37.656+02:00  INFO 20988 --- [eurekaServer] [RMI TCP Connection(8)-127.0.0.1] c.n.eureka.DefaultEurekaServerContext    : Shut down
-2025-06-07T18:43:37.656+02:00  INFO 20988 --- [eurekaServer] [RMI TCP Connection(8)-127.0.0.1] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka Service is now shutdown...
-2025-06-07T18:43:37.656+02:00  INFO 20988 --- [eurekaServer] [RMI TCP Connection(8)-127.0.0.1] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
-2025-06-07T18:43:37.656+02:00  INFO 20988 --- [eurekaServer] [RMI TCP Connection(8)-127.0.0.1] c.n.eureka.DefaultEurekaServerContext    : Shut down
-2025-06-07T18:43:37.662+02:00  INFO 20988 --- [eurekaServer] [RMI TCP Connection(8)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-06-07T18:43:37.663+02:00  INFO 20988 --- [eurekaServer] [RMI TCP Connection(8)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2025-06-07T18:43:37.656+02:00 ERROR 20988 --- [eurekaServer] [Eureka-Jersey3Client-Conn-Cleaner2] c.n.d.s.t.j.EurekaJersey3ClientImpl      : Cannot clean connections
+2025-06-10T13:48:35.356+02:00  INFO 7288 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
+2025-06-10T13:48:35.356+02:00  WARN 7288 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
+2025-06-10T13:48:35.357+02:00  INFO 7288 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
+2025-06-10T13:48:35.357+02:00  INFO 7288 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Not registering with Eureka server per configuration
+2025-06-10T13:48:35.358+02:00  INFO 7288 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1749556115357 with initial instances count: 0
+2025-06-10T13:48:35.404+02:00  INFO 7288 --- [eurekaServer] [restartedMain] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2025-06-10T13:48:35.405+02:00  INFO 7288 --- [eurekaServer] [restartedMain] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
+2025-06-10T13:48:35.520+02:00  INFO 7288 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-06-10T13:48:35.521+02:00  INFO 7288 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-06-10T13:48:35.522+02:00  INFO 7288 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-06-10T13:48:35.522+02:00  INFO 7288 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-06-10T13:48:35.547+02:00  INFO 7288 --- [eurekaServer] [restartedMain] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
+2025-06-10T13:48:35.559+02:00  INFO 7288 --- [eurekaServer] [restartedMain] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2025-06-10T13:48:35.559+02:00  INFO 7288 --- [eurekaServer] [restartedMain] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2025-06-10T13:48:35.571+02:00  INFO 7288 --- [eurekaServer] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-06-10T13:48:35.634+02:00  INFO 7288 --- [eurekaServer] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EUREKASERVER with eureka with status UP
+2025-06-10T13:48:35.644+02:00  INFO 7288 --- [eurekaServer] [Thread-13] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2025-06-10T13:48:35.645+02:00  INFO 7288 --- [eurekaServer] [Thread-13] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2025-06-10T13:48:35.645+02:00  INFO 7288 --- [eurekaServer] [Thread-13] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2025-06-10T13:48:35.645+02:00  INFO 7288 --- [eurekaServer] [Thread-13] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2025-06-10T13:48:35.645+02:00  INFO 7288 --- [eurekaServer] [Thread-13] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2025-06-10T13:48:35.647+02:00  INFO 7288 --- [eurekaServer] [Thread-13] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2025-06-10T13:48:35.658+02:00  INFO 7288 --- [eurekaServer] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8761 (http) with context path '/'
+2025-06-10T13:48:35.659+02:00  INFO 7288 --- [eurekaServer] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2025-06-10T13:48:35.677+02:00  INFO 7288 --- [eurekaServer] [restartedMain] c.m.e.EurekaServerApplication            : Started EurekaServerApplication in 4.152 seconds (process running for 6.536)
+2025-06-10T13:48:36.193+02:00  INFO 7288 --- [eurekaServer] [RMI TCP Connection(6)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-10T13:48:36.194+02:00  INFO 7288 --- [eurekaServer] [RMI TCP Connection(6)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-10T13:48:36.195+02:00  INFO 7288 --- [eurekaServer] [RMI TCP Connection(6)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-10T13:48:44.023+02:00  WARN 7288 --- [eurekaServer] [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: EVALUATIONRISQUEAPI - PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003
+2025-06-10T13:48:44.023+02:00  WARN 7288 --- [eurekaServer] [http-nio-8761-exec-1] c.n.eureka.resources.InstanceResource    : Not Found (Renew): EVALUATIONRISQUEAPI - PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003
+2025-06-10T13:48:44.117+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003 with status UP (replication=false)
+2025-06-10T13:48:44.130+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003 with status UP (replication=false)
+2025-06-10T13:48:44.740+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003 with status UP (replication=true)
+2025-06-10T13:49:05.359+02:00  INFO 7288 --- [eurekaServer] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-06-10T13:49:05.360+02:00  INFO 7288 --- [eurekaServer] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-06-10T13:49:05.360+02:00  INFO 7288 --- [eurekaServer] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-06-10T13:49:05.360+02:00  INFO 7288 --- [eurekaServer] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-06-10T13:49:05.360+02:00  INFO 7288 --- [eurekaServer] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-06-10T13:49:05.361+02:00  INFO 7288 --- [eurekaServer] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-06-10T13:49:05.361+02:00  INFO 7288 --- [eurekaServer] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-06-10T13:49:05.382+02:00  INFO 7288 --- [eurekaServer] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-06-10T13:49:35.647+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T13:50:35.647+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T13:51:35.661+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2025-06-10T13:52:35.661+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T13:53:35.253+02:00  INFO 7288 --- [eurekaServer] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-10T13:53:35.662+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T13:54:35.665+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2025-06-10T13:55:35.670+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2025-06-10T13:56:35.671+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T13:57:35.672+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T13:58:35.268+02:00  INFO 7288 --- [eurekaServer] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-10T13:58:35.676+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2025-06-10T13:59:35.687+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2025-06-10T14:00:35.694+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2025-06-10T14:01:35.697+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2025-06-10T14:01:48.767+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status UP (replication=false)
+2025-06-10T14:01:49.279+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status UP (replication=true)
+2025-06-10T14:02:35.697+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T14:03:35.285+02:00  INFO 7288 --- [eurekaServer] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-10T14:03:35.567+02:00  INFO 7288 --- [eurekaServer] [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 5
+2025-06-10T14:03:35.707+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2025-06-10T14:04:35.722+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+2025-06-10T14:05:35.733+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2025-06-10T14:06:35.734+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T14:06:44.846+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003 with status DOWN (replication=false)
+2025-06-10T14:06:45.363+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003 with status DOWN (replication=true)
+2025-06-10T14:06:47.892+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003 (replication=false)
+2025-06-10T14:06:48.402+02:00  WARN 7288 --- [eurekaServer] [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003
+2025-06-10T14:06:48.402+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-2] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): EVALUATIONRISQUEAPI - PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003
+2025-06-10T14:06:48.404+02:00  WARN 7288 --- [eurekaServer] [TaskBatchingWorker-target_localhost-14] c.n.eureka.cluster.ReplicationTask       : The replication of task EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003:Cancel@localhost failed with response code 404
+2025-06-10T14:06:48.404+02:00  WARN 7288 --- [eurekaServer] [TaskBatchingWorker-target_localhost-14] c.netflix.eureka.cluster.PeerEurekaNode  : EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003:Cancel@localhost: missing entry.
+2025-06-10T14:06:48.705+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003 with status UP (replication=false)
+2025-06-10T14:06:49.215+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003 with status UP (replication=true)
+2025-06-10T14:07:20.717+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003 with status DOWN (replication=false)
+2025-06-10T14:07:21.226+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003 with status DOWN (replication=true)
+2025-06-10T14:07:23.753+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003 (replication=false)
+2025-06-10T14:07:24.264+02:00  WARN 7288 --- [eurekaServer] [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003
+2025-06-10T14:07:24.265+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-1] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): EVALUATIONRISQUEAPI - PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003
+2025-06-10T14:07:24.266+02:00  WARN 7288 --- [eurekaServer] [TaskBatchingWorker-target_localhost-0] c.n.eureka.cluster.ReplicationTask       : The replication of task EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003:Cancel@localhost failed with response code 404
+2025-06-10T14:07:24.266+02:00  WARN 7288 --- [eurekaServer] [TaskBatchingWorker-target_localhost-0] c.netflix.eureka.cluster.PeerEurekaNode  : EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003:Cancel@localhost: missing entry.
+2025-06-10T14:07:24.467+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003 with status UP (replication=false)
+2025-06-10T14:07:24.972+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003 with status UP (replication=true)
+2025-06-10T14:07:35.736+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2025-06-10T14:08:35.289+02:00  INFO 7288 --- [eurekaServer] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-10T14:08:35.741+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2025-06-10T14:08:56.388+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance NOTEAPI/PC-Quentin-Martel.mshome.net:noteapi:5002 with status UP (replication=false)
+2025-06-10T14:08:56.897+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance NOTEAPI/PC-Quentin-Martel.mshome.net:noteapi:5002 with status UP (replication=true)
+2025-06-10T14:09:35.743+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2025-06-10T14:10:03.606+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance GATEWAYAPI/PC-Quentin-Martel.mshome.net:gatewayapi:5005 with status UP (replication=false)
+2025-06-10T14:10:04.119+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance GATEWAYAPI/PC-Quentin-Martel.mshome.net:gatewayapi:5005 with status UP (replication=true)
+2025-06-10T14:10:35.743+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T14:11:35.756+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2025-06-10T14:12:35.759+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2025-06-10T14:12:50.201+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance GATEWAYAPI/PC-Quentin-Martel.mshome.net:gatewayapi:5005 with status DOWN (replication=false)
+2025-06-10T14:12:50.711+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance GATEWAYAPI/PC-Quentin-Martel.mshome.net:gatewayapi:5005 with status DOWN (replication=true)
+2025-06-10T14:12:51.124+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance NOTEAPI/PC-Quentin-Martel.mshome.net:noteapi:5002 with status DOWN (replication=false)
+2025-06-10T14:12:51.638+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance NOTEAPI/PC-Quentin-Martel.mshome.net:noteapi:5002 with status DOWN (replication=true)
+2025-06-10T14:12:52.186+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status DOWN (replication=false)
+2025-06-10T14:12:52.688+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status DOWN (replication=true)
+2025-06-10T14:12:55.256+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 (replication=false)
+2025-06-10T14:12:55.320+02:00  WARN 7288 --- [eurekaServer] [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000
+2025-06-10T14:12:55.321+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-4] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PATIENTAPI - PC-Quentin-Martel.mshome.net:patientapi:5000
+2025-06-10T14:12:55.322+02:00  WARN 7288 --- [eurekaServer] [TaskBatchingWorker-target_localhost-13] c.n.eureka.cluster.ReplicationTask       : The replication of task PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000:Cancel@localhost failed with response code 404
+2025-06-10T14:12:55.322+02:00  WARN 7288 --- [eurekaServer] [TaskBatchingWorker-target_localhost-13] c.netflix.eureka.cluster.PeerEurekaNode  : PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000:Cancel@localhost: missing entry.
+2025-06-10T14:13:35.292+02:00  INFO 7288 --- [eurekaServer] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-10T14:13:35.773+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2025-06-10T14:14:35.773+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T14:15:35.773+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T14:16:35.774+02:00  INFO 7288 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T14:17:33.680+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003 with status DOWN (replication=false)
+2025-06-10T14:17:34.195+02:00  INFO 7288 --- [eurekaServer] [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003 with status DOWN (replication=true)
+2025-06-10T14:17:34.995+02:00  INFO 7288 --- [eurekaServer] [RMI TCP Connection(39)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-10T14:17:34.995+02:00  INFO 7288 --- [eurekaServer] [RMI TCP Connection(42)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-10T14:17:34.996+02:00  INFO 7288 --- [eurekaServer] [RMI TCP Connection(39)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EUREKASERVER with eureka with status DOWN
+2025-06-10T14:17:35.000+02:00  INFO 7288 --- [eurekaServer] [RMI TCP Connection(39)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-10T14:17:35.010+02:00  INFO 7288 --- [eurekaServer] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-10T14:17:35.014+02:00  INFO 7288 --- [eurekaServer] [RMI TCP Connection(39)-127.0.0.1] o.s.c.n.e.server.EurekaServerBootstrap   : Shutting down Eureka Server..
+2025-06-10T14:17:35.014+02:00  INFO 7288 --- [eurekaServer] [RMI TCP Connection(39)-127.0.0.1] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2025-06-10T14:17:35.020+02:00  INFO 7288 --- [eurekaServer] [RMI TCP Connection(39)-127.0.0.1] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2025-06-10T14:17:35.020+02:00  INFO 7288 --- [eurekaServer] [RMI TCP Connection(39)-127.0.0.1] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka Service is now shutdown...
+2025-06-10T14:17:35.021+02:00  INFO 7288 --- [eurekaServer] [RMI TCP Connection(39)-127.0.0.1] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2025-06-10T14:17:35.021+02:00  INFO 7288 --- [eurekaServer] [RMI TCP Connection(39)-127.0.0.1] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2025-06-10T14:17:35.016+02:00 ERROR 7288 --- [eurekaServer] [Eureka-Jersey3Client-Conn-Cleaner2] c.n.d.s.t.j.EurekaJersey3ClientImpl      : Cannot clean connections
 
 java.lang.IllegalStateException: Client instance has been closed.
 	at org.glassfish.jersey.internal.guava.Preconditions.checkState(Preconditions.java:169) ~[jersey-common-3.1.10.jar:na]
@@ -508,26 +395,40 @@ java.lang.IllegalStateException: Client instance has been closed.
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
 
-2025-06-07T18:43:49.006+02:00  INFO 29720 --- [eurekaServer] [main] c.m.e.EurekaServerApplicationTests       : Starting EurekaServerApplicationTests using Java 22.0.1 with PID 29720 (started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\eurekaserver)
-2025-06-07T18:43:49.014+02:00  INFO 29720 --- [eurekaServer] [main] c.m.e.EurekaServerApplicationTests       : No active profile set, falling back to 1 default profile: "default"
-2025-06-07T18:43:50.198+02:00  INFO 29720 --- [eurekaServer] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fa45f8d2-4a6b-3f50-9c21-05d889cf0ddf
-2025-06-07T18:43:50.850+02:00  INFO 29720 --- [eurekaServer] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-06-07T18:43:51.862+02:00  WARN 29720 --- [eurekaServer] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-06-07T18:43:52.123+02:00  INFO 29720 --- [eurekaServer] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-06-07T18:43:52.154+02:00  INFO 29720 --- [eurekaServer] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-06-07T18:43:52.210+02:00  INFO 29720 --- [eurekaServer] [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2025-06-07T18:43:52.211+02:00  INFO 29720 --- [eurekaServer] [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2025-06-07T18:43:52.211+02:00  INFO 29720 --- [eurekaServer] [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2025-06-07T18:43:52.211+02:00  INFO 29720 --- [eurekaServer] [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2025-06-07T18:43:52.246+02:00  INFO 29720 --- [eurekaServer] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-07T18:43:52.252+02:00  INFO 29720 --- [eurekaServer] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-06-07T18:43:52.253+02:00  INFO 29720 --- [eurekaServer] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-06-07T18:43:52.253+02:00  INFO 29720 --- [eurekaServer] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-06-07T18:43:52.253+02:00  INFO 29720 --- [eurekaServer] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-06-07T18:43:52.253+02:00  INFO 29720 --- [eurekaServer] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-06-07T18:43:52.253+02:00  INFO 29720 --- [eurekaServer] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-06-07T18:43:52.253+02:00  INFO 29720 --- [eurekaServer] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-06-07T18:43:52.532+02:00  INFO 29720 --- [eurekaServer] [main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=java.net.ConnectException: Connection refused: getsockopt stacktrace=jakarta.ws.rs.ProcessingException: java.net.ConnectException: Connection refused: getsockopt
+2025-06-10T14:17:35.026+02:00  INFO 7288 --- [eurekaServer] [RMI TCP Connection(39)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-06-10T14:17:35.027+02:00  INFO 7288 --- [eurekaServer] [RMI TCP Connection(39)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-06-10T14:24:40.495+02:00  INFO 6820 --- [eurekaServer] [restartedMain] c.m.e.EurekaServerApplication            : Starting EurekaServerApplication using Java 22.0.1 with PID 6820 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\eurekaserver\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\eurekaserver)
+2025-06-10T14:24:40.497+02:00  INFO 6820 --- [eurekaServer] [restartedMain] c.m.e.EurekaServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-06-10T14:24:40.552+02:00  INFO 6820 --- [eurekaServer] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-10T14:24:40.552+02:00  INFO 6820 --- [eurekaServer] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-10T14:24:41.528+02:00  INFO 6820 --- [eurekaServer] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8f78fac4-482a-3816-81cc-3120a6b70c6f
+2025-06-10T14:24:41.851+02:00  INFO 6820 --- [eurekaServer] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
+2025-06-10T14:24:41.864+02:00  INFO 6820 --- [eurekaServer] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-10T14:24:41.865+02:00  INFO 6820 --- [eurekaServer] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-10T14:24:41.912+02:00  INFO 6820 --- [eurekaServer] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-10T14:24:41.913+02:00  INFO 6820 --- [eurekaServer] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1360 ms
+2025-06-10T14:24:42.806+02:00  INFO 6820 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-06-10T14:24:42.808+02:00  INFO 6820 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-06-10T14:24:42.973+02:00  INFO 6820 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-06-10T14:24:42.973+02:00  INFO 6820 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-06-10T14:24:43.146+02:00  INFO 6820 --- [eurekaServer] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-10T14:24:43.889+02:00  WARN 6820 --- [eurekaServer] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-06-10T14:24:43.967+02:00  WARN 6820 --- [eurekaServer] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-06-10T14:24:43.986+02:00  INFO 6820 --- [eurekaServer] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-06-10T14:24:44.006+02:00  INFO 6820 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-06-10T14:24:44.015+02:00  INFO 6820 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-06-10T14:24:44.016+02:00  INFO 6820 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-06-10T14:24:44.016+02:00  INFO 6820 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-06-10T14:24:44.016+02:00  INFO 6820 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-06-10T14:24:44.026+02:00  INFO 6820 --- [eurekaServer] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-10T14:24:44.033+02:00  INFO 6820 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-06-10T14:24:44.033+02:00  INFO 6820 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-06-10T14:24:44.033+02:00  INFO 6820 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-06-10T14:24:44.034+02:00  INFO 6820 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-06-10T14:24:44.034+02:00  INFO 6820 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-06-10T14:24:44.034+02:00  INFO 6820 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-06-10T14:24:44.034+02:00  INFO 6820 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-06-10T14:24:44.145+02:00  INFO 6820 --- [eurekaServer] [restartedMain] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=java.net.ConnectException: Connection refused: getsockopt stacktrace=jakarta.ws.rs.ProcessingException: java.net.ConnectException: Connection refused: getsockopt
 	at org.glassfish.jersey.client.internal.HttpUrlConnector.apply(HttpUrlConnector.java:288)
 	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:300)
 	at org.glassfish.jersey.client.JerseyInvocation.lambda$invoke$0(JerseyInvocation.java:674)
@@ -581,7 +482,7 @@ java.lang.IllegalStateException: Client instance has been closed.
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
 	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:203)
-	at jdk.proxy2/jdk.proxy2.$Proxy87.getApplications(Unknown Source)
+	at jdk.proxy3/jdk.proxy3.$Proxy74.getApplications(Unknown Source)
 	at org.springframework.cloud.netflix.eureka.server.EurekaServerAutoConfiguration.peerAwareInstanceRegistry(EurekaServerAutoConfiguration.java:207)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -630,93 +531,16 @@ java.lang.IllegalStateException: Client instance has been closed.
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1122)
 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
-	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:144)
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
-	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1462)
-	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:563)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:144)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:110)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:159)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$12(ClassBasedTestDescriptor.java:378)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:194)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1709)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:556)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:546)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:611)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$7(ClassBasedTestDescriptor.java:290)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:279)
-	at java.base/java.util.Optional.orElseGet(Optional.java:364)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$6(ClassBasedTestDescriptor.java:278)
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$1(TestMethodTestDescriptor.java:105)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
-	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:194)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.mediLabo.eurekaserver.EurekaServerApplication.main(EurekaServerApplication.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
 Caused by: java.net.ConnectException: Connection refused: getsockopt
 	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
 	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
@@ -738,10 +562,10 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:531)
 	at org.glassfish.jersey.client.internal.HttpUrlConnector._apply(HttpUrlConnector.java:453)
 	at org.glassfish.jersey.client.internal.HttpUrlConnector.apply(HttpUrlConnector.java:286)
-	... 188 more
+	... 111 more
 
-2025-06-07T18:43:52.534+02:00  WARN 29720 --- [eurekaServer] [main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: getsockopt
-2025-06-07T18:43:52.535+02:00  INFO 29720 --- [eurekaServer] [main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EUREKASERVER/PC-Quentin-Martel.mshome.net:eurekaServer:8761 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+2025-06-10T14:24:44.145+02:00  WARN 6820 --- [eurekaServer] [restartedMain] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: getsockopt
+2025-06-10T14:24:44.145+02:00  INFO 6820 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EUREKASERVER/PC-Quentin-Martel.mshome.net:eurekaServer:8761 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
@@ -772,7 +596,7 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
 	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:203)
-	at jdk.proxy2/jdk.proxy2.$Proxy87.getApplications(Unknown Source)
+	at jdk.proxy3/jdk.proxy3.$Proxy74.getApplications(Unknown Source)
 	at org.springframework.cloud.netflix.eureka.server.EurekaServerAutoConfiguration.peerAwareInstanceRegistry(EurekaServerAutoConfiguration.java:207)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -821,127 +645,181 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1122)
 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
-	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:144)
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
-	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1462)
-	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:563)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:144)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:110)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:159)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$12(ClassBasedTestDescriptor.java:378)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:194)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1709)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:556)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:546)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:611)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$7(ClassBasedTestDescriptor.java:290)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:279)
-	at java.base/java.util.Optional.orElseGet(Optional.java:364)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$6(ClassBasedTestDescriptor.java:278)
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$1(TestMethodTestDescriptor.java:105)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
-	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:194)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.mediLabo.eurekaserver.EurekaServerApplication.main(EurekaServerApplication.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
 
-2025-06-07T18:43:52.537+02:00  INFO 29720 --- [eurekaServer] [main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
-2025-06-07T18:43:52.537+02:00  WARN 29720 --- [eurekaServer] [main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
-2025-06-07T18:43:52.538+02:00  INFO 29720 --- [eurekaServer] [main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
-2025-06-07T18:43:52.539+02:00  INFO 29720 --- [eurekaServer] [main] com.netflix.discovery.DiscoveryClient    : Not registering with Eureka server per configuration
-2025-06-07T18:43:52.542+02:00  INFO 29720 --- [eurekaServer] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1749314632540 with initial instances count: 0
-2025-06-07T18:43:52.579+02:00  INFO 29720 --- [eurekaServer] [main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
-2025-06-07T18:43:52.581+02:00  INFO 29720 --- [eurekaServer] [main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
-2025-06-07T18:43:52.769+02:00  INFO 29720 --- [eurekaServer] [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2025-06-07T18:43:52.769+02:00  INFO 29720 --- [eurekaServer] [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2025-06-07T18:43:52.770+02:00  INFO 29720 --- [eurekaServer] [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2025-06-07T18:43:52.770+02:00  INFO 29720 --- [eurekaServer] [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2025-06-07T18:43:52.806+02:00  INFO 29720 --- [eurekaServer] [main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
-2025-06-07T18:43:52.814+02:00  INFO 29720 --- [eurekaServer] [main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
-2025-06-07T18:43:52.814+02:00  INFO 29720 --- [eurekaServer] [main] c.n.eureka.DefaultEurekaServerContext    : Initialized
-2025-06-07T18:43:52.891+02:00  INFO 29720 --- [eurekaServer] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2025-06-07T18:43:52.947+02:00  INFO 29720 --- [eurekaServer] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EUREKASERVER with eureka with status UP
-2025-06-07T18:43:52.960+02:00  INFO 29720 --- [eurekaServer] [main] c.m.e.EurekaServerApplicationTests       : Started EurekaServerApplicationTests in 4.489 seconds (process running for 5.89)
-2025-06-07T18:43:52.965+02:00  INFO 29720 --- [eurekaServer] [Thread-11] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
-2025-06-07T18:43:52.966+02:00  INFO 29720 --- [eurekaServer] [Thread-11] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
-2025-06-07T18:43:52.966+02:00  INFO 29720 --- [eurekaServer] [Thread-11] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
-2025-06-07T18:43:52.966+02:00  INFO 29720 --- [eurekaServer] [Thread-11] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
-2025-06-07T18:43:52.968+02:00  INFO 29720 --- [eurekaServer] [Thread-11] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
-2025-06-07T18:43:52.974+02:00  INFO 29720 --- [eurekaServer] [Thread-11] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
-2025-06-07T18:43:53.834+02:00  INFO 29720 --- [eurekaServer] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EUREKASERVER with eureka with status DOWN
-2025-06-07T18:43:53.836+02:00  INFO 29720 --- [eurekaServer] [SpringApplicationShutdownHook] o.s.c.n.e.server.EurekaServerBootstrap   : Shutting down Eureka Server..
-2025-06-07T18:43:53.836+02:00  INFO 29720 --- [eurekaServer] [SpringApplicationShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
-2025-06-07T18:43:53.837+02:00  INFO 29720 --- [eurekaServer] [SpringApplicationShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shut down
-2025-06-07T18:43:53.837+02:00  INFO 29720 --- [eurekaServer] [SpringApplicationShutdownHook] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka Service is now shutdown...
-2025-06-07T18:43:53.838+02:00  INFO 29720 --- [eurekaServer] [SpringApplicationShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
-2025-06-07T18:43:53.840+02:00  INFO 29720 --- [eurekaServer] [SpringApplicationShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shut down
-2025-06-07T18:43:53.844+02:00  INFO 29720 --- [eurekaServer] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-06-07T18:43:53.848+02:00  INFO 29720 --- [eurekaServer] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2025-06-07T18:43:53.837+02:00 ERROR 29720 --- [eurekaServer] [Eureka-Jersey3Client-Conn-Cleaner2] c.n.d.s.t.j.EurekaJersey3ClientImpl      : Cannot clean connections
+2025-06-10T14:24:44.147+02:00  INFO 6820 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
+2025-06-10T14:24:44.147+02:00  WARN 6820 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
+2025-06-10T14:24:44.147+02:00  INFO 6820 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
+2025-06-10T14:24:44.148+02:00  INFO 6820 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Not registering with Eureka server per configuration
+2025-06-10T14:24:44.149+02:00  INFO 6820 --- [eurekaServer] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1749558284148 with initial instances count: 0
+2025-06-10T14:24:44.182+02:00  INFO 6820 --- [eurekaServer] [restartedMain] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2025-06-10T14:24:44.182+02:00  INFO 6820 --- [eurekaServer] [restartedMain] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
+2025-06-10T14:24:44.301+02:00  INFO 6820 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-06-10T14:24:44.301+02:00  INFO 6820 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-06-10T14:24:44.301+02:00  INFO 6820 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-06-10T14:24:44.301+02:00  INFO 6820 --- [eurekaServer] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-06-10T14:24:44.343+02:00  INFO 6820 --- [eurekaServer] [restartedMain] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
+2025-06-10T14:24:44.351+02:00  INFO 6820 --- [eurekaServer] [restartedMain] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2025-06-10T14:24:44.351+02:00  INFO 6820 --- [eurekaServer] [restartedMain] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2025-06-10T14:24:44.365+02:00  INFO 6820 --- [eurekaServer] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-06-10T14:24:44.441+02:00  INFO 6820 --- [eurekaServer] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EUREKASERVER with eureka with status UP
+2025-06-10T14:24:44.458+02:00  INFO 6820 --- [eurekaServer] [Thread-13] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2025-06-10T14:24:44.459+02:00  INFO 6820 --- [eurekaServer] [Thread-13] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2025-06-10T14:24:44.459+02:00  INFO 6820 --- [eurekaServer] [Thread-13] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2025-06-10T14:24:44.459+02:00  INFO 6820 --- [eurekaServer] [Thread-13] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2025-06-10T14:24:44.459+02:00  INFO 6820 --- [eurekaServer] [Thread-13] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2025-06-10T14:24:44.462+02:00  INFO 6820 --- [eurekaServer] [Thread-13] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2025-06-10T14:24:44.473+02:00  INFO 6820 --- [eurekaServer] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8761 (http) with context path '/'
+2025-06-10T14:24:44.475+02:00  INFO 6820 --- [eurekaServer] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2025-06-10T14:24:44.499+02:00  INFO 6820 --- [eurekaServer] [restartedMain] c.m.e.EurekaServerApplication            : Started EurekaServerApplication in 4.467 seconds (process running for 5.406)
+2025-06-10T14:24:45.104+02:00  INFO 6820 --- [eurekaServer] [RMI TCP Connection(7)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-10T14:24:45.105+02:00  INFO 6820 --- [eurekaServer] [RMI TCP Connection(7)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-10T14:24:45.107+02:00  INFO 6820 --- [eurekaServer] [RMI TCP Connection(7)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-10T14:24:47.948+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003 with status UP (replication=false)
+2025-06-10T14:24:48.548+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003 with status UP (replication=true)
+2025-06-10T14:24:53.024+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance GATEWAYAPI/PC-Quentin-Martel.mshome.net:gatewayapi:5005 with status UP (replication=false)
+2025-06-10T14:24:53.534+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance GATEWAYAPI/PC-Quentin-Martel.mshome.net:gatewayapi:5005 with status UP (replication=true)
+2025-06-10T14:25:01.437+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance NOTEAPI/PC-Quentin-Martel.mshome.net:noteapi:5002 with status UP (replication=false)
+2025-06-10T14:25:01.958+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance NOTEAPI/PC-Quentin-Martel.mshome.net:noteapi:5002 with status UP (replication=true)
+2025-06-10T14:25:08.108+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status UP (replication=false)
+2025-06-10T14:25:08.621+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status UP (replication=true)
+2025-06-10T14:25:14.158+02:00  INFO 6820 --- [eurekaServer] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-06-10T14:25:14.158+02:00  INFO 6820 --- [eurekaServer] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-06-10T14:25:14.158+02:00  INFO 6820 --- [eurekaServer] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-06-10T14:25:14.158+02:00  INFO 6820 --- [eurekaServer] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-06-10T14:25:14.159+02:00  INFO 6820 --- [eurekaServer] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-06-10T14:25:14.159+02:00  INFO 6820 --- [eurekaServer] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-06-10T14:25:14.159+02:00  INFO 6820 --- [eurekaServer] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-06-10T14:25:14.181+02:00  INFO 6820 --- [eurekaServer] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-06-10T14:25:44.460+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T14:26:44.461+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2025-06-10T14:27:44.471+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-06-10T14:28:44.471+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T14:29:35.375+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status DOWN (replication=false)
+2025-06-10T14:29:35.909+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status DOWN (replication=true)
+2025-06-10T14:29:38.422+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 (replication=false)
+2025-06-10T14:29:38.777+02:00  WARN 6820 --- [eurekaServer] [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: PATIENTAPI - PC-Quentin-Martel.mshome.net:patientapi:5000
+2025-06-10T14:29:38.777+02:00  WARN 6820 --- [eurekaServer] [http-nio-8761-exec-1] c.n.eureka.resources.InstanceResource    : Not Found (Renew): PATIENTAPI - PC-Quentin-Martel.mshome.net:patientapi:5000
+2025-06-10T14:29:38.777+02:00  WARN 6820 --- [eurekaServer] [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000
+2025-06-10T14:29:38.778+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-1] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PATIENTAPI - PC-Quentin-Martel.mshome.net:patientapi:5000
+2025-06-10T14:29:38.780+02:00  WARN 6820 --- [eurekaServer] [TaskBatchingWorker-target_localhost-1] c.n.eureka.cluster.ReplicationTask       : The replication of task PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000:Heartbeat@localhost failed with response code 404
+2025-06-10T14:29:38.780+02:00  WARN 6820 --- [eurekaServer] [TaskBatchingWorker-target_localhost-1] c.netflix.eureka.cluster.PeerEurekaNode  : PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000:Heartbeat@localhost: missing entry.
+2025-06-10T14:29:38.780+02:00  WARN 6820 --- [eurekaServer] [TaskBatchingWorker-target_localhost-1] c.netflix.eureka.cluster.PeerEurekaNode  : PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000:Heartbeat@localhost: cannot find instance id PC-Quentin-Martel.mshome.net:patientapi:5000 and hence replicating the instance with status DOWN
+2025-06-10T14:29:38.780+02:00  WARN 6820 --- [eurekaServer] [TaskBatchingWorker-target_localhost-1] c.n.eureka.cluster.ReplicationTask       : The replication of task PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000:Cancel@localhost failed with response code 404
+2025-06-10T14:29:38.780+02:00  WARN 6820 --- [eurekaServer] [TaskBatchingWorker-target_localhost-1] c.netflix.eureka.cluster.PeerEurekaNode  : PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000:Cancel@localhost: missing entry.
+2025-06-10T14:29:39.285+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status DOWN (replication=true)
+2025-06-10T14:29:40.625+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status UP (replication=false)
+2025-06-10T14:29:41.141+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status UP (replication=true)
+2025-06-10T14:29:44.043+02:00  INFO 6820 --- [eurekaServer] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-10T14:29:44.479+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2025-06-10T14:30:00.263+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status DOWN (replication=false)
+2025-06-10T14:30:00.779+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status DOWN (replication=true)
+2025-06-10T14:30:03.292+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 (replication=false)
+2025-06-10T14:30:03.805+02:00  WARN 6820 --- [eurekaServer] [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000
+2025-06-10T14:30:03.805+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-1] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PATIENTAPI - PC-Quentin-Martel.mshome.net:patientapi:5000
+2025-06-10T14:30:03.808+02:00  WARN 6820 --- [eurekaServer] [TaskBatchingWorker-target_localhost-15] c.n.eureka.cluster.ReplicationTask       : The replication of task PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000:Cancel@localhost failed with response code 404
+2025-06-10T14:30:03.808+02:00  WARN 6820 --- [eurekaServer] [TaskBatchingWorker-target_localhost-15] c.netflix.eureka.cluster.PeerEurekaNode  : PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000:Cancel@localhost: missing entry.
+2025-06-10T14:30:05.021+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status UP (replication=false)
+2025-06-10T14:30:05.531+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status UP (replication=true)
+2025-06-10T14:30:41.955+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status DOWN (replication=false)
+2025-06-10T14:30:42.459+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status DOWN (replication=true)
+2025-06-10T14:30:44.480+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T14:30:44.993+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 (replication=false)
+2025-06-10T14:30:45.499+02:00  WARN 6820 --- [eurekaServer] [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000
+2025-06-10T14:30:45.500+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-6] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PATIENTAPI - PC-Quentin-Martel.mshome.net:patientapi:5000
+2025-06-10T14:30:45.501+02:00  WARN 6820 --- [eurekaServer] [TaskBatchingWorker-target_localhost-10] c.n.eureka.cluster.ReplicationTask       : The replication of task PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000:Cancel@localhost failed with response code 404
+2025-06-10T14:30:45.501+02:00  WARN 6820 --- [eurekaServer] [TaskBatchingWorker-target_localhost-10] c.netflix.eureka.cluster.PeerEurekaNode  : PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000:Cancel@localhost: missing entry.
+2025-06-10T14:30:46.814+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status UP (replication=false)
+2025-06-10T14:30:47.320+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status UP (replication=true)
+2025-06-10T14:30:53.180+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status DOWN (replication=false)
+2025-06-10T14:30:53.693+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status DOWN (replication=true)
+2025-06-10T14:30:56.220+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 (replication=false)
+2025-06-10T14:30:56.727+02:00  WARN 6820 --- [eurekaServer] [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000
+2025-06-10T14:30:56.728+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-9] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PATIENTAPI - PC-Quentin-Martel.mshome.net:patientapi:5000
+2025-06-10T14:30:56.729+02:00  WARN 6820 --- [eurekaServer] [TaskBatchingWorker-target_localhost-4] c.n.eureka.cluster.ReplicationTask       : The replication of task PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000:Cancel@localhost failed with response code 404
+2025-06-10T14:30:56.729+02:00  WARN 6820 --- [eurekaServer] [TaskBatchingWorker-target_localhost-4] c.netflix.eureka.cluster.PeerEurekaNode  : PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000:Cancel@localhost: missing entry.
+2025-06-10T14:30:58.141+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status UP (replication=false)
+2025-06-10T14:30:58.648+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status UP (replication=true)
+2025-06-10T14:31:08.493+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status DOWN (replication=false)
+2025-06-10T14:31:09.008+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status DOWN (replication=true)
+2025-06-10T14:31:11.514+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 (replication=false)
+2025-06-10T14:31:12.018+02:00  WARN 6820 --- [eurekaServer] [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000
+2025-06-10T14:31:12.018+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-7] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PATIENTAPI - PC-Quentin-Martel.mshome.net:patientapi:5000
+2025-06-10T14:31:12.020+02:00  WARN 6820 --- [eurekaServer] [TaskBatchingWorker-target_localhost-9] c.n.eureka.cluster.ReplicationTask       : The replication of task PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000:Cancel@localhost failed with response code 404
+2025-06-10T14:31:12.020+02:00  WARN 6820 --- [eurekaServer] [TaskBatchingWorker-target_localhost-9] c.netflix.eureka.cluster.PeerEurekaNode  : PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000:Cancel@localhost: missing entry.
+2025-06-10T14:31:13.154+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status UP (replication=false)
+2025-06-10T14:31:13.660+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status UP (replication=true)
+2025-06-10T14:31:44.481+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T14:32:35.623+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status DOWN (replication=false)
+2025-06-10T14:32:36.147+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status DOWN (replication=true)
+2025-06-10T14:32:44.489+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2025-06-10T14:33:44.494+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2025-06-10T14:34:44.057+02:00  INFO 6820 --- [eurekaServer] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-10T14:34:44.496+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2025-06-10T14:34:44.497+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Evicting 1 items (expired=1, evictionLimit=1)
+2025-06-10T14:34:44.497+02:00  WARN 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: expired lease for PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000
+2025-06-10T14:34:44.499+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 (replication=false)
+2025-06-10T14:35:44.496+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T14:36:44.507+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2025-06-10T14:37:44.507+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T14:38:44.508+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T14:39:24.057+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status UP (replication=false)
+2025-06-10T14:39:24.281+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status UP (replication=true)
+2025-06-10T14:39:44.060+02:00  INFO 6820 --- [eurekaServer] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-10T14:39:44.356+02:00  INFO 6820 --- [eurekaServer] [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 8
+2025-06-10T14:39:44.522+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2025-06-10T14:40:44.522+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T14:41:44.530+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2025-06-10T14:42:44.531+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T14:43:44.533+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2025-06-10T14:44:44.062+02:00  INFO 6820 --- [eurekaServer] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-10T14:44:44.534+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T14:45:07.069+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status DOWN (replication=false)
+2025-06-10T14:45:07.581+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status DOWN (replication=true)
+2025-06-10T14:45:10.131+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 (replication=false)
+2025-06-10T14:45:10.641+02:00  WARN 6820 --- [eurekaServer] [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000
+2025-06-10T14:45:10.641+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-9] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PATIENTAPI - PC-Quentin-Martel.mshome.net:patientapi:5000
+2025-06-10T14:45:10.644+02:00  WARN 6820 --- [eurekaServer] [TaskBatchingWorker-target_localhost-12] c.n.eureka.cluster.ReplicationTask       : The replication of task PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000:Cancel@localhost failed with response code 404
+2025-06-10T14:45:10.644+02:00  WARN 6820 --- [eurekaServer] [TaskBatchingWorker-target_localhost-12] c.netflix.eureka.cluster.PeerEurekaNode  : PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000:Cancel@localhost: missing entry.
+2025-06-10T14:45:12.207+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status UP (replication=false)
+2025-06-10T14:45:12.716+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status UP (replication=true)
+2025-06-10T14:45:44.535+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T14:46:44.535+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T14:47:44.543+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2025-06-10T14:48:44.544+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T14:49:44.066+02:00  INFO 6820 --- [eurekaServer] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-10T14:49:44.544+02:00  INFO 6820 --- [eurekaServer] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-06-10T14:50:24.265+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status DOWN (replication=false)
+2025-06-10T14:50:24.773+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 with status DOWN (replication=true)
+2025-06-10T14:50:34.972+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance NOTEAPI/PC-Quentin-Martel.mshome.net:noteapi:5002 with status DOWN (replication=false)
+2025-06-10T14:50:35.462+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance GATEWAYAPI/PC-Quentin-Martel.mshome.net:gatewayapi:5005 with status DOWN (replication=false)
+2025-06-10T14:50:35.467+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance GATEWAYAPI/PC-Quentin-Martel.mshome.net:gatewayapi:5005 (replication=false)
+2025-06-10T14:50:35.487+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance NOTEAPI/PC-Quentin-Martel.mshome.net:noteapi:5002 with status DOWN (replication=true)
+2025-06-10T14:50:35.487+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance GATEWAYAPI/PC-Quentin-Martel.mshome.net:gatewayapi:5005 with status DOWN (replication=true)
+2025-06-10T14:50:35.487+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance GATEWAYAPI/PC-Quentin-Martel.mshome.net:gatewayapi:5005 (replication=true)
+2025-06-10T14:50:36.396+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003 with status DOWN (replication=false)
+2025-06-10T14:50:36.906+02:00  INFO 6820 --- [eurekaServer] [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EVALUATIONRISQUEAPI/PC-Quentin-Martel.mshome.net:evaluationrisqueapi:5003 with status DOWN (replication=true)
+2025-06-10T14:50:36.910+02:00  INFO 6820 --- [eurekaServer] [RMI TCP Connection(38)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-10T14:50:36.912+02:00  INFO 6820 --- [eurekaServer] [RMI TCP Connection(38)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EUREKASERVER with eureka with status DOWN
+2025-06-10T14:50:36.915+02:00  INFO 6820 --- [eurekaServer] [RMI TCP Connection(38)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-10T14:50:36.934+02:00  INFO 6820 --- [eurekaServer] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-10T14:50:36.937+02:00  INFO 6820 --- [eurekaServer] [RMI TCP Connection(38)-127.0.0.1] o.s.c.n.e.server.EurekaServerBootstrap   : Shutting down Eureka Server..
+2025-06-10T14:50:36.937+02:00  INFO 6820 --- [eurekaServer] [RMI TCP Connection(38)-127.0.0.1] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2025-06-10T14:50:36.946+02:00  INFO 6820 --- [eurekaServer] [RMI TCP Connection(38)-127.0.0.1] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2025-06-10T14:50:36.946+02:00  INFO 6820 --- [eurekaServer] [RMI TCP Connection(38)-127.0.0.1] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka Service is now shutdown...
+2025-06-10T14:50:36.946+02:00  INFO 6820 --- [eurekaServer] [RMI TCP Connection(38)-127.0.0.1] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2025-06-10T14:50:36.947+02:00  INFO 6820 --- [eurekaServer] [RMI TCP Connection(38)-127.0.0.1] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2025-06-10T14:50:36.951+02:00  INFO 6820 --- [eurekaServer] [RMI TCP Connection(38)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-06-10T14:50:36.938+02:00 ERROR 6820 --- [eurekaServer] [Eureka-Jersey3Client-Conn-Cleaner2] c.n.d.s.t.j.EurekaJersey3ClientImpl      : Cannot clean connections
 
 java.lang.IllegalStateException: Client instance has been closed.
 	at org.glassfish.jersey.internal.guava.Preconditions.checkState(Preconditions.java:169) ~[jersey-common-3.1.10.jar:na]
@@ -956,3 +834,4 @@ java.lang.IllegalStateException: Client instance has been closed.
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
 
+2025-06-10T14:50:36.952+02:00  INFO 6820 --- [eurekaServer] [RMI TCP Connection(38)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

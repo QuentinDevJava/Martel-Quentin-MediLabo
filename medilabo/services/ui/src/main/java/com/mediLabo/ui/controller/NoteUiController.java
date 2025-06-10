@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 
 import com.mediLabo.ui.dto.NoteDto;
+import com.mediLabo.ui.dto.PatientDto;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -19,25 +20,33 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping("/patients/notes")
 public class NoteUiController {
 
-	//TODO bean configuration du restTemplate au lieu de le faire dans chaque controller
+	// TODO bean configuration du restTemplate au lieu de le faire dans chaque
+	// controller
 	private final RestTemplate restTemplate = new RestTemplate();
 
 	@Value("${note.api.url}")
 	private String noteApiUrl;
 
-	@GetMapping("/add/{patientNom}")
-	public String addNoteForm(@PathVariable String patientNom, Model model) {
-		log.info("UI GET /patients/notes/add/{} - showing add note form", patientNom);
-		model.addAttribute("patientNom", patientNom);
+	@Value("${patient.api.url}")
+	private String patientApiUrl;
+
+	@GetMapping("/add/{patientId}")
+	public String addNoteForm(@PathVariable int patientId, Model model) {
+		log.info("UI GET /patients/notes/add/{} - showing add note form", patientId);
+		model.addAttribute("patientNom", patientId);
 		return "add-note";
 	}
 
-	@PostMapping("/add/{patientNom}")
-	public String submitAddNote(@PathVariable String patientNom, @RequestParam("note") String noteText) {
-		log.info("UI POST /patients/notes/add/{} - submitting note: {}", patientNom, noteText);
+	@PostMapping("/add/{patientId}")
+	public String submitAddNote(@PathVariable int patientId, @RequestParam("note") String noteText) {
+		log.info("UI POST /patients/notes/add/{} - submitting note: {}", patientId, noteText);
+
+		PatientDto patientDto = restTemplate.getForObject(patientApiUrl + patientId, PatientDto.class);
+
 		NoteDto noteDto = new NoteDto();
-		noteDto.setFkPatientNom(patientNom);
-		noteDto.setNote(noteText);
+		noteDto.setPatientId(patientId);
+		noteDto.setPatientNom(patientDto.getNom());
+		noteDto.setContenuNote(noteText);
 		restTemplate.postForObject(noteApiUrl, noteDto, NoteDto.class);
 		return "redirect:/patients";
 	}
@@ -54,7 +63,7 @@ public class NoteUiController {
 	public String submitEditNote(@PathVariable String noteId, @RequestParam("note") String updatedText) {
 		log.info("UI POST /patients/notes/update/{} - updating note with text: {}", noteId, updatedText);
 		NoteDto noteDto = restTemplate.getForObject(noteApiUrl + noteId, NoteDto.class);
-		noteDto.setNote(updatedText);
+		noteDto.setContenuNote(updatedText);
 		restTemplate.put(noteApiUrl + noteId, noteDto);
 		return "redirect:/patients";
 	}

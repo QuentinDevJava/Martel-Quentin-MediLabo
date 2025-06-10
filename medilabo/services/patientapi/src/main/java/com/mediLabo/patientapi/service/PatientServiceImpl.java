@@ -50,7 +50,7 @@ public class PatientServiceImpl implements PatientService {
 	@Override
 	public PatientDto updatePatient(int id, PatientDto patientDto) {
 		Patient patient = patientRepository.findById(id)
-				.orElseThrow(() -> new RuntimeException("Patient with name not find"));
+				.orElseThrow(() -> new RuntimeException("Patient with id not find"));
 		patient.setNom(patientDto.getNom());
 		patient.setPrenom(patientDto.getPrenom());
 		patient.setDateAnniversaire(patientDto.getDateAnniversaire());
@@ -65,16 +65,16 @@ public class PatientServiceImpl implements PatientService {
 	public PatientDto getPatientWithNotesById(int id) {
 		Patient patient = patientRepository.findById(id)
 				.orElseThrow(() -> new RuntimeException("Patient with id not find"));
-		List<NoteDto> noteDtos = noteApi.getNoteDtos(patient.getNom());
+		List<NoteDto> noteDtos = noteApi.getNoteDtos(patient.getId());
 		return patientMapper.toDtoWithNotes(patient, noteDtos);
 	}
 
-	@Override
-	public PatientDto getPatientWithNotesByName(String name) {
-		Patient patient = patientRepository.findByNom(name)
-				.orElseThrow(() -> new RuntimeException("Patient with name not find"));
-		List<NoteDto> noteDtos = noteApi.getNoteDtos(name);
-		return patientMapper.toDtoWithNotes(patient, noteDtos);
-	}
+//	@Override
+//	public PatientDto getPatientWithNotesByName(String name) {
+//		Patient patient = patientRepository.findByNom(name)
+//				.orElseThrow(() -> new RuntimeException("Patient with id not find"));
+//		List<NoteDto> noteDtos = noteApi.getNoteDtos(patient.getId());
+//		return patientMapper.toDtoWithNotes(patient, noteDtos);
+//	}
 
 }

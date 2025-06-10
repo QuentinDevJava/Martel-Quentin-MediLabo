@@ -32,13 +32,6 @@ public class PatientController {
 		return new ResponseEntity<>(patientService.getPatientById(id), HttpStatus.OK);
 	}
 
-	@GetMapping("name/{name}")
-	public ResponseEntity<PatientDto> getPatientByName(@PathVariable String name) {
-		log.info("Receive GET /api/patients/name/" + name
-				+ ": PatientApi use RestController to send PatientDto by name");
-		return new ResponseEntity<>(patientService.getPatientByName(name), HttpStatus.OK);
-	}
-
 	@GetMapping
 	public ResponseEntity<List<PatientDto>> getAllPatients() {
 		log.info("Receive GET /api/patients: PatientApi use RestController to send list of PatientDto");
@@ -67,17 +60,10 @@ public class PatientController {
 		return new ResponseEntity<>(patientService.getPatientWithNotesById(id), HttpStatus.OK);
 	}
 
-	@GetMapping("notes/name/{name}")
-	public ResponseEntity<PatientDto> getPatientWithNotesByName(@PathVariable String name) {
-		log.info("Receive GET /api/patients/name/" + name
-				+ ": PatientApi use RestController to send PatientDto by name");
-		return new ResponseEntity<>(patientService.getPatientWithNotesByName(name), HttpStatus.OK);
-	}
-	// @DeleteMapping("/{id}")
-	// public ResponseEntity<Void> deletePatient(@PathVariable int id) {
-	// log.info("Receive DELETE /api/patients/" + id + ": PatientApi use
-	// RestController to delete Patient");
-	// patientService.deletePatient(id);
-	// return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-	// }
+//	@GetMapping("notes/name/{name}")
+//	public ResponseEntity<PatientDto> getPatientWithNotesByName(@PathVariable String name) {
+//		log.info("Receive GET /api/patients/name/" + name
+//				+ ": PatientApi use RestController to send PatientDto by name");
+//		return new ResponseEntity<>(patientService.getPatientWithNotesByName(name), HttpStatus.OK);
+//	}
 }

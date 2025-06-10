@@ -130,32 +130,17 @@ class PatientServiceImplTest {
 	void testGetPatientWithNotesById() {
 		when(patientRepository.findById(1)).thenReturn(optionalPatient);
 
-		List<NoteDto> notes = List.of(new NoteDto("note-1", "Test", "Ceci est une note"),
-				new NoteDto("note-2", "Test", "Deuxième note"));
+		List<NoteDto> notes = List.of(new NoteDto("note-1", 1, "Test", "Ceci est une note"),
+				new NoteDto("note-2", 1, "Test", "Deuxième note"));
 
-		when(noteApi.getNoteDtos("Test")).thenReturn(notes);
+		when(noteApi.getNoteDtos(1)).thenReturn(notes);
 
 		PatientDto result = patientServiceImpl.getPatientWithNotesById(1);
 
 		assertEquals("Test", result.getNom());
 		assertEquals(2, result.getNotes().size());
 		verify(patientRepository).findById(1);
-		verify(noteApi).getNoteDtos("Test");
+		verify(noteApi).getNoteDtos(1);
 	}
 
-	@Test
-	void testGetPatientWithNotesByName() {
-		when(patientRepository.findByNom("Test")).thenReturn(optionalPatient);
-
-		List<NoteDto> notes = List.of(new NoteDto("note-1", "Test", "Première note"));
-
-		when(noteApi.getNoteDtos("Test")).thenReturn(notes);
-
-		PatientDto result = patientServiceImpl.getPatientWithNotesByName("Test");
-
-		assertEquals("Test", result.getNom());
-		assertEquals(1, result.getNotes().size());
-		verify(patientRepository).findByNom("Test");
-		verify(noteApi).getNoteDtos("Test");
-	}
 }

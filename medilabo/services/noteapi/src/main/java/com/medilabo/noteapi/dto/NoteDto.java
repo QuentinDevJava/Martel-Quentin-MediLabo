@@ -13,7 +13,9 @@ public class NoteDto {
 
 	private String id;
 
-	private String fkPatientNom;
+	private int patientId;
 
-	private String note;
+	private String patientNom;
+
+	private String contenuNote;
 }

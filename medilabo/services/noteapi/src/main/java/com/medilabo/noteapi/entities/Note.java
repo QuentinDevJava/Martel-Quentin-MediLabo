@@ -15,15 +15,20 @@ import lombok.NoArgsConstructor;
 @Document(collection = "notes")
 public class Note {
 
+	public Note(int patientId, String patientNom, String note) {
+		super();
+		this.patientId = patientId;
+		this.patientNom = patientNom;
+		this.contenuNote = note;
+	}
+
 	@Id
 	private String id;
 
-	private String fkPatientNom;
+	private int patientId;
 
-	private String note;
+	private String patientNom;
 
-	public Note(String note, String fkPatientNom) {
-		this.note = note;
-		this.fkPatientNom = fkPatientNom;
-	}
+	private String contenuNote;
+
 }

@@ -4,6 +4,6 @@ import com.medilabo.evaluationrisqueapi.enums.DangerLevel;
 
 public interface EvaluationRisqueService {
 
-	DangerLevel generateDiabetesReport(String patientName);
+	DangerLevel generateDiabetesReport(int patientId);
 
 }

@@ -21,4 +21,4 @@ note:
 
 evaluationrisque:
   api:
-    url: http://localhost:5005/api/evaluationrisque/patients/name/
+    url: http://localhost:5005/api/evaluationrisque/patients/
