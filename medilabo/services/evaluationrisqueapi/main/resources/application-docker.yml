@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: evaluationrisqueapi
+  config:
+    import: optional:configserver:http://configserver:5555	 
