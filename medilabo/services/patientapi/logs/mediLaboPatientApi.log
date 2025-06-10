@@ -1203,16 +1203,3 @@ feign.FeignException$ServiceUnavailable: [503] during [GET] to [http://noteapi/a
 2025-06-10T17:00:23.315+02:00  INFO 23540 --- [patientapi] [http-nio-5000-exec-5] c.m.p.controllers.PatientController      : Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes
 2025-06-10T17:00:36.293+02:00  INFO 23540 --- [patientapi] [http-nio-5000-exec-4] c.m.p.controllers.PatientController      : Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes
 2025-06-10T17:00:57.766+02:00  INFO 23540 --- [patientapi] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-10T17:05:57.771+02:00  INFO 23540 --- [patientapi] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-10T17:10:57.780+02:00  INFO 23540 --- [patientapi] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-10T17:12:21.184+02:00  INFO 23540 --- [patientapi] [RMI TCP Connection(49)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2025-06-10T17:12:21.190+02:00  INFO 23540 --- [patientapi] [RMI TCP Connection(49)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PATIENTAPI with eureka with status DOWN
-2025-06-10T17:12:21.191+02:00  INFO 23540 --- [patientapi] [RMI TCP Connection(49)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749568341190, current=DOWN, previous=UP]
-2025-06-10T17:12:21.192+02:00  INFO 23540 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
-2025-06-10T17:12:21.200+02:00  INFO 23540 --- [patientapi] [RMI TCP Connection(49)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-10T17:12:21.230+02:00  INFO 23540 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration status: 204
-2025-06-10T17:12:21.235+02:00  INFO 23540 --- [patientapi] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-06-10T17:12:21.296+02:00  INFO 23540 --- [patientapi] [RMI TCP Connection(49)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-10T17:12:21.310+02:00  INFO 23540 --- [patientapi] [RMI TCP Connection(49)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-06-10T17:12:21.330+02:00  INFO 23540 --- [patientapi] [RMI TCP Connection(49)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-06-10T17:12:21.333+02:00  INFO 23540 --- [patientapi] [RMI TCP Connection(49)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...

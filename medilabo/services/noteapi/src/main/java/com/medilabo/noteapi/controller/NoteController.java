@@ -26,16 +26,16 @@ public class NoteController {
 
 	private NoteService noteService;
 
-	@GetMapping("patient/{patientNom}")
-	public ResponseEntity<List<NoteDto>> getPatientByNom(@PathVariable String patientNom) {
-		log.info("Receive GET /api/notes/patient/" + patientNom
-				+ ": NoteApi use RestController to send list of NoteDto");
-		return new ResponseEntity<>(noteService.getNotesByNom(patientNom), HttpStatus.OK);
+	@GetMapping("patient/{patientId}")
+	public ResponseEntity<List<NoteDto>> getNoteByPatientId(@PathVariable int patientId) {
+		log.info(
+				"Receive GET /api/notes/patient/" + patientId + ": NoteApi use RestController to send list of NoteDto");
+		return new ResponseEntity<>(noteService.getNotesByPatientId(patientId), HttpStatus.OK);
 
 	}
 
 	@GetMapping("{id}")
-	public ResponseEntity<NoteDto> getPatientById(@PathVariable String id) {
+	public ResponseEntity<NoteDto> getNoteById(@PathVariable String id) {
 		log.info("Receive GET /api/notes/" + id + ": NoteApi use RestController to send NoteDto");
 		return new ResponseEntity<>(noteService.getNotesById(id), HttpStatus.OK);
 
@@ -56,12 +56,12 @@ public class NoteController {
 		return new ResponseEntity<>(updated, HttpStatus.OK);
 	}
 
-	@GetMapping("termesAnalyse/{patientName}")
-	public ResponseEntity<Integer> getTriggerTermCountForPatient(@PathVariable String patientName) {
-		int count = noteService.getNumberOfTermsByPatient(patientName);
-		log.info("Receive PUT /api/notes/termesAnalyse/" + patientName
-				+ " - NoteApi use RestController get number of trigger terms in list of NoteDto for patient : "
-				+ patientName);
+	@GetMapping("termesAnalyse/{patientId}")
+	public ResponseEntity<Integer> getTriggerTermCountForPatient(@PathVariable int patientId) {
+		int count = noteService.getNumberOfTermsByPatient(patientId);
+		log.info("Receive PUT /api/notes/termesAnalyse/" + patientId
+				+ " - NoteApi use RestController get number of trigger terms in list of NoteDto for patient id : "
+				+ patientId);
 		return ResponseEntity.ok(count);
 	}
 }

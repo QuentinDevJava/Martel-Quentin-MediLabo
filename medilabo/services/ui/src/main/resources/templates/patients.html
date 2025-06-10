@@ -10,13 +10,14 @@
         <table class="table table-bordered table-hover">
             <thead class="table-dark">
                 <tr>
-                    <th>Nom</th>
-                    <th>Prénom</th>
-                    <th>Date de naissance</th>
-                    <th class="text-center">Genre</th>
-                    <th class="text-center">Détails patients</th>
-                    <th class="text-center">Détails notes</th>
-                    <th class="text-center">Voir le rapport</th> <!-- Nouvelle colonne -->
+					<th class="col-md-1">Nom</th>
+					<th class="col-md-1">Prénom</th>
+					<th class="col-md-1">Date de naissance</th>
+					<th class="col-md-1">Genre</th>
+					<th class="text-center col-md-3">Notes du patient</th>
+					<th class="text-center col-md-1">Détails patients</th>
+					<th class="text-center col-md-2">Détails notes</th>
+					<th class="text-center col-md-2">Voir le rapport</th> 
                 </tr>
             </thead>
             <tbody>
@@ -25,6 +26,11 @@
                     <td th:text="${patient.prenom}">Prénom</td>
                     <td th:text="${patient.dateAnniversaire}">Date</td>
                     <td class="text-center" th:text="${patient.genre}">Genre</td>
+					<td>
+		                <ul th:each="note : ${patient.notes}">
+		                    <li th:text="${note.contenuNote}">Note</li>
+		                </ul>
+		            </td>
                     <td class="text-center">
                         <a class="btn btn-primary btn-sm" th:href="@{'/patients/' + ${patient.id}}">Voir</a>
                     </td>
@@ -32,7 +38,7 @@
                         <a class="btn btn-primary btn-sm" th:href="@{'/patients/notes/' + ${patient.id}}">Voir les notes</a>
                     </td>
                     <td class="text-center">
-                        <a class="btn btn-info btn-sm" th:href="@{'/evaluationRisque/rapport/' + ${patient.nom}}">Voir le rapport</a>
+                        <a class="btn btn-info btn-sm" th:href="@{'/evaluationRisque/rapport/' + ${patient.id}}">Voir le rapport</a>
                     </td>
                 </tr>
             </tbody>

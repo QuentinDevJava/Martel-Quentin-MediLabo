@@ -16,8 +16,8 @@ public interface PatientService {
 
 	PatientDto getPatientByName(String name);
 
-	PatientDto getPatientWithNotesById(int id);
+	List<PatientDto> getPatientWithNotesById();
 
-	PatientDto getPatientWithNotesByName(String name);
+	// PatientDto getPatientWithNotesByName(String name);
 
 }
