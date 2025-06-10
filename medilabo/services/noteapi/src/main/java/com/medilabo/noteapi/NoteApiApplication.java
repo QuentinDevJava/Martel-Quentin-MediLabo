@@ -22,6 +22,7 @@ public class NoteApiApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		noteRepository.deleteAll();
 		if (noteRepository.findAll().isEmpty()) {
 			noteRepository.save(Note.builder()
 
