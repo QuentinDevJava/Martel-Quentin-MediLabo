@@ -39,7 +39,7 @@ public class PatientController {
 	}
 
 	@PostMapping
-	public ResponseEntity<PatientDto> addPatient(@RequestBody PatientDto patientDto) {
+	public ResponseEntity<PatientDto> addPatient(@Valid @RequestBody PatientDto patientDto) {
 		PatientDto savedPatient = patientService.addPatient(patientDto);
 		log.info("Receive POST /api/patients: PatientDto " + patientDto
 				+ " - PatientApi use RestController to create Patient");
@@ -47,7 +47,7 @@ public class PatientController {
 	}
 
 	@PutMapping("{id}")
-	public ResponseEntity<PatientDto> updatePatient(@PathVariable int id, @RequestBody PatientDto patientDto) {
+	public ResponseEntity<PatientDto> updatePatient(@PathVariable int id,@Valid @RequestBody PatientDto patientDto) {
 		PatientDto updatedPatient = patientService.updatePatient(id, patientDto);
 		log.info("Receive PUT /api/patients/" + id + ": PatientDto " + patientDto
 				+ " - PatientApi use RestController to update Patient");
