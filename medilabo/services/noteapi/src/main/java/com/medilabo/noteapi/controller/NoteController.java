@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.medilabo.noteapi.dto.NoteDto;
 import com.medilabo.noteapi.service.NoteService;
 
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -42,14 +43,14 @@ public class NoteController {
 	}
 
 	@PostMapping
-	public ResponseEntity<NoteDto> createNote(@RequestBody NoteDto noteDto) {
+	public ResponseEntity<NoteDto> createNote(@Valid @RequestBody NoteDto noteDto) {
 		NoteDto created = noteService.createNote(noteDto);
 		log.info("Receive POST:" + noteDto + " - NoteApi use RestController to create NoteDto");
 		return new ResponseEntity<>(created, HttpStatus.CREATED);
 	}
 
 	@PutMapping("{id}")
-	public ResponseEntity<NoteDto> updateNote(@PathVariable String id, @RequestBody NoteDto noteDto) {
+	public ResponseEntity<NoteDto> updateNote(@PathVariable String id, @Valid @RequestBody NoteDto noteDto) {
 		NoteDto updated = noteService.updateNote(id, noteDto);
 		log.info("Receive PUT /api/notes/" + id + " : NoteDto:" + noteDto
 				+ " - NoteApi use RestController to update NoteDto");

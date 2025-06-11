@@ -1,5 +1,6 @@
 package com.medilabo.noteapi.dto;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,5 +18,6 @@ public class NoteDto {
 
 	private String patientNom;
 
+	@NotBlank(message = "Please provide content for the note")
 	private String contenuNote;
 }

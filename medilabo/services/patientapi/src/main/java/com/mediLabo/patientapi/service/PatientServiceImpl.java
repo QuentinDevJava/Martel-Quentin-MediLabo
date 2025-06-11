@@ -1,6 +1,7 @@
 package com.mediLabo.patientapi.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -22,18 +23,7 @@ public class PatientServiceImpl implements PatientService {
 
 	@Override
 	public PatientDto getPatientById(int id) {
-		Patient patient = patientRepository.findById(id)
-				.orElseThrow(() -> new RuntimeException("Patient with id not find"));
-		;
-		return patientMapper.toDto(patient);
-	}
-
-	@Override
-	public PatientDto getPatientByName(String name) {
-		Patient patient = patientRepository.findByNom(name)
-				.orElseThrow(() -> new RuntimeException("Patient with name not find"));
-		;
-		return patientMapper.toDto(patient);
+		return getPatientDtoWithPatientById(id);
 	}
 
 	@Override
@@ -48,17 +38,22 @@ public class PatientServiceImpl implements PatientService {
 	}
 
 	@Override
-	public PatientDto updatePatient(int id, PatientDto patientDto) {
-		Patient patient = patientRepository.findById(id)
-				.orElseThrow(() -> new RuntimeException("Patient with id not find"));
-		patient.setNom(patientDto.getNom());
-		patient.setPrenom(patientDto.getPrenom());
-		patient.setDateAnniversaire(patientDto.getDateAnniversaire());
-		patient.setGenre(patientDto.getGenre());
-		patient.setAdresse(patientDto.getAdresse());
-		patient.setTelephone(patientDto.getTelephone());
+	public PatientDto updatePatient(int id, PatientDto updatePatientDto) {
 
-		return patientMapper.toDto(patientRepository.save(patient));
+		PatientDto patientDto = getPatientDtoWithPatientById(id);
+
+		if (patientDto == null) {
+			throw new IllegalArgumentException("The note with id : " + id + "is not found");
+		} else {
+			patientDto.setNom(updatePatientDto.getNom());
+			patientDto.setPrenom(updatePatientDto.getPrenom());
+			patientDto.setDateAnniversaire(updatePatientDto.getDateAnniversaire());
+			patientDto.setGenre(updatePatientDto.getGenre());
+			patientDto.setAdresse(updatePatientDto.getAdresse());
+			patientDto.setTelephone(updatePatientDto.getTelephone());
+
+			return patientMapper.toDto(patientRepository.save(patientMapper.toEntity(patientDto)));
+		}
 	}
 
 	@Override
@@ -70,9 +65,20 @@ public class PatientServiceImpl implements PatientService {
 	}
 
 	@Override
-	public List<PatientDto> getPatientsWithNotes() {
+	public List<PatientDto> getAllPatientsWithNotes() {
 		return patientRepository.findAll().stream()
 				.map(patient -> patientMapper.toDtoWithNotes(patient, noteApi.getNoteDtos(patient.getId()))).toList();
 
 	}
+
+	private PatientDto getPatientDtoWithPatientById(int patientId) {
+		Optional<Patient> patient = patientRepository.findById(patientId);
+		if (patient.isPresent()) {
+			return patientMapper.toDto(patient.get());
+		} else {
+			return null;
+		}
+
+	}
+
 }

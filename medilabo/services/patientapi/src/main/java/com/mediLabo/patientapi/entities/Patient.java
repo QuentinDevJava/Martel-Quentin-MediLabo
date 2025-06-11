@@ -8,7 +8,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -37,18 +36,15 @@ public class Patient {
 		this.telephone = telephone;
 	}
 
-	@NotBlank
 	@Column(name = "nom")
 	private String nom;
 
-	@NotBlank
 	@Column(name = "prenom")
 	private String prenom;
 
 	@Column(name = "date")
 	private LocalDate dateAnniversaire;
 
-	@NotBlank
 	@Column(name = "genre")
 	private String genre;
 

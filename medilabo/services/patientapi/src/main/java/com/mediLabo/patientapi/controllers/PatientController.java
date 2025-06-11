@@ -63,7 +63,7 @@ public class PatientController {
 	@GetMapping("notes")
 	public ResponseEntity<List<PatientDto>> getAllPatientWithNotesById() {
 		log.info("Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes");
-		return new ResponseEntity<>(patientService.getPatientsWithNotes(), HttpStatus.OK);
+		return new ResponseEntity<>(patientService.getAllPatientsWithNotes(), HttpStatus.OK);
 	}
 
 }

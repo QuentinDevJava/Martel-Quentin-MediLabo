@@ -77,16 +77,6 @@ class PatientServiceImplTest {
 	}
 
 	@Test
-	void testGetPatientByName() {
-		when(patientRepository.findByNom("Test")).thenReturn(optionalPatient);
-
-		PatientDto result = patientServiceImpl.getPatientByName("Test");
-
-		assertEquals("Jean", result.getPrenom());
-		verify(patientRepository).findByNom("Test");
-	}
-
-	@Test
 	void testGetAllPatient() {
 		when(patientRepository.findAll()).thenReturn(List.of(testPatient));
 
@@ -135,7 +125,7 @@ class PatientServiceImplTest {
 
 		when(noteApi.getNoteDtos(1)).thenReturn(notes);
 
-		List<PatientDto> result = patientServiceImpl.getPatientsWithNotes();
+		List<PatientDto> result = patientServiceImpl.getAllPatientsWithNotes();
 
 		assertEquals("Test", result.getFirst().getNom());
 		assertEquals(2, result.getFirst().getNotes().size());
