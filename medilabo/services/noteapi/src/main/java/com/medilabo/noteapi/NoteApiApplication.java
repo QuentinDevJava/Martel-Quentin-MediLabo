@@ -3,6 +3,7 @@ package com.medilabo.noteapi;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Profile;
 
 import com.medilabo.noteapi.entities.Note;
 import com.medilabo.noteapi.repository.NoteRepository;
@@ -20,6 +21,7 @@ public class NoteApiApplication implements CommandLineRunner {
 		SpringApplication.run(NoteApiApplication.class, args);
 	}
 
+	@Profile({ "dev", "docker" })
 	@Override
 	public void run(String... args) throws Exception {
 		noteRepository.deleteAll();

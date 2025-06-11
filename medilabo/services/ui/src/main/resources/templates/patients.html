@@ -7,41 +7,41 @@
     <div class="container mt-4">
         <h1 class="mb-4">Liste des patients</h1>
 
-        <table class="table table-bordered table-hover">
+        <table class="table table-responsive table-bordered table-sm table-hover">
             <thead class="table-dark">
                 <tr>
 					<th class="col-md-1">Nom</th>
 					<th class="col-md-1">Prénom</th>
 					<th class="col-md-1">Date de naissance</th>
 					<th class="col-md-1">Genre</th>
-					<th class="text-center col-md-3">Notes du patient</th>
+					<th class="text-center col-md-4">Notes du patient</th>
 					<th class="text-center col-md-1">Détails patients</th>
-					<th class="text-center col-md-2">Détails notes</th>
-					<th class="text-center col-md-2">Voir le rapport</th> 
+					<th class="text-center col-md-1.5">Détails notes</th>
+					<th class="text-center col-md-1.5">Voir le rapport</th> 
                 </tr>
             </thead>
-            <tbody>
-                <tr th:each="patient : ${patients}">
-                    <td th:text="${patient.nom}">Nom</td>
-                    <td th:text="${patient.prenom}">Prénom</td>
-                    <td th:text="${patient.dateAnniversaire}">Date</td>
-                    <td class="text-center" th:text="${patient.genre}">Genre</td>
-					<td>
-		                <ul th:each="note : ${patient.notes}">
-		                    <li th:text="${note.contenuNote}">Note</li>
-		                </ul>
-		            </td>
-                    <td class="text-center">
-                        <a class="btn btn-primary btn-sm" th:href="@{'/patients/' + ${patient.id}}">Voir</a>
-                    </td>
-                    <td class="text-center">
-                        <a class="btn btn-primary btn-sm" th:href="@{'/patients/notes/' + ${patient.id}}">Voir les notes</a>
-                    </td>
-                    <td class="text-center">
-                        <a class="btn btn-info btn-sm" th:href="@{'/evaluationRisque/rapport/' + ${patient.id}}">Voir le rapport</a>
-                    </td>
-                </tr>
-            </tbody>
+			<tbody>
+			    <tr th:each="patient : ${patients}">
+			        <td class="align-middle" th:text="${patient.nom}">Nom</td>
+			        <td class="align-middle" th:text="${patient.prenom}">Prénom</td>
+			        <td class="align-middle" th:text="${patient.dateAnniversaire}">Date</td>
+			        <td class="align-middle text-center" th:text="${patient.genre}">Genre</td>
+			        <td class="align-middle">
+			            <ul class="mb-0" th:each="note : ${patient.notes}">
+			                <li th:text="${note.contenuNote}">Note</li>
+			            </ul>
+			        </td>
+			        <td class="align-middle text-center">
+			            <a class="btn btn-primary btn-sm" th:href="@{'/patients/' + ${patient.id}}">Voir</a>
+			        </td>
+			        <td class="align-middle text-center">
+			            <a class="btn btn-primary btn-sm" th:href="@{'/patients/notes/' + ${patient.id}}">Voir les notes</a>
+			        </td>
+			        <td class="align-middle text-center">
+			            <a class="btn btn-primary btn-sm" th:href="@{'/evaluationRisque/rapport/' + ${patient.id}}">Voir le rapport</a>
+			        </td>
+			    </tr>
+			</tbody>
         </table>
 
         <a class="btn btn-primary" href="/patients/add">Ajouter un patient</a>
