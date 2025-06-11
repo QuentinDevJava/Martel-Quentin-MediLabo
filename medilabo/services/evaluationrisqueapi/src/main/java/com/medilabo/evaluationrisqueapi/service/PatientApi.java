@@ -10,6 +10,6 @@ import com.medilabo.evaluationrisqueapi.dto.PatientDto;
 public interface PatientApi {
 
 	@GetMapping("api/patients/{patientId}")
-	PatientDto getPatientDtoByPatientId(@PathVariable int patientId);
+	PatientDto getPatientDtoForPatientId(@PathVariable int patientId);
 
 }

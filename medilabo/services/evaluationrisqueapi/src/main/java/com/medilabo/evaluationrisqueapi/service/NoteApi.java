@@ -8,5 +8,5 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface NoteApi {
 
 	@GetMapping("api/notes/termesAnalyse/{patientId}")
-	int getTriggerTermsByPatientId(@PathVariable int patientId);
+	int getTriggerTermsForPatientId(@PathVariable int patientId);
 }

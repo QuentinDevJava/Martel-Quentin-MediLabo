@@ -5,8 +5,9 @@ import static org.mockito.Mockito.when;
 
 import java.time.LocalDate;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -29,120 +30,22 @@ class EvaluationRisqueServiceImplTest {
 	@InjectMocks
 	private EvaluationRisqueServiceImpl evaluationService;
 
-	private PatientDto createPatient(String genre, int age) {
-		return new PatientDto("Test", "User", LocalDate.now().minusYears(age), genre);
+	private PatientDto createPatient(String gender, int age) {
+		return new PatientDto("Test", "User", LocalDate.now().minusYears(age), gender);
 	}
 
-	@Test
-	void generateDiabetesReport_AgeOver30_ZeroTriggersTest() {
-		PatientDto patient = createPatient("M", 45);
-		when(patientApi.getPatientDtoByPatientId(1)).thenReturn(patient);
-		when(noteApi.getTriggerTermsByPatientId(1)).thenReturn(0);
+	@ParameterizedTest(name = "Gender={0}, Age={1}, Triggers={2} => Expected={3}")
+	@CsvSource({ "M,45,0,NONE", "M,50,3,BORDERLINE", "F,60,6,IN_DANGER", "F,62,8,EARLY_ONSET", "M,28,4,IN_DANGER",
+			"M,25,6,EARLY_ONSET", "F,27,5,IN_DANGER", "F,22,9,EARLY_ONSET", "M,25,2,NONE", "F,30,2,NONE" })
+	void generateDiabetesReport_ShouldReturnExpectedDangerLevel(String gender, int age, int triggerCount,
+			DangerLevel expectedLevel) {
+		PatientDto patient = createPatient(gender, age);
+
+		when(patientApi.getPatientDtoForPatientId(1)).thenReturn(patient);
+		when(noteApi.getTriggerTermsForPatientId(1)).thenReturn(triggerCount);
 
 		DangerLevel result = evaluationService.generateDiabetesReport(1);
 
-		assertThat(result).isEqualTo(DangerLevel.NONE);
-	}
-
-	@Test
-	void generateDiabetesReport_AgeOver30_ThreeTriggersTest() {
-		PatientDto patient = createPatient("M", 50);
-
-		when(patientApi.getPatientDtoByPatientId(1)).thenReturn(patient);
-		when(noteApi.getTriggerTermsByPatientId(1)).thenReturn(3);
-
-		DangerLevel result = evaluationService.generateDiabetesReport(1);
-
-		assertThat(result).isEqualTo(DangerLevel.BORDERLINE);
-	}
-
-	@Test
-	void generateDiabetesReport_AgeOver30_SixTriggersTest() {
-		PatientDto patient = createPatient("F", 60);
-		when(patientApi.getPatientDtoByPatientId(1)).thenReturn(patient);
-		when(noteApi.getTriggerTermsByPatientId(1)).thenReturn(6);
-
-		DangerLevel result = evaluationService.generateDiabetesReport(1);
-
-		assertThat(result).isEqualTo(DangerLevel.IN_DANGER);
-	}
-
-	@Test
-	void generateDiabetesReport_AgeOver30_EightTriggersTest() {
-		PatientDto patient = createPatient("F", 62);
-		when(patientApi.getPatientDtoByPatientId(1)).thenReturn(patient);
-		when(noteApi.getTriggerTermsByPatientId(1)).thenReturn(8);
-
-		DangerLevel result = evaluationService.generateDiabetesReport(1);
-
-		assertThat(result).isEqualTo(DangerLevel.EARLY_ONSET);
-	}
-
-	@Test
-	void generateDiabetesReport_MaleAgeUnder30_FourTriggersTest() {
-		PatientDto patient = createPatient("M", 28);
-		when(patientApi.getPatientDtoByPatientId(1)).thenReturn(patient);
-		when(noteApi.getTriggerTermsByPatientId(1)).thenReturn(4);
-
-		DangerLevel result = evaluationService.generateDiabetesReport(1);
-
-		assertThat(result).isEqualTo(DangerLevel.IN_DANGER);
-	}
-
-	@Test
-	void generateDiabetesReport_MaleAgeUnder30_SixTriggersTest() {
-		PatientDto patient = createPatient("M", 25);
-		when(patientApi.getPatientDtoByPatientId(1)).thenReturn(patient);
-		when(noteApi.getTriggerTermsByPatientId(1)).thenReturn(6);
-
-		DangerLevel result = evaluationService.generateDiabetesReport(1);
-
-		assertThat(result).isEqualTo(DangerLevel.EARLY_ONSET);
-	}
-
-	@Test
-	void generateDiabetesReport_FemaleAgeUnder30_FiveTriggersTest() {
-		PatientDto patient = createPatient("F", 27);
-		when(patientApi.getPatientDtoByPatientId(1)).thenReturn(patient);
-		when(noteApi.getTriggerTermsByPatientId(1)).thenReturn(5);
-
-		DangerLevel result = evaluationService.generateDiabetesReport(1);
-
-		assertThat(result).isEqualTo(DangerLevel.IN_DANGER);
-	}
-
-	@Test
-	void generateDiabetesReport_FemaleAgeUnder30_NineTriggersTest() {
-		PatientDto patient = createPatient("F", 22);
-
-		when(patientApi.getPatientDtoByPatientId(1)).thenReturn(patient);
-		when(noteApi.getTriggerTermsByPatientId(1)).thenReturn(9);
-
-		DangerLevel result = evaluationService.generateDiabetesReport(1);
-
-		assertThat(result).isEqualTo(DangerLevel.EARLY_ONSET);
-	}
-
-	@Test
-	void generateDiabetesReport_MaleAgeUnder30_TwoTriggersTest() {
-		PatientDto patient = createPatient("M", 25);
-
-		when(patientApi.getPatientDtoByPatientId(1)).thenReturn(patient);
-		when(noteApi.getTriggerTermsByPatientId(1)).thenReturn(2);
-
-		DangerLevel result = evaluationService.generateDiabetesReport(1);
-
-		assertThat(result).isEqualTo(DangerLevel.BORDERLINE);
-	}
-
-	@Test
-	void generateDiabetesReport_FemaleAgeUnder30_TwoTriggersTest() {
-		PatientDto patient = createPatient("F", 30);
-		when(patientApi.getPatientDtoByPatientId(1)).thenReturn(patient);
-		when(noteApi.getTriggerTermsByPatientId(1)).thenReturn(2);
-
-		DangerLevel result = evaluationService.generateDiabetesReport(1);
-
-		assertThat(result).isEqualTo(DangerLevel.BORDERLINE);
+		assertThat(result).isEqualTo(expectedLevel);
 	}
 }

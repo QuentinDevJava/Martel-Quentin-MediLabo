@@ -20,7 +20,7 @@ public class EvaluationRisqueServiceImpl implements EvaluationRisqueService {
 	@Override
 	public DangerLevel generateDiabetesReport(int patientId) {
 
-		PatientDto patientDto = getPatientByName(patientId);
+		PatientDto patientDto = getPatientById(patientId);
 
 		int age = Period.between(patientDto.getDateAnniversaire(), LocalDate.now()).getYears();
 		String genre = patientDto.getGenre();
@@ -62,17 +62,14 @@ public class EvaluationRisqueServiceImpl implements EvaluationRisqueService {
 
 	private DangerLevel evaluateRisqueForWomanAge30OrLess(int numberOfTriggerTerms) {
 		switch (numberOfTriggerTerms) {
-		case 0, 1 -> {// ajouté mais pas demandé
+		case 0, 1, 2, 3 -> {
 			return DangerLevel.NONE;
 		}
-		case 2, 3 -> {// ajouté mais pas demandé
-			return DangerLevel.BORDERLINE;
-		}
-		case 4, 5, 6, 7 -> {
+		case 4, 5, 6 -> {
 			return DangerLevel.IN_DANGER;
 		}
 		default -> {
-			if (numberOfTriggerTerms > 7) {
+			if (numberOfTriggerTerms >= 7) {
 				return DangerLevel.EARLY_ONSET;
 			}
 			throw new IllegalArgumentException("Unexpected value: " + numberOfTriggerTerms);
@@ -82,17 +79,14 @@ public class EvaluationRisqueServiceImpl implements EvaluationRisqueService {
 
 	private DangerLevel evaluateRisqueForManAge30OrLess(int numberOfTriggerTerms) {
 		switch (numberOfTriggerTerms) {
-		case 0, 1 -> {// ajouté mais pas demandé mettre NONE si pas couvert par les explications OCR
+		case 0, 1, 2 -> {
 			return DangerLevel.NONE;
 		}
-		case 2 -> {// ajouté mais pas demandé
-			return DangerLevel.BORDERLINE;
-		}
-		case 3, 4, 5 -> {
+		case 3, 4 -> {
 			return DangerLevel.IN_DANGER;
 		}
 		default -> {
-			if (numberOfTriggerTerms > 5) {
+			if (numberOfTriggerTerms >= 5) {
 				return DangerLevel.EARLY_ONSET;
 			}
 			throw new IllegalArgumentException("Unexpected value: " + numberOfTriggerTerms);
@@ -100,14 +94,11 @@ public class EvaluationRisqueServiceImpl implements EvaluationRisqueService {
 		}
 	}
 
-//TODO il y a des cas qui ne sont pas traité(dans les info client) cela génere des valeur inatendu ex 
-
-	private PatientDto getPatientByName(int patientId) {
-		return patientApi.getPatientDtoByPatientId(patientId);
+	private PatientDto getPatientById(int patientId) {
+		return patientApi.getPatientDtoForPatientId(patientId);
 	}
 
 	private int getNumberOfTriggerTermsByPatientId(int patientId) {
-		return noteApi.getTriggerTermsByPatientId(patientId);
+		return noteApi.getTriggerTermsForPatientId(patientId);
 	}
-
 }
