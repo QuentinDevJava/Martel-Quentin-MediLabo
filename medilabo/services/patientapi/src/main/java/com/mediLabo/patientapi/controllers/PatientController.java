@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.mediLabo.patientapi.dto.PatientDto;
 import com.mediLabo.patientapi.service.PatientService;
 
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -47,7 +48,7 @@ public class PatientController {
 	}
 
 	@PutMapping("{id}")
-	public ResponseEntity<PatientDto> updatePatient(@PathVariable int id,@Valid @RequestBody PatientDto patientDto) {
+	public ResponseEntity<PatientDto> updatePatient(@PathVariable int id, @Valid @RequestBody PatientDto patientDto) {
 		PatientDto updatedPatient = patientService.updatePatient(id, patientDto);
 		log.info("Receive PUT /api/patients/" + id + ": PatientDto " + patientDto
 				+ " - PatientApi use RestController to update Patient");

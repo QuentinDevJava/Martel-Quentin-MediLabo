@@ -1,22 +1,22 @@
-2025-06-11T16:47:02.516+02:00  INFO 13412 --- [patientapi] [restartedMain] c.m.patientapi.PatientApiApplication     : Starting PatientApiApplication using Java 22.0.1 with PID 13412 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
-2025-06-11T16:47:02.525+02:00  INFO 13412 --- [patientapi] [restartedMain] c.m.patientapi.PatientApiApplication     : The following 1 profile is active: "dev"
-2025-06-11T16:47:02.605+02:00  INFO 13412 --- [patientapi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-06-11T16:47:02.606+02:00  INFO 13412 --- [patientapi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-06-11T16:47:04.705+02:00  INFO 13412 --- [patientapi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-11T16:47:04.922+02:00  INFO 13412 --- [patientapi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 201 ms. Found 1 JPA repository interface.
-2025-06-11T16:47:05.406+02:00  INFO 13412 --- [patientapi] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=44f16fa7-41b0-350d-9428-042fd26c463e
-2025-06-11T16:47:06.736+02:00  INFO 13412 --- [patientapi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
-2025-06-11T16:47:06.758+02:00  INFO 13412 --- [patientapi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-11T16:47:06.759+02:00  INFO 13412 --- [patientapi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-06-11T16:47:06.845+02:00  INFO 13412 --- [patientapi] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-11T16:47:06.845+02:00  INFO 13412 --- [patientapi] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4238 ms
-2025-06-11T16:47:07.440+02:00  INFO 13412 --- [patientapi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-11T16:47:09.591+02:00  WARN 13412 --- [patientapi] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script
-2025-06-11T16:47:09.595+02:00  INFO 13412 --- [patientapi] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2025-06-11T16:47:09.626+02:00  INFO 13412 --- [patientapi] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+2025-06-13T14:20:15.825+02:00  INFO 20804 --- [patientapi] [restartedMain] c.m.patientapi.PatientApiApplication     : Starting PatientApiApplication using Java 22.0.1 with PID 20804 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
+2025-06-13T14:20:15.833+02:00  INFO 20804 --- [patientapi] [restartedMain] c.m.patientapi.PatientApiApplication     : The following 1 profile is active: "dev"
+2025-06-13T14:20:15.909+02:00  INFO 20804 --- [patientapi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-13T14:20:15.910+02:00  INFO 20804 --- [patientapi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-13T14:20:17.443+02:00  INFO 20804 --- [patientapi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-13T14:20:17.617+02:00  INFO 20804 --- [patientapi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 162 ms. Found 1 JPA repository interface.
+2025-06-13T14:20:18.060+02:00  INFO 20804 --- [patientapi] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=44f16fa7-41b0-350d-9428-042fd26c463e
+2025-06-13T14:20:19.035+02:00  INFO 20804 --- [patientapi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2025-06-13T14:20:19.061+02:00  INFO 20804 --- [patientapi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-13T14:20:19.062+02:00  INFO 20804 --- [patientapi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-13T14:20:19.136+02:00  INFO 20804 --- [patientapi] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-13T14:20:19.136+02:00  INFO 20804 --- [patientapi] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3224 ms
+2025-06-13T14:20:19.579+02:00  INFO 20804 --- [patientapi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-13T14:20:20.719+02:00  WARN 20804 --- [patientapi] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script
+2025-06-13T14:20:20.724+02:00  INFO 20804 --- [patientapi] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-06-13T14:20:20.737+02:00  INFO 20804 --- [patientapi] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-06-11T16:47:09.645+02:00 ERROR 13412 --- [patientapi] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+2025-06-13T14:20:20.759+02:00 ERROR 20804 --- [patientapi] [restartedMain] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script
 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328) ~[spring-beans-6.2.6.jar:6.2.6]
@@ -58,9 +58,11 @@ Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to 
 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84) ~[spring-jdbc-6.2.6.jar:6.2.6]
 	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:52) ~[spring-jdbc-6.2.6.jar:6.2.6]
 	... 28 common frames omitted
-Caused by: java.sql.SQLException: Access denied for user 'root'@'172.18.0.1' (using password: NO)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.1.0.jar:9.1.0]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55) ~[mysql-connector-j-9.1.0.jar:9.1.0]
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837) ~[mysql-connector-j-9.1.0.jar:9.1.0]
 	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.1.0.jar:9.1.0]
 	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.1.0.jar:9.1.0]
@@ -76,256 +78,29 @@ Caused by: java.sql.SQLException: Access denied for user 'root'@'172.18.0.1' (us
 	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118) ~[spring-jdbc-6.2.6.jar:6.2.6]
 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81) ~[spring-jdbc-6.2.6.jar:6.2.6]
 	... 29 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
-2025-06-11T16:53:08.560+02:00  INFO 11836 --- [patientapi] [restartedMain] c.m.patientapi.PatientApiApplication     : Starting PatientApiApplication using Java 22.0.1 with PID 11836 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
-2025-06-11T16:53:08.563+02:00  INFO 11836 --- [patientapi] [restartedMain] c.m.patientapi.PatientApiApplication     : The following 1 profile is active: "dev"
-2025-06-11T16:53:08.615+02:00  INFO 11836 --- [patientapi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-06-11T16:53:08.615+02:00  INFO 11836 --- [patientapi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-06-11T16:53:09.584+02:00  INFO 11836 --- [patientapi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-11T16:53:09.694+02:00  INFO 11836 --- [patientapi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 1 JPA repository interface.
-2025-06-11T16:53:09.966+02:00  INFO 11836 --- [patientapi] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=44f16fa7-41b0-350d-9428-042fd26c463e
-2025-06-11T16:53:10.686+02:00  INFO 11836 --- [patientapi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
-2025-06-11T16:53:10.702+02:00  INFO 11836 --- [patientapi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-11T16:53:10.702+02:00  INFO 11836 --- [patientapi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-06-11T16:53:10.754+02:00  INFO 11836 --- [patientapi] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-11T16:53:10.755+02:00  INFO 11836 --- [patientapi] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2139 ms
-2025-06-11T16:53:11.092+02:00  INFO 11836 --- [patientapi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-11T16:53:12.702+02:00  WARN 11836 --- [patientapi] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script
-2025-06-11T16:53:12.708+02:00  INFO 11836 --- [patientapi] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2025-06-11T16:53:12.722+02:00  INFO 11836 --- [patientapi] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:961) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	... 42 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:752) ~[na:na]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	... 45 common frames omitted
 
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-06-11T16:53:12.740+02:00 ERROR 11836 --- [patientapi] [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351) ~[spring-boot-3.4.5.jar:3.4.5]
-	at com.mediLabo.patientapi.PatientApiApplication.main(PatientApiApplication.java:12) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.5.jar:3.4.5]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1818) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.6.jar:6.2.6]
-	... 13 common frames omitted
-Caused by: org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script
-	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:67) ~[spring-jdbc-6.2.6.jar:6.2.6]
-	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1865) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1814) ~[spring-beans-6.2.6.jar:6.2.6]
-	... 20 common frames omitted
-Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84) ~[spring-jdbc-6.2.6.jar:6.2.6]
-	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:52) ~[spring-jdbc-6.2.6.jar:6.2.6]
-	... 28 common frames omitted
-Caused by: java.sql.SQLException: Access denied for user 'root'@'172.18.0.1' (using password: NO)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.1.0.jar:9.1.0]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.1.0.jar:9.1.0]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837) ~[mysql-connector-j-9.1.0.jar:9.1.0]
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.1.0.jar:9.1.0]
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.1.0.jar:9.1.0]
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.1.0.jar:9.1.0]
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar:na]
-	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160) ~[spring-jdbc-6.2.6.jar:6.2.6]
-	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118) ~[spring-jdbc-6.2.6.jar:6.2.6]
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81) ~[spring-jdbc-6.2.6.jar:6.2.6]
-	... 29 common frames omitted
-
-2025-06-11T16:54:57.512+02:00  INFO 17924 --- [patientapi] [restartedMain] c.m.patientapi.PatientApiApplication     : Starting PatientApiApplication using Java 22.0.1 with PID 17924 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\patientapi)
-2025-06-11T16:54:57.514+02:00  INFO 17924 --- [patientapi] [restartedMain] c.m.patientapi.PatientApiApplication     : The following 1 profile is active: "dev"
-2025-06-11T16:54:57.572+02:00  INFO 17924 --- [patientapi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-06-11T16:54:57.572+02:00  INFO 17924 --- [patientapi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-06-11T16:54:58.552+02:00  INFO 17924 --- [patientapi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-11T16:54:58.673+02:00  INFO 17924 --- [patientapi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 1 JPA repository interface.
-2025-06-11T16:54:58.886+02:00  INFO 17924 --- [patientapi] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=44f16fa7-41b0-350d-9428-042fd26c463e
-2025-06-11T16:54:59.448+02:00  INFO 17924 --- [patientapi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
-2025-06-11T16:54:59.462+02:00  INFO 17924 --- [patientapi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-11T16:54:59.462+02:00  INFO 17924 --- [patientapi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-06-11T16:54:59.507+02:00  INFO 17924 --- [patientapi] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-11T16:54:59.508+02:00  INFO 17924 --- [patientapi] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1935 ms
-2025-06-11T16:54:59.790+02:00  INFO 17924 --- [patientapi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-11T16:54:59.947+02:00  INFO 17924 --- [patientapi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@257ee8f2
-2025-06-11T16:54:59.949+02:00  INFO 17924 --- [patientapi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-11T16:55:00.071+02:00  INFO 17924 --- [patientapi] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-11T16:55:00.145+02:00  INFO 17924 --- [patientapi] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
-2025-06-11T16:55:00.192+02:00  INFO 17924 --- [patientapi] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-11T16:55:00.522+02:00  INFO 17924 --- [patientapi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-11T16:55:00.595+02:00  WARN 17924 --- [patientapi] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-06-11T16:55:00.597+02:00  WARN 17924 --- [patientapi] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-06-11T16:55:00.614+02:00  INFO 17924 --- [patientapi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-06-11T16:55:01.332+02:00  INFO 17924 --- [patientapi] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-11T16:55:01.389+02:00  INFO 17924 --- [patientapi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-11T16:55:01.787+02:00  WARN 17924 --- [patientapi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-11T16:55:01.960+02:00  WARN 17924 --- [patientapi] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2025-06-11T16:55:02.009+02:00  INFO 17924 --- [patientapi] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'noteapi' URL not provided. Will try picking an instance via load-balancing.
-2025-06-11T16:55:03.064+02:00  INFO 17924 --- [patientapi] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/medilaboSqlDb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC'
-2025-06-11T16:55:03.145+02:00  INFO 17924 --- [patientapi] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-06-11T16:55:03.195+02:00  WARN 17924 --- [patientapi] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-06-11T16:55:03.214+02:00  INFO 17924 --- [patientapi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2025-06-11T16:55:03.355+02:00  INFO 17924 --- [patientapi] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-06-11T16:55:03.375+02:00  INFO 17924 --- [patientapi] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-06-11T16:55:03.378+02:00  INFO 17924 --- [patientapi] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-11T16:55:03.386+02:00  INFO 17924 --- [patientapi] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-06-11T16:55:03.386+02:00  INFO 17924 --- [patientapi] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-06-11T16:55:03.386+02:00  INFO 17924 --- [patientapi] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-06-11T16:55:03.386+02:00  INFO 17924 --- [patientapi] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-06-11T16:55:03.386+02:00  INFO 17924 --- [patientapi] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-06-11T16:55:03.386+02:00  INFO 17924 --- [patientapi] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-06-11T16:55:03.387+02:00  INFO 17924 --- [patientapi] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-06-11T16:55:03.727+02:00  INFO 17924 --- [patientapi] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-06-11T16:55:03.729+02:00  INFO 17924 --- [patientapi] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-06-11T16:55:03.732+02:00  INFO 17924 --- [patientapi] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-06-11T16:55:03.735+02:00  INFO 17924 --- [patientapi] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1749653703734 with initial instances count: 3
-2025-06-11T16:55:03.741+02:00  INFO 17924 --- [patientapi] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PATIENTAPI with eureka with status UP
-2025-06-11T16:55:03.742+02:00  INFO 17924 --- [patientapi] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749653703742, current=UP, previous=STARTING]
-2025-06-11T16:55:03.745+02:00  INFO 17924 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
-2025-06-11T16:55:03.772+02:00  INFO 17924 --- [patientapi] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
-2025-06-11T16:55:03.774+02:00  INFO 17924 --- [patientapi] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 5000
-2025-06-11T16:55:03.790+02:00  INFO 17924 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration status: 204
-2025-06-11T16:55:03.797+02:00  INFO 17924 --- [patientapi] [restartedMain] c.m.patientapi.PatientApiApplication     : Started PatientApiApplication in 6.706 seconds (process running for 7.476)
-2025-06-11T16:55:04.126+02:00  INFO 17924 --- [patientapi] [RMI TCP Connection(8)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-11T16:55:04.126+02:00  INFO 17924 --- [patientapi] [RMI TCP Connection(8)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-06-11T16:55:04.128+02:00  INFO 17924 --- [patientapi] [RMI TCP Connection(8)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-06-11T16:55:06.180+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-1] c.m.p.controllers.PatientController      : Receive GET /api/patients: PatientApi use RestController to send list of PatientDto
-2025-06-11T16:55:09.890+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-3] c.m.p.controllers.PatientController      : Receive GET /api/patients: PatientApi use RestController to send list of PatientDto
-2025-06-11T16:55:27.475+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-6] c.m.p.controllers.PatientController      : Receive GET /api/patients: PatientApi use RestController to send list of PatientDto
-2025-06-11T16:55:41.919+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-9] c.m.p.controllers.PatientController      : Receive GET /api/patients: PatientApi use RestController to send list of PatientDto
-2025-06-11T16:55:44.853+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-10] c.m.p.controllers.PatientController      : Receive GET /api/patients/1: PatientApi use RestController to send PatientDto by ID
-2025-06-11T16:55:46.172+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-1] c.m.p.controllers.PatientController      : Receive GET /api/patients/1: PatientApi use RestController to send PatientDto by ID
-2025-06-11T16:55:47.796+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-2] c.m.p.controllers.PatientController      : Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes
-2025-06-11T16:55:54.881+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-3] c.m.p.controllers.PatientController      : Receive GET /api/patients/1: PatientApi use RestController to send PatientDto by ID
-2025-06-11T16:56:01.205+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-4] c.m.p.controllers.PatientController      : Receive GET /api/patients/10: PatientApi use RestController to send PatientDto by ID
-2025-06-11T16:56:01.236+02:00 ERROR 17924 --- [patientapi] [http-nio-5000-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Patient with id not find] with root cause
-
-java.lang.RuntimeException: Patient with id not find
-	at com.mediLabo.patientapi.service.PatientServiceImpl.lambda$0(PatientServiceImpl.java:26) ~[classes/:na]
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
-	at com.mediLabo.patientapi.service.PatientServiceImpl.getPatientById(PatientServiceImpl.java:26) ~[classes/:na]
-	at com.mediLabo.patientapi.controllers.PatientController.getPatientById(PatientController.java:32) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.6.jar:6.2.6]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.6.jar:6.2.6]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.6.jar:6.2.6]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.6.jar:6.2.6]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.6.jar:6.2.6]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.6.jar:6.2.6]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.6.jar:6.2.6]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.6.jar:6.2.6]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.6.jar:6.2.6]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.6.jar:6.2.6]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.40.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.6.jar:6.2.6]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.40.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.40.jar:10.1.40]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar:6.2.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.6.jar:6.2.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:114) ~[spring-web-6.2.6.jar:6.2.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.6.jar:6.2.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
-
-2025-06-11T16:56:25.385+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-5] c.m.p.controllers.PatientController      : Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes
-2025-06-11T16:56:28.386+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-6] c.m.p.controllers.PatientController      : Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes
-2025-06-11T16:56:49.278+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-8] c.m.p.controllers.PatientController      : Receive GET /api/patients/1: PatientApi use RestController to send PatientDto by ID
-2025-06-11T16:56:50.435+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-9] c.m.p.controllers.PatientController      : Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes
-2025-06-11T16:56:51.526+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-10] c.m.p.controllers.PatientController      : Receive GET /api/patients/1: PatientApi use RestController to send PatientDto by ID
-2025-06-11T16:56:52.454+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-1] c.m.p.controllers.PatientController      : Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes
-2025-06-11T16:56:53.598+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-2] c.m.p.controllers.PatientController      : Receive GET /api/patients/1: PatientApi use RestController to send PatientDto by ID
-2025-06-11T16:56:53.656+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-3] c.m.p.controllers.PatientController      : Receive GET /api/patients/1: PatientApi use RestController to send PatientDto by ID
-2025-06-11T16:56:56.132+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-4] c.m.p.controllers.PatientController      : Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes
-2025-06-11T17:00:03.404+02:00  INFO 17924 --- [patientapi] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-11T17:03:36.879+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-7] c.m.p.controllers.PatientController      : Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes
-2025-06-11T17:03:38.231+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-8] c.m.p.controllers.PatientController      : Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes
-2025-06-11T17:03:51.370+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-9] c.m.p.controllers.PatientController      : Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes
-2025-06-11T17:05:03.415+02:00  INFO 17924 --- [patientapi] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-11T17:08:28.329+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-1] c.m.p.controllers.PatientController      : Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes
-2025-06-11T17:09:19.550+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-2] c.m.p.controllers.PatientController      : Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes
-2025-06-11T17:09:48.145+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-3] c.m.p.controllers.PatientController      : Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes
-2025-06-11T17:10:03.419+02:00  INFO 17924 --- [patientapi] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-11T17:10:53.027+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-5] c.m.p.controllers.PatientController      : Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes
-2025-06-11T17:11:01.719+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-6] c.m.p.controllers.PatientController      : Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes
-2025-06-11T17:11:02.624+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-7] c.m.p.controllers.PatientController      : Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes
-2025-06-11T17:11:02.892+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-8] c.m.p.controllers.PatientController      : Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes
-2025-06-11T17:11:20.679+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-9] c.m.p.controllers.PatientController      : Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes
-2025-06-11T17:11:25.204+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-10] c.m.p.controllers.PatientController      : Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes
-2025-06-11T17:11:29.825+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-1] c.m.p.controllers.PatientController      : Receive GET /api/patients/1: PatientApi use RestController to send PatientDto by ID
-2025-06-11T17:11:30.748+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-2] c.m.p.controllers.PatientController      : Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes
-2025-06-11T17:15:03.433+02:00  INFO 17924 --- [patientapi] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-11T17:19:05.789+02:00  INFO 17924 --- [patientapi] [http-nio-5000-exec-4] c.m.p.controllers.PatientController      : Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes
-2025-06-11T17:19:25.983+02:00  INFO 17924 --- [patientapi] [RMI TCP Connection(36)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2025-06-11T17:19:25.985+02:00  INFO 17924 --- [patientapi] [RMI TCP Connection(36)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PATIENTAPI with eureka with status DOWN
-2025-06-11T17:19:25.985+02:00  INFO 17924 --- [patientapi] [RMI TCP Connection(36)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749655165985, current=DOWN, previous=UP]
-2025-06-11T17:19:25.985+02:00  INFO 17924 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000: registering service...
-2025-06-11T17:19:25.990+02:00  INFO 17924 --- [patientapi] [RMI TCP Connection(36)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-11T17:19:25.998+02:00  INFO 17924 --- [patientapi] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-06-11T17:19:26.005+02:00  INFO 17924 --- [patientapi] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - registration status: 204
-2025-06-11T17:19:26.015+02:00  INFO 17924 --- [patientapi] [RMI TCP Connection(36)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-11T17:19:26.019+02:00  INFO 17924 --- [patientapi] [RMI TCP Connection(36)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-06-11T17:19:26.026+02:00  INFO 17924 --- [patientapi] [RMI TCP Connection(36)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-06-11T17:19:26.028+02:00  INFO 17924 --- [patientapi] [RMI TCP Connection(36)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-06-11T17:19:29.044+02:00  INFO 17924 --- [patientapi] [RMI TCP Connection(36)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-06-11T17:19:29.085+02:00  INFO 17924 --- [patientapi] [RMI TCP Connection(36)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PATIENTAPI/PC-Quentin-Martel.mshome.net:patientapi:5000 - deregister  status: 200
-2025-06-11T17:19:29.086+02:00  INFO 17924 --- [patientapi] [RMI TCP Connection(36)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
