@@ -24,7 +24,7 @@ public class PatientMapper {
 	}
 
 	public Patient toEntity(PatientDto patientDto) {
-		return Patient.builder().nom(patientDto.getNom()).prenom(patientDto.getPrenom())
+		return Patient.builder().id(patientDto.getId()).nom(patientDto.getNom()).prenom(patientDto.getPrenom())
 				.dateAnniversaire(patientDto.getDateAnniversaire()).genre(patientDto.getGenre())
 				.adresse(patientDto.getAdresse()).telephone(patientDto.getTelephone()).build();
 	}

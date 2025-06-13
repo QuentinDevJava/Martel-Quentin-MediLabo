@@ -21,7 +21,7 @@ public class NoteApiApplication implements CommandLineRunner {
 		SpringApplication.run(NoteApiApplication.class, args);
 	}
 
-	@Profile({ "dev", "docker" })
+	@Profile("dev")
 	@Override
 	public void run(String... args) throws Exception {
 		noteRepository.deleteAll();

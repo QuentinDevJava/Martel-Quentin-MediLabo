@@ -45,6 +45,7 @@ public class PatientServiceImpl implements PatientService {
 		if (patientDto == null) {
 			throw new IllegalArgumentException("The note with id : " + id + "is not found");
 		} else {
+			patientDto.setId(updatePatientDto.getId());
 			patientDto.setNom(updatePatientDto.getNom());
 			patientDto.setPrenom(updatePatientDto.getPrenom());
 			patientDto.setDateAnniversaire(updatePatientDto.getDateAnniversaire());

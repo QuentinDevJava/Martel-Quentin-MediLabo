@@ -22,7 +22,7 @@ services:
     image: mongo:6
     container_name: mongodb
     ports:
-      - "27018:27017"
+      - "27017:27017"
     environment:
       MONGO_INITDB_DATABASE: ${MONGO_INITDB_DATABASE}
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
@@ -124,8 +124,6 @@ services:
         condition: service_healthy
       configserver:
         condition: service_healthy
-      gatewayapi:
-        condition: service_healthy
     environment:
       - SPRING_APPLICATION_NAME=patientapi
       - SPRING_CONFIG_IMPORT=optional:configserver:http://configserver:5555
@@ -167,7 +165,6 @@ services:
     environment:
       - SPRING_THYMELEAF_CACHE=false
       - SERVER_PORT=5001
-      - LOGGING_FILE_NAME=logs/mediLaboUi.log
       - PATIENT_API_URL=http://gatewayapi:5005/api/patients/
       - NOTE_API_URL=http://gatewayapi:5005/api/notes/
       - EVALUATIONRISQUE_API_URL=http://gatewayapi:5005/api/evaluationrisque/patients/

@@ -392,3 +392,489 @@ org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property o
 2025-06-13T18:23:13.753+02:00  INFO 27532 --- [ui] [http-nio-5001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2025-06-13T18:23:20.080+02:00  INFO 27532 --- [ui] [http-nio-5001-exec-1] c.m.ui.controller.NoteUiController       : UI GET /patients/notes/update/684c4d24131bd47630002ed8 - displaying note update form
 2025-06-13T18:23:25.903+02:00  INFO 27532 --- [ui] [http-nio-5001-exec-2] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:01:29.347+02:00  INFO 27324 --- [ui] [restartedMain] com.mediLabo.ui.UiApplication            : Starting UiApplication using Java 22.0.1 with PID 27324 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\ui\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\ui)
+2025-06-13T22:01:29.353+02:00  INFO 27324 --- [ui] [restartedMain] com.mediLabo.ui.UiApplication            : The following 1 profile is active: "dev"
+2025-06-13T22:01:29.451+02:00  INFO 27324 --- [ui] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-13T22:01:29.451+02:00  INFO 27324 --- [ui] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-13T22:01:31.912+02:00  INFO 27324 --- [ui] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5001 (http)
+2025-06-13T22:01:31.938+02:00  INFO 27324 --- [ui] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-13T22:01:31.939+02:00  INFO 27324 --- [ui] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-13T22:01:32.014+02:00  INFO 27324 --- [ui] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-13T22:01:32.015+02:00  INFO 27324 --- [ui] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2564 ms
+2025-06-13T22:01:33.333+02:00  INFO 27324 --- [ui] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-13T22:01:33.379+02:00  INFO 27324 --- [ui] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5001 (http) with context path '/'
+2025-06-13T22:01:33.390+02:00  INFO 27324 --- [ui] [restartedMain] com.mediLabo.ui.UiApplication            : Started UiApplication in 4.712 seconds (process running for 5.753)
+2025-06-13T22:02:02.993+02:00  INFO 27324 --- [ui] [http-nio-5001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-13T22:02:02.994+02:00  INFO 27324 --- [ui] [http-nio-5001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-13T22:02:02.995+02:00  INFO 27324 --- [ui] [http-nio-5001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-13T22:02:03.022+02:00  INFO 27324 --- [ui] [http-nio-5001-exec-1] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:02:03.250+02:00 ERROR 27324 --- [ui] [http-nio-5001-exec-1] c.m.ui.controller.PatientUiController    : Request to GET http://localhost:5005/api/patients/notes failed to fetch patients list - HTTP 503 SERVICE_UNAVAILABLE
+2025-06-13T22:02:03.257+02:00 ERROR 27324 --- [ui] [http-nio-5001-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Failed to retrieve patient list] with root cause
+
+java.lang.RuntimeException: Failed to retrieve patient list
+	at com.mediLabo.ui.controller.PatientUiController.lambda$listOfAllPatients$0(PatientUiController.java:38) ~[classes/:na]
+	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:831) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$readBody$4(DefaultRestClient.java:820) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:216) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:819) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$body$0(DefaultRestClient.java:750) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:579) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:533) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:680) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:814) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.body(DefaultRestClient.java:750) ~[spring-web-6.2.6.jar:6.2.6]
+	at com.mediLabo.ui.controller.PatientUiController.listOfAllPatients(PatientUiController.java:39) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+
+2025-06-13T22:02:05.594+02:00  INFO 27324 --- [ui] [http-nio-5001-exec-3] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:02:05.609+02:00 ERROR 27324 --- [ui] [http-nio-5001-exec-3] c.m.ui.controller.PatientUiController    : Request to GET http://localhost:5005/api/patients/notes failed to fetch patients list - HTTP 503 SERVICE_UNAVAILABLE
+2025-06-13T22:02:05.616+02:00 ERROR 27324 --- [ui] [http-nio-5001-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Failed to retrieve patient list] with root cause
+
+java.lang.RuntimeException: Failed to retrieve patient list
+	at com.mediLabo.ui.controller.PatientUiController.lambda$listOfAllPatients$0(PatientUiController.java:38) ~[classes/:na]
+	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:831) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$readBody$4(DefaultRestClient.java:820) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:216) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:819) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$body$0(DefaultRestClient.java:750) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:579) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:533) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:680) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:814) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.body(DefaultRestClient.java:750) ~[spring-web-6.2.6.jar:6.2.6]
+	at com.mediLabo.ui.controller.PatientUiController.listOfAllPatients(PatientUiController.java:39) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+
+2025-06-13T22:02:37.223+02:00  INFO 27324 --- [ui] [http-nio-5001-exec-5] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:02:37.629+02:00 ERROR 27324 --- [ui] [http-nio-5001-exec-5] c.m.ui.controller.PatientUiController    : Request to GET http://localhost:5005/api/patients/notes failed to fetch patients list - HTTP 500 INTERNAL_SERVER_ERROR
+2025-06-13T22:02:37.633+02:00 ERROR 27324 --- [ui] [http-nio-5001-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Failed to retrieve patient list] with root cause
+
+java.lang.RuntimeException: Failed to retrieve patient list
+	at com.mediLabo.ui.controller.PatientUiController.lambda$listOfAllPatients$0(PatientUiController.java:38) ~[classes/:na]
+	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:831) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$readBody$4(DefaultRestClient.java:820) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:216) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:819) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$body$0(DefaultRestClient.java:750) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:579) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:533) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:680) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:814) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.body(DefaultRestClient.java:750) ~[spring-web-6.2.6.jar:6.2.6]
+	at com.mediLabo.ui.controller.PatientUiController.listOfAllPatients(PatientUiController.java:39) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+
+2025-06-13T22:02:51.946+02:00  INFO 27324 --- [ui] [http-nio-5001-exec-6] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:03:12.369+02:00  INFO 27324 --- [ui] [RMI TCP Connection(10)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-13T22:03:12.371+02:00  INFO 27324 --- [ui] [RMI TCP Connection(10)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-13T22:03:12.378+02:00  INFO 27324 --- [ui] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-13T22:03:16.262+02:00  INFO 18560 --- [ui] [restartedMain] com.mediLabo.ui.UiApplication            : Starting UiApplication using Java 22.0.1 with PID 18560 (C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\ui\target\classes started by martel in C:\Users\martel\Desktop\1-dev java\P9-App\Martel-Quentin-MediLabo\medilabo\services\ui)
+2025-06-13T22:03:16.268+02:00  INFO 18560 --- [ui] [restartedMain] com.mediLabo.ui.UiApplication            : The following 1 profile is active: "dev"
+2025-06-13T22:03:16.321+02:00  INFO 18560 --- [ui] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-13T22:03:16.321+02:00  INFO 18560 --- [ui] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-13T22:03:17.820+02:00  INFO 18560 --- [ui] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5001 (http)
+2025-06-13T22:03:17.834+02:00  INFO 18560 --- [ui] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-13T22:03:17.834+02:00  INFO 18560 --- [ui] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-13T22:03:17.884+02:00  INFO 18560 --- [ui] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-13T22:03:17.885+02:00  INFO 18560 --- [ui] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1563 ms
+2025-06-13T22:03:18.512+02:00  INFO 18560 --- [ui] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-13T22:03:18.548+02:00  INFO 18560 --- [ui] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5001 (http) with context path '/'
+2025-06-13T22:03:18.557+02:00  INFO 18560 --- [ui] [restartedMain] com.mediLabo.ui.UiApplication            : Started UiApplication in 2.798 seconds (process running for 3.711)
+2025-06-13T22:04:06.587+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-13T22:04:06.587+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-13T22:04:06.588+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-13T22:04:06.622+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-1] c.m.ui.controller.PatientUiController    : UI GET /patients/4 - retrieving patient detail
+2025-06-13T22:04:06.715+02:00 ERROR 18560 --- [ui] [http-nio-5001-exec-1] c.m.ui.controller.PatientUiController    : Request to GET http://localhost:5005/api/patients/4 failed to retrieve patient ID 4 - HTTP 503 SERVICE_UNAVAILABLE
+2025-06-13T22:04:06.721+02:00 ERROR 18560 --- [ui] [http-nio-5001-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Failed to retrieve patient details] with root cause
+
+java.lang.RuntimeException: Failed to retrieve patient details
+	at com.mediLabo.ui.controller.PatientUiController.lambda$viewPatientDetail$1(PatientUiController.java:53) ~[classes/:na]
+	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:831) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$readBody$4(DefaultRestClient.java:820) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:216) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:819) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$body$0(DefaultRestClient.java:750) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:579) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:533) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:680) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:814) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.body(DefaultRestClient.java:750) ~[spring-web-6.2.6.jar:6.2.6]
+	at com.mediLabo.ui.controller.PatientUiController.viewPatientDetail(PatientUiController.java:54) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+
+2025-06-13T22:04:25.703+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-2] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:04:27.841+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-3] c.m.ui.controller.PatientUiController    : UI GET /patients/1 - retrieving patient detail
+2025-06-13T22:04:30.039+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-4] c.m.ui.controller.PatientUiController    : UI GET /patients/update/1 - showing update form
+2025-06-13T22:12:01.434+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-5] c.m.ui.controller.PatientUiController    : UI POST /patients/update/1 - updating patient
+2025-06-13T22:14:17.064+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-7] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:14:19.098+02:00 ERROR 18560 --- [ui] [http-nio-5001-exec-7] c.m.ui.controller.PatientUiController    : Request to GET http://localhost:5005/api/patients/notes failed to fetch patients list - HTTP 500 INTERNAL_SERVER_ERROR
+2025-06-13T22:14:19.100+02:00 ERROR 18560 --- [ui] [http-nio-5001-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Failed to retrieve patient list] with root cause
+
+java.lang.RuntimeException: Failed to retrieve patient list
+	at com.mediLabo.ui.controller.PatientUiController.lambda$listOfAllPatients$0(PatientUiController.java:38) ~[classes/:na]
+	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:831) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$readBody$4(DefaultRestClient.java:820) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:216) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:819) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$body$0(DefaultRestClient.java:750) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:579) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:533) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:680) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:814) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.body(DefaultRestClient.java:750) ~[spring-web-6.2.6.jar:6.2.6]
+	at com.mediLabo.ui.controller.PatientUiController.listOfAllPatients(PatientUiController.java:39) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+
+2025-06-13T22:14:25.627+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-8] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:14:27.541+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-9] c.m.ui.controller.PatientUiController    : UI GET /patients/1 - retrieving patient detail
+2025-06-13T22:14:28.693+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-10] c.m.ui.controller.PatientUiController    : UI GET /patients/update/1 - showing update form
+2025-06-13T22:14:35.392+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-1] c.m.ui.controller.PatientUiController    : UI POST /patients/update/1 - updating patient
+2025-06-13T22:14:39.254+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-2] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:16:29.817+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-6] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:16:31.478+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-5] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:16:32.221+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-7] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:16:32.422+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-8] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:17:14.546+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-9] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:17:15.610+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-10] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:18:06.765+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-2] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:18:08.827+02:00 ERROR 18560 --- [ui] [http-nio-5001-exec-2] c.m.ui.controller.PatientUiController    : Request to GET http://localhost:5005/api/patients/notes failed to fetch patients list - HTTP 500 INTERNAL_SERVER_ERROR
+2025-06-13T22:18:08.828+02:00 ERROR 18560 --- [ui] [http-nio-5001-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Failed to retrieve patient list] with root cause
+
+java.lang.RuntimeException: Failed to retrieve patient list
+	at com.mediLabo.ui.controller.PatientUiController.lambda$listOfAllPatients$0(PatientUiController.java:38) ~[classes/:na]
+	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:831) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$readBody$4(DefaultRestClient.java:820) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:216) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:819) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$body$0(DefaultRestClient.java:750) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:579) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:533) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:680) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:814) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.body(DefaultRestClient.java:750) ~[spring-web-6.2.6.jar:6.2.6]
+	at com.mediLabo.ui.controller.PatientUiController.listOfAllPatients(PatientUiController.java:39) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+
+2025-06-13T22:18:09.642+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-3] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:18:11.039+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-4] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:18:16.388+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-6] c.m.ui.controller.PatientUiController    : UI GET /patients/add - showing patient creation form
+2025-06-13T22:18:17.890+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-5] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:18:19.240+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-7] c.m.ui.controller.PatientUiController    : UI GET /patients/1 - retrieving patient detail
+2025-06-13T22:18:20.932+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-8] c.m.ui.controller.PatientUiController    : UI GET /patients/update/1 - showing update form
+2025-06-13T22:18:33.417+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-9] c.m.ui.controller.PatientUiController    : UI POST /patients/update/1 - updating patient
+2025-06-13T22:19:31.769+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-1] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:19:36.686+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-2] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:19:37.431+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-3] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:19:37.647+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-4] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:19:37.863+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-6] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:19:39.710+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-5] c.m.ui.controller.PatientUiController    : UI GET /patients/1 - retrieving patient detail
+2025-06-13T22:19:40.997+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-7] c.m.ui.controller.PatientUiController    : UI GET /patients/update/1 - showing update form
+2025-06-13T22:19:52.978+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-8] c.m.ui.controller.PatientUiController    : UI POST /patients/update/1 - updating patient
+2025-06-13T22:19:55.194+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-10] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:20:01.590+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-9] c.m.ui.controller.PatientUiController    : UI GET /patients/notes/1 - displaying notes for patient
+2025-06-13T22:20:15.362+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-1] c.m.ui.controller.NoteUiController       : UI GET /patients/notes/update/684c87156c7d756030de3c41 - displaying note update form
+2025-06-13T22:20:26.115+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-2] c.m.ui.controller.NoteUiController       : UI POST /patients/notes/update/684c87156c7d756030de3c41 - updating note with new content
+2025-06-13T22:20:26.203+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-3] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:20:29.043+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-4] c.m.u.c.EvaluationRisqueUiController     : Receive GET /evaluationrisque/patients/1: EvaluationRisqueApi use RestController to send diabetes report
+2025-06-13T22:20:29.118+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-4] c.m.u.c.EvaluationRisqueUiController     : Receive dannger level : NONE
+2025-06-13T22:20:30.367+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-6] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:20:38.957+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-7] c.m.ui.controller.PatientUiController    : UI GET /patients/notes/4 - displaying notes for patient
+2025-06-13T22:20:41.834+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-8] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:20:43.826+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-10] c.m.ui.controller.PatientUiController    : UI GET /patients/4 - retrieving patient detail
+2025-06-13T22:20:45.669+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-9] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:20:52.655+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-1] c.m.ui.controller.PatientUiController    : UI GET /patients/1 - retrieving patient detail
+2025-06-13T22:20:55.053+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-2] c.m.ui.controller.PatientUiController    : UI GET /patients/update/1 - showing update form
+2025-06-13T22:21:10.270+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-3] c.m.ui.controller.PatientUiController    : UI POST /patients/update/1 - updating patient
+2025-06-13T22:21:10.316+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-4] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:21:21.175+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-6] c.m.ui.controller.PatientUiController    : UI GET /patients/notes/1 - displaying notes for patient
+2025-06-13T22:21:22.848+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-5] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
+2025-06-13T22:21:23.821+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-7] c.m.ui.controller.PatientUiController    : UI GET /patients/1 - retrieving patient detail
+2025-06-13T22:21:24.838+02:00  INFO 18560 --- [ui] [http-nio-5001-exec-8] c.m.ui.controller.PatientUiController    : UI GET /patients - retrieving list of patients
