@@ -68,14 +68,21 @@ public class NoteUiController {
 	public String updateNoteForm(@PathVariable String noteId, Model model) {
 		log.info("UI GET /patients/notes/update/{} - displaying note update form", noteId);
 
-		NoteDto noteDto = restClient.get().uri(noteApiUrl + noteId).retrieve()
+		NoteDto noteDto = restClient.get().uri(noteApiUrl + noteId)
+
+				.retrieve()
+
 				.onStatus(HttpStatusCode::isError, (request, response) -> {
 					log.error("Request to {} {} failed to retrieve note ID {} - HTTP {}", request.getMethod(),
 							request.getURI(), noteId, response.getStatusCode());
 					throw new RuntimeException("Error retrieving note");
-				}).body(NoteDto.class);
+
+				})
+
+				.body(NoteDto.class);
 
 		model.addAttribute("note", noteDto);
+
 		return "update-note";
 	}
 
@@ -83,21 +90,41 @@ public class NoteUiController {
 	public String submitEditNote(@PathVariable String noteId, @RequestParam("note") String updatedText) {
 		log.info("UI POST /patients/notes/update/{} - updating note with new content", noteId);
 
-		NoteDto noteDto = restClient.get().uri(noteApiUrl + noteId).retrieve()
+		NoteDto noteDto = restClient.get()
+
+				.uri(noteApiUrl + noteId)
+
+				.retrieve()
+
 				.onStatus(HttpStatusCode::isError, (request, response) -> {
+
 					log.error("Request to {} {} failed to retrieve note ID {} - HTTP {}", request.getMethod(),
 							request.getURI(), noteId, response.getStatusCode());
+
 					throw new RuntimeException("Error retrieving note");
-				}).body(NoteDto.class);
+				})
+
+				.body(NoteDto.class);
 
 		noteDto.setContenuNote(updatedText);
 
-		restClient.put().uri(noteApiUrl + noteId).body(noteDto).retrieve()
+		restClient.put()
+
+				.uri(noteApiUrl + noteId)
+
+				.body(noteDto)
+
+				.retrieve()
+
 				.onStatus(HttpStatusCode::isError, (request, response) -> {
+
 					log.error("Request to {} {} failed to update note ID {} - HTTP {}", request.getMethod(),
 							request.getURI(), noteId, response.getStatusCode());
+
 					throw new RuntimeException("Error updating note");
-				}).toBodilessEntity();
+				})
+
+				.toBodilessEntity();
 
 		return "redirect:/patients";
 	}

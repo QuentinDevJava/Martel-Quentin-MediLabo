@@ -20,9 +20,9 @@ import lombok.extern.slf4j.Slf4j;
 @AllArgsConstructor
 public class NoteServiceImpl implements NoteService {
 
-	private NoteMapper noteMapper;
+	private final NoteMapper noteMapper = new NoteMapper();
 
-	private NoteRepository noteRepository;
+	private final NoteRepository noteRepository;
 
 	@Override
 	public List<NoteDto> getNotesByPatientId(int patientId) {
