@@ -135,6 +135,7 @@ services:
       timeout: 3s
       retries: 10
       start_period: 20s
+
   evaluationrisqueapi:
     build:
       context: ../services/evaluationrisqueapi
@@ -153,6 +154,7 @@ services:
       timeout: 3s
       retries: 10
       start_period: 20s
+
   ui:
     build:
       context: ../services/ui

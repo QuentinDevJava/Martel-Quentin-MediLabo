@@ -99,7 +99,6 @@ class PatientServiceImplTest {
 	@Test
 	void testUpdatePatient() {
 		when(patientRepository.findById(1)).thenReturn(optionalPatient);
-		when(patientRepository.save(any(Patient.class))).thenReturn(testPatient);
 
 		PatientDto updatedDto = new PatientDto();
 		updatedDto.setNom("Nouveau");
@@ -109,10 +108,26 @@ class PatientServiceImplTest {
 		updatedDto.setAdresse("456 rue nouvelle");
 		updatedDto.setTelephone("9999999999");
 
+		Patient savedPatient = new Patient();
+		savedPatient.setId(1);
+		savedPatient.setNom("Nouveau");
+		savedPatient.setPrenom("Prenom");
+		savedPatient.setDateAnniversaire(LocalDate.of(2000, 1, 1));
+		savedPatient.setGenre("F");
+		savedPatient.setAdresse("456 rue nouvelle");
+		savedPatient.setTelephone("9999999999");
+
+		when(patientRepository.save(any())).thenReturn(savedPatient);
+
 		PatientDto result = patientServiceImpl.updatePatient(1, updatedDto);
 
 		assertEquals("Nouveau", result.getNom());
 		assertEquals("Prenom", result.getPrenom());
+		assertEquals(LocalDate.of(2000, 1, 1), result.getDateAnniversaire());
+		assertEquals("F", result.getGenre());
+		assertEquals("456 rue nouvelle", result.getAdresse());
+		assertEquals("9999999999", result.getTelephone());
+
 		verify(patientRepository).save(any(Patient.class));
 	}
 
