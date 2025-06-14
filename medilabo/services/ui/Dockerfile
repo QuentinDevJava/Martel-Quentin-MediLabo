@@ -1,9 +1,14 @@
-FROM eclipse-temurin:22-jdk-alpine
-VOLUME /tmp
+# ---- Stage 1: Build the application ----
+FROM maven:3.9-eclipse-temurin-22 AS builder
+WORKDIR /build
+COPY . .
+RUN mvn clean package -DskipTests
 
-RUN apk add --no-cache curl
+# ---- Stage 2: Run the application ----
+FROM eclipse-temurin:22-jdk
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
-COPY target/ui.jar .
-
-ENTRYPOINT ["java", "-jar", "ui.jar"]
+COPY --from=builder /build/target/*.jar ui.jar
+EXPOSE 5001
+ENTRYPOINT ["java", "-jar", "/app/ui.jar"]
