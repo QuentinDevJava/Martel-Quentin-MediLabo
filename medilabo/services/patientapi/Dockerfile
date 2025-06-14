@@ -1,9 +1,14 @@
-FROM eclipse-temurin:22-jdk-alpine
-VOLUME /tmp
+# ---- Stage 1: Build the application ----
+FROM maven:3.9-eclipse-temurin-22 AS builder
+WORKDIR /build
+COPY . .
+RUN mvn clean package -DskipTests
 
-RUN apk add --no-cache curl
+# ---- Stage 2: Run the application ----
+FROM eclipse-temurin:22-jdk
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
-COPY target/patientapi.jar .
-
-ENTRYPOINT ["java", "-jar", "patientapi.jar"]
+COPY --from=builder /build/target/*.jar patientapi.jar
+EXPOSE 5000
+ENTRYPOINT ["java", "-jar", "/app/patientapi.jar"]
