@@ -13,9 +13,8 @@ public class AuthapiApplication {
 		SpringApplication.run(AuthapiApplication.class, args);
 	}
 
-
 	@Bean
-	public PasswordEncoder passwordEncoder() {
+	PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
 

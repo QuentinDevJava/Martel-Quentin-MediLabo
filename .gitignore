@@ -50,6 +50,7 @@ build/
 .vscode/
 
 .sonarlint/
-.log/
-.logs/
 .metadata
+
+medilabo/services/**/logs/
+medilabo/services/**/logs/**.log
