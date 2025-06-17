@@ -1,4 +1,4 @@
-package com.medilabo.authapi.dto;
+package com.medilabo.ui.dto;
 
 import lombok.Builder;
 import lombok.Data;

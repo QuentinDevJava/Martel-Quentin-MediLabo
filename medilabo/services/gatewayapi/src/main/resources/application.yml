@@ -24,6 +24,10 @@ spring:
           uri: lb://evaluationrisqueapi
           predicates:
             - Path=/api/evaluationrisque/**
+        - id: authapi
+          uri: lb://authapi
+          predicates:
+            - Path=/auth/**
       discovery:
         locator:
           enabled: true

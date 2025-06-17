@@ -21,20 +21,22 @@ public class AuthController {
     private final AuthServicesImpl authService;
 
     @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody LoginAuth request) {
+    public ResponseEntity<TokenAuth> login(@RequestBody LoginAuth request) {
 	String token = authService.autorizedUser(request.getUsername(), request.getPassword());
 
 	if (token.equals("Invalid username or password")) {
-	    return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(token);
+	    return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
 	}
 
-	return ResponseEntity.ok(token);
+	TokenAuth tokenAuth = TokenAuth.builder().token(token).username(request.getUsername()).build();
+
+	return ResponseEntity.ok(tokenAuth);
     }
 
     @PostMapping("/token")
     public ResponseEntity<Boolean> tokenValidation(@RequestBody TokenAuth request) {
 
-	boolean tokenIsValid = authService.isTokenValid(request.getUsername(), request.getToken());
+	Boolean tokenIsValid = authService.isTokenValid(request.getUsername(), request.getToken());
 
 	return ResponseEntity.ok(tokenIsValid);
 
