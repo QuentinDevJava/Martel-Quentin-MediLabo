@@ -1,0 +1,26 @@
+server:
+  port: 5004
+
+spring:
+  application:
+    name: authapi
+
+  datasource:
+    url: jdbc:postgresql://authdb:5432/medilabo_postgres
+    username: postgres_admin
+    password: "!eUFG8LWZ4nb2$@VBVuiLI69gre?Zb?j"
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+  cloud:
+    config:
+      enabled: true
+    discovery:
+      enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health

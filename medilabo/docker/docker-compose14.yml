@@ -1,0 +1,215 @@
+services:
+  mysqldb:
+    image: mysql:8
+    container_name: mysqldb
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: ${MYSQL_INITDB_DATABASE}
+      MYSQL_USER: ${MYSQL_INITDB_USER}
+      MYSQL_PASSWORD: ${MYSQL_INITDB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_INITDB_ROOT_PASSWORD}
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 20s
+
+  authdb:
+    image: postgres:14-alpine
+    container_name: authdb
+    ports:
+      - "5432:5432"
+    volumes:
+      -  postgres-data:/var/lib/postgresql
+    environment:
+      POSTGRES_DB: ${POSTGRES_INITDB_DATABASE}
+      POSTGRES_USER: ${POSTGRES_INITDB_ROOT_USERNAME}
+      POSTGRES_PASSWORD: ${POSTGRES_INITDB_ROOT_PASSWORD}
+
+  mongodb:
+    image: mongo:6
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: ${MONGO_INITDB_DATABASE}
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: ["CMD-SHELL", "echo 'db.runCommand({ ping: 1 }).ok' | mongosh localhost:27017/test --quiet | grep 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 20s
+
+  eurekaserver:
+    build:
+      context: ../services/eurekaserver
+    container_name: eurekaserver
+    ports:
+      - "8761:8761"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8761/actuator/health || exit 1"]
+      interval: 2s
+      timeout: 3s
+      retries: 10
+      start_period: 20s
+
+  configserver:
+    build:
+      context: ../services/configserver
+    container_name: configserver
+    ports:
+      - "5555:5555"
+    depends_on:
+      eurekaserver:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5555/actuator/health || exit 1"]
+      interval: 2s
+      timeout: 3s
+      retries: 10
+      start_period: 20s
+
+  gatewayapi:
+    build:
+      context: ../services/gatewayapi
+    container_name: gatewayapi
+    ports:
+      - "5005:5005"
+    depends_on:
+      eurekaserver:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+    environment:
+      - SPRING_APPLICATION_NAME=gatewayapi
+      - SPRING_CONFIG_IMPORT=optional:configserver:http://configserver:5555
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5005/actuator/health || exit 1"]
+      interval: 2s
+      timeout: 3s
+      retries: 10
+      start_period: 20s
+
+  authapi:
+    build:
+      context: ../services/authapi
+    container_name: authapi
+    ports:
+      - "5002:5002"
+    depends_on:
+      mongodb:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+      gatewayapi:
+        condition: service_healthy
+    environment:
+      - SPRING_APPLICATION_NAME=authapi
+      - SPRING_CONFIG_IMPORT=optional:configserver:http://configserver:5555
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5002/actuator/health || exit 1"]
+      interval: 2s
+      timeout: 3s
+      retries: 10
+      start_period: 20s
+
+  noteapi:
+    build:
+      context: ../services/noteapi
+    container_name: noteapi
+    ports:
+      - "5002:5002"
+    depends_on:
+      mongodb:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+      gatewayapi:
+        condition: service_healthy
+    environment:
+      - SPRING_APPLICATION_NAME=noteapi
+      - SPRING_CONFIG_IMPORT=optional:configserver:http://configserver:5555
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5002/actuator/health || exit 1"]
+      interval: 2s
+      timeout: 3s
+      retries: 10
+      start_period: 20s
+
+  patientapi:
+    build:
+      context: ../services/patientapi
+    container_name: patientapi
+    ports:
+      - "5000:5000"
+    depends_on:
+      mysqldb:
+        condition: service_healthy
+      noteapi:
+        condition: service_healthy
+      evaluationrisqueapi:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+    environment:
+      - SPRING_APPLICATION_NAME=patientapi
+      - SPRING_CONFIG_IMPORT=optional:configserver:http://configserver:5555
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5000/actuator/health || exit 1"]
+      interval: 2s
+      timeout: 3s
+      retries: 10
+      start_period: 20s
+
+  evaluationrisqueapi:
+    build:
+      context: ../services/evaluationrisqueapi
+    container_name: evaluationrisqueapi
+    ports:
+      - "5003:5003"
+    depends_on:
+      gatewayapi:
+        condition: service_healthy
+    environment:
+      - SPRING_APPLICATION_NAME=evaluationrisqueapi
+      - SPRING_CONFIG_IMPORT=optional:configserver:http://configserver:5555
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5003/actuator/health || exit 1"]
+      interval: 2s
+      timeout: 3s
+      retries: 10
+      start_period: 20s
+
+  ui:
+    build:
+      context: ../services/ui
+    container_name: ui
+    ports:
+      - "5001:5001"
+    depends_on:
+      patientapi:
+        condition: service_healthy
+    environment:
+      - SPRING_THYMELEAF_CACHE=false
+      - SERVER_PORT=5001
+      - PATIENT_API_URL=http://gatewayapi:5005/api/patients/
+      - NOTE_API_URL=http://gatewayapi:5005/api/notes/
+      - EVALUATIONRISQUE_API_URL=http://gatewayapi:5005/api/evaluationrisque/patients/
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5001 || exit 1"]
+      interval: 2s
+      timeout: 3s
+      retries: 10
+      start_period: 20s
+
+volumes:
+  mysql-data:
+  mongo-data:

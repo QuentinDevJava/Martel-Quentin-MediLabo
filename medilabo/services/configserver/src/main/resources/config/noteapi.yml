@@ -9,7 +9,7 @@ spring:
     mongodb:
       host: mongodb
       port: 27017
-      database: medilaboMongoDB
+      database: medilabo_mongodb
       username: mongo_admin
       password: "!eUFG8LWZ4nb2$@VBVuiLI69gre?Zb?j"
       authentication-database: admin  
