@@ -16,117 +16,119 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.test.context.ActiveProfiles;
 
 import com.medilabo.noteapi.dto.NoteDto;
 import com.medilabo.noteapi.entities.Note;
 import com.medilabo.noteapi.repository.NoteRepository;
 import com.medilabo.noteapi.service.NoteServiceImpl;
 
+@ActiveProfiles("test")
 @ExtendWith(MockitoExtension.class)
 class NoteServiceImplTest {
 
-	@Mock
-	private NoteRepository noteRepository;
+    @Mock
+    private NoteRepository noteRepository;
 
-	private NoteServiceImpl noteService;
+    private NoteServiceImpl noteService;
 
-	private Note note;
-	private NoteDto noteDto;
+    private Note note;
+    private NoteDto noteDto;
 
-	@BeforeEach
-	void setUp() {
-		noteService = new NoteServiceImpl(noteRepository);
+    @BeforeEach
+    void setUp() {
+	noteService = new NoteServiceImpl(noteRepository);
 
-		note = Note.builder().id("noteTest").patientId(1).patientNom("Jean")
-				.contenuNote("Le patient est un fumeur avec du cholestérol.").build();
+	note = Note.builder().id("noteTest").patientId(1).patientNom("Jean")
+		.contenuNote("Le patient est un fumeur avec du cholestérol.").build();
 
-		noteDto = NoteDto.builder().id("noteTest").patientId(1).patientNom("Jean")
-				.contenuNote("Le patient est un fumeur avec du cholestérol.").build();
-	}
+	noteDto = NoteDto.builder().id("noteTest").patientId(1).patientNom("Jean")
+		.contenuNote("Le patient est un fumeur avec du cholestérol.").build();
+    }
 
-	@Test
-	void testGetNotesByPatientId() {
-		when(noteRepository.findAllByPatientId(1)).thenReturn(List.of(note));
+    @Test
+    void testGetNotesByPatientId() {
+	when(noteRepository.findAllByPatientId(1)).thenReturn(List.of(note));
 
-		List<NoteDto> result = noteService.getNotesByPatientId(1);
+	List<NoteDto> result = noteService.getNotesByPatientId(1);
 
-		assertEquals(1, result.size());
-		assertEquals("noteTest", result.get(0).getId());
-	}
+	assertEquals(1, result.size());
+	assertEquals("noteTest", result.get(0).getId());
+    }
 
-	@Test
-	void testCreateNote() {
-		when(noteRepository.save(any())).thenReturn(note);
+    @Test
+    void testCreateNote() {
+	when(noteRepository.save(any())).thenReturn(note);
 
-		NoteDto result = noteService.createNote(noteDto);
+	NoteDto result = noteService.createNote(noteDto);
 
-		assertNotNull(result);
-		assertEquals("noteTest", result.getId());
-		verify(noteRepository).save(any());
-	}
+	assertNotNull(result);
+	assertEquals("noteTest", result.getId());
+	verify(noteRepository).save(any());
+    }
 
-	@Test
-	void testUpdateNote_successful() {
-		when(noteRepository.findById("noteTest")).thenReturn(Optional.of(note));
-		when(noteRepository.save(any())).thenReturn(note);
+    @Test
+    void testUpdateNote_successful() {
+	when(noteRepository.findById("noteTest")).thenReturn(Optional.of(note));
+	when(noteRepository.save(any())).thenReturn(note);
 
-		NoteDto updatedDto = new NoteDto();
-		updatedDto.setContenuNote("Nouvelle version");
+	NoteDto updatedDto = new NoteDto();
+	updatedDto.setContenuNote("Nouvelle version");
 
-		NoteDto result = noteService.updateNote("noteTest", updatedDto);
+	NoteDto result = noteService.updateNote("noteTest", updatedDto);
 
-		assertNotNull(result);
-		verify(noteRepository).save(any());
-	}
+	assertNotNull(result);
+	verify(noteRepository).save(any());
+    }
 
-	@Test
-	void testUpdateNote_notFound_throwsException() {
-		when(noteRepository.findById("not-exist")).thenReturn(Optional.empty());
+    @Test
+    void testUpdateNote_notFound_throwsException() {
+	when(noteRepository.findById("not-exist")).thenReturn(Optional.empty());
 
-		NoteDto updatedDto = new NoteDto();
-		updatedDto.setContenuNote("Nouvelle version");
+	NoteDto updatedDto = new NoteDto();
+	updatedDto.setContenuNote("Nouvelle version");
 
-		assertThrows(IllegalArgumentException.class, () -> {
-			noteService.updateNote("not-exist", updatedDto);
-		});
-	}
+	assertThrows(IllegalArgumentException.class, () -> {
+	    noteService.updateNote("not-exist", updatedDto);
+	});
+    }
 
-	@Test
-	void testGetNotesById_found() {
-		when(noteRepository.findById("noteTest")).thenReturn(Optional.of(note));
+    @Test
+    void testGetNotesById_found() {
+	when(noteRepository.findById("noteTest")).thenReturn(Optional.of(note));
 
-		NoteDto result = noteService.getNotesById("noteTest");
+	NoteDto result = noteService.getNotesById("noteTest");
 
-		assertNotNull(result);
-		assertEquals("noteTest", result.getId());
-	}
+	assertNotNull(result);
+	assertEquals("noteTest", result.getId());
+    }
 
-	@Test
-	void testGetNotesById_notFound() {
-		when(noteRepository.findById("not-exist")).thenReturn(Optional.empty());
+    @Test
+    void testGetNotesById_notFound() {
+	when(noteRepository.findById("not-exist")).thenReturn(Optional.empty());
 
-		NoteDto result = noteService.getNotesById("not-exist");
+	NoteDto result = noteService.getNotesById("not-exist");
 
-		assertNull(result);
-	}
+	assertNull(result);
+    }
 
-	@Test
-	void testGetNumberOfTermsByPatient_detectsTermsCorrectly() {
-		when(noteRepository.findAllByPatientId(1)).thenReturn(List.of(note));
+    @Test
+    void testGetNumberOfTermsByPatient_detectsTermsCorrectly() {
+	when(noteRepository.findAllByPatientId(1)).thenReturn(List.of(note));
 
-		int count = noteService.getNumberOfTermsByPatient(1);
+	int count = noteService.getNumberOfTermsByPatient(1);
 
-		assertEquals(2, count);
-	}
+	assertEquals(2, count);
+    }
 
-	@Test
-	void testGetNumberOfTermsByPatient_noTerms() {
-		Note emptyNote = Note.builder().id("note-2").patientId(1).contenuNote("Le patient va bien.").build();
+    @Test
+    void testGetNumberOfTermsByPatient_noTerms() {
+	Note emptyNote = Note.builder().id("note-2").patientId(1).contenuNote("Le patient va bien.").build();
 
-		when(noteRepository.findAllByPatientId(1)).thenReturn(List.of(emptyNote));
+	when(noteRepository.findAllByPatientId(1)).thenReturn(List.of(emptyNote));
 
-		int count = noteService.getNumberOfTermsByPatient(1);
+	int count = noteService.getNumberOfTermsByPatient(1);
 
-		assertEquals(0, count);
-	}
+	assertEquals(0, count);
+    }
 }

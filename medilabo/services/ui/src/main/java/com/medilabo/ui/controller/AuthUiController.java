@@ -1,6 +1,12 @@
 package com.medilabo.ui.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.context.HttpSessionSecurityContextRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,10 +27,10 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping("/auth")
 public class AuthUiController {
 
-    private final RestClient restClient; // mieux que resttemplate
+    private final RestClient restClient;
 
     @Value("${patient.api.url}")
-    private String patientApiUrl; // url des autre micro service si besoin
+    private String patientApiUrl;
 
     @Value("${note.api.url}")
     private String noteApiUrl;
@@ -46,17 +52,26 @@ public class AuthUiController {
 	LoginAuth loginRequest = LoginAuth.builder().username(username).password(password).build();
 
 	try {
-	    String token = restClient.post().uri("http://localhost:5005/auth/login") // mettre authApiUrl via gateway
-		    .body(loginRequest).retrieve().body(String.class);
+	    String token = restClient.post().uri(authApiUrl + "login").body(loginRequest).retrieve().body(String.class);
+
+	    List<SimpleGrantedAuthority> authorities = List.of(new SimpleGrantedAuthority("ROLE_USER"));
+	    UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(username, null,
+		    authorities);
+
+	    SecurityContextHolder.getContext().setAuthentication(authToken);
+
+	    session.setAttribute(HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY,
+		    SecurityContextHolder.getContext());
 
 	    session.setAttribute("token", token);
 	    session.setAttribute("username", username);
 
 	    return "redirect:/patients";
 
-	} catch (Exception _) {
+	} catch (Exception e) {
 	    model.addAttribute("loginError", "Nom d’utilisateur ou mot de passe invalide");
 	    return "login";
 	}
     }
+
 }
