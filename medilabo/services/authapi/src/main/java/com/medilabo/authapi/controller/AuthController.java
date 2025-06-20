@@ -21,16 +21,14 @@ public class AuthController {
     private final AuthServicesImpl authService;
 
     @PostMapping("/login")
-    public ResponseEntity<TokenAuth> login(@RequestBody LoginAuth request) {
+    public ResponseEntity<String> login(@RequestBody LoginAuth request) {
 	String token = authService.autorizedUser(request.getUsername(), request.getPassword());
 
 	if (token.equals("Invalid username or password")) {
 	    return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
 	}
 
-	TokenAuth tokenAuth = TokenAuth.builder().token(token).username(request.getUsername()).build();
-
-	return ResponseEntity.ok(tokenAuth);
+	return ResponseEntity.ok(token);
     }
 
     @PostMapping("/token")

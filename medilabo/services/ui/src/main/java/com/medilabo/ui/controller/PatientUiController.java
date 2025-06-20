@@ -46,7 +46,7 @@ public class PatientUiController {
 		.onStatus(HttpStatusCode::isError, (request, response) -> {
 		    log.error("Request to {} {} failed to fetch patients list - HTTP {}", request.getMethod(),
 			    request.getURI(), response.getStatusCode());
-		    throw new RuntimeException("Failed to retrieve patient list");
+		    throw new RuntimeException("Failed to retrieve patient list"); // ducoup jarrive ici
 		})
 
 		.body(PatientDto[].class);

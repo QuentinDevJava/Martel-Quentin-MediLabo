@@ -39,19 +39,25 @@ public class JwtValidationFilter implements WebFilter {
 	if (authHeader != null && authHeader.startsWith("Bearer ") && username != null) {
 	    String token = authHeader.substring(7);
 	    TokenAuth tokenAuth = new TokenAuth(token, username);
-
-	    return webClient.post().uri("lb://authapi/auth/token").bodyValue(tokenAuth).retrieve()
-		    .bodyToMono(Boolean.class).flatMap(valid -> {
-			if (Boolean.TRUE.equals(valid)) {
-			    return chain.filter(exchange);
-			} else {
+	    try {
+		return webClient.post().uri("lb://authapi/auth/token").bodyValue(tokenAuth).retrieve()
+			.bodyToMono(Boolean.class).flatMap(valid -> {
+			    if (Boolean.TRUE.equals(valid)) {
+				return chain.filter(exchange);
+			    } else {
+				exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
+				return exchange.getResponse().setComplete();
+			    }
+			}).onErrorResume(error -> {
 			    exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
 			    return exchange.getResponse().setComplete();
-			}
-		    }).onErrorResume(error -> {
-			exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
-			return exchange.getResponse().setComplete();
-		    });
+			});
+
+	    } catch (Exception e) {
+		log.error("Erreur lors du parsing de l'en-tête Authorization", e);
+		exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
+		return exchange.getResponse().setComplete();
+	    }
 
 	} else {
 	    exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);

@@ -1,12 +1,6 @@
 package com.medilabo.ui.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.web.context.HttpSessionSecurityContextRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,15 +23,6 @@ public class AuthUiController {
 
     private final RestClient restClient;
 
-    @Value("${patient.api.url}")
-    private String patientApiUrl;
-
-    @Value("${note.api.url}")
-    private String noteApiUrl;
-
-    @Value("${evaluationrisque.api.url}")
-    private String evaluationRisqueApiUrl;
-
     @Value("${auth.api.url}")
     private String authApiUrl;
 
@@ -49,19 +34,19 @@ public class AuthUiController {
     @PostMapping("/login")
     public String authenticationAuthApi(@RequestParam String username, @RequestParam String password,
 	    HttpSession session, Model model) {
+
 	LoginAuth loginRequest = LoginAuth.builder().username(username).password(password).build();
 
 	try {
-	    String token = restClient.post().uri(authApiUrl + "login").body(loginRequest).retrieve().body(String.class);
+	    String token = restClient.post()
 
-	    List<SimpleGrantedAuthority> authorities = List.of(new SimpleGrantedAuthority("ROLE_USER"));
-	    UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(username, null,
-		    authorities);
+		    .uri(authApiUrl + "login")
 
-	    SecurityContextHolder.getContext().setAuthentication(authToken);
+		    .body(loginRequest)
 
-	    session.setAttribute(HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY,
-		    SecurityContextHolder.getContext());
+		    .retrieve()
+
+		    .body(String.class);
 
 	    session.setAttribute("token", token);
 	    session.setAttribute("username", username);
