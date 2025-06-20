@@ -1,4 +1,4 @@
-package com.medilabo.gatewayapi.config;
+package com.medilabo.gatewayapi.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

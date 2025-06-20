@@ -14,6 +14,7 @@ import org.springframework.web.client.RestClient;
 import com.medilabo.ui.dto.NoteDto;
 import com.medilabo.ui.dto.PatientDto;
 
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -23,109 +24,156 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping("/patients/notes")
 public class NoteUiController {
 
-	private final RestClient restClient;
+    private final RestClient restClient;
 
-	@Value("${note.api.url}")
-	private String noteApiUrl;
+    @Value("${note.api.url}")
+    private String noteApiUrl;
 
-	@Value("${patient.api.url}")
-	private String patientApiUrl;
+    @Value("${patient.api.url}")
+    private String patientApiUrl;
 
-	@GetMapping("/add/{patientId}")
-	public String addNoteForm(@PathVariable int patientId, Model model) {
-		log.info("UI GET /patients/notes/add/{} - displaying add note form", patientId);
-		model.addAttribute("patientNom", patientId);
-		return "add-note";
-	}
+    @GetMapping("/add/{patientId}")
+    public String addNoteForm(@PathVariable int patientId, Model model) {
+	log.info("UI GET /patients/notes/add/{} - displaying add note form", patientId);
+	model.addAttribute("patientNom", patientId);
+	return "add-note";
+    }
 
-	@PostMapping("/add/{patientId}")
-	public String submitAddNote(@PathVariable int patientId, @RequestParam("note") String noteText) {
-		log.info("UI POST /patients/notes/add/{} - submitting note: {}", patientId, noteText);
+    @PostMapping("/add/{patientId}")
+    public String submitAddNote(HttpSession session, @PathVariable int patientId,
+	    @RequestParam("note") String noteText) {
+	log.info("UI POST /patients/notes/add/{} - submitting note: {}", patientId, noteText);
 
-		PatientDto patientDto = restClient.get().uri(patientApiUrl + patientId).retrieve()
-				.onStatus(HttpStatusCode::isError, (request, response) -> {
-					log.error("Request to {} {} failed to retrieve patient ID {} - HTTP {}", request.getMethod(),
-							request.getURI(), patientId, response.getStatusCode());
-					throw new RuntimeException("Error retrieving patient data");
-				}).body(PatientDto.class);
+	String token = (String) session.getAttribute("token");
+	String username = (String) session.getAttribute("username");
 
-		NoteDto noteDto = new NoteDto();
-		noteDto.setPatientId(patientId);
-		noteDto.setPatientNom(patientDto.getNom());
-		noteDto.setContenuNote(noteText);
+	PatientDto patientDto = restClient.get()
 
-		restClient.post().uri(noteApiUrl).body(noteDto).retrieve()
-				.onStatus(HttpStatusCode::isError, (request, response) -> {
-					log.error("Request to {} {} failed to create note for patient ID {} - HTTP {}", request.getMethod(),
-							request.getURI(), patientId, response.getStatusCode());
-					throw new IllegalStateException("Error adding note");
-				}).toBodilessEntity();
+		.uri(patientApiUrl + patientId)
 
-		return "redirect:/patients";
-	}
+		.header("Authorization", "Bearer " + token)
 
-	@GetMapping("/update/{noteId}")
-	public String updateNoteForm(@PathVariable String noteId, Model model) {
-		log.info("UI GET /patients/notes/update/{} - displaying note update form", noteId);
+		.header("X-Username", username)
 
-		NoteDto noteDto = restClient.get().uri(noteApiUrl + noteId)
+		.retrieve()
 
-				.retrieve()
+		.onStatus(HttpStatusCode::isError, (request, response) -> {
+		    log.error("Request to {} {} failed to retrieve patient ID {} - HTTP {}", request.getMethod(),
+			    request.getURI(), patientId, response.getStatusCode());
+		    throw new RuntimeException("Error retrieving patient data");
+		})
 
-				.onStatus(HttpStatusCode::isError, (request, response) -> {
-					log.error("Request to {} {} failed to retrieve note ID {} - HTTP {}", request.getMethod(),
-							request.getURI(), noteId, response.getStatusCode());
-					throw new RuntimeException("Error retrieving note");
+		.body(PatientDto.class);
 
-				})
+	NoteDto noteDto = new NoteDto();
+	noteDto.setPatientId(patientId);
+	noteDto.setPatientNom(patientDto.getNom());
+	noteDto.setContenuNote(noteText);
 
-				.body(NoteDto.class);
+	restClient.post()
 
-		model.addAttribute("note", noteDto);
+		.uri(noteApiUrl)
 
-		return "update-note";
-	}
+		.body(noteDto)
 
-	@PostMapping("/update/{noteId}")
-	public String submitEditNote(@PathVariable String noteId, @RequestParam("note") String updatedText) {
-		log.info("UI POST /patients/notes/update/{} - updating note with new content", noteId);
+		.header("Authorization", "Bearer " + token)
 
-		NoteDto noteDto = restClient.get()
+		.header("X-Username", username)
 
-				.uri(noteApiUrl + noteId)
+		.retrieve()
 
-				.retrieve()
+		.onStatus(HttpStatusCode::isError, (request, response) -> {
+		    log.error("Request to {} {} failed to create note for patient ID {} - HTTP {}", request.getMethod(),
+			    request.getURI(), patientId, response.getStatusCode());
+		    throw new IllegalStateException("Error adding note");
+		})
 
-				.onStatus(HttpStatusCode::isError, (request, response) -> {
+		.toBodilessEntity();
 
-					log.error("Request to {} {} failed to retrieve note ID {} - HTTP {}", request.getMethod(),
-							request.getURI(), noteId, response.getStatusCode());
+	return "redirect:/patients";
+    }
 
-					throw new RuntimeException("Error retrieving note");
-				})
+    @GetMapping("/update/{noteId}")
+    public String updateNoteForm(HttpSession session, @PathVariable String noteId, Model model) {
+	log.info("UI GET /patients/notes/update/{} - displaying note update form", noteId);
 
-				.body(NoteDto.class);
+	String token = (String) session.getAttribute("token");
+	String username = (String) session.getAttribute("username");
 
-		noteDto.setContenuNote(updatedText);
+	NoteDto noteDto = restClient.get().uri(noteApiUrl + noteId)
 
-		restClient.put()
+		.header("Authorization", "Bearer " + token)
 
-				.uri(noteApiUrl + noteId)
+		.header("X-Username", username)
 
-				.body(noteDto)
+		.retrieve()
 
-				.retrieve()
+		.onStatus(HttpStatusCode::isError, (request, response) -> {
+		    log.error("Request to {} {} failed to retrieve note ID {} - HTTP {}", request.getMethod(),
+			    request.getURI(), noteId, response.getStatusCode());
+		    throw new RuntimeException("Error retrieving note");
 
-				.onStatus(HttpStatusCode::isError, (request, response) -> {
+		})
 
-					log.error("Request to {} {} failed to update note ID {} - HTTP {}", request.getMethod(),
-							request.getURI(), noteId, response.getStatusCode());
+		.body(NoteDto.class);
 
-					throw new RuntimeException("Error updating note");
-				})
+	model.addAttribute("note", noteDto);
 
-				.toBodilessEntity();
+	return "update-note";
+    }
 
-		return "redirect:/patients";
-	}
+    @PostMapping("/update/{noteId}")
+    public String submitEditNote(HttpSession session, @PathVariable String noteId,
+	    @RequestParam("note") String updatedText) {
+	log.info("UI POST /patients/notes/update/{} - updating note with new content", noteId);
+
+	String token = (String) session.getAttribute("token");
+	String username = (String) session.getAttribute("username");
+
+	NoteDto noteDto = restClient.get()
+
+		.uri(noteApiUrl + noteId)
+
+		.header("Authorization", "Bearer " + token)
+
+		.header("X-Username", username)
+
+		.retrieve()
+
+		.onStatus(HttpStatusCode::isError, (request, response) -> {
+
+		    log.error("Request to {} {} failed to retrieve note ID {} - HTTP {}", request.getMethod(),
+			    request.getURI(), noteId, response.getStatusCode());
+
+		    throw new RuntimeException("Error retrieving note");
+		})
+
+		.body(NoteDto.class);
+
+	noteDto.setContenuNote(updatedText);
+
+	restClient.put()
+
+		.uri(noteApiUrl + noteId)
+
+		.body(noteDto)
+
+		.header("Authorization", "Bearer " + token)
+
+		.header("X-Username", username)
+
+		.retrieve()
+
+		.onStatus(HttpStatusCode::isError, (request, response) -> {
+
+		    log.error("Request to {} {} failed to update note ID {} - HTTP {}", request.getMethod(),
+			    request.getURI(), noteId, response.getStatusCode());
+
+		    throw new RuntimeException("Error updating note");
+		})
+
+		.toBodilessEntity();
+
+	return "redirect:/patients";
+    }
 }

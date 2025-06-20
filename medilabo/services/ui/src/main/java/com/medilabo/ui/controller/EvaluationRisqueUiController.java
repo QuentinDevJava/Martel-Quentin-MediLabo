@@ -11,6 +11,7 @@ import org.springframework.web.client.RestClient;
 
 import com.medilabo.ui.dto.PatientDto;
 
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -20,71 +21,86 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping("/evaluationRisque")
 public class EvaluationRisqueUiController {
 
-	private final RestClient restClient;
+    private final RestClient restClient;
 
-	@Value("${patient.api.url}")
-	private String patientApiUrl;
+    @Value("${patient.api.url}")
+    private String patientApiUrl;
 
-	@Value("${evaluationrisque.api.url}")
-	private String evaluationRisqueApiUrl;
+    @Value("${evaluationrisque.api.url}")
+    private String evaluationRisqueApiUrl;
 
-	@GetMapping("/rapport/{patientId}")
-	public String getRapport(@PathVariable int patientId, Model model) {
+    @GetMapping("/rapport/{patientId}")
+    public String getRapport(HttpSession session, @PathVariable int patientId, Model model) {
 
-		log.info("Receive GET /evaluationrisque/patients/" + patientId
-				+ ": EvaluationRisqueApi use RestController to send diabetes report");
+	log.info("Receive GET /evaluationrisque/patients/" + patientId
+		+ ": EvaluationRisqueApi use RestController to send diabetes report");
 
-		PatientDto patientDto = restClient.get()
+	String token = (String) session.getAttribute("token");
+	String username = (String) session.getAttribute("username");
 
-				.uri(patientApiUrl + patientId)
+	PatientDto patientDto = restClient.get()
 
-				.retrieve()
+		.uri(patientApiUrl + patientId)
 
-				.onStatus(HttpStatusCode::isError, (request, response) -> {
+		.header("Authorization", "Bearer " + token)
 
-					log.error("Request to {} {} failed to retrieve patient ID {} - HTTP {}"
+		.header("X-Username", username)
 
-							, request.getMethod()
+		.retrieve()
 
-							, request.getURI()
+		.onStatus(HttpStatusCode::isError, (request, response) -> {
 
-							, patientId
+		    log.error("Request to {} {} failed to retrieve patient ID {} - HTTP {}"
 
-							, response.getStatusCode());
+			    , request.getMethod()
 
-					throw new RuntimeException("Error retrieving rapport");
+			    , request.getURI()
 
-				}).body(PatientDto.class);
+			    , patientId
 
-		if (patientDto == null) {
-			return "redirect:/patients";
-		}
+			    , response.getStatusCode());
 
-		String dangerLevel = restClient.get().uri(evaluationRisqueApiUrl + patientId).retrieve()
+		    throw new RuntimeException("Error retrieving rapport");
 
-				.onStatus(HttpStatusCode::isError, (request, response) -> {
+		}).body(PatientDto.class);
 
-					log.error("Request to {} {} failed to retrieve patient ID {} - HTTP {}"
-
-							, request.getMethod()
-
-							, request.getURI()
-
-							, patientId
-
-							, response.getStatusCode());
-
-					throw new RuntimeException("Error retrieving dangerLevel");
-
-				}).body(String.class);
-
-		dangerLevel = dangerLevel.replace("\"", "");
-		log.info("Receive dannger level : " + dangerLevel);
-
-		model.addAttribute("patient", patientDto);
-		model.addAttribute("dangerLevel", dangerLevel);
-
-		return "rapport";
-
+	if (patientDto == null) {
+	    return "redirect:/patients";
 	}
+
+	String dangerLevel = restClient.get()
+
+		.uri(evaluationRisqueApiUrl + patientId)
+
+		.header("Authorization", "Bearer " + token)
+
+		.header("X-Username", username)
+
+		.retrieve()
+
+		.onStatus(HttpStatusCode::isError, (request, response) -> {
+
+		    log.error("Request to {} {} failed to retrieve patient ID {} - HTTP {}"
+
+			    , request.getMethod()
+
+			    , request.getURI()
+
+			    , patientId
+
+			    , response.getStatusCode());
+
+		    throw new RuntimeException("Error retrieving dangerLevel");
+
+		}).body(String.class);
+
+	dangerLevel = dangerLevel.replace("\"", "");
+	log.info("Receive dannger level : " + dangerLevel);
+
+	model.addAttribute("patient", patientDto);
+	model.addAttribute("dangerLevel", dangerLevel);
+
+	return "rapport";
+
+    }
 }

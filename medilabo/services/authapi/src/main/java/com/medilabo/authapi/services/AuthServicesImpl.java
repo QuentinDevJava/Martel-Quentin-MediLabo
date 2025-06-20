@@ -10,7 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.medilabo.authapi.User;
+import com.medilabo.authapi.entities.User;
 import com.medilabo.authapi.repository.AuthUserRepository;
 
 import lombok.AllArgsConstructor;
@@ -31,6 +31,7 @@ public class AuthServicesImpl {
 
 	    UserDetails userDetails = new org.springframework.security.core.userdetails.User(authUser.getUsername(),
 		    authUser.getPassword(), getAuthorities(authUser));
+
 	    return jwtService.generateToken(userDetails);
 	} else {
 	    return "Invalid username or password";

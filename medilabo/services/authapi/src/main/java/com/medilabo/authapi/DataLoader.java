@@ -6,6 +6,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import com.medilabo.authapi.entities.User;
 import com.medilabo.authapi.repository.AuthUserRepository;
 
 import lombok.AllArgsConstructor;

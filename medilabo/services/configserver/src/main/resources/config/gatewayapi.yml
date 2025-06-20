@@ -15,6 +15,8 @@ spring:
           uri: lb://patientapi
           predicates:
             - Path=/api/patients/**
+          filters:
+            - PreserveHostHeader=true
         - id: noteapi
           uri: lb://noteapi
           predicates:
@@ -30,8 +32,11 @@ management:
       exposure:
         include: '*'
   endpoint:
-    gateway:
-      access: unrestricted
+      health:
+      show-details: always
+  security:
+    enabled: false
+
 eureka:
   client:
     service-url:

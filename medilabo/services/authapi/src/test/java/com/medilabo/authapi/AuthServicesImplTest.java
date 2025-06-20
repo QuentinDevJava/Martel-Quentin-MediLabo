@@ -18,6 +18,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import com.medilabo.authapi.entities.User;
 import com.medilabo.authapi.repository.AuthUserRepository;
 import com.medilabo.authapi.services.AuthServicesImpl;
 import com.medilabo.authapi.services.JwtServiceImpl;

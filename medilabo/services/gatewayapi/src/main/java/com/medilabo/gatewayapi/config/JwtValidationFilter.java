@@ -9,6 +9,8 @@ import org.springframework.web.server.ServerWebExchange;
 import org.springframework.web.server.WebFilter;
 import org.springframework.web.server.WebFilterChain;
 
+import com.medilabo.gatewayapi.dto.TokenAuth;
+
 import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Mono;
 
