@@ -42,6 +42,8 @@ management:
   endpoint:
     gateway:
       access: unrestricted
+    health:
+      show-details: always
 eureka:
   client:
     service-url:

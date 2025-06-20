@@ -32,11 +32,10 @@ management:
       exposure:
         include: '*'
   endpoint:
-      health:
+    gateway:
+      access: unrestricted
+    health:
       show-details: always
-  security:
-    enabled: false
-
 eureka:
   client:
     service-url:

@@ -29,7 +29,7 @@ public class JwtValidationFilter implements WebFilter {
 	ServerHttpRequest request = exchange.getRequest();
 	String path = request.getPath().toString();
 
-	if (path.equals("/auth/login") || path.equals("/auth/token")) {
+	if (path.equals("/auth/login") || path.equals("/auth/token") || path.equals("/actuator/health")) {
 	    log.info("requete : " + path);
 	    return chain.filter(exchange);
 	}
