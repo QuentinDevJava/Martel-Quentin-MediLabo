@@ -1,9 +1,5 @@
 package com.medilabo.ui.controller;
 
-import com.medilabo.ui.dto.LoginAuth;
-import jakarta.servlet.http.HttpSession;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Controller;
@@ -13,6 +9,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestClient;
+
+import com.medilabo.ui.dto.LoginAuth;
+
+import jakarta.servlet.http.HttpSession;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -27,46 +29,38 @@ public class AuthUiController {
 
     @GetMapping("/login")
     public String showLoginForm() {
-        return "login";
+	return "login";
     }
 
     @PostMapping("/login")
     public String authenticationAuthApi(@RequestParam String username, @RequestParam String password,
-                                        HttpSession session, Model model) {
+	    HttpSession session, Model model) {
 
-        LoginAuth loginRequest = LoginAuth.builder().username(username).password(password).build();
+	LoginAuth loginRequest = LoginAuth.builder().username(username).password(password).build();
 
-        try {
-            String token = restClient.post()
-                    .uri(authApiUrl + "login")
-                    .body(loginRequest)
-                    .retrieve()
-                    .onStatus(HttpStatusCode::is4xxClientError, (req, res) -> {
-                        log.error("Response {}", res.getStatusCode());
-                        throw new RuntimeException("Unauthorized");
-                    })
-                    .onStatus(HttpStatusCode::is5xxServerError, (req, res) -> {
-                        log.error("Response {}", res.getStatusCode());
-                        throw new RuntimeException("Internal Server Error");
-                    })
-                    .body(String.class);
+	try {
+	    String token = restClient.post().uri(authApiUrl + "login").body(loginRequest).retrieve()
+		    .onStatus(HttpStatusCode::is4xxClientError, (req, res) -> {
+			log.error("Response {}", res.getStatusCode());
+			throw new RuntimeException("Unauthorized");
+		    }).onStatus(HttpStatusCode::is5xxServerError, (req, res) -> {
+			log.error("Response {}", res.getStatusCode());
+			throw new RuntimeException("Internal Server Error");
+		    }).body(String.class);
 
+	    session.setAttribute("token", token);
+	    return "redirect:/patients";
 
-            session.setAttribute("token", token);
-//	    session.setAttribute("username", username); // TODO remove
-
-            return "redirect:/patients";
-
-        } catch (Exception e) {
-            model.addAttribute("loginError", "Nom d’utilisateur ou mot de passe invalide");
-            return "login";
-        }
+	} catch (Exception e) {
+	    model.addAttribute("loginError", "Nom d’utilisateur ou mot de passe invalide");
+	    return "login";
+	}
     }
 
     @GetMapping("/logout")
     public String logout(HttpSession session) {
-        session.invalidate();
-        return "redirect:/auth/login";
+	session.invalidate();
+	return "redirect:/auth/login";
     }
 
 }

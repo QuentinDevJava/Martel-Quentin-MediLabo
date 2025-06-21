@@ -15,8 +15,6 @@ spring:
           uri: lb://patientapi
           predicates:
             - Path=/api/patients/**
-          filters:
-            - PreserveHostHeader=true
         - id: noteapi
           uri: lb://noteapi
           predicates:
@@ -25,6 +23,10 @@ spring:
           uri: lb://evaluationrisqueapi
           predicates:
             - Path=/api/evaluationrisque/**
+        - id: authapi
+          uri: lb://authapi
+          predicates:
+            - Path=/auth/**
 
 management:
   endpoints:

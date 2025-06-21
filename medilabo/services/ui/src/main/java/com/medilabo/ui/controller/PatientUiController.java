@@ -33,13 +33,13 @@ public class PatientUiController {
 	log.info("UI GET /patients - retrieving list of patients");
 
 	String token = (String) session.getAttribute("token");
-	String username = (String) session.getAttribute("username");
+	// String username = (String) session.getAttribute("username");
 
 	PatientDto[] patients = restClient.get().uri(patientApiUrl + "/notes")
 
 		.header("Authorization", "Bearer " + token)
 
-		.header("X-Username", username)
+		// .header("X-Username", username)
 
 		.retrieve()
 

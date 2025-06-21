@@ -12,11 +12,14 @@ import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Component
 public class AuthSessionFilter implements Filter {
 
-    private static final List<String> PUBLIC_PATHS = List.of("/auth/login", "/auth/token");
+    private static final List<String> PUBLIC_PATHS = List.of("/auth/login", "/auth/token", "/favicon.ico", "/css/**",
+	    "/js/**");
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
@@ -26,7 +29,7 @@ public class AuthSessionFilter implements Filter {
 	HttpServletResponse res = (HttpServletResponse) response;
 
 	String path = req.getRequestURI();
-
+	log.info("Ui use AuthSessionFilter for path : {} ", path);
 	if (isPublicPath(path)) {
 	    chain.doFilter(request, response);
 	    return;

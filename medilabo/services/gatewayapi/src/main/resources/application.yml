@@ -16,8 +16,6 @@ spring:
           uri: lb://patientapi
           predicates:
             - Path=/api/patients/**
-          filters:
-            - PreserveHostHeader=true
         - id: noteapi
           uri: lb://noteapi
           predicates:
@@ -48,5 +46,3 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
-  instance:
-   prefer-ip-address: true
