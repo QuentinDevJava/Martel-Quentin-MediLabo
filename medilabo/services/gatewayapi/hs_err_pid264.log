@@ -151,7 +151,7 @@ Stack slot to memory mapping:
 
 stack at sp + 0 slots: 0x000001e303a390e6 is at code_begin+3174 in an Interpreter codelet
 return entry points  [0x000001e303a38480, 0x000001e303a3a388]  7944 bytes
-stack at sp + 1 slots: 0x000000070d383150 is an oop: com.medilabo.gatewayapi.config.JwtValidationFilter 
+stack at sp + 1 slots: 0x000000070d383150 is an oop: com.medilabo.gatewayapi.config.GatewayFilter
 {0x000000070d383150} - klass: 'com/medilabo/gatewayapi/config/JwtValidationFilter'
  - ---- fields (total size 2 words):
  - private final 'webClient' 'Lorg/springframework/web/reactive/function/client/WebClient;' @12  null (0x00000000)
@@ -631,7 +631,7 @@ Classes unloaded (0 events):
 No events
 
 Classes redefined (1 events):
-Event: 11.657 Thread 0x000001e30db69470 redefined class name=com.medilabo.gatewayapi.config.JwtValidationFilter, count=1
+Event: 11.657 Thread 0x000001e30db69470 redefined class name=com.medilabo.gatewayapi.config.GatewayFilter, count=1
 
 Internal exceptions (20 events):
 Event: 2.638 Thread 0x000001e312dfef70 Exception <a 'java/lang/NoSuchMethodError'{0x000000070cd79e50}: 'int java.lang.invoke.DirectMethodHandle$Holder.invokeStaticInit(java.lang.Object, double, double)'> (0x000000070cd79e50) 
