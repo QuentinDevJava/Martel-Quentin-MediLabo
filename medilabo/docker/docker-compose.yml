@@ -13,7 +13,7 @@ services:
       - mysql-data:/var/lib/mysql
     healthcheck:
       test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
-      interval: 5s
+      interval: 10s
       timeout: 3s
       retries: 5
       start_period: 20s
@@ -43,7 +43,7 @@ services:
       - mongo-data:/data/db
     healthcheck:
       test: ["CMD-SHELL", "echo 'db.runCommand({ ping: 1 }).ok' | mongosh localhost:27017/test --quiet | grep 1"]
-      interval: 5s
+      interval: 10s
       timeout: 3s
       retries: 5
       start_period: 20s
@@ -56,7 +56,7 @@ services:
       - "8761:8761"
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:8761/actuator/health || exit 1"]
-      interval: 2s
+      interval: 10s
       timeout: 3s
       retries: 10
       start_period: 20s
@@ -72,7 +72,7 @@ services:
         condition: service_healthy
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:5555/actuator/health || exit 1"]
-      interval: 2s
+      interval: 10s
       timeout: 3s
       retries: 10
       start_period: 20s
@@ -93,7 +93,7 @@ services:
       - SPRING_CONFIG_IMPORT=optional:configserver:http://configserver:5555
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:5005/actuator/health || exit 1"]
-      interval: 2s
+      interval: 10s
       timeout: 3s
       retries: 10
       start_period: 20s
@@ -116,7 +116,7 @@ services:
       - SPRING_CONFIG_IMPORT=optional:configserver:http://configserver:5555
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:5004/actuator/health || exit 1"]
-      interval: 2s
+      interval: 10s
       timeout: 3s
       retries: 10
       start_period: 20s
@@ -139,7 +139,7 @@ services:
       - SPRING_CONFIG_IMPORT=optional:configserver:http://configserver:5555
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:5002/actuator/health || exit 1"]
-      interval: 2s
+      interval: 10s
       timeout: 3s
       retries: 10
       start_period: 20s
@@ -164,7 +164,7 @@ services:
       - SPRING_CONFIG_IMPORT=optional:configserver:http://configserver:5555
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:5000/actuator/health || exit 1"]
-      interval: 2s
+      interval: 10s
       timeout: 3s
       retries: 10
       start_period: 20s
@@ -183,7 +183,7 @@ services:
       - SPRING_CONFIG_IMPORT=optional:configserver:http://configserver:5555
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:5003/actuator/health || exit 1"]
-      interval: 2s
+      interval: 10s
       timeout: 3s
       retries: 10
       start_period: 20s
@@ -205,7 +205,7 @@ services:
       - EVALUATIONRISQUE_API_URL=http://gatewayapi:5005/api/evaluationrisque/patients/
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:5001 || exit 1"]
-      interval: 2s
+      interval: 10s
       timeout: 3s
       retries: 10
       start_period: 20s
