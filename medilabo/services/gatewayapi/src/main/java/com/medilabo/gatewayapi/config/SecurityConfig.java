@@ -14,7 +14,7 @@ public class SecurityConfig {
 
 		.authorizeExchange(exchanges -> exchanges
 
-			.pathMatchers("/auth/login", "/auth/token", "/actuator/**", "/api/**").permitAll()
+			.pathMatchers("/auth/login", "/auth/validate", "/actuator/**", "/api/**").permitAll()
 
 			.anyExchange().authenticated());
 	return http.build();

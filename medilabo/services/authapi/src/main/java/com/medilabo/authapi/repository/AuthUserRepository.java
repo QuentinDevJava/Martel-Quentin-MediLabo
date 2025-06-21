@@ -5,10 +5,10 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.medilabo.authapi.entities.User;
+import com.medilabo.authapi.entities.AppUser;
 
 @Repository
-public interface AuthUserRepository extends JpaRepository<User, Long> {
+public interface AuthUserRepository extends JpaRepository<AppUser, Long> {
 
-	Optional<User> findByUsername(String username);
+	Optional<AppUser> findByUsername(String username);
 }
