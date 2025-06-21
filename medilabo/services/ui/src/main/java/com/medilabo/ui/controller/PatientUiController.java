@@ -60,15 +60,12 @@ public class PatientUiController {
 	log.info("UI GET /patients/{} - retrieving patient detail", id);
 
 	String token = (String) session.getAttribute("token");
-	String username = (String) session.getAttribute("username");
 
 	PatientDto patient = restClient.get()
 
 		.uri(patientApiUrl + id)
 
 		.header("Authorization", "Bearer " + token)
-
-		.header("X-Username", username)
 
 		.retrieve()
 
@@ -96,15 +93,12 @@ public class PatientUiController {
 	log.info("UI POST /patients/add - submitting new patient: {}", patient);
 
 	String token = (String) session.getAttribute("token");
-	String username = (String) session.getAttribute("username");
 
 	restClient.post().uri(patientApiUrl)
 
 		.body(patient)
 
 		.header("Authorization", "Bearer " + token)
-
-		.header("X-Username", username)
 
 		.retrieve()
 
@@ -124,13 +118,10 @@ public class PatientUiController {
 	log.info("UI GET /patients/update/{} - showing update form", id);
 
 	String token = (String) session.getAttribute("token");
-	String username = (String) session.getAttribute("username");
 
 	PatientDto patient = restClient.get().uri(patientApiUrl + id)
 
 		.header("Authorization", "Bearer " + token)
-
-		.header("X-Username", username)
 
 		.retrieve()
 
@@ -150,15 +141,12 @@ public class PatientUiController {
 	log.info("UI POST /patients/update/{} - updating patient", id);
 
 	String token = (String) session.getAttribute("token");
-	String username = (String) session.getAttribute("username");
 
 	restClient.put().uri(patientApiUrl + id)
 
 		.body(patient)
 
 		.header("Authorization", "Bearer " + token)
-
-		.header("X-Username", username)
 
 		.retrieve().onStatus(HttpStatusCode::isError, (request, response) -> {
 		    log.error("Request to {} {} failed to update patient ID {} - HTTP {}", request.getMethod(),
@@ -176,15 +164,12 @@ public class PatientUiController {
 	log.info("UI GET /patients/notes/{} - displaying notes for patient", id);
 
 	String token = (String) session.getAttribute("token");
-	String username = (String) session.getAttribute("username");
 
 	PatientDto patient = restClient.get()
 
 		.uri(patientApiUrl + "notes/" + id)
 
 		.header("Authorization", "Bearer " + token)
-
-		.header("X-Username", username)
 
 		.retrieve().onStatus(HttpStatusCode::isError, (request, response) -> {
 		    log.error("Request to {} {} failed to retrieve notes for patient ID {} - HTTP {}",

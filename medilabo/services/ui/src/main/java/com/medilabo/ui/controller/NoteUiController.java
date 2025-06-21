@@ -45,15 +45,12 @@ public class NoteUiController {
 	log.info("UI POST /patients/notes/add/{} - submitting note: {}", patientId, noteText);
 
 	String token = (String) session.getAttribute("token");
-	String username = (String) session.getAttribute("username");
 
 	PatientDto patientDto = restClient.get()
 
 		.uri(patientApiUrl + patientId)
 
 		.header("Authorization", "Bearer " + token)
-
-		.header("X-Username", username)
 
 		.retrieve()
 
@@ -78,8 +75,6 @@ public class NoteUiController {
 
 		.header("Authorization", "Bearer " + token)
 
-		.header("X-Username", username)
-
 		.retrieve()
 
 		.onStatus(HttpStatusCode::isError, (request, response) -> {
@@ -98,13 +93,10 @@ public class NoteUiController {
 	log.info("UI GET /patients/notes/update/{} - displaying note update form", noteId);
 
 	String token = (String) session.getAttribute("token");
-	String username = (String) session.getAttribute("username");
 
 	NoteDto noteDto = restClient.get().uri(noteApiUrl + noteId)
 
 		.header("Authorization", "Bearer " + token)
-
-		.header("X-Username", username)
 
 		.retrieve()
 
@@ -128,15 +120,12 @@ public class NoteUiController {
 	log.info("UI POST /patients/notes/update/{} - updating note with new content", noteId);
 
 	String token = (String) session.getAttribute("token");
-	String username = (String) session.getAttribute("username");
 
 	NoteDto noteDto = restClient.get()
 
 		.uri(noteApiUrl + noteId)
 
 		.header("Authorization", "Bearer " + token)
-
-		.header("X-Username", username)
 
 		.retrieve()
 
@@ -159,8 +148,6 @@ public class NoteUiController {
 		.body(noteDto)
 
 		.header("Authorization", "Bearer " + token)
-
-		.header("X-Username", username)
 
 		.retrieve()
 

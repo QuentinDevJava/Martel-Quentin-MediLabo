@@ -10,5 +10,5 @@ RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 COPY --from=builder /build/target/*.jar authapi.jar
-EXPOSE 5002
+EXPOSE 5004
 ENTRYPOINT ["java", "-jar", "/app/authapi.jar"]

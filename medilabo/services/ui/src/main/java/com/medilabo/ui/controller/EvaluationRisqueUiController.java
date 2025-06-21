@@ -36,15 +36,12 @@ public class EvaluationRisqueUiController {
 		+ ": EvaluationRisqueApi use RestController to send diabetes report");
 
 	String token = (String) session.getAttribute("token");
-	String username = (String) session.getAttribute("username");
 
 	PatientDto patientDto = restClient.get()
 
 		.uri(patientApiUrl + patientId)
 
 		.header("Authorization", "Bearer " + token)
-
-		.header("X-Username", username)
 
 		.retrieve()
 
@@ -73,8 +70,6 @@ public class EvaluationRisqueUiController {
 		.uri(evaluationRisqueApiUrl + patientId)
 
 		.header("Authorization", "Bearer " + token)
-
-		.header("X-Username", username)
 
 		.retrieve()
 
