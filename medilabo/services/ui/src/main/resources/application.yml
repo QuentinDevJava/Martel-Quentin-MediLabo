@@ -13,16 +13,16 @@ logging:
 
 patient:
   api:
-    url: http://localhost:5005/api/patients/
+    url: http://gatewayapi:5005/api/patients/
 
 note:
   api:
-    url: http://localhost:5005/api/notes/
+    url: http://gatewayapi:5005/api/notes/
 
 evaluationrisque:
   api:
-    url: http://localhost:5005/api/evaluationrisque/patients/
+    url: http://gatewayapi:5005/api/evaluationrisque/patients/
 
 auth:
   api:
-    url: http://localhost:5005/auth/
+    url: http://gatewayapi:5005/auth/
