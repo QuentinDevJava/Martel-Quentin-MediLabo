@@ -10,17 +10,17 @@ import org.junit.jupiter.api.Test;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.medilabo.authapi.services.JwtServiceImpl;
+import com.medilabo.authapi.services.JwtService;
 
 public class JwtServiceTest {
 
-	private JwtServiceImpl jwtService;
+	private JwtService jwtService;
 
 	@BeforeEach
 	void setUp() {
-		jwtService = new JwtServiceImpl();
+		jwtService = new JwtService();
 
-		jwtService = new JwtServiceImpl();
+		jwtService = new JwtService();
 		jwtService = injectTestValues(jwtService, "3cfa76ef14937c1c0ea519f8fc057a80fcd04a7420f8e8bcd0a7567c272e007b",
 				3600000);
 	}
@@ -42,7 +42,7 @@ public class JwtServiceTest {
 
 	@Test
 	void isTokenInvalidWhenExpired() {
-		JwtServiceImpl shortLivedJwtService = injectTestValues(new JwtServiceImpl(),
+		JwtService shortLivedJwtService = injectTestValues(new JwtService(),
 				"3cfa76ef14937c1c0ea519f8fc057a80fcd04a7420f8e8bcd0a7567c272e007b", 1);
 
 		UserDetails userDetails = User.withUsername("testuser").password("testpass").roles("USER").build();
@@ -71,13 +71,13 @@ public class JwtServiceTest {
 		assertFalse(jwtService.isTokenValid(token, otherUser));
 	}
 
-	private JwtServiceImpl injectTestValues(JwtServiceImpl service, String secret, long expiration) {
+	private JwtService injectTestValues(JwtService service, String secret, long expiration) {
 		try {
-			var secretField = JwtServiceImpl.class.getDeclaredField("secretKey");
+			var secretField = JwtService.class.getDeclaredField("secretKey");
 			secretField.setAccessible(true);
 			secretField.set(service, secret);
 
-			var expField = JwtServiceImpl.class.getDeclaredField("jwtExpiration");
+			var expField = JwtService.class.getDeclaredField("jwtExpiration");
 			expField.setAccessible(true);
 			expField.set(service, expiration);
 

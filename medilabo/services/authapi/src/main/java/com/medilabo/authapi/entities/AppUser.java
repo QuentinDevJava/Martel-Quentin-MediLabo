@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 @AllArgsConstructor
-public class User implements UserDetails {
+public class AppUser implements UserDetails {
 
     private static final long serialVersionUID = 1L;
 
