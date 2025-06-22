@@ -6,7 +6,7 @@
 
 ## Structure du projet
 
-![Architecture des microservices](schema.png)
+![Image](https://github.com/user-attachments/assets/aa823f3e-c6cf-49d7-9b85-a9242507b833)
 
 ---
 
