@@ -24,7 +24,7 @@ public class AuthapiConfiguration {
     @Bean
     UserDetailsService userDetailsService() {
 	return username -> authUserRepository.findByUsername(username)
-		.orElseThrow(() -> new UsernameNotFoundException("Utilisateur non trouvé"));
+		.orElseThrow(() -> new UsernameNotFoundException("User not found"));
     }
 
     @Bean

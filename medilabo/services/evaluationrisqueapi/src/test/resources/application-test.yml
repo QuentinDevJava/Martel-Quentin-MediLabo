@@ -1,0 +1,11 @@
+server:
+  port: 5003
+
+spring:
+  application:
+    name: evaluationrisqueapi
+  cloud:
+    config:
+      enabled: false
+    discovery:
+      enabled: false
