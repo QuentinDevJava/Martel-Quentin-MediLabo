@@ -25,46 +25,46 @@ import lombok.extern.slf4j.Slf4j;
 @AllArgsConstructor
 public class PatientController {
 
-	private PatientService patientService;
+    private PatientService patientService;
 
-	@GetMapping("{id}")
-	public ResponseEntity<PatientDto> getPatientById(@PathVariable int id) {
-		log.info("Receive GET /api/patients/" + id + ": PatientApi use RestController to send PatientDto by ID");
-		return new ResponseEntity<>(patientService.getPatientById(id), HttpStatus.OK);
-	}
+    @PostMapping
+    public ResponseEntity<PatientDto> addPatient(@Valid @RequestBody PatientDto patientDto) {
+	PatientDto savedPatient = patientService.addPatient(patientDto);
+	log.info("Receive POST /api/patients: PatientDto " + patientDto
+		+ " - PatientApi use RestController to create Patient");
+	return new ResponseEntity<>(savedPatient, HttpStatus.CREATED);
+    }
 
-	@GetMapping
-	public ResponseEntity<List<PatientDto>> getAllPatients() {
-		log.info("Receive GET /api/patients: PatientApi use RestController to send list of PatientDto");
-		return new ResponseEntity<>(patientService.getAllPatient(), HttpStatus.OK);
-	}
+    @PutMapping("{id}")
+    public ResponseEntity<PatientDto> updatePatient(@PathVariable int id, @Valid @RequestBody PatientDto patientDto) {
+	PatientDto updatedPatient = patientService.updatePatient(id, patientDto);
+	log.info("Receive PUT /api/patients/" + id + ": PatientDto " + patientDto
+		+ " - PatientApi use RestController to update Patient");
+	return new ResponseEntity<>(updatedPatient, HttpStatus.OK);
+    }
 
-	@PostMapping
-	public ResponseEntity<PatientDto> addPatient(@Valid @RequestBody PatientDto patientDto) {
-		PatientDto savedPatient = patientService.addPatient(patientDto);
-		log.info("Receive POST /api/patients: PatientDto " + patientDto
-				+ " - PatientApi use RestController to create Patient");
-		return new ResponseEntity<>(savedPatient, HttpStatus.CREATED);
-	}
+    @GetMapping("{id}")
+    public ResponseEntity<PatientDto> getPatientById(@PathVariable int id) {
+	log.info("Receive GET /api/patients/" + id + ": PatientApi use RestController to send PatientDto by ID");
+	return new ResponseEntity<>(patientService.getPatientById(id), HttpStatus.OK);
+    }
 
-	@PutMapping("{id}")
-	public ResponseEntity<PatientDto> updatePatient(@PathVariable int id, @Valid @RequestBody PatientDto patientDto) {
-		PatientDto updatedPatient = patientService.updatePatient(id, patientDto);
-		log.info("Receive PUT /api/patients/" + id + ": PatientDto " + patientDto
-				+ " - PatientApi use RestController to update Patient");
-		return new ResponseEntity<>(updatedPatient, HttpStatus.OK);
-	}
+    @GetMapping
+    public ResponseEntity<List<PatientDto>> getAllPatients() {
+	log.info("Receive GET /api/patients: PatientApi use RestController to send list of PatientDto");
+	return new ResponseEntity<>(patientService.getAllPatient(), HttpStatus.OK);
+    }
 
-	@GetMapping("notes/{id}")
-	public ResponseEntity<PatientDto> getPatientWithNotesById(@PathVariable int id) {
-		log.info("Receive GET /api/patients/" + id + ": PatientApi use RestController to send PatientDto by ID");
-		return new ResponseEntity<>(patientService.getPatientWithNotesById(id), HttpStatus.OK);
-	}
+    @GetMapping("notes/{id}")
+    public ResponseEntity<PatientDto> getPatientWithNotesById(@PathVariable int id) {
+	log.info("Receive GET /api/patients/" + id + ": PatientApi use RestController to send PatientDto by ID");
+	return new ResponseEntity<>(patientService.getPatientWithNotesById(id), HttpStatus.OK);
+    }
 
-	@GetMapping("notes")
-	public ResponseEntity<List<PatientDto>> getAllPatientWithNotesById() {
-		log.info("Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes");
-		return new ResponseEntity<>(patientService.getAllPatientsWithNotes(), HttpStatus.OK);
-	}
+    @GetMapping("notes")
+    public ResponseEntity<List<PatientDto>> getAllPatientWithNotesById() {
+	log.info("Receive GET /api/patients/notes - PatientApi use RestController to send all Patients with notes");
+	return new ResponseEntity<>(patientService.getAllPatientsWithNotes(), HttpStatus.OK);
+    }
 
 }
