@@ -40,6 +40,7 @@ public class JwtServiceTest {
 	when(userDetailsService.loadUserByUsername("testuser")).thenReturn(userDetails);
 
 	String token = jwtService.generateToken(userDetails);
+
 	assertNotNull(token);
 	assertFalse(token.isEmpty());
 

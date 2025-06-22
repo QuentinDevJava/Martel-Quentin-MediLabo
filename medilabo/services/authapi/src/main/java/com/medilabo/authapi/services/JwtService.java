@@ -33,12 +33,10 @@ public class JwtService {
 	return buildToken(userDetails);
     }
 
-//TODO
     public boolean validateToken(String token) {
-	// String username = extractUsername(token);
-	// UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-	// return username.equals(userDetails.getUsername()) && !isTokenExpired(token);
-	return !isTokenExpired(token);
+	String username = extractUsername(token);
+	UserDetails userDetails = userDetailsService.loadUserByUsername(username);
+	return username.equals(userDetails.getUsername()) && !isTokenExpired(token);
     }
 
     private String extractUsername(String token) {
