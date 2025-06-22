@@ -6,7 +6,7 @@
 
 ## Structure du projet
 
-![Image](https://github.com/user-attachments/assets/aa823f3e-c6cf-49d7-9b85-a9242507b833)
+![Image](https://github.com/user-attachments/assets/7f8cdb31-4bf3-4b8b-8c0c-bd988abede35)
 
 ---
 
@@ -21,7 +21,6 @@
 - **Patient API** – Gestion des patients (MySQL)
 - **Note API** – Gestion des notes médicales (MongoDB)
 - **Évaluation Risque API** – Analyse de risque de diabète (calculs & logique métier)
-- **Swagger UI** – Documentation interactive de chaque API
 - **Bases de données** :
   - **MySQL** : données patients
   - **MongoDB** : notes médicales
