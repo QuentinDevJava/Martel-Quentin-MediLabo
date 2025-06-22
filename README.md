@@ -17,7 +17,7 @@
 - **Eureka Server** – Service de découverte (Service Discovery)
 - **Config Server** – Centralisation de la configuration Spring Cloud
 - **Actuator** – Endpoints de monitoring pour chaque microservice (`/actuator/health`)
-- **Auth API** – Gestion des utilisateurs et tokens (MongoDB)
+- **Auth API** – Gestion des utilisateurs et tokens (PostgreSQL)
 - **Patient API** – Gestion des patients (MySQL)
 - **Note API** – Gestion des notes médicales (MongoDB)
 - **Évaluation Risque API** – Analyse de risque de diabète (calculs & logique métier)
@@ -34,9 +34,6 @@
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
 - [Docker Desktop](https://docs.docker.com/desktop/)
-- Java 21+
-- Maven 4.0.0+
-
 ---
 
 ## 🗂️ Arborescence du projet
@@ -120,24 +117,7 @@ docker compose down -v
     Composant                 URL
 
     Interface utilisateur :	  http://localhost:5001
-    Gateway :     	          http://localhost:5005
     Eureka Server: 	          http://localhost:8761
-    Config Server: 	          http://localhost:5555
-    Auth API :	              http://localhost:5004/actuator	
-    Note API :                http://localhost:5002/actuator	
-    Patient API :	          http://localhost:5000/actuator	
-    Évaluation Risque API :	  http://localhost:5003/actuator	
-
-## Swagger (Documentation des APIs)
-
-Chaque microservice expose sa documentation Swagger :
-
-    Microservice	          Swagger UI 
-
-    Patient API	              http://localhost:5000/swagger-ui.html
-    Note API	              http://localhost:5002/swagger-ui.html
-    Évaluation Risque API     http://localhost:5003/swagger-ui.html
-    Auth API	              http://localhost:5004/swagger-ui.html
 
 ## Commandes Docker utiles
 
