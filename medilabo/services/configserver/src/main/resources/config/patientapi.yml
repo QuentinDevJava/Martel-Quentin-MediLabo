@@ -4,11 +4,10 @@ server:
 spring:
   application:
     name: patientapi
-
   datasource:
-    url: jdbc:mysql://mysqldb:3306/medilabo_mysql?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
-    username: medilabo_admin
-    password: "!eUFG8LWZ4nb2$@VBVuiLI69gre?Zb?j"
+    url: jdbc:mysql://mysqldb:3306/${MYSQL_INITDB_DATABASE}?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: ${MYSQL_INITDB_USER}
+    password: ${MYSQL_INITDB_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:

@@ -120,6 +120,8 @@ services:
     environment:
       - SPRING_APPLICATION_NAME=authapi
       - SPRING_CONFIG_IMPORT=optional:configserver:http://configserver:5555
+    env_file:
+      - .env
     healthcheck:
       test: "curl --fail --silent http://localhost:5004/actuator/health | grep UP || exit 1"
       interval: 10s
@@ -143,6 +145,8 @@ services:
     environment:
       - SPRING_APPLICATION_NAME=noteapi
       - SPRING_CONFIG_IMPORT=optional:configserver:http://configserver:5555
+    env_file:
+      - .env
     healthcheck:
       test: "curl --fail --silent http://localhost:5002/actuator/health | grep UP || exit 1"
       interval: 10s
@@ -168,6 +172,8 @@ services:
     environment:
       - SPRING_APPLICATION_NAME=patientapi
       - SPRING_CONFIG_IMPORT=optional:configserver:http://configserver:5555
+    env_file:
+      - .env
     healthcheck:
       test: "curl --fail --silent http://localhost:5000/actuator/health | grep UP || exit 1"
       interval: 10s

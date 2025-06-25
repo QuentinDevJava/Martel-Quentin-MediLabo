@@ -4,11 +4,10 @@ server:
 spring:
   application:
     name: authapi
-
   datasource:
-    url: jdbc:postgresql://authdb:5432/medilabo_postgres
-    username: postgres_admin
-    password: "!eUFG8LWZ4nb2$@VBVuiLI69gre?Zb?j"
+    url: jdbc:postgresql://authdb:5432/${POSTGRES_INITDB_DATABASE}
+    username: ${POSTGRES_INITDB_ROOT_USERNAME}
+    password: ${POSTGRES_INITDB_ROOT_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: create-drop
