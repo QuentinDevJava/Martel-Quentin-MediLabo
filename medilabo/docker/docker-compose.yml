@@ -49,7 +49,7 @@ services:
       - mongo-data:/data/db
     healthcheck:
       test: ["CMD-SHELL", "echo 'db.runCommand({ ping: 1 }).ok' | mongosh localhost:27017/test --quiet | grep 1"]
-      interval: 30s
+      interval: 60s
       timeout: 20s
       retries: 5
       start_period: 20s
@@ -142,9 +142,6 @@ services:
         condition: service_healthy
       gatewayapi:
         condition: service_healthy
-    environment:
-      - SPRING_APPLICATION_NAME=noteapi
-      - SPRING_CONFIG_IMPORT=optional:configserver:http://configserver:5555
     env_file:
       - .env
     healthcheck:

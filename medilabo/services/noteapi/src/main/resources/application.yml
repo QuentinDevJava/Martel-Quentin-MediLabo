@@ -1,2 +1,13 @@
 server:
   port: 5002
+spring:
+  profiles:
+    active:
+    - "prod"
+  application:
+    name: noteapi
+  cloud:
+    config:
+      enabled: true
+  config:
+    import: optional:configserver:${CONFIG_SERVICE_URL:http://localhost:5555}
