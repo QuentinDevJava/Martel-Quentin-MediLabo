@@ -45,8 +45,8 @@ public class GatewayFilter implements WebFilter {
     }
 
     private Mono<Void> callAuthApi(ServerWebExchange exchange, WebFilterChain chain, String token) {
-	return webClient.post().uri("lb://authapi/auth/validate?token=" + token) // appel via service discovery
-		.retrieve().bodyToMono(Boolean.class).flatMap(valid -> {
+	return webClient.post().uri("lb://authapi/auth/validate?token=" + token).retrieve().bodyToMono(Boolean.class)
+		.flatMap(valid -> {
 		    if (Boolean.TRUE.equals(valid)) {
 			return chain.filter(exchange);
 		    } else {

@@ -26,3 +26,9 @@ evaluationrisque:
 auth:
   api:
     url: http://gatewayapi:5005/auth/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
