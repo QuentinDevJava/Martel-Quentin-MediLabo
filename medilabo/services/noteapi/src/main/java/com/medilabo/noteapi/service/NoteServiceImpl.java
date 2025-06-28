@@ -26,7 +26,7 @@ public class NoteServiceImpl implements NoteService {
 
     @Override
     public List<NoteDto> getNotesByPatientId(int patientId) {
-	return noteRepository.findAllByPatientId(patientId).stream().map(patient -> noteMapper.toDto(patient)).toList();
+	return noteRepository.findAllByPatientId(patientId).stream().map(noteMapper::toDto).toList();
     }
 
     @Override
@@ -42,7 +42,7 @@ public class NoteServiceImpl implements NoteService {
     public NoteDto updateNote(String id, NoteDto updateNoteDto) {
 	NoteDto noteDto = getNoteDtoWithNoteById(id);
 	if (noteDto == null) {
-	    throw new IllegalArgumentException("The note with id : " + id + "is not found");
+	    throw new IllegalArgumentException("The note is not found");
 	} else {
 	    noteDto.setContenuNote(updateNoteDto.getContenuNote());
 
@@ -59,6 +59,10 @@ public class NoteServiceImpl implements NoteService {
     public int getNumberOfTermsByPatient(int patientId) {
 
 	List<NoteDto> notes = getNotesByPatientId(patientId);
+	if (notes == null) {
+	    throw new IllegalArgumentException("The patient is not found");
+	}
+
 	StringBuilder contents = new StringBuilder();
 	for (NoteDto note : notes) {
 	    contents.append(contents.append(note.getContenuNote().toLowerCase()).append(" "));
