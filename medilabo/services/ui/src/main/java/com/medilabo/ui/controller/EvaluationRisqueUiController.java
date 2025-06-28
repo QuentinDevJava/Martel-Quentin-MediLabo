@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.client.RestClient;
 
 import com.medilabo.ui.dto.PatientDto;
+import com.medilabo.ui.exception.EvaluationRisqueControllerException;
 
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
@@ -57,7 +58,7 @@ public class EvaluationRisqueUiController {
 
 			    , response.getStatusCode());
 
-		    throw new RuntimeException("Error retrieving rapport");
+		    throw new EvaluationRisqueControllerException("Error retrieving rapport");
 
 		}).body(PatientDto.class);
 
@@ -85,7 +86,7 @@ public class EvaluationRisqueUiController {
 
 			    , response.getStatusCode());
 
-		    throw new RuntimeException("Error retrieving dangerLevel");
+		    throw new EvaluationRisqueControllerException("Error retrieving dangerLevel");
 
 		}).body(String.class);
 

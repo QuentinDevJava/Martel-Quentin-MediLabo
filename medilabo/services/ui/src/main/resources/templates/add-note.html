@@ -3,9 +3,9 @@
 <head th:replace="~{fragments/header :: head(pageTitle='Ajouter une note')}"></head>
 <body>
     <div class="container my-5">
-        <h1 class="mb-4">Ajouter une note pour <span th:text="${patientNom}"></span></h1>
+        <h1 class="mb-4">Ajouter une note</h1>
 
-        <form th:action="@{'/patients/notes/add/' + ${patientNom}}" method="post">
+        <form th:action="@{'/patients/notes/add/' + ${patientId}}" method="post">
             <div class="mb-4">
                 <label for="note" class="form-label">Contenu de la note :</label>
                 <textarea 

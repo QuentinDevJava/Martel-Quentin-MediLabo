@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	
+<head th:replace="~{fragments/header :: head(pageTitle='Erreur')}"></head>
+	
+<body class="container mt-4">
+	<div th:replace="~{fragments/navbar :: navbar}"></div>
+
+	    <h1>Une erreur s'est produite</h1>
+		
+	    <p th:text="${errorMessage}">Message d'erreur</p>
+	    <a href="/patients">Retour à la liste des patients</a>
+		<div th:replace="~{fragments/footer :: footer}"></div>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: ui
+  thymeleaf:
+    cache: false
+
+server:
+  port: 5001
+
+logging:
+  file:
+    name: logs/mediLaboUi.log
+
+patient:
+  api:
+    url: http://localhost:5005/api/patients/
+
+note:
+  api:
+    url: http://localhost:5005/api/notes/
+
+evaluationrisque:
+  api:
+    url: http://localhost:5005/api/evaluationrisque/patients/
+
+auth:
+  api:
+    url: http://localhost:5005/auth/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health

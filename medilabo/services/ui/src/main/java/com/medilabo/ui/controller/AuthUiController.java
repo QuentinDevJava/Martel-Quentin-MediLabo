@@ -52,7 +52,8 @@ public class AuthUiController {
 	    return "redirect:/patients";
 
 	} catch (Exception e) {
-	    model.addAttribute("loginError", "Nom d’utilisateur ou mot de passe invalide");
+	    model.addAttribute("loginError", "Nom d’utilisateur ou mot de passe invalide : " + e.getLocalizedMessage()
+		    + " -- " + e.getMessage());
 	    return "login";
 	}
     }

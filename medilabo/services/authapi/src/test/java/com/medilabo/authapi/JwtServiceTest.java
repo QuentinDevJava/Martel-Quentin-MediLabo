@@ -1,10 +1,13 @@
 package com.medilabo.authapi;
 
+import static org.awaitility.Awaitility.await;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
+
+import java.time.Duration;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -50,19 +53,16 @@ public class JwtServiceTest {
     @Test
     void isTokenInvalidWhenExpired() {
 	JwtService shortLivedJwtService = injectTestValues(new JwtService(userDetailsService),
-		"3cfa76ef14937c1c0ea519f8fc057a80fcd04a7420f8e8bcd0a7567c272e007b", 1);
+		"3cfa76ef14937c1c0ea519f8fc057a80fcd04a7420f8e8bcd0a7567c272e007b", 1 // expiration in milliseconds
+	);
 
 	UserDetails userDetails = User.withUsername("testuser").password("testpass").roles("USER").build();
 
 	String token = shortLivedJwtService.generateToken(userDetails);
 
-	try {
-	    Thread.sleep(5);
-	} catch (InterruptedException e) {
-	    Thread.currentThread().interrupt();
-	}
-
-	assertThrows(io.jsonwebtoken.ExpiredJwtException.class, () -> shortLivedJwtService.validateToken(token));
+	await().atMost(Duration.ofSeconds(2))
+		.untilAsserted(() -> assertThrows(io.jsonwebtoken.ExpiredJwtException.class,
+			() -> shortLivedJwtService.validateToken(token)));
     }
 
     private JwtService injectTestValues(JwtService service, String secret, long expiration) {
