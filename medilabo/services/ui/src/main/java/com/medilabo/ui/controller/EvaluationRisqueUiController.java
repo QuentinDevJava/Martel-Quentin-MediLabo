@@ -63,7 +63,7 @@ public class EvaluationRisqueUiController {
 		}).body(PatientDto.class);
 
 	if (patientDto == null) {
-	    return "redirect:/patients";
+	    throw new EvaluationRisqueControllerException("Error retrieving rapport");
 	}
 
 	String dangerLevel = restClient.get()

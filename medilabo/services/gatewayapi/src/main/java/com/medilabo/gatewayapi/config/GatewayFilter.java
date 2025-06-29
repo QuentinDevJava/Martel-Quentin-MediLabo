@@ -47,12 +47,15 @@ public class GatewayFilter implements WebFilter {
 	return webClient.post().uri("lb://authapi/auth/validate?token=" + token).retrieve().bodyToMono(Boolean.class)
 		.flatMap(valid -> {
 		    if (Boolean.TRUE.equals(valid)) {
+			log.info("Requete avec token valide");
 			return chain.filter(exchange);
 		    } else {
+			log.info("Requete avec token non valide");
 			exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
 			return exchange.getResponse().setComplete();
 		    }
 		}).onErrorResume(error -> {
+		    log.info("Requete avec token non valide");
 		    exchange.getResponse().setStatusCode(HttpStatus.INTERNAL_SERVER_ERROR);
 		    return exchange.getResponse().setComplete();
 		});

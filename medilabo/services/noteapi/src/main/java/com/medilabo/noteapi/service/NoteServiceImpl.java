@@ -15,29 +15,51 @@ import com.medilabo.noteapi.repository.NoteRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * Service de gestion des notes médicales. Fournit les opérations CRUD et le
+ * calcul du nombre de mots-clés liés à des termes médicaux dans les notes.
+ */
 @Slf4j
 @Service
 @AllArgsConstructor
 public class NoteServiceImpl implements NoteService {
 
     private final NoteMapper noteMapper = new NoteMapper();
-
     private final NoteRepository noteRepository;
 
+    /**
+     * Récupère toutes les notes associées à un patient.
+     *
+     * @param patientId identifiant du patient
+     * @return liste des NoteDto associées
+     */
     @Override
     public List<NoteDto> getNotesByPatientId(int patientId) {
 	return noteRepository.findAllByPatientId(patientId).stream().map(noteMapper::toDto).toList();
     }
 
+    /**
+     * Crée une nouvelle note médicale pour un patient.
+     *
+     * @param noteDto données de la note à créer
+     * @return note créée sous forme de NoteDto
+     */
     @Override
     public NoteDto createNote(NoteDto noteDto) {
-
 	Note note = Note.builder().patientId(noteDto.getPatientId()).patientNom(noteDto.getPatientNom())
 		.contenuNote(noteDto.getContenuNote()).build();
 
 	return noteMapper.toDto(noteRepository.save(note));
     }
 
+    /**
+     * Met à jour une note existante.
+     *
+     * @param id            identifiant de la note à mettre à jour
+     * @param updateNoteDto nouvelles données de la note
+     * @return note mise à jour sous forme de NoteDto
+     * @throws IllegalArgumentException si la note n'existe pas
+     */
     @Override
     public NoteDto updateNote(String id, NoteDto updateNoteDto) {
 	NoteDto noteDto = getNoteDtoWithNoteById(id);
@@ -45,19 +67,31 @@ public class NoteServiceImpl implements NoteService {
 	    throw new IllegalArgumentException("The note is not found");
 	} else {
 	    noteDto.setContenuNote(updateNoteDto.getContenuNote());
-
 	    return noteMapper.toDto(noteRepository.save(noteMapper.toEntity(noteDto)));
 	}
     }
 
+    /**
+     * Récupère une note par son identifiant.
+     *
+     * @param id identifiant de la note
+     * @return NoteDto correspondante ou null si non trouvée
+     */
     @Override
     public NoteDto getNotesById(String id) {
 	return getNoteDtoWithNoteById(id);
     }
 
+    /**
+     * Calcule le nombre de termes médicaux détectés dans les notes d’un patient.
+     * Les termes sont regroupés et comptés une seule fois par groupe.
+     *
+     * @param patientId identifiant du patient
+     * @return nombre de groupes de termes médicaux trouvés
+     * @throws IllegalArgumentException si aucun patient n'est trouvé
+     */
     @Override
     public int getNumberOfTermsByPatient(int patientId) {
-
 	List<NoteDto> notes = getNotesByPatientId(patientId);
 	if (notes == null) {
 	    throw new IllegalArgumentException("The patient is not found");
@@ -65,8 +99,9 @@ public class NoteServiceImpl implements NoteService {
 
 	StringBuilder contents = new StringBuilder();
 	for (NoteDto note : notes) {
-	    contents.append(contents.append(note.getContenuNote().toLowerCase()).append(" "));
+	    contents.append(note.getContenuNote().toLowerCase()).append(" ");
 	}
+
 	String contentString = contents.toString();
 
 	Map<String, List<String>> termGroups = new HashMap<>();
@@ -88,7 +123,7 @@ public class NoteServiceImpl implements NoteService {
 	    for (String term : entry.getValue()) {
 		if (contentString.contains(term)) {
 		    count++;
-		    log.info("Termes trouvé : " + term);
+		    log.info("Terme trouvé : " + term);
 		    break;
 		}
 	    }
@@ -99,11 +134,6 @@ public class NoteServiceImpl implements NoteService {
 
     private NoteDto getNoteDtoWithNoteById(String noteId) {
 	Optional<Note> note = noteRepository.findById(noteId);
-	if (note.isPresent()) {
-	    return noteMapper.toDto(note.get());
-	} else {
-	    return null;
-	}
+	return note.map(noteMapper::toDto).orElse(null);
     }
-
 }

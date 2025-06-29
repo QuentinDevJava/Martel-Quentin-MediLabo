@@ -10,29 +10,32 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * DTO représentant un patient.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class PatientDto {
 
-	private int id;
+    private int id;
 
-	@NotBlank(message = "Last name must not be blank")
-	private String nom;
+    @NotBlank(message = "Last name must not be blank")
+    private String nom;
 
-	@NotBlank(message = "First name must not be blank")
-	private String prenom;
+    @NotBlank(message = "First name must not be blank")
+    private String prenom;
 
-	@Past(message = "Birth date must be in the past")
-	private LocalDate dateAnniversaire;
+    @Past(message = "Birth date must be in the past")
+    private LocalDate dateAnniversaire;
 
-	@NotBlank(message = "Gender must not be blank")
-	private String genre;
+    @NotBlank(message = "Gender must not be blank")
+    private String genre;
 
-	private String adresse;
+    private String adresse;
 
-	private String telephone;
+    private String telephone;
 
-	List<NoteDto> notes;
+    List<NoteDto> notes;
 }

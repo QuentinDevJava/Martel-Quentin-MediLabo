@@ -39,8 +39,12 @@ public class AuthController {
 	log.info("Receive POST /auth/validate - Authapi use RestController to validate token");
 
 	Boolean tokenIsValid = authService.validateToken(token);
+	if (Boolean.TRUE.equals(tokenIsValid)) {
+	    return ResponseEntity.ok(tokenIsValid);
+	} else {
+	    return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(tokenIsValid);
 
-	return ResponseEntity.ok(tokenIsValid);
+	}
 
     }
 }

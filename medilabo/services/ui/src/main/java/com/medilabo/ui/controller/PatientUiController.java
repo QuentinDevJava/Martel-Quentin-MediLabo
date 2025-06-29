@@ -59,7 +59,7 @@ public class PatientUiController {
 
 	String token = (String) session.getAttribute("token");
 
-	PatientDto patient = restClient.get()
+	PatientDto patientDto = restClient.get()
 
 		.uri(patientApiUrl + id)
 
@@ -75,7 +75,11 @@ public class PatientUiController {
 
 		.body(PatientDto.class);
 
-	model.addAttribute("patient", patient);
+	if (patientDto == null) {
+	    throw new PatientControllerException("Failed to retrieve patient details");
+	}
+
+	model.addAttribute("patient", patientDto);
 	return "patient-detail";
     }
 
@@ -117,7 +121,7 @@ public class PatientUiController {
 
 	String token = (String) session.getAttribute("token");
 
-	PatientDto patient = restClient.get().uri(patientApiUrl + id)
+	PatientDto patientDto = restClient.get().uri(patientApiUrl + id)
 
 		.header("Authorization", "Bearer " + token)
 
@@ -129,8 +133,12 @@ public class PatientUiController {
 		    throw new PatientControllerException("Failed to fetch patient data");
 		}).body(PatientDto.class);
 
-	model.addAttribute("patient", patient);
-	model.addAttribute("dateAnniversaire", patient.getDateAnniversaire());
+	if (patientDto == null) {
+	    throw new PatientControllerException("Failed to retrieve patient details");
+	}
+
+	model.addAttribute("patient", patientDto);
+	model.addAttribute("dateAnniversaire", patientDto.getDateAnniversaire());
 	return "patient-update";
     }
 
@@ -163,7 +171,7 @@ public class PatientUiController {
 
 	String token = (String) session.getAttribute("token");
 
-	PatientDto patient = restClient.get()
+	PatientDto patientDto = restClient.get()
 
 		.uri(patientApiUrl + "notes/" + id)
 
@@ -177,7 +185,11 @@ public class PatientUiController {
 
 		.body(PatientDto.class);
 
-	model.addAttribute("patient", patient);
+	if (patientDto == null) {
+	    throw new PatientControllerException("Failed to retrieve patient details");
+	}
+
+	model.addAttribute("patient", patientDto);
 	return "patient-notes";
     }
 }

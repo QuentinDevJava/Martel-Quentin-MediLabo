@@ -13,6 +13,7 @@ import org.springframework.web.client.RestClient;
 
 import com.medilabo.ui.dto.NoteDto;
 import com.medilabo.ui.dto.PatientDto;
+import com.medilabo.ui.exception.EvaluationRisqueControllerException;
 import com.medilabo.ui.exception.NoteControllerException;
 
 import jakarta.servlet.http.HttpSession;
@@ -62,6 +63,10 @@ public class NoteUiController {
 		})
 
 		.body(PatientDto.class);
+
+	if (patientDto == null) {
+	    throw new EvaluationRisqueControllerException("Error retrieving rapport");
+	}
 
 	NoteDto noteDto = new NoteDto();
 	noteDto.setPatientId(patientId);
