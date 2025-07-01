@@ -34,7 +34,6 @@ public class GatewayFilter implements GlobalFilter {
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        log.info("Executing Global Filter");
         ServerHttpRequest request = exchange.getRequest();
         log.info("Request URI: {}", request.getURI());
 

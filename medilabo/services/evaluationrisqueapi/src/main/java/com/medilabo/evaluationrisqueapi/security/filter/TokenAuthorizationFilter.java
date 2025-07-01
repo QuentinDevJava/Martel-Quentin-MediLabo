@@ -1,6 +1,6 @@
-package com.medilabo.patientapi.security.filters;
+package com.medilabo.evaluationrisqueapi.security.filter;
 
-import com.medilabo.patientapi.security.client.AuthClient;
+import com.medilabo.evaluationrisqueapi.security.client.AuthClient;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -55,4 +55,5 @@ public class TokenAuthorizationFilter extends OncePerRequestFilter {
             response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         }
     }
+
 }
