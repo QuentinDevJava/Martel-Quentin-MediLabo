@@ -1,64 +1,72 @@
 package com.medilabo.gatewayapi.config;
 
-import org.apache.commons.lang.StringUtils;
+import com.medilabo.gatewayapi.client.AuthClient;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.cloud.gateway.filter.GatewayFilterChain;
+import org.springframework.cloud.gateway.filter.GlobalFilter;
+import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
+import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.stereotype.Component;
-import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.server.ServerWebExchange;
-import org.springframework.web.server.WebFilter;
-import org.springframework.web.server.WebFilterChain;
-
-import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Mono;
+
+import java.util.List;
+
+import static java.lang.Boolean.TRUE;
+import static java.nio.charset.StandardCharsets.UTF_8;
+import static org.apache.commons.lang.StringUtils.isEmpty;
+import static org.springframework.http.HttpStatus.FORBIDDEN;
+import static reactor.core.publisher.Mono.just;
 
 @Component
 @Slf4j
-public class GatewayFilter implements WebFilter {
+public class GatewayFilter implements GlobalFilter {
 
-    private final WebClient webClient;
+    private final List<String> ALLOWED_PATHS = List.of("/auth/login", "/auth/validate", "/actuator/health");
+    private final AuthClient authClient;
 
-    public GatewayFilter(WebClient.Builder builder) {
-	this.webClient = builder.build();
+    public GatewayFilter(AuthClient authClient) {
+        this.authClient = authClient;
     }
 
     @Override
-    public Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {
-	ServerHttpRequest request = exchange.getRequest();
-	String path = request.getPath().toString();
+    public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
+        log.info("Executing Global Filter");
+        ServerHttpRequest request = exchange.getRequest();
+        log.info("Request URI: {}", request.getURI());
 
-	if (path.equals("/auth/login") || path.equals("/auth/validate") || path.equals("/actuator/health")) {
-	    return chain.filter(exchange);
-	}
+        String path = request.getURI().getPath();
+        if (ALLOWED_PATHS.contains(path)) return chain.filter(exchange);
 
-	HttpHeaders headers = request.getHeaders();
-	String authHeader = headers.getFirst("Authorization");
+        String authHeader = request.getHeaders().getFirst(HttpHeaders.AUTHORIZATION);
 
-	if (StringUtils.isEmpty(authHeader) || !authHeader.startsWith("Bearer ")) {
-	    return exchange.getResponse().setComplete();
-	}
+        if (isEmpty(authHeader) || !authHeader.startsWith("Bearer ")) {
+            log.info("Please authenticate first");
+            ServerHttpResponse response = exchange.getResponse();
+            response.setStatusCode(HttpStatus.UNAUTHORIZED);
+            String message = "Please authenticate first";
+            DataBuffer dataBuffer = response.bufferFactory().wrap(message.getBytes(UTF_8));
+            return response.writeWith(just(dataBuffer));
+        }
 
-	String token = authHeader.substring(7);
-	return callAuthApi(exchange, chain, token);
-    }
-
-    private Mono<Void> callAuthApi(ServerWebExchange exchange, WebFilterChain chain, String token) {
-	return webClient.post().uri("lb://authapi/auth/validate?token=" + token).retrieve().bodyToMono(Boolean.class)
-		.flatMap(valid -> {
-		    if (Boolean.TRUE.equals(valid)) {
-			log.info("Requete avec token valide");
-			return chain.filter(exchange);
-		    } else {
-			log.info("Requete avec token non valide");
-			exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
-			return exchange.getResponse().setComplete();
-		    }
-		}).onErrorResume(error -> {
-		    log.info("Requete avec token non valide");
-		    exchange.getResponse().setStatusCode(HttpStatus.INTERNAL_SERVER_ERROR);
-		    return exchange.getResponse().setComplete();
-		});
+        log.info("validating token");
+        return authClient.validateToken(authHeader.substring(7))
+                .flatMap(isValid -> {
+                    if (TRUE.equals(isValid)) {
+                        log.info("token validated successfully, process request");
+                        return chain.filter(exchange);
+                    } else {
+                        log.info("token validation failed");
+                        ServerHttpResponse response = exchange.getResponse();
+                        response.setStatusCode(FORBIDDEN);
+                        String message = "Access Denied";
+                        DataBuffer dataBuffer = response.bufferFactory().wrap(message.getBytes(UTF_8));
+                        return response.writeWith(just(dataBuffer));
+                    }
+                });
     }
 
 }

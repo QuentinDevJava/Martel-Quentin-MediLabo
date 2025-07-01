@@ -32,7 +32,12 @@ management:
   endpoints:
     web:
       exposure:
-        include: health
+        include: '*'
+  endpoint:
+    patientapi:
+      access: unrestricted
+    health:
+      show-details: always
 
 logging:
   file:

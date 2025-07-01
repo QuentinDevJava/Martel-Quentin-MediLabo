@@ -13,13 +13,13 @@ import java.util.List;
 
 @Component
 @Slf4j
-public class TokenValidatorFilter extends OncePerRequestFilter {
+public class TokenAuthorizationFilter extends OncePerRequestFilter {
 
     private final AuthApiClient authApiClient;
 
     private static final List<String> EXCLUDED_PATHS = List.of("/actuator/health");
 
-    public TokenValidatorFilter(AuthApiClient authApiClient) {
+    public TokenAuthorizationFilter(AuthApiClient authApiClient) {
         this.authApiClient = authApiClient;
     }
 

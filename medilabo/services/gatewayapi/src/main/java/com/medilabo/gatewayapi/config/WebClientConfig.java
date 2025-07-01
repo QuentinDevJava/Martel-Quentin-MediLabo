@@ -10,7 +10,8 @@ public class WebClientConfig {
 
     @Bean
     @LoadBalanced
-    WebClient.Builder webClientBuilder() {
-	return WebClient.builder();
+    public WebClient.Builder webClientBuilder() {
+        return WebClient.builder();
     }
+
 }

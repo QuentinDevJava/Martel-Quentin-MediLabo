@@ -1,6 +1,6 @@
 package com.medilabo.patientapi.security.config;
 
-import com.medilabo.patientapi.security.filters.TokenValidatorFilter;
+import com.medilabo.patientapi.security.filters.TokenAuthorizationFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -11,16 +11,16 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 public class SecurityConfig {
 
-    private final TokenValidatorFilter tokenFilter;
+    private final TokenAuthorizationFilter tokenFilter;
 
-    public SecurityConfig(TokenValidatorFilter tokenFilter) {
+    public SecurityConfig(TokenAuthorizationFilter tokenFilter) {
         this.tokenFilter = tokenFilter;
     }
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(auth -> auth.anyRequest().authenticated())
+                .authorizeHttpRequests(auth -> auth.anyRequest().permitAll())
                 .addFilterBefore(tokenFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();

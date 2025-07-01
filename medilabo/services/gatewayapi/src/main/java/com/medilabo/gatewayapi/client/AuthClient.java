@@ -1,4 +1,4 @@
-package com.medilabo.patientapi.security.client;
+package com.medilabo.gatewayapi.client;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -16,12 +16,12 @@ import static reactor.core.publisher.Mono.just;
 
 @Component
 @Slf4j
-public class AuthApiClient {
+public class AuthClient {
 
     private static final String AUTH_URI = "lb://authapi/auth/validate?token=%s";
     private final WebClient webClient;
 
-    public AuthApiClient(WebClient.Builder builder) {
+    public AuthClient(WebClient.Builder builder) {
         this.webClient = builder.build();
     }
 
