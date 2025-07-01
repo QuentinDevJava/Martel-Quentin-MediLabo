@@ -26,11 +26,18 @@ eureka:
   instance:
     prefer-ip-address: true
 
+
 management:
   endpoints:
     web:
       exposure:
-        include: health
+        include: '*'
+  endpoint:
+    noteapi:
+      access: unrestricted
+    health:
+      show-details: always
+
 logging:
   file:
     name: logs/mediLaboNoteApi.log
