@@ -1,23 +1,16 @@
 package com.medilabo.patientapi.controllers;
 
-import java.util.List;
-
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
 import com.medilabo.patientapi.dto.PatientDto;
 import com.medilabo.patientapi.service.PatientService;
-
+import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * Contrôleur REST pour la gestion des patients. Fournit des endpoints pour
@@ -70,7 +63,15 @@ public class PatientController {
     @GetMapping("{id}")
     public ResponseEntity<PatientDto> getPatientById(@PathVariable int id) {
 	log.info("Receive GET /api/patients/" + id + ": PatientApi use RestController to send PatientDto by ID");
-	return new ResponseEntity<>(patientService.getPatientById(id), HttpStatus.OK);
+	try {
+        return new ResponseEntity<>(patientService.getPatientById(id), HttpStatus.OK);
+    } catch (EntityNotFoundException e) {
+        log.info("Patient not found ", e);
+        return ResponseEntity.notFound().build();
+    } catch (Exception e) {
+        log.error("Error while getting patient by id", e);
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+    }
     }
 
     /**
@@ -93,7 +94,12 @@ public class PatientController {
     @GetMapping("notes/{id}")
     public ResponseEntity<PatientDto> getPatientWithNotesById(@PathVariable int id) {
 	log.info("Receive GET /api/patients/" + id + ": PatientApi use RestController to send PatientDto by ID");
-	return new ResponseEntity<>(patientService.getPatientWithNotesById(id), HttpStatus.OK);
+	try {
+        return new ResponseEntity<>(patientService.getPatientWithNotesById(id), HttpStatus.OK);
+    } catch (Exception e) {
+        log.error("Error ", e);
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+    }
     }
 
     /**

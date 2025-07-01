@@ -3,6 +3,7 @@ package com.medilabo.patientapi.service;
 import java.util.List;
 import java.util.Optional;
 
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.medilabo.patientapi.dto.NoteDto;
@@ -113,7 +114,8 @@ public class PatientServiceImpl implements PatientService {
     }
 
     private PatientDto getPatientDtoWithPatientById(int patientId) {
-	Optional<Patient> patient = patientRepository.findById(patientId);
-	return patient.map(patientMapper::toDto).orElse(null);
+	return patientRepository.findById(patientId)
+            .map(patientMapper::toDto)
+            .orElseThrow(() -> new EntityNotFoundException("No patient found for id " + patientId));
     }
 }
