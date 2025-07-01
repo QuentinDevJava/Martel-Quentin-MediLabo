@@ -100,7 +100,7 @@ docker ps
 
 ```
 
-### Àrrêt de l’application
+## Àrrêt de l’application
 
 ```bash
 # Arrêter tous les conteneurs
@@ -128,3 +128,15 @@ docker compose down -v
     docker compose down -v	Supprime les conteneurs et les volumes
     docker compose logs -f	Affiche les logs de tous les services
     docker ps	            Liste les conteneurs en cours d’exécution
+
+## 🛠️ Dépannage
+
+#### En cas d’erreur au démarrage (`unhealthy`,`error`, crash ou service bloqué)
+
+Si un ou plusieurs services ne démarrent pas correctement après `docker compose up -d`, exécute la commande suivante :
+
+```bash
+docker compose down -v --remove-orphans && \
+docker compose build --no-cache && \
+docker compose up -d
+```
