@@ -1,18 +1,12 @@
 package com.medilabo.authapi.controller;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
 import com.medilabo.authapi.dto.LoginAuth;
 import com.medilabo.authapi.services.AuthService;
-
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
@@ -24,27 +18,28 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody LoginAuth request) {
-	log.info("Receive POST /auth/login - Authapi use RestController to authenticate user : {} ",
-		request.getUsername());
-	try {
-	    String token = authService.authenticate(request.getUsername(), request.getPassword());
-	    return ResponseEntity.ok(token);
-	} catch (Exception e) {
-	    return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage());
-	}
+        try {
+            log.info("Attempt to authenticate user : {} ", request.getUsername());
+            String token = authService.authenticate(request.getUsername(), request.getPassword());
+            log.info("User {} authenticated successfully", request.getUsername());
+            return ResponseEntity.ok(token);
+        } catch (Exception e) {
+            log.info("Failed to authenticate user {}", request.getUsername(), e);
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage());
+        }
     }
 
     @PostMapping("/validate")
-    public ResponseEntity<Boolean> validateToken(@RequestParam String token) {
-	log.info("Receive POST /auth/validate - Authapi use RestController to validate token");
-
-	Boolean tokenIsValid = authService.validateToken(token);
-	if (Boolean.TRUE.equals(tokenIsValid)) {
-	    return ResponseEntity.ok(tokenIsValid);
-	} else {
-	    return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(tokenIsValid);
-
-	}
+    public ResponseEntity<Void> validateToken(@RequestParam String token) {
+        try {
+            log.info("Validating token");
+            boolean isValid = authService.validateToken(token);
+            log.info("Token is valid {}", isValid);
+            return isValid ? ResponseEntity.ok().build() : ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+        } catch (Exception e) {
+            log.info("Failed to validate token", e);
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+        }
 
     }
 }

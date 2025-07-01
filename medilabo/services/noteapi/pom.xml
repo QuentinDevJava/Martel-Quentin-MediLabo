@@ -11,7 +11,7 @@
 	<groupId>com.mediLabo</groupId>
 	<artifactId>noteapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>noteApi</name>
+	<name>noteapi</name>
 	<description>microservice pour la gestion des notes</description>
 
 	<properties>

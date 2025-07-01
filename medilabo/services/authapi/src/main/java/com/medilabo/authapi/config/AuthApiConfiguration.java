@@ -14,10 +14,10 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import com.medilabo.authapi.repository.AuthUserRepository;
 
 @Configuration
-public class AuthapiConfiguration {
+public class AuthApiConfiguration {
     private final AuthUserRepository authUserRepository;
 
-    public AuthapiConfiguration(AuthUserRepository authUserRepository) {
+    public AuthApiConfiguration(AuthUserRepository authUserRepository) {
 	this.authUserRepository = authUserRepository;
     }
 

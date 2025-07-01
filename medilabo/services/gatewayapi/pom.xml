@@ -11,9 +11,9 @@
 	</parent>
 
     <groupId>com.mediLabo</groupId>
-	<artifactId>gatewayApi</artifactId>
+	<artifactId>gatewayapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>gatewayApi</name>
+	<name>gatewayapi</name>
 	<description>microservice gateway</description>
 
 
