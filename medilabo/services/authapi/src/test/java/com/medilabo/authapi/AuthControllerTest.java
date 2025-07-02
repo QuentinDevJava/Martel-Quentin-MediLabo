@@ -59,15 +59,13 @@ class AuthControllerTest {
     void validateTokenWhenTokenIsValid() throws Exception {
 	when(authService.validateToken("valid-token")).thenReturn(true);
 
-	mockMvc.perform(post("/auth/validate").param("token", "valid-token")).andExpect(status().isOk())
-		.andExpect(content().string("true"));
+	mockMvc.perform(post("/auth/validate").param("token", "valid-token")).andExpect(status().isOk());
     }
 
     @Test
     void validateTokenWhenTokenIsInvalid() throws Exception {
 	when(authService.validateToken("invalid-token")).thenReturn(false);
 
-	mockMvc.perform(post("/auth/validate").param("token", "invalid-token")).andExpect(status().isOk())
-		.andExpect(content().string("false"));
+	mockMvc.perform(post("/auth/validate").param("token", "invalid-token")).andExpect(status().isForbidden());
     }
 }

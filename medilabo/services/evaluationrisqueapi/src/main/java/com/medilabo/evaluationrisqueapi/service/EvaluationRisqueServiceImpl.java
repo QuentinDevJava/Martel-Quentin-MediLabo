@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import com.medilabo.evaluationrisqueapi.dto.PatientDto;
 import com.medilabo.evaluationrisqueapi.enums.DangerLevel;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 
 @Service
@@ -23,7 +22,7 @@ public class EvaluationRisqueServiceImpl implements EvaluationRisqueService {
 
 	PatientDto patientDto = getPatientById(patientId);
 	if (patientDto == null) {
-	    throw new EntityNotFoundException("The patient is not found");
+	    throw new IllegalArgumentException("The patient is not found");
 	}
 
 	int age = Period.between(patientDto.getDateAnniversaire(), LocalDate.now()).getYears();

@@ -2,7 +2,6 @@ package com.medilabo.noteapi;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.verify;
@@ -22,6 +21,8 @@ import com.medilabo.noteapi.dto.NoteDto;
 import com.medilabo.noteapi.entities.Note;
 import com.medilabo.noteapi.repository.NoteRepository;
 import com.medilabo.noteapi.service.NoteServiceImpl;
+
+import jakarta.persistence.EntityNotFoundException;
 
 @ActiveProfiles("test")
 @ExtendWith(MockitoExtension.class)
@@ -88,7 +89,7 @@ class NoteServiceImplTest {
 	NoteDto updatedDto = new NoteDto();
 	updatedDto.setContenuNote("Nouvelle version");
 
-	assertThrows(IllegalArgumentException.class, () -> {
+	assertThrows(EntityNotFoundException.class, () -> {
 	    noteService.updateNote("not-exist", updatedDto);
 	});
     }
@@ -107,9 +108,9 @@ class NoteServiceImplTest {
     void testGetNotesById_notFound() {
 	when(noteRepository.findById("not-exist")).thenReturn(Optional.empty());
 
-	NoteDto result = noteService.getNotesById("not-exist");
-
-	assertNull(result);
+	assertThrows(EntityNotFoundException.class, () -> {
+	    noteService.getNotesById("not-exist");
+	});
     }
 
     @Test
