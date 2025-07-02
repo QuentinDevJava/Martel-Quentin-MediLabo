@@ -1,9 +1,7 @@
 package com.medilabo.patientapi.service;
 
 import java.util.List;
-import java.util.Optional;
 
-import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.medilabo.patientapi.dto.NoteDto;
@@ -12,6 +10,7 @@ import com.medilabo.patientapi.entities.Patient;
 import com.medilabo.patientapi.mapper.PatientMapper;
 import com.medilabo.patientapi.repository.PatientRepository;
 
+import jakarta.persistence.EntityNotFoundException;
 import lombok.AllArgsConstructor;
 
 /**
@@ -72,7 +71,7 @@ public class PatientServiceImpl implements PatientService {
 	PatientDto patientDto = getPatientDtoWithPatientById(id);
 
 	if (patientDto == null) {
-	    throw new IllegalArgumentException("The patient is not found");
+	    throw new EntityNotFoundException("The patient is not found");
 	}
 
 	patientDto.setId(updatePatientDto.getId());
@@ -96,7 +95,7 @@ public class PatientServiceImpl implements PatientService {
     @Override
     public PatientDto getPatientWithNotesById(int id) {
 	Patient patient = patientRepository.findById(id)
-		.orElseThrow(() -> new IllegalArgumentException("The patient is not found"));
+		.orElseThrow(() -> new EntityNotFoundException("The patient is not found"));
 
 	List<NoteDto> noteDtos = noteApi.getNoteDtos(patient.getId());
 	return patientMapper.toDtoWithNotes(patient, noteDtos);
@@ -114,8 +113,7 @@ public class PatientServiceImpl implements PatientService {
     }
 
     private PatientDto getPatientDtoWithPatientById(int patientId) {
-	return patientRepository.findById(patientId)
-            .map(patientMapper::toDto)
-            .orElseThrow(() -> new EntityNotFoundException("No patient found for id " + patientId));
+	return patientRepository.findById(patientId).map(patientMapper::toDto)
+		.orElseThrow(() -> new EntityNotFoundException("No patient found for id " + patientId));
     }
 }

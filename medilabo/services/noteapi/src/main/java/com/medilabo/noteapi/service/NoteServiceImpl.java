@@ -3,7 +3,6 @@ package com.medilabo.noteapi.service;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -12,6 +11,7 @@ import com.medilabo.noteapi.entities.Note;
 import com.medilabo.noteapi.mapper.NoteMapper;
 import com.medilabo.noteapi.repository.NoteRepository;
 
+import jakarta.persistence.EntityNotFoundException;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -58,13 +58,13 @@ public class NoteServiceImpl implements NoteService {
      * @param id            identifiant de la note à mettre à jour
      * @param updateNoteDto nouvelles données de la note
      * @return note mise à jour sous forme de NoteDto
-     * @throws IllegalArgumentException si la note n'existe pas
+     * @throws EntityNotFoundException si la note n'existe pas
      */
     @Override
     public NoteDto updateNote(String id, NoteDto updateNoteDto) {
 	NoteDto noteDto = getNoteDtoWithNoteById(id);
 	if (noteDto == null) {
-	    throw new IllegalArgumentException("The note is not found");
+	    throw new EntityNotFoundException("The note is not found");
 	} else {
 	    noteDto.setContenuNote(updateNoteDto.getContenuNote());
 	    return noteMapper.toDto(noteRepository.save(noteMapper.toEntity(noteDto)));
@@ -92,9 +92,13 @@ public class NoteServiceImpl implements NoteService {
      */
     @Override
     public int getNumberOfTermsByPatient(int patientId) {
+
+	int count = 0;
+
 	List<NoteDto> notes = getNotesByPatientId(patientId);
+
 	if (notes == null) {
-	    throw new IllegalArgumentException("The patient is not found");
+	    return count;
 	}
 
 	StringBuilder contents = new StringBuilder();
@@ -117,8 +121,6 @@ public class NoteServiceImpl implements NoteService {
 	termGroups.put("hémoglobine a1c", List.of("hémoglobine a1c"));
 	termGroups.put("microalbumine", List.of("microalbumine"));
 
-	int count = 0;
-
 	for (Map.Entry<String, List<String>> entry : termGroups.entrySet()) {
 	    for (String term : entry.getValue()) {
 		if (contentString.contains(term)) {
@@ -133,7 +135,7 @@ public class NoteServiceImpl implements NoteService {
     }
 
     private NoteDto getNoteDtoWithNoteById(String noteId) {
-	Optional<Note> note = noteRepository.findById(noteId);
-	return note.map(noteMapper::toDto).orElse(null);
+	return noteRepository.findById(noteId).map(noteMapper::toDto)
+		.orElseThrow(() -> new EntityNotFoundException("No note found for id " + noteId));
     }
 }
