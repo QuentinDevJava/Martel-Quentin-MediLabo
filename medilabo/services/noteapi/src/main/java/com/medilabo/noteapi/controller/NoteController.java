@@ -80,6 +80,14 @@ public class NoteController {
 	log.info("Receive PUT /api/notes/termesAnalyse/" + patientId
 		+ " - NoteApi use RestController get number of trigger terms in list of NoteDto for patient id : "
 		+ patientId);
-	return ResponseEntity.ok(count);
+	try {
+	    return ResponseEntity.ok(count);
+	} catch (EntityNotFoundException e) {
+	    log.info("Note not found ", e);
+	    return ResponseEntity.notFound().build();
+	} catch (Exception e) {
+	    log.error("Error while getting note by id", e);
+	    return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+	}
     }
 }
