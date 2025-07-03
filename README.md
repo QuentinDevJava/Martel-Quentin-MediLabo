@@ -38,7 +38,6 @@
 ## 🗂️ Arborescence du projet
 ```
 ├──medilabo/
-│ ├── bd
 │ ├── service/
 │ │ ├── eurekaserver/
 │ │ ├── configserver/
