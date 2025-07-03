@@ -1,5 +1,6 @@
 package com.medilabo.patientapi;
 
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -25,7 +26,10 @@ import org.springframework.test.web.servlet.MockMvc;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.medilabo.patientapi.dto.NoteDto;
 import com.medilabo.patientapi.dto.PatientDto;
+import com.medilabo.patientapi.security.client.AuthClient;
 import com.medilabo.patientapi.service.PatientService;
+
+import reactor.core.publisher.Mono;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -37,6 +41,9 @@ class PatientControllerTest {
 
     @MockitoBean
     private PatientService patientService;
+
+    @MockitoBean
+    private AuthClient authClient;
 
     @Autowired
     private ObjectMapper objectMapper;
@@ -57,55 +64,71 @@ class PatientControllerTest {
 
     @Test
     void getPatientById() throws Exception {
+
+	when(authClient.validateToken(anyString())).thenReturn(Mono.just(true));
+
 	when(patientService.getPatientById(1)).thenReturn(patientDto);
 
-	mockMvc.perform(get("/api/patients/1")).andExpect(status().isOk()).andExpect(jsonPath("$.nom").value("Test"))
-		.andExpect(jsonPath("$.prenom").value("Jean"));
+	mockMvc.perform(get("/api/patients/1").header("Authorization", "Bearer test-token")).andExpect(status().isOk())
+		.andExpect(jsonPath("$.nom").value("Test")).andExpect(jsonPath("$.prenom").value("Jean"));
     }
 
     @Test
     void getAllPatients() throws Exception {
+	when(authClient.validateToken(anyString())).thenReturn(Mono.just(true));
+
 	when(patientService.getAllPatient()).thenReturn(List.of(patientDto));
 
-	mockMvc.perform(get("/api/patients/")).andExpect(status().isOk()).andExpect(jsonPath("$.size()").value(1));
+	mockMvc.perform(get("/api/patients/").header("Authorization", "Bearer test-token")).andExpect(status().isOk())
+		.andExpect(jsonPath("$.size()").value(1));
     }
 
     @Test
     void addPatient() throws Exception {
+	when(authClient.validateToken(anyString())).thenReturn(Mono.just(true));
+
 	when(patientService.addPatient(ArgumentMatchers.any(PatientDto.class))).thenReturn(patientDto);
 
-	mockMvc.perform(post("/api/patients/").contentType(MediaType.APPLICATION_JSON)
-		.content(objectMapper.writeValueAsString(patientDto))).andExpect(status().isCreated())
-		.andExpect(jsonPath("$.nom").value("Test"));
+	mockMvc.perform(post("/api/patients/").header("Authorization", "Bearer test-token")
+		.contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(patientDto)))
+		.andExpect(status().isCreated()).andExpect(jsonPath("$.nom").value("Test"));
     }
 
     @Test
     void updatePatient() throws Exception {
+	when(authClient.validateToken(anyString())).thenReturn(Mono.just(true));
+
 	when(patientService.updatePatient(Mockito.eq(1), ArgumentMatchers.any(PatientDto.class)))
 		.thenReturn(patientDto);
 
-	mockMvc.perform(put("/api/patients/1").contentType(MediaType.APPLICATION_JSON)
-		.content(objectMapper.writeValueAsString(patientDto))).andExpect(status().isOk())
-		.andExpect(jsonPath("$.nom").value("Test"));
+	mockMvc.perform(put("/api/patients/1").header("Authorization", "Bearer test-token")
+		.contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(patientDto)))
+		.andExpect(status().isOk()).andExpect(jsonPath("$.nom").value("Test"));
     }
 
     @Test
     void getPatientWithNotesById() throws Exception {
+	when(authClient.validateToken(anyString())).thenReturn(Mono.just(true));
+
 	patientDto.setNotes(List.of(new NoteDto("note-1", 1, "Jean", "test note")));
 
 	when(patientService.getPatientWithNotesById(1)).thenReturn(patientDto);
 
-	mockMvc.perform(get("/api/patients/notes/1")).andExpect(status().isOk())
-		.andExpect(jsonPath("$.nom").value("Test")).andExpect(jsonPath("$.notes.length()").value(1));
+	mockMvc.perform(get("/api/patients/notes/1").header("Authorization", "Bearer test-token"))
+		.andExpect(status().isOk()).andExpect(jsonPath("$.nom").value("Test"))
+		.andExpect(jsonPath("$.notes.length()").value(1));
     }
 
     @Test
     void getAllPatientWithNotesById() throws Exception {
+	when(authClient.validateToken(anyString())).thenReturn(Mono.just(true));
+
 	patientDto.setNotes(List.of(new NoteDto("note-1", 1, "Jean", "test note")));
 
 	when(patientService.getAllPatientsWithNotes()).thenReturn(List.of(patientDto));
 
-	mockMvc.perform(get("/api/patients/notes")).andExpect(status().isOk()).andExpect(jsonPath("$.size()").value(1))
+	mockMvc.perform(get("/api/patients/notes").header("Authorization", "Bearer test-token"))
+		.andExpect(status().isOk()).andExpect(jsonPath("$.size()").value(1))
 		.andExpect(jsonPath("$[0].notes.length()").value(1));
     }
 }

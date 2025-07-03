@@ -88,11 +88,11 @@ public class NoteServiceImpl implements NoteService {
      *
      * @param patientId identifiant du patient
      * @return nombre de groupes de termes médicaux trouvés
-     * @throws IllegalArgumentException si aucun patient n'est trouvé
+     * @throws EntityNotFoundException si aucun patient n'est trouvé
      */
     @Override
     public int getNumberOfTermsByPatient(int patientId) {
-
+	log.info("get number of terms");
 	int count = 0;
 
 	List<NoteDto> notes = getNotesByPatientId(patientId);
@@ -125,12 +125,12 @@ public class NoteServiceImpl implements NoteService {
 	    for (String term : entry.getValue()) {
 		if (contentString.contains(term)) {
 		    count++;
-		    log.info("Terme trouvé : " + term);
+		    log.info("Terme : " + term);
 		    break;
 		}
 	    }
 	}
-
+	log.info("Number of terms : {}", count);
 	return count;
     }
 

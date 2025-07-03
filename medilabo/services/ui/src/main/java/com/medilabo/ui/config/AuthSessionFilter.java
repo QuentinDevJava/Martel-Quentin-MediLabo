@@ -29,7 +29,6 @@ public class AuthSessionFilter implements Filter {
 	HttpServletResponse res = (HttpServletResponse) response;
 
 	String path = req.getRequestURI();
-	log.info("Ui use AuthSessionFilter for path : {} ", path);
 	if (isPublicPath(path)) {
 	    chain.doFilter(request, response);
 	    return;

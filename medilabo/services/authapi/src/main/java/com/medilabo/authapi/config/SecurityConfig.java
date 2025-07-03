@@ -18,6 +18,8 @@ public class SecurityConfig {
 
 			.requestMatchers(HttpMethod.POST, "/auth/validate").permitAll()
 
+			.requestMatchers("/actuator/**").permitAll()
+
 			.anyRequest().authenticated());
 	return http.build();
     }

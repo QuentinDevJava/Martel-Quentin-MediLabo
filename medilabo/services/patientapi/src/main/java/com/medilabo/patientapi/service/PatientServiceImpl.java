@@ -12,11 +12,13 @@ import com.medilabo.patientapi.repository.PatientRepository;
 
 import jakarta.persistence.EntityNotFoundException;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Service de gestion des patients. Fournit les opérations CRUD sur les
  * patients, avec ou sans récupération des notes associées.
  */
+@Slf4j
 @Service
 @AllArgsConstructor
 public class PatientServiceImpl implements PatientService {
@@ -54,7 +56,10 @@ public class PatientServiceImpl implements PatientService {
      */
     @Override
     public PatientDto addPatient(PatientDto patientDto) {
+	log.info("addPatient receive : {}", patientDto.getDateAnniversaire());
+
 	Patient patient = patientRepository.save(patientMapper.toEntity(patientDto));
+
 	return patientMapper.toDto(patient);
     }
 
@@ -64,7 +69,7 @@ public class PatientServiceImpl implements PatientService {
      * @param id               identifiant du patient à mettre à jour
      * @param updatePatientDto nouvelles données du patient
      * @return PatientDto mis à jour
-     * @throws IllegalArgumentException si le patient n'existe pas
+     * @throws EntityNotFoundException si le patient n'existe pas
      */
     @Override
     public PatientDto updatePatient(int id, PatientDto updatePatientDto) {
@@ -90,7 +95,7 @@ public class PatientServiceImpl implements PatientService {
      *
      * @param id identifiant du patient
      * @return PatientDto avec les notes
-     * @throws IllegalArgumentException si le patient n'existe pas
+     * @throws EntityNotFoundException si le patient n'existe pas
      */
     @Override
     public PatientDto getPatientWithNotesById(int id) {
@@ -98,6 +103,7 @@ public class PatientServiceImpl implements PatientService {
 		.orElseThrow(() -> new EntityNotFoundException("The patient is not found"));
 
 	List<NoteDto> noteDtos = noteApi.getNoteDtos(patient.getId());
+
 	return patientMapper.toDtoWithNotes(patient, noteDtos);
     }
 

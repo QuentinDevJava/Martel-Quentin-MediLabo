@@ -11,23 +11,30 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create-drop
-
   cloud:
     config:
       enabled: true
     discovery:
       enabled: true
+
 eureka: 
   client: 
     service-url: 
       defaultZone: http://eurekaserver:8761/eureka/ 
   instance:
     prefer-ip-address: true
+
 management:
   endpoints:
     web:
       exposure:
-        include: health
+        include: '*'
+  endpoint:
+    noteapi:
+      access: unrestricted
+    health:
+      show-details: always
+
 security:
   jwt:
     secret-key: "3cfa76ef14937c1c0ea519f8fc057a80fcd04a7420f8e8bcd0a7567c272e007b"

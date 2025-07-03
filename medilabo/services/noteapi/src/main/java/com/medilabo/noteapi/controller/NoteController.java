@@ -46,6 +46,7 @@ public class NoteController {
 	} catch (Exception e) {
 	    log.error("Error while getting note by id", e);
 	    return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+	    
 	}
 
     }

@@ -13,8 +13,6 @@ import org.springframework.web.client.RestClient;
 
 import com.medilabo.ui.dto.NoteDto;
 import com.medilabo.ui.dto.PatientDto;
-import com.medilabo.ui.exception.EvaluationRisqueControllerException;
-import com.medilabo.ui.exception.NoteControllerException;
 
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
@@ -59,13 +57,14 @@ public class NoteUiController {
 		.onStatus(HttpStatusCode::isError, (request, response) -> {
 		    log.error("Request to {} {} failed to retrieve patient ID {} - HTTP {}", request.getMethod(),
 			    request.getURI(), patientId, response.getStatusCode());
-		    throw new NoteControllerException("Error retrieving patient data");
+		    throw new RuntimeException(
+			    "Error retrieving patient data - " + response.getStatusCode().toString());
 		})
 
 		.body(PatientDto.class);
 
 	if (patientDto == null) {
-	    throw new EvaluationRisqueControllerException("Error retrieving rapport");
+	    throw new RuntimeException("Patient not found");
 	}
 
 	NoteDto noteDto = new NoteDto();
@@ -86,7 +85,7 @@ public class NoteUiController {
 		.onStatus(HttpStatusCode::isError, (request, response) -> {
 		    log.error("Request to {} {} failed to create note for patient ID {} - HTTP {}", request.getMethod(),
 			    request.getURI(), patientId, response.getStatusCode());
-		    throw new NoteControllerException("Error adding note");
+		    throw new RuntimeException("Error adding note - " + response.getStatusCode().toString());
 		})
 
 		.toBodilessEntity();
@@ -109,7 +108,7 @@ public class NoteUiController {
 		.onStatus(HttpStatusCode::isError, (request, response) -> {
 		    log.error("Request to {} {} failed to retrieve note ID {} - HTTP {}", request.getMethod(),
 			    request.getURI(), noteId, response.getStatusCode());
-		    throw new NoteControllerException("Error retrieving note");
+		    throw new RuntimeException("Error retrieving note - " + response.getStatusCode().toString());
 
 		})
 
@@ -140,7 +139,7 @@ public class NoteUiController {
 		    log.error("Request to {} {} failed to retrieve note ID {} - HTTP {}", request.getMethod(),
 			    request.getURI(), noteId, response.getStatusCode());
 
-		    throw new NoteControllerException("Error retrieving note");
+		    throw new RuntimeException("Error retrieving note  - " + response.getStatusCode().toString());
 		})
 
 		.body(NoteDto.class);
@@ -162,7 +161,7 @@ public class NoteUiController {
 		    log.error("Request to {} {} failed to update note ID {} - HTTP {}", request.getMethod(),
 			    request.getURI(), noteId, response.getStatusCode());
 
-		    throw new NoteControllerException("Error updating note");
+		    throw new RuntimeException("Error updating note  - " + response.getStatusCode().toString());
 		})
 
 		.toBodilessEntity();

@@ -23,11 +23,14 @@ spring:
         - classpath:data.sql
 
   cloud:
+    openfeign:
+      circuitbreaker:
+        enabled: true
     config:
       enabled: true
     discovery:
       enabled: true
-
+   
 management:
   endpoints:
     web:

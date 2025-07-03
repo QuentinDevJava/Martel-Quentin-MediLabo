@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.client.RestClient;
 
 import com.medilabo.ui.dto.PatientDto;
-import com.medilabo.ui.exception.EvaluationRisqueControllerException;
 
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
@@ -48,22 +47,16 @@ public class EvaluationRisqueUiController {
 
 		.onStatus(HttpStatusCode::isError, (request, response) -> {
 
-		    log.error("Request to {} {} failed to retrieve patient ID {} - HTTP {}"
+		    log.error("Request to {} {} failed to retrieve patient ID {} - HTTP {}", request.getMethod(),
+			    request.getURI(), patientId, response.getStatusCode());
 
-			    , request.getMethod()
-
-			    , request.getURI()
-
-			    , patientId
-
-			    , response.getStatusCode());
-
-		    throw new EvaluationRisqueControllerException("Error retrieving rapport");
+		    throw new RuntimeException(
+			    "Error retrieving patient data - " + response.getStatusCode().toString());
 
 		}).body(PatientDto.class);
 
 	if (patientDto == null) {
-	    throw new EvaluationRisqueControllerException("Error retrieving rapport");
+	    throw new RuntimeException("Patient not found");
 	}
 
 	String dangerLevel = restClient.get()
@@ -76,17 +69,11 @@ public class EvaluationRisqueUiController {
 
 		.onStatus(HttpStatusCode::isError, (request, response) -> {
 
-		    log.error("Request to {} {} failed to retrieve patient ID {} - HTTP {}"
+		    log.error("Request to {} {} failed to retrieve patient ID {} - HTTP {}", request.getMethod(),
+			    request.getURI(), patientId, response.getStatusCode());
 
-			    , request.getMethod()
-
-			    , request.getURI()
-
-			    , patientId
-
-			    , response.getStatusCode());
-
-		    throw new EvaluationRisqueControllerException("Error retrieving dangerLevel");
+		    throw new RuntimeException(
+			    "Error retrieving dangerLevel  - " + response.getStatusCode().toString());
 
 		}).body(String.class);
 

@@ -129,6 +129,25 @@ services:
       retries: 10
       start_period: 20s
 
+  evaluationrisqueapi:
+    build:
+      context: ../services/evaluationrisqueapi
+    container_name: evaluationrisqueapi
+    ports:
+      - "5003:5003"
+    depends_on:
+      gatewayapi:
+        condition: service_healthy
+    environment:
+      - SPRING_APPLICATION_NAME=evaluationrisqueapi
+      - SPRING_CONFIG_IMPORT=optional:configserver:http://configserver:5555
+    healthcheck:
+      test: "curl --fail --silent http://localhost:5003/actuator/health | grep UP || exit 1"
+      interval: 10s
+      timeout: 3s
+      retries: 10
+      start_period: 20s
+
   noteapi:
     build:
       context: ../services/noteapi
@@ -178,25 +197,6 @@ services:
       retries: 10
       start_period: 20s
 
-  evaluationrisqueapi:
-    build:
-      context: ../services/evaluationrisqueapi
-    container_name: evaluationrisqueapi
-    ports:
-      - "5003:5003"
-    depends_on:
-      gatewayapi:
-        condition: service_healthy
-    environment:
-      - SPRING_APPLICATION_NAME=evaluationrisqueapi
-      - SPRING_CONFIG_IMPORT=optional:configserver:http://configserver:5555
-    healthcheck:
-      test: "curl --fail --silent http://localhost:5003/actuator/health | grep UP || exit 1"
-      interval: 10s
-      timeout: 3s
-      retries: 10
-      start_period: 20s
-
   ui:
     build:
       context: ../services/ui
@@ -205,6 +205,8 @@ services:
       - "5001:5001"
     depends_on:
       patientapi:
+        condition: service_healthy
+      authapi:
         condition: service_healthy
     healthcheck:
       test: "curl --fail --silent http://localhost:5001/actuator/health | grep UP || exit 1"

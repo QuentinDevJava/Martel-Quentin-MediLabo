@@ -10,23 +10,26 @@ spring:
     discovery:
       enabled: true
     gateway:
-      routes:
-        - id: patientapi
-          uri: lb://patientapi
-          predicates:
-            - Path=/api/patients/**
-        - id: noteapi
-          uri: lb://noteapi
-          predicates:
-            - Path=/api/notes/**
-        - id: evaluationrisqueapi
-          uri: lb://evaluationrisqueapi
-          predicates:
-            - Path=/api/evaluationrisque/**
-        - id: authapi
-          uri: lb://authapi
-          predicates:
-            - Path=/auth/**
+      httpclient:
+        connect-timeout: 5000
+        response-timeout: 20s
+#      routes:
+#        - id: patientapi
+#          uri: lb://patientapi
+#          predicates:
+#            - Path=/api/patients/**
+#        - id: noteapi
+#          uri: lb://noteapi
+#          predicates:
+#            - Path=/api/notes/**
+#        - id: evaluationrisqueapi
+#          uri: lb://evaluationrisqueapi
+#          predicates:
+#            - Path=/api/evaluationrisque/**
+#        - id: authapi
+#          uri: lb://authapi
+#          predicates:
+#           - Path=/auth/**
 
 management:
   endpoints:
@@ -44,3 +47,11 @@ eureka:
       defaultZone: http://eurekaserver:8761/eureka/
   instance:
    prefer-ip-address: true
+
+resilience4j.circuitbreaker: 
+   configs: 
+     default: 
+       slidingWindowSize: 20
+       permittedNumberOfCallsInHalfOpenState: 3
+       failureRateThreshold: 50
+       waitDurationInOpenState: 5s

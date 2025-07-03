@@ -6,7 +6,7 @@
 
 ## Structure du projet
 
-![Image](https://github.com/user-attachments/assets/a8470b2e-b169-4e93-9a01-14c1a6e8da86)
+![Image](https://github.com/user-attachments/assets/f8e1944e-6420-4894-8681-1e037b4cbc64)
 
 ---
 

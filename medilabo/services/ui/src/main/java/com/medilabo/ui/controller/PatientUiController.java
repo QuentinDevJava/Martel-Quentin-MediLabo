@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.client.RestClient;
 
 import com.medilabo.ui.dto.PatientDto;
-import com.medilabo.ui.exception.PatientControllerException;
 
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
@@ -44,7 +43,8 @@ public class PatientUiController {
 		.onStatus(HttpStatusCode::isError, (request, response) -> {
 		    log.error("Request to {} {} failed to fetch patients list - HTTP {}", request.getMethod(),
 			    request.getURI(), response.getStatusCode());
-		    throw new PatientControllerException("Failed to retrieve patient list");
+		    throw new RuntimeException("Failed to retrieve patient list - "
+			    + response.getStatusCode().toString() + " - " + response.getStatusText());
 		})
 
 		.body(PatientDto[].class);
@@ -70,13 +70,14 @@ public class PatientUiController {
 		.onStatus(HttpStatusCode::isError, (request, response) -> {
 		    log.error("Request to {} {} failed to retrieve patient ID {} - HTTP {}", request.getMethod(),
 			    request.getURI(), id, response.getStatusCode());
-		    throw new PatientControllerException("Failed to retrieve patient details");
+		    throw new RuntimeException(
+			    "Failed to retrieve patient details - " + response.getStatusCode().toString());
 		})
 
 		.body(PatientDto.class);
 
 	if (patientDto == null) {
-	    throw new PatientControllerException("Failed to retrieve patient details");
+	    throw new RuntimeException("Patient not found");
 	}
 
 	model.addAttribute("patient", patientDto);
@@ -107,7 +108,7 @@ public class PatientUiController {
 		.onStatus(HttpStatusCode::isError, (request, response) -> {
 		    log.error("Request to {} {} failed to add patient - HTTP {}", request.getMethod(), request.getURI(),
 			    response.getStatusCode());
-		    throw new PatientControllerException("Failed to add patient");
+		    throw new RuntimeException("failed to add patient - " + response.getStatusCode().toString());
 		})
 
 		.toBodilessEntity();
@@ -130,11 +131,11 @@ public class PatientUiController {
 		.onStatus(HttpStatusCode::isError, (request, response) -> {
 		    log.error("Request to {} {} failed to fetch patient for update ID {} - HTTP {}",
 			    request.getMethod(), request.getURI(), id, response.getStatusCode());
-		    throw new PatientControllerException("Failed to fetch patient data");
+		    throw new RuntimeException("Failed to fetch patient data - " + response.getStatusCode().toString());
 		}).body(PatientDto.class);
 
 	if (patientDto == null) {
-	    throw new PatientControllerException("Failed to retrieve patient details");
+	    throw new RuntimeException("Patient not found");
 	}
 
 	model.addAttribute("patient", patientDto);
@@ -157,7 +158,7 @@ public class PatientUiController {
 		.retrieve().onStatus(HttpStatusCode::isError, (request, response) -> {
 		    log.error("Request to {} {} failed to update patient ID {} - HTTP {}", request.getMethod(),
 			    request.getURI(), id, response.getStatusCode());
-		    throw new PatientControllerException("Failed to update patient");
+		    throw new RuntimeException("Failed to update patient - " + response.getStatusCode().toString());
 		})
 
 		.toBodilessEntity();
@@ -180,13 +181,14 @@ public class PatientUiController {
 		.retrieve().onStatus(HttpStatusCode::isError, (request, response) -> {
 		    log.error("Request to {} {} failed to retrieve notes for patient ID {} - HTTP {}",
 			    request.getMethod(), request.getURI(), id, response.getStatusCode());
-		    throw new PatientControllerException("Failed to retrieve patient notes");
+		    throw new RuntimeException(
+			    "Failed to retrieve patient notes - " + response.getStatusCode().toString());
 		})
 
 		.body(PatientDto.class);
 
 	if (patientDto == null) {
-	    throw new PatientControllerException("Failed to retrieve patient details");
+	    throw new RuntimeException("Patient not found");
 	}
 
 	model.addAttribute("patient", patientDto);

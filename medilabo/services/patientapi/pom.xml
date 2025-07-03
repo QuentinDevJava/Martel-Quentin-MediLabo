@@ -109,6 +109,7 @@
             <groupId>jakarta.persistence</groupId>
             <artifactId>jakarta.persistence-api</artifactId>
         </dependency>
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
@@ -151,4 +152,17 @@
 			</plugin>
 		</plugins>
 	</build>
+	<url/>
+	<licenses>
+		<license/>
+	</licenses>
+	<developers>
+		<developer/>
+	</developers>
+	<scm>
+		<connection/>
+		<developerConnection/>
+		<tag/>
+		<url/>
+	</scm>
 </project>

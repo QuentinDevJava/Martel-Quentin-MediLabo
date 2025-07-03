@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestClient;
 
 import com.medilabo.ui.dto.LoginAuth;
+import com.medilabo.ui.exceptions.AuthServiceUnavailableException;
+import com.medilabo.ui.exceptions.InvalidCredentialsException;
 
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
@@ -41,19 +43,25 @@ public class AuthUiController {
 	try {
 	    String token = restClient.post().uri(authApiUrl + "login").body(loginRequest).retrieve()
 		    .onStatus(HttpStatusCode::is4xxClientError, (req, res) -> {
-			log.error("Response {}", res.getStatusCode());
-			throw new RuntimeException("Unauthorized");
+			log.warn("Authentication failed for user {} - HTTP {}", loginRequest.getUsername());
+			throw new InvalidCredentialsException("Nom d’utilisateur ou mot de passe invalide.");
 		    }).onStatus(HttpStatusCode::is5xxServerError, (req, res) -> {
-			log.error("Response {}", res.getStatusCode());
-			throw new RuntimeException("Internal Server Error");
+			log.error("Auth service unavailable - HTTP {}", res.getStatusCode());
+			throw new AuthServiceUnavailableException("Le service d’authentification est indisponible.");
 		    }).body(String.class);
 
 	    session.setAttribute("token", token);
 	    return "redirect:/patients";
 
+	} catch (InvalidCredentialsException e) {
+	    model.addAttribute("loginError", e.getMessage());
+	    return "login";
+	} catch (AuthServiceUnavailableException e) {
+	    model.addAttribute("loginError", e.getMessage());
+	    return "login";
 	} catch (Exception e) {
-	    model.addAttribute("loginError", "Nom d’utilisateur ou mot de passe invalide : " + e.getLocalizedMessage()
-		    + " -- " + e.getMessage());
+	    model.addAttribute("loginError", "Une erreur inattendue est survenue.");
+	    log.error("Unexpected error during login", e);
 	    return "login";
 	}
     }

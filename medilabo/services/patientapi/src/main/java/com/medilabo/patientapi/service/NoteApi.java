@@ -11,6 +11,6 @@ import com.medilabo.patientapi.dto.NoteDto;
 @FeignClient(name = "noteapi")
 public interface NoteApi {
 
-	@GetMapping("api/notes/patient/{patientId}")
-	List<NoteDto> getNoteDtos(@PathVariable int patientId);
+    @GetMapping("api/notes/patient/{patientId}")
+    List<NoteDto> getNoteDtos(@PathVariable int patientId);
 }
