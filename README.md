@@ -6,7 +6,7 @@
 
 ## Structure du projet
 
-![Image](https://github.com/user-attachments/assets/f8e1944e-6420-4894-8681-1e037b4cbc64)
+<img width="1074" height="889" alt="Image" src="https://github.com/user-attachments/assets/b36e910b-9a53-4035-b2d2-9350b7afc4b1" />
 
 ---
 
