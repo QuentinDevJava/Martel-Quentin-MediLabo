@@ -6,8 +6,6 @@ import com.medilabo.noteapi.dto.NoteDto;
 
 public interface NoteService {
 
-	// List<NoteDto> getNotesByNom(String nom);
-
 	NoteDto createNote(NoteDto noteDto);
 
 	NoteDto updateNote(String id, NoteDto noteDto);

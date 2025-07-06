@@ -13,23 +13,23 @@ spring:
       httpclient:
         connect-timeout: 5000
         response-timeout: 20s
-#      routes:
-#        - id: patientapi
-#          uri: lb://patientapi
-#          predicates:
-#            - Path=/api/patients/**
-#        - id: noteapi
-#          uri: lb://noteapi
-#          predicates:
-#            - Path=/api/notes/**
-#        - id: evaluationrisqueapi
-#          uri: lb://evaluationrisqueapi
-#          predicates:
-#            - Path=/api/evaluationrisque/**
-#        - id: authapi
-#          uri: lb://authapi
-#          predicates:
-#           - Path=/auth/**
+      routes:
+        - id: patientapi
+          uri: lb://patientapi
+          predicates:
+            - Path=/api/patients/**
+        - id: noteapi
+          uri: lb://noteapi
+          predicates:
+            - Path=/api/notes/**
+        - id: evaluationrisqueapi
+          uri: lb://evaluationrisqueapi
+          predicates:
+            - Path=/api/evaluationrisque/**
+        - id: authapi
+          uri: lb://authapi
+          predicates:
+            - Path=/auth/**
 
 management:
   endpoints:

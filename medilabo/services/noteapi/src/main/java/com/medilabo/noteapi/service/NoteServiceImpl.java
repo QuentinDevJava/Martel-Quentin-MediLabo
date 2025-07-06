@@ -7,6 +7,7 @@ import java.util.Map;
 import org.springframework.stereotype.Service;
 
 import com.medilabo.noteapi.dto.NoteDto;
+import com.medilabo.noteapi.dto.PatientDto;
 import com.medilabo.noteapi.entities.Note;
 import com.medilabo.noteapi.mapper.NoteMapper;
 import com.medilabo.noteapi.repository.NoteRepository;
@@ -24,118 +25,130 @@ import lombok.extern.slf4j.Slf4j;
 @AllArgsConstructor
 public class NoteServiceImpl implements NoteService {
 
-    private final NoteMapper noteMapper = new NoteMapper();
-    private final NoteRepository noteRepository;
+	private final NoteMapper noteMapper = new NoteMapper();
+	private final NoteRepository noteRepository;
+	private final PatientApi patientApi;
 
-    /**
-     * Récupère toutes les notes associées à un patient.
-     *
-     * @param patientId identifiant du patient
-     * @return liste des NoteDto associées
-     */
-    @Override
-    public List<NoteDto> getNotesByPatientId(int patientId) {
-	return noteRepository.findAllByPatientId(patientId).stream().map(noteMapper::toDto).toList();
-    }
-
-    /**
-     * Crée une nouvelle note médicale pour un patient.
-     *
-     * @param noteDto données de la note à créer
-     * @return note créée sous forme de NoteDto
-     */
-    @Override
-    public NoteDto createNote(NoteDto noteDto) {
-	Note note = Note.builder().patientId(noteDto.getPatientId()).patientNom(noteDto.getPatientNom())
-		.contenuNote(noteDto.getContenuNote()).build();
-
-	return noteMapper.toDto(noteRepository.save(note));
-    }
-
-    /**
-     * Met à jour une note existante.
-     *
-     * @param id            identifiant de la note à mettre à jour
-     * @param updateNoteDto nouvelles données de la note
-     * @return note mise à jour sous forme de NoteDto
-     * @throws EntityNotFoundException si la note n'existe pas
-     */
-    @Override
-    public NoteDto updateNote(String id, NoteDto updateNoteDto) {
-	NoteDto noteDto = getNoteDtoWithNoteById(id);
-	if (noteDto == null) {
-	    throw new EntityNotFoundException("The note is not found");
-	} else {
-	    noteDto.setContenuNote(updateNoteDto.getContenuNote());
-	    return noteMapper.toDto(noteRepository.save(noteMapper.toEntity(noteDto)));
-	}
-    }
-
-    /**
-     * Récupère une note par son identifiant.
-     *
-     * @param id identifiant de la note
-     * @return NoteDto correspondante ou null si non trouvée
-     */
-    @Override
-    public NoteDto getNotesById(String id) {
-	return getNoteDtoWithNoteById(id);
-    }
-
-    /**
-     * Calcule le nombre de termes médicaux détectés dans les notes d’un patient.
-     * Les termes sont regroupés et comptés une seule fois par groupe.
-     *
-     * @param patientId identifiant du patient
-     * @return nombre de groupes de termes médicaux trouvés
-     * @throws EntityNotFoundException si aucun patient n'est trouvé
-     */
-    @Override
-    public int getNumberOfTermsByPatient(int patientId) {
-	log.info("get number of terms");
-	int count = 0;
-
-	List<NoteDto> notes = getNotesByPatientId(patientId);
-
-	if (notes == null) {
-	    return count;
+	/**
+	 * Récupère toutes les notes associées à un patient.
+	 *
+	 * @param patientId identifiant du patient
+	 * @return liste des NoteDto associées
+	 */
+	@Override
+	public List<NoteDto> getNotesByPatientId(int patientId) {
+		return noteRepository.findAllByPatientId(patientId).stream().map(noteMapper::toDto).toList();
 	}
 
-	StringBuilder contents = new StringBuilder();
-	for (NoteDto note : notes) {
-	    contents.append(note.getContenuNote().toLowerCase()).append(" ");
-	}
+	/**
+	 * Crée une nouvelle note médicale pour un patient.
+	 *
+	 * @param noteDto données de la note à créer
+	 * @return note créée sous forme de NoteDto
+	 * @throws EntityNotFoundException si le patient associé a la note n'existe pas
+	 * 
+	 */
+	@Override
+	public NoteDto createNote(NoteDto noteDto) {
+		log.info("createNote receive with note content : {}", noteDto.getContenuNote());
+		int patientId = noteDto.getPatientId();
+		PatientDto patientDto = patientApi.getPatientById(patientId);
 
-	String contentString = contents.toString();
-
-	Map<String, List<String>> termGroups = new HashMap<>();
-	termGroups.put("fumeur", List.of("fumer", "fumeur", "fumeuse", "fumeurs", "fumeuses"));
-	termGroups.put("anormal", List.of("anormal", "anormale", "anormaux", "anormales"));
-	termGroups.put("cholestérol", List.of("cholestérol"));
-	termGroups.put("vertige", List.of("vertige", "vertiges"));
-	termGroups.put("rechute", List.of("rechute", "rechutes"));
-	termGroups.put("réaction", List.of("réaction", "réactions"));
-	termGroups.put("anticorps", List.of("anticorps"));
-	termGroups.put("taille", List.of("taille"));
-	termGroups.put("poids", List.of("poids"));
-	termGroups.put("hémoglobine a1c", List.of("hémoglobine a1c"));
-	termGroups.put("microalbumine", List.of("microalbumine"));
-
-	for (Map.Entry<String, List<String>> entry : termGroups.entrySet()) {
-	    for (String term : entry.getValue()) {
-		if (contentString.contains(term)) {
-		    count++;
-		    log.info("Terme : " + term);
-		    break;
+		if (patientDto == null) {
+			log.info("Patient with id : {} is not found", patientId);
+			throw new EntityNotFoundException("The patient is not found");
 		}
-	    }
-	}
-	log.info("Number of terms : {}", count);
-	return count;
-    }
+		log.info("Patient with id : {} is found", patientId);
+		Note note = Note.builder().patientId(noteDto.getPatientId()).patientNom(noteDto.getPatientNom())
+				.contenuNote(noteDto.getContenuNote()).build();
 
-    private NoteDto getNoteDtoWithNoteById(String noteId) {
-	return noteRepository.findById(noteId).map(noteMapper::toDto)
-		.orElseThrow(() -> new EntityNotFoundException("No note found for id " + noteId));
-    }
+		return noteMapper.toDto(noteRepository.save(note));
+	}
+
+	/**
+	 * Met à jour une note existante.
+	 *
+	 * @param id            identifiant de la note à mettre à jour
+	 * @param updateNoteDto nouvelles données de la note
+	 * @return note mise à jour sous forme de NoteDto
+	 * @throws EntityNotFoundException si la note n'existe pas
+	 */
+	@Override
+	public NoteDto updateNote(String id, NoteDto updateNoteDto) {
+		NoteDto noteDto = getNoteDtoWithNoteById(id);
+		if (noteDto == null) {
+			throw new EntityNotFoundException("The note is not found");
+		} else {
+			noteDto.setContenuNote(updateNoteDto.getContenuNote());
+			return noteMapper.toDto(noteRepository.save(noteMapper.toEntity(noteDto)));
+		}
+	}
+
+	/**
+	 * Récupère une note par son identifiant.
+	 *
+	 * @param id identifiant de la note
+	 * @return NoteDto correspondante ou null si non trouvée
+	 */
+	@Override
+	public NoteDto getNotesById(String id) {
+		return getNoteDtoWithNoteById(id);
+	}
+
+	/**
+	 * Calcule le nombre de termes médicaux détectés dans les notes d’un patient.
+	 * Les termes sont regroupés et comptés une seule fois par groupe.
+	 *
+	 * @param patientId identifiant du patient
+	 * @return nombre de groupes de termes médicaux trouvés
+	 * @throws EntityNotFoundException si aucun patient n'est trouvé
+	 */
+	@Override
+	public int getNumberOfTermsByPatient(int patientId) {
+		log.info("get number of terms");
+		int count = 0;
+
+		List<NoteDto> notes = getNotesByPatientId(patientId);
+
+		if (notes == null) {
+			return count;
+		}
+
+		StringBuilder contents = new StringBuilder();
+		for (NoteDto note : notes) {
+			contents.append(note.getContenuNote().toLowerCase()).append(" ");
+		}
+
+		String contentString = contents.toString();
+
+		Map<String, List<String>> termGroups = new HashMap<>();
+		termGroups.put("fumeur", List.of("fumer", "fumeur", "fumeuse", "fumeurs", "fumeuses"));
+		termGroups.put("anormal", List.of("anormal", "anormale", "anormaux", "anormales"));
+		termGroups.put("cholestérol", List.of("cholestérol"));
+		termGroups.put("vertige", List.of("vertige", "vertiges"));
+		termGroups.put("rechute", List.of("rechute", "rechutes"));
+		termGroups.put("réaction", List.of("réaction", "réactions"));
+		termGroups.put("anticorps", List.of("anticorps"));
+		termGroups.put("taille", List.of("taille"));
+		termGroups.put("poids", List.of("poids"));
+		termGroups.put("hémoglobine a1c", List.of("hémoglobine a1c"));
+		termGroups.put("microalbumine", List.of("microalbumine"));
+
+		for (Map.Entry<String, List<String>> entry : termGroups.entrySet()) {
+			for (String term : entry.getValue()) {
+				if (contentString.contains(term)) {
+					count++;
+					log.info("Terme : " + term);
+					break;
+				}
+			}
+		}
+		log.info("Number of terms : {}", count);
+		return count;
+	}
+
+	private NoteDto getNoteDtoWithNoteById(String noteId) {
+		return noteRepository.findById(noteId).map(noteMapper::toDto)
+				.orElseThrow(() -> new EntityNotFoundException("No note found for id " + noteId));
+	}
 }
