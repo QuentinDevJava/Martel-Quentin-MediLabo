@@ -6,7 +6,7 @@
 
 ## Structure du projet
 
-![Image](https://github.com/user-attachments/assets/f8e1944e-6420-4894-8681-1e037b4cbc64)
+[Schema.md](https://github.com/user-attachments/files/21090343/Schema.md)
 
 ---
 
