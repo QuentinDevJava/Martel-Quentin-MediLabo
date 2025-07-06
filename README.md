@@ -6,7 +6,7 @@
 
 ## Structure du projet
 
-[Schema.md](https://github.com/user-attachments/files/21090343/Schema.md)
+<img width="1074" height="889" alt="Image" src="https://github.com/user-attachments/assets/b36e910b-9a53-4035-b2d2-9350b7afc4b1" />
 
 ---
 
